@@ -10,4 +10,8 @@ drafts/
 CLAUDE.md
 AGENT-CONTRACT.md
 build-search-index.cjs
-search-index.json
+
+# NOT ignored, deliberately: search-index.json.
+# Mintlify serves it as a static asset and the unified app's Cmd+K docs search
+# fetches https://docs.getrivet.ca/search-index.json at runtime
+# (apps/app/lib/docs-search.ts). Ignoring it 404s docs search in the app.
