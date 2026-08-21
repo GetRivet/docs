@@ -1,0 +1,124 @@
+---
+title: "Payment methods"
+description: "Credit card, entered at checkout. Rivet never sees your card details."
+---
+
+Rivet uses **Stripe** for every payment. When you activate your
+subscription, you land on a Stripe-hosted checkout page where you
+enter your card. The card details go straight to Stripe — Rivet's
+servers never see them, store them, or process them.
+
+## What we accept
+
+Cards accepted at checkout:
+
+- **Visa, Mastercard, American Express** — credit and debit.
+- **Discover.**
+- **Apple Pay and Google Pay** — if you're paying from a device that
+  supports them. The checkout page detects this and offers the option
+  automatically.
+
+We don't currently accept:
+
+- **PayPal.**
+- **Interac e-Transfer.**
+- **ACH / EFT direct from a bank account.** Not currently enabled —
+  monthly card billing hasn't created enough demand to justify the
+  extra reconciliation work.
+- **Cheques. Wire transfers. Crypto.** Not for a monthly $65
+  subscription.
+
+If your only viable payment method is something not on the supported
+list — say, your practice is set up to pay vendors by EFT only —
+email us. We can usually arrange annual upfront billing by invoice
+in those cases.
+
+## How checkout works
+
+<Steps>
+  <Step title="Tap Activate my account">
+    From the trial-warning modal, the trial-ended blocker, or anywhere
+    else Rivet surfaces the subscription link.
+  </Step>
+  <Step title="Land on the checkout page">
+    URL starts with `buy.stripe.com` — that's how you know you're
+    on the payment provider's domain, not a phishing imitation. The
+    page shows Rivet's branding (logo + product name + price) but
+    the form is hosted by our payment provider.
+  </Step>
+  <Step title="Enter your card details and billing address">
+    The billing address fields are required — your province determines
+    the right sales tax.
+  </Step>
+  <Step title="Tap Subscribe">
+    A $1 charge verifies the card (refunded immediately) and sets up
+    the monthly recurring billing. The first real charge for
+    $65 + sales tax runs the same day.
+  </Step>
+  <Step title="Redirect back to Rivet">
+    You're sent back to your inbox. The trial blocker is gone;
+    your account is active.
+  </Step>
+</Steps>
+
+The whole flow is about 60 seconds.
+
+## What Rivet stores vs what the payment provider stores
+
+A clean line:
+
+| What the payment provider stores | What Rivet stores |
+|---|---|
+| Your full card number | Your customer ID |
+| Your card expiration and CVV | Your subscription ID |
+| Your billing address | Whether your account is active or in trial |
+| Every charge, refund, and dispute | Nothing about charges or invoices |
+| Your invoice history (7 years per CRA rules) | Nothing about invoice history |
+
+This is the entire reason we use a dedicated payment processor: it's
+built specifically to hold card data safely and independently audited
+for security. Rivet, by holding only a reference ID, never has to take
+on that liability.
+
+## Changing your card
+
+Your **billing portal** handles this — a separate URL included in
+every invoice email. Open the most recent invoice email, scroll to
+the bottom, click "Manage your subscription." From there you can:
+
+- Update your card.
+- Update your billing address.
+- View past invoices.
+- Cancel your subscription.
+
+Rivet doesn't have a "Change card" tab in the app. Your billing portal
+is the right place for this — it handles card details so Rivet never
+has to.
+
+If you can't find the invoice email, see
+[Invoices and receipts](/billing/invoices-and-receipts) for how to
+retrieve a fresh customer portal link.
+
+## A note on security
+
+Rivet's database has no card numbers in it, has never had card
+numbers in it, and isn't designed to ever hold card numbers. If
+someone accessed Rivet's database, they couldn't take your card —
+because it's not there.
+
+The same is true for your clients' data: Rivet doesn't bill your
+clients on your behalf, doesn't take payments from them, doesn't
+hold their cards. Your clients pay you directly through whatever
+method you already use (Jane, e-Transfer, cheque, etc.) —
+Rivet stays out of the practitioner↔client payment relationship.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Invoices and receipts" icon="receipt" href="/billing/invoices-and-receipts">
+    Where to find every invoice.
+  </Card>
+  <Card title="Failed payments" icon="circle-exclamation" href="/billing/failed-payments">
+    What happens if your card declines, and when it matters.
+  </Card>
+</CardGroup>

@@ -1,0 +1,154 @@
+---
+title: "What Rivet stores about your clients"
+description: "The exact data Rivet holds, the retention defaults, and how to delete a client's information on request."
+---
+
+You're accountable for the personal health information of the people who
+contact your practice. Knowing exactly what Rivet stores — and for how
+long — is the foundation of that accountability.
+
+## What Rivet collects from your clients
+
+Rivet handles client information on your behalf as your agent. Every
+category below is treated as personal health information (PHI) and
+protected accordingly.
+
+| Category | How it arrives | Where it lives |
+|---|---|---|
+| Phone number | The phone network passes it on every inbound call and SMS | Database |
+| Voicemail audio | The caller leaves a message; Twilio records it | Twilio for the platform retention window (30 days by default); fetched on demand by Rivet |
+| Voicemail transcript | Transcribed locally on Rivet's Canadian hardware | Database |
+| Voicemail intent classification | Rivet's local LLM categorizes the transcript ("new client," "reschedule," "urgent," etc.) | Database |
+| SMS content | Sent or received via your Rivet number | Database |
+| Caller name | A client may volunteer it in a voicemail or text | Database |
+| Video session metadata | Time joined, duration, participating phone numbers | Database |
+| Video session content | Encrypted peer-to-peer between you and your client — **not stored** | — |
+| Progress notes (DAP/SOAP narrative) | Drafted in Rivet's note editor during or after a session | Database |
+| Progress note addenda | Dated corrections appended to a signed note | Database |
+| Assessment responses (item-by-item answers and score) | Submitted by your client during the video session | Database |
+| Derived risk level (none, elevated, or high) | Computed from risk-relevant assessment items when a measure is submitted | Database |
+| Client record fields (date of birth, emergency contact, referral source, consent log) | Entered by the practitioner | Database |
+
+What Rivet **does not** collect:
+
+- Diagnoses, treatment plans, and therapeutic formulations — those remain
+  in your EHR. Rivet holds the session record (notes, measures, risk);
+  interpretation, formulation, and the longitudinal chart stay where
+  they belong. See [how Rivet and your EHR fit together](/privacy/the-measurement-results-vs-clinical-content-distinction).
+- Health-card numbers, OHIP numbers, or government identifiers.
+- Payment card numbers — Stripe handles payments end to end.
+- Recordings of video sessions. The architecture has no recording path.
+- Anything from third-party AI services. Voicemail audio and transcripts
+  never leave Rivet's infrastructure for cloud AI processing.
+
+## Retention defaults
+
+| Category | Default retention |
+|---|---|
+| Voicemail audio recordings | 30 days, then automatically deleted |
+| Voicemail transcripts | Retained while the conversation is active; caller personal information purges 90 days after last activity |
+| SMS conversation history | Same 90-day purge after last activity |
+| Caller phone number | Subject to the same 90-day purge cycle |
+| Video session metadata | 90 days |
+| Call history | Retained while your account is active, subject to the 90-day caller-information purge |
+| Imported contacts | Retained while your account is active; deleted on request or on account closure |
+| Clinical records (progress notes, assessment responses, risk assessments, and client record fields) | Retained by Rivet for the duration of your active account, so you can view and export them at any time. On account closure, records are made available for export and deleted on your instruction or at the end of a 90-day wind-down. The ongoing retention obligation — commonly at least 10 years from the last clinical interaction, or 10 years after a minor client reaches majority — is yours as custodian, met through your own system of record after export from Rivet. |
+
+Anonymous metadata about activity volume and timing — counts, not
+content — may be retained for service-performance analysis.
+
+## Your client's right to deletion
+
+A client can ask you, at any time, to delete information you hold about
+them. Under PHIPA, that request comes to you as the custodian.
+
+To act on it:
+
+1. Confirm the request with the client (a text or email reply is fine).
+2. Email `hello@getrivet.ca` from your Rivet-signed-in email address.
+   Include the client's phone number and the scope ("everything," "the
+   October 14 voicemail," "just the message history," etc.).
+3. Rivet acts on your authorization and deletes the requested
+   information within seven business days.
+4. Rivet confirms the deletion back to you so you can close the loop
+   with the client.
+
+You stay in the audit trail — the audit log records that the deletion
+was authorized by your account.
+
+## Your client's right to access
+
+If a client asks for a copy of what you hold about them (PHIPA s.52),
+you respond as the custodian. The data is exportable from your inbox —
+voicemail transcripts, SMS history, and session metadata can be copied
+or printed. Progress notes, assessment responses, and client record
+fields are exportable from the client record as a structured document.
+If you need help compiling a complete response, email `hello@getrivet.ca`.
+
+## Imported phone contacts
+
+If you import contacts from your phone (to display names alongside
+incoming calls and to suppress auto-replies on personal contacts),
+those contact records are held only for that purpose. They aren't used
+for any other purpose, aren't shared with any third party, and are
+deleted when you remove them or close your account.
+
+Imported contacts are non-client personal information — the people in
+your contacts haven't consented to anything by being in your phone.
+Rivet limits use to display and auto-reply suppression for that reason.
+
+## When you cancel
+
+When you cancel your account, Rivet — at your option — either returns
+your account and communication data to you or securely deletes it
+within 30 days. This covers voicemail recordings, transcripts, SMS
+conversation history, call records, and imported contacts.
+
+**Clinical records are handled separately.** Because they go with you —
+into your own record system — Rivet gives you a 90-day window after
+cancellation to export them before they are deleted. A full export is
+available on or before your account closure date. Your clinical records
+are deleted on your instruction, or automatically at the end of the
+90-day wind-down, whichever comes first. The ongoing obligation to keep
+clinical records for the period your College requires — commonly at
+least 10 years from the last clinical interaction — is yours as
+custodian, met through your own record system after export from Rivet.
+
+Three additional carve-outs apply regardless:
+
+- **Billing records** are retained for seven years to meet Canada Revenue
+  Agency requirements.
+- **Operational audit logs** (sign-in events, security events) are
+  retained for 90 days.
+- **Deletion ledger** — a timestamped record of what was deleted and
+  when, used as compliance evidence, not the data itself.
+
+You can elect a return-and-delete (we send you an export, then delete)
+or delete-only (no export) for your account and communication data.
+Email `hello@getrivet.ca` to invoke the cancellation path you want.
+
+## Where the data physically lives
+
+- Voicemail audio + transcription: **processed locally in Canada** on
+  Rivet's hardware. See [voicemail processing in
+  Canada](/privacy/voicemail-transcription-canadian-processing).
+- Database (Supabase): hosted in Canada (ca-central-1, Montreal).
+- WebRTC TURN relay for video (when used): Metered.ca in Canada.
+
+The full sub-processor list and their processing locations are in [the
+Data Processing Agreement](/privacy/data-processing-agreement).
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Voicemail processing in Canada" icon="microphone" href="/privacy/voicemail-transcription-canadian-processing">
+    What runs in Canada, and why that matters for your most sensitive
+    audio.
+  </Card>
+  <Card title="Encryption" icon="lock" href="/privacy/encryption">
+    What's protected, where, and how.
+  </Card>
+  <Card title="Your role as custodian" icon="user-shield" href="/privacy/your-role-as-custodian">
+    Access, correction, and deletion as your obligation under PHIPA.
+  </Card>
+</CardGroup>

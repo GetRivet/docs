@@ -1,0 +1,102 @@
+---
+title: "Your session link"
+description: "Your slug URL is a permanent waiting room — share it once, use it for every session, never mint a new link."
+---
+
+You don't generate a new video link for every session. You have one URL.
+It's yours forever. Clients use it for every session, every time. This is
+the single biggest workflow difference between Rivet and the
+"copy-paste a unique link into the email" pattern.
+
+## What your link is
+
+When you signed up, you picked a slug — the short name in
+`getrivet.ca/your-slug`. That URL is your permanent waiting room:
+
+- **Always live.** It works whether you're online or offline. When you're
+  not in a session, clients who tap it see a polite "you can wait here"
+  screen.
+- **Shared with anyone.** There's no per-client link. You give the same
+  URL to every client.
+- **Never expires.** Same URL year over year. Print it on a business card.
+- **No PHI in the URL.** No client name, no phone number, no appointment
+  ID. The URL is safe to put in an email signature or on a website.
+
+## How it works under the hood
+
+The URL is a **queue**, not a persistent session. When a client opens it
+and taps Join, they land in your waiting room. You see them appear with
+their first name. When you tap Start, a fresh, encrypted, peer-to-peer
+session starts for the two of you. That session ends when you end
+the call. The next client who arrives gets their own fresh session.
+
+You can have one session at a time. If a second client arrives while you're
+already with someone, they wait — you see both names in the queue.
+
+## How to find your link
+
+Your slug URL is on your welcome screen during onboarding and in the
+account section after that. The format is always
+`getrivet.ca/your-slug` — no path, no query parameters, no token. The whole
+URL is the slug.
+
+If you want to change your slug, you can — once. After that it stays
+locked, because clients who bookmarked the old version need it to keep
+working. See [Changing your Rivet URL](/account/changing-your-rivet-url)
+for what happens to the old slug.
+
+## What clients see when they tap the link
+
+The same waiting-room page regardless of whether you're in session:
+
+- Your practice name at the top
+- A short "you can wait here, your practitioner will start the session
+  when ready" line
+- A form: first name + phone number
+- A Join button
+
+After they tap Join, they wait. You get the notification.
+
+## Sharing the link
+
+Three places it belongs:
+
+- **Your intake email or booking confirmation** — the most important. If
+  the link is there, the client doesn't have to look anywhere else.
+- **Your email signature** — a fallback for clients who lose the intake.
+- **Wherever you list your contact info** — your website, your directory
+  listing, your Psychology Today profile.
+
+See [Sharing with clients](/video-sessions/sharing-with-clients) for the
+exact wording most practitioners use.
+
+<Tip>
+  You can also send the link mid-conversation from the SMS thread — tap the
+  video icon in the reply bar and the bare URL drops into the message.
+  Useful for clients who text you mid-week about a same-day session.
+</Tip>
+
+## What the link is NOT
+
+- It's **not** a video meeting room sitting open 24/7. The waiting room is
+  open; the actual call only exists for the duration of a session.
+- It's **not** sharable in a "anyone with the link can join my session" way.
+  Only you can start the session — the client lands in your queue and waits
+  for you to tap Start. Even if a stranger discovered the URL, they'd land
+  in a waiting room they couldn't progress out of without you.
+- It's **not** the same as your practice phone number. The phone number
+  handles calls and SMS. The slug URL handles video. They're separate.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Sharing the link with clients" icon="paper-plane" href="/video-sessions/sharing-with-clients">
+    Where to put the link and the exact wording that works.
+  </Card>
+  <Card title="The pre-join screen" icon="eye" href="/video-sessions/the-pre-join-experience">
+    What you and the client see right before joining.
+  </Card>
+  <Card title="Changing your Rivet URL" icon="pen" href="/account/changing-your-rivet-url">
+    The one-time slug change rule.
+  </Card>
+</CardGroup>

@@ -1,0 +1,104 @@
+---
+title: "Something we've described isn't in your app"
+description: "If a feature in these docs isn't visible in your Rivet, your build is behind. How to refresh on web and update on iOS and Android."
+---
+
+These docs describe the current production version of Rivet. If you
+follow a page and the button isn't where it says it is — or a section is
+missing entirely — your installed build is behind. Three ways that
+happens and three fixes.
+
+## Web — refresh the page
+
+The web app at `next.getrivet.ca` updates automatically when you reload.
+The latest version is served on every full page load.
+
+**Fix:** Hard-refresh the page.
+
+- Mac, Chrome or Safari: Cmd+Shift+R
+- Windows, Chrome or Edge: Ctrl+F5
+- iPhone Safari: Pull down on the page until the refresh arrow spins,
+  then release.
+
+If the refresh doesn't surface the new feature, check the lower-right
+corner of the app — there's a version stamp. Cross-check with the
+version stamp on this docs site (footer). They should match within a
+few hours.
+
+## iPhone — kill and reopen, then check the App Store
+
+The Rivet iOS app uses two update mechanisms:
+
+1. **Over-the-air update.** Smaller changes download silently on the
+   next launch and apply on the launch after that. To force this:
+
+   <Steps>
+     <Step title="Kill Rivet">
+       Swipe up from the bottom (or double-tap home on older iPhones),
+       swipe Rivet off the top of the app switcher.
+     </Step>
+     <Step title="Reopen Rivet">
+       This launch downloads the new bundle in the background.
+     </Step>
+     <Step title="Kill it again, wait 30 seconds, reopen">
+       This launch applies the bundle you just downloaded.
+     </Step>
+   </Steps>
+
+   Two kill-and-reopen cycles is sometimes the difference between "I
+   don't see it" and "Oh, there it is."
+
+2. **App Store update.** Larger changes (new native modules, new
+   permissions) ship as a full App Store update. Open the App Store,
+   search for Rivet, and tap Update if it's offered.
+
+If both are current and the feature still isn't there, email
+**hello@getrivet.ca** with your app version (Settings → About) and we'll
+check whether it's turned on for your account.
+
+## Android — Play Store update
+
+Android updates only ship through the Play Store. Open the Play Store,
+search for Rivet, tap Update. There's no kill-and-reopen cycle needed —
+Android applies updates the next time the app launches.
+
+If you don't see an update offered and you're confident a feature is
+missing, you may be on a build that hasn't rolled out to your device
+yet. Google staggers Android rollouts; a new
+build can take 24–48 hours to reach every device.
+
+## TestFlight (beta users)
+
+If you're testing pre-release Rivet via TestFlight, builds drop more
+often than the App Store version. The TestFlight app itself notifies you
+when a new build is available; tap the notification, accept the update,
+and reopen Rivet.
+
+A trick that helps when a TestFlight build seems stuck: kill Rivet, kill
+TestFlight, reopen TestFlight, and tap Update again. The TestFlight
+download sometimes pauses silently.
+
+## "I see the feature, it just doesn't work"
+
+That's a different page. If a button is there but tapping it does
+nothing, or a screen loads blank, that's something we want to know
+about. Send **hello@getrivet.ca** with:
+
+- The screen you were on
+- What you tapped
+- What happened (or didn't)
+- A screenshot if you have one
+
+We respond within one business day.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Contacting support" icon="envelope" href="/troubleshooting/contacting-support">
+    What to include so the first reply is the fix.
+  </Card>
+  <Card title="Quick start" icon="rocket" href="/quick-start">
+    The current version of "your first 10 minutes" — useful for
+    cross-referencing what should be on screen.
+  </Card>
+</CardGroup>

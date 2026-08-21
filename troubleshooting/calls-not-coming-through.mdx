@@ -1,0 +1,101 @@
+---
+title: "Calls not coming through"
+description: "Inbound calls ring briefly and stop, or never ring at all. Push permissions, Do Not Disturb, and the network at the moment of the call."
+---
+
+Rivet rings your phone when a call comes into your practice line. If
+that ring is missing, one of these four things is happening.
+
+## 1. Notification permission is off
+
+The first time you open Rivet, the app asks for permission to send
+notifications. If you tapped "Don't Allow," incoming calls don't ring
+on the device — the app doesn't have the permission it needs to wake the
+screen.
+
+**Fix on iPhone:**
+
+<Steps>
+  <Step title="Open Settings">
+    Settings → Notifications → Rivet.
+  </Step>
+  <Step title="Turn on Allow Notifications">
+    Plus toggle on Sounds, Banners, and Time Sensitive Notifications.
+  </Step>
+  <Step title="Open Rivet once more">
+    Open the app so it can re-register for incoming calls. Then call
+    your Rivet number from another phone — it should ring.
+  </Step>
+</Steps>
+
+**Fix on Android:** Settings → Apps → Rivet → Notifications. Allow all
+categories, particularly **Incoming calls** and **Calls** (these are the
+high-priority channels that wake the screen). Then reopen Rivet once.
+
+## 2. Do Not Disturb or Focus mode is on
+
+iOS Focus modes (Do Not Disturb, Sleep, Work, Personal) silence Rivet
+calls unless you've allow-listed the app.
+
+**Fix on iPhone:** Settings → Focus → tap the active mode → **Apps** →
+add Rivet to allowed apps. Repeat for any Focus mode you regularly use.
+
+**Fix on Android:** Settings → Notifications → Do Not Disturb →
+Exceptions → allow Rivet (specifically the **Incoming calls** channel).
+
+## 3. iOS shows the call screen for two seconds then dies
+
+A particular pattern: the incoming-call screen flashes up with your
+contact name, you reach for the phone, the screen goes dark before you
+can answer. The caller hears it ring once and then dead air.
+
+This is almost always a network problem at the exact moment of the call.
+Rivet sends the call to your phone, iOS shows the call UI, the app
+tries to connect to set up the audio — and the connection fails because
+your phone briefly has no usable internet. The incoming-call screen
+auto-dismisses after a few seconds when the connection doesn't
+establish.
+
+**Common causes:**
+
+- You were on a weak Wi-Fi (one bar) at the moment of the call. Your
+  phone was connected but couldn't reach the internet.
+- You were on cellular at the edge of coverage.
+- You just woke the phone from a long sleep and the network hadn't
+  reconnected yet.
+
+**Fix:** Stay in places with reliable signal during your practice hours,
+or turn off Wi-Fi when you're at the edge of a network so the phone
+falls back to cellular. If the pattern is consistent at a particular
+location, that location's network is the problem.
+
+## 4. Android — push wasn't fully configured for your account
+
+Rare, and only on Android, and only if you signed up before May 2026.
+If your account was provisioned before a particular setup step landed,
+incoming calls might never ring even though SMS notifications work.
+
+**Symptom:** Inbound SMS notifications work, but inbound calls never
+ring on your Pixel/Samsung/etc. Outbound calls from the app work fine.
+
+**Fix:** Email **hello@getrivet.ca** with "Android calls not ringing"
+and your Rivet email. It's a one-minute fix on our end.
+
+## When in doubt: test it
+
+The fastest way to verify the loop is working: call your Rivet number
+from a friend's phone (or your home phone). If it rings, the
+notification path is healthy and the missed call was a moment-in-time
+network problem. If it doesn't ring, work through the four causes above
+in order.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="SMS not sending" icon="message-slash" href="/troubleshooting/sms-not-sending">
+    The other side of the same loop — outbound text not delivering.
+  </Card>
+  <Card title="Contacting support" icon="envelope" href="/troubleshooting/contacting-support">
+    What to send if calls are still missing after the fixes here.
+  </Card>
+</CardGroup>

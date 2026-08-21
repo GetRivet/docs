@@ -1,0 +1,127 @@
+---
+title: "Mood diary"
+description: "A sub-twenty-second daily mood capture — slider, optional sleep, optional context."
+---
+
+Daily mood tracking is one of the most useful and lowest-cost data sources
+in depression and behavioral activation work. The mood diary in Rivet is
+designed for friction-low capture: a 0-10 slider, optional hours of sleep,
+optional free-text context. Most clients fill it in under twenty seconds.
+
+No total score, no severity band. The clinical signal lives in the trend
+over time — patterns the client and practitioner read together at the weekly
+review.
+
+## What it captures
+
+Four fields, all optional:
+
+- **Date** — defaults to today
+- **How you're feeling** — 0-10 slider, low → great
+- **Hours of sleep last night** — decimal, optional
+- **Anything notable today** — textarea, optional
+
+The sleep field is included because mood and sleep are entangled in most
+depression presentations, and clients often connect bad nights to next-day
+low mood without prompting. The context field exists so the client can pin
+the rating to something concrete (*productive morning, afternoon energy
+crash*) which makes the weekly review more diagnostic.
+
+## Why a single global mood rather than per-emotion sliders
+
+The friction-low design is the point. A sub-twenty-second worksheet gets
+filled every day. A two-minute worksheet gets filled three times a week and
+then abandoned.
+
+A few clients benefit from finer-grained emotion tracking (per-emotion
+sliders, mood + anxiety + energy split). For those clients, the underlying
+intervention is the conversation about what's being missed by a global
+rating — and you can supplement the mood diary with notes in the context
+field naming the specific emotion. The single-slider design holds.
+
+## When to use it
+
+- **Foundational homework in CBT and BA.** Standard care for depression
+  treatment for the past fifty years.
+- **Daily, ideally same time each day.** Bedtime is the most common time
+  because the day is over and the rating reflects the whole day rather than
+  the moment.
+- **Reviewed weekly with the practitioner**, especially in the first 4-8
+  weeks of treatment when patterns are emerging. Often continues across
+  the whole treatment course.
+- **In-session as a quick check-in opener.** *How's the mood the last few
+  days?* — the client looks at their week of entries and the answer is data
+  rather than memory.
+
+## How the weekly review tends to work
+
+The most useful patterns from a week of mood diary entries:
+
+- **Day-of-week patterns.** Mondays consistently low, Fridays consistently
+  high — points at work or weekday structure.
+- **Sleep coupling.** Days following < 6 hours of sleep that are
+  systematically lower — points at sleep as a treatment target. Pair with
+  the [sleep diary](/clinical-templates/cbt/sleep-diary) for CBT-I.
+- **Activity coupling.** When the context field mentions specific activities,
+  the activities present on high-mood days inform behavioral activation
+  scheduling. Pair with the
+  [activity check-in](/clinical-templates/cbt/activity-check-in).
+- **The flat-line pattern.** Several days in a row of 4 or 5 with no
+  variability — clinically distinctive. Either the client is at a stable
+  low baseline (treatment target) or the client is rating without
+  engaging (worksheet target).
+
+## In-session mechanics
+
+Open **Mood diary** from the top-right corner (**Clinical templates ▾**). Fill it during the
+session opener as a quick read-and-rate (*how was yesterday, zero to ten?*)
+or review the client's homework entries by reopening prior responses from
+the client's record.
+
+The entry copies to clipboard for paste into session notes.
+
+## Citation
+
+No single inventor — daily mood tracking is generic published clinical
+method.
+
+Foundational references:
+
+- Lewinsohn, P. M. (1974). "A behavioral approach to depression." In R. J.
+  Friedman & M. M. Katz (Eds.), *The Psychology of Depression.*
+- Burns, D. D. (1980). *Feeling Good: The New Mood Therapy.* The "Daily Mood
+  Log" worksheet.
+
+Daily mood tracking has been standard care in CBT and behavioral activation
+for over fifty years. The concept is uncopyrightable. Field labels and
+plain-language phrasing are original to Rivet.
+
+## When not to use it
+
+- **Clients who find daily self-rating activating or shame-inducing.** A
+  small number of clients (often with severe self-criticism or
+  perfectionism) find the daily rating itself becomes the target of harsh
+  self-judgment. If the worksheet is making the cycle worse, drop it.
+- **Bipolar mood logging.** Bipolar tracking benefits from a different
+  worksheet that captures mood, energy, sleep, and medication adherence
+  together. The single-slider mood diary undersamples manic and mixed
+  states.
+- **Acute crisis monitoring.** The mood diary is a treatment-progress tool,
+  not a risk-flagging surface. Use the
+  [C-SSRS](/clinical-templates/clinician-administered/c-ssrs) for suicide
+  risk and the [safety plan](/clinical-templates/crisis/safety-plan)
+  for crisis-period work.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Activity check-in" icon="check" href="/clinical-templates/cbt/activity-check-in">
+    Paired with mood tracking in behavioral activation.
+  </Card>
+  <Card title="Sleep diary" icon="moon" href="/clinical-templates/cbt/sleep-diary">
+    For days when sleep is the variable to isolate.
+  </Card>
+  <Card title="PHQ-9" icon="clipboard-list" href="/clinical-templates/screening/phq-9">
+    The validated 2-week severity instrument that pairs with daily tracking.
+  </Card>
+</CardGroup>

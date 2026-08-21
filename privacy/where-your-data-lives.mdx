@@ -1,0 +1,125 @@
+---
+title: "Where your data lives — proof for your College"
+description: "Specific, evidence-backed answer to the question your College, compliance officer, or insurer will ask: where is my clients' information physically stored?"
+---
+
+When your College, your insurer, or a compliance officer asks *"where is your clients' information stored?"*, this page is the answer. It's specific about which information is in which country, which sub-processor holds it, and what evidence Rivet can produce on demand.
+
+The short version is at the top. The detailed proof is below it. If your reviewer wants more than what's here, email `hello@getrivet.ca` and Rivet can produce additional attestation.
+
+## The short answer
+
+> As of **June 24, 2026**, all client information that Rivet stores **at rest** lives on Canadian infrastructure:
+>
+> - The database — every client phone number, voicemail transcript, conversation, audit log row, and account record — is hosted by **Supabase** in their `ca-central-1` region (Montreal).
+> - The voicemail greeting audio files (the *outgoing* prompts you record for callers, not client voicemail content) are hosted by **Cloudflare R2** with an Eastern-North-America location hint that places them in Canadian data centres in normal operation.
+> - Voicemail transcription and intent classification run **locally on Rivet's Canadian hardware** in Belle River, Ontario — no cloud AI service receives client audio or transcripts.
+>
+> The Twilio telephony layer (which records inbound calls in the moment they happen) is hosted in the United States. Twilio recordings are deleted at 30 days; SMS bodies and call records are deleted at 90 days. The Data Processing Agreement (v2.0, effective June 24, 2026) enumerates every sub-processor and its processing location.
+
+## What changed on June 24, 2026
+
+Before June 24, 2026, the database (Supabase) was hosted in a United States region. The page describing voicemail processing used to say *"the database is currently hosted in a United States region"* — it now says ca-central-1 because the migration is complete.
+
+Rivet executed a planned cutover that moved every existing client record, conversation, voicemail transcript, and audit log row from the US Supabase region to `ca-central-1`. The migration was performed under a maintenance window, with row-count parity verification on every table, byte-identity verification on the sensitive fields (subaccount credentials, push credential identifiers), and a tested encrypted-transfer process (GPG-encrypted dump piped over TLS).
+
+Your existing data — every voicemail transcript, every conversation, every audit row — was migrated. The Data Processing Agreement was updated to **v2.0** to reflect the new sub-processor list and was presented to every signed-in practitioner for re-acceptance at next sign-in.
+
+## Where each kind of information lives
+
+This table is the specific answer most College reviewers and compliance officers are looking for.
+
+| What | Where it lives | Sub-processor | Country |
+|---|---|---|---|
+| Voicemail transcripts | Database | Supabase (`ca-central-1`) | Canada |
+| Voicemail audio (raw) | Telephony provider's storage | Twilio | United States (deleted at 30 days) |
+| SMS conversation content | Database | Supabase (`ca-central-1`) | Canada |
+| SMS records at telephony provider | Telephony provider's storage | Twilio | United States (deleted at 90 days) |
+| Call records (timestamps, durations) | Database | Supabase (`ca-central-1`) | Canada |
+| Call records at telephony provider | Telephony provider's storage | Twilio | United States (deleted at 90 days) |
+| Practice account, business record, settings | Database | Supabase (`ca-central-1`) | Canada |
+| Push notification subscriptions | Database | Supabase (`ca-central-1`) | Canada |
+| Outgoing voicemail greeting audio (your recorded prompts) | Object storage | Cloudflare R2 (Eastern-North-America hint) | Canada (preferred) |
+| Audit log (append-only access events) | Database | Supabase (`ca-central-1`) | Canada |
+| DPA acceptance records | Database | Supabase (`ca-central-1`) | Canada |
+| Progress notes and addenda | Database | Supabase (`ca-central-1`) | Canada |
+| Assessment responses (item-by-item answers and scores) | Database | Supabase (`ca-central-1`) | Canada |
+| Derived risk level | Database | Supabase (`ca-central-1`) | Canada |
+| Client record fields (date of birth, emergency contact, referral source, consent log) | Database | Supabase (`ca-central-1`) | Canada |
+| Magic-link emails | Email delivery | Resend | United States (delivery only; message bodies contain no PHI) |
+| Mobile push notification payloads (alert subjects, no transcript content) | Push delivery | Apple APNs (iOS), Google FCM (Android) | United States (delivery only) |
+| Billing records | Payment processor | Stripe | United States (billing identifiers only; no PHI sent to Stripe) |
+| Video session media (audio + video streams) | Peer-to-peer encrypted; not stored | WebRTC DTLS-SRTP between participants | Not stored anywhere |
+| Video session signaling tokens (10-minute lifetime) | Cloudflare Workers transient state | Cloudflare Durable Objects | Global edge (transient, no PHI at rest) |
+
+The pattern: **persistent records are in Canada; in-transit delivery and the telephony layer touch other countries but don't hold client content longer than necessary.**
+
+## Evidence your reviewer can ask for
+
+If a College auditor or compliance officer wants more than this page, here's what Rivet can produce:
+
+### 1. Confirmation of the Supabase region
+
+The Supabase region for Rivet's project is `ca-central-1`. This is verifiable in two ways:
+
+- **DNS lookup of `auth.getrivet.ca`** — Rivet uses a custom domain that points at the Supabase project. A reviewer can confirm the underlying Supabase project's region from the Supabase dashboard project settings. Rivet will provide a screenshot of the project's region setting on request.
+- **API response headers** — every Supabase REST API response includes a region indicator. Rivet can produce a captured response showing `ca-central-1` on request.
+
+### 2. Confirmation of the Cloudflare R2 bucket location
+
+The R2 bucket name is `rivet-greetings`. The location hint is set to `ENAM` (Eastern North America), which targets Canadian and US east data centres. Rivet will provide a screenshot of the R2 bucket configuration on request.
+
+If your reviewer requires *strict* Canadian-only object storage with a contractual guarantee, the alternative is AWS S3 in their Canadian region. Rivet considered this and chose the R2/ENAM path because the content stored is the *outgoing* voicemail greeting that callers hear — not client information. Persistent client information at rest is on Supabase ca-central-1 (strict Canada).
+
+### 3. The Data Processing Agreement v2.0
+
+The current DPA is published at `docs.getrivet.ca/privacy/data-processing-agreement` (Rivet's product guide). It enumerates every sub-processor and its processing location, the breach-notification timeline (72 hours), the retention schedule, and the service-scope description. The full DPA text — with its SHA-256 hash that proves you accepted what's still there — is in your account, accessible under Settings.
+
+### 4. The signed attestation letter
+
+If your College requires a signed attestation from Rivet directly (rather than a pointer to the DPA), email `hello@getrivet.ca` with the recipient name and the date you need it by. Rivet will produce a signed letter on company letterhead confirming the residency posture described on this page. Turnaround target: 2 business days.
+
+### 5. The audit log of your account
+
+Significant access events on your account are written to an append-only audit log. The events include practitioner sign-ins, voicemail playback, audio file fetches, outbound SMS dispatches, voice token mints, and DPA acceptance events. Rivet will produce an extract of your audit log on request — typically used in incident investigations rather than routine audits.
+
+## What this lets you say
+
+If a College auditor asks where your clients' information is stored, the accurate, defensible answer is:
+
+> All persistent client information — voicemail transcripts, SMS conversation content, call records, clinical records (progress notes, assessment responses, risk assessments, and client record fields), audit logs, and practice records — is stored on Canadian infrastructure. Rivet's database is hosted by Supabase in their `ca-central-1` (Montreal) region. Voicemail audio at the telephony provider (Twilio, United States) is retained for 30 days and then deleted; SMS bodies and call records at Twilio are deleted at 90 days. Voicemail transcription and intent classification run on Rivet's Canadian hardware in Belle River, Ontario — no cloud AI service receives client audio or transcripts. The Data Processing Agreement enumerates every sub-processor and its processing location.
+
+This is the language Rivet recommends because every clause is verifiable. It does not overclaim ("nothing ever leaves Canada" would be wrong — telephony and push delivery touch other countries) and does not underclaim ("Canadian residency" is now accurate at rest, where it matters most).
+
+## What about cross-border data transfer concerns?
+
+The two cross-border touches above are:
+
+1. **Twilio (United States) holding voicemail audio for 30 days.** This is the telephony provider's operational retention. Rivet's worker fetches the audio from Twilio in Canada, transcribes it locally, and writes the transcript to the Canadian database. The original audio at Twilio is then deleted at 30 days by Rivet's automated purge. Twilio operates under its own contractual data-handling commitments and is named in the DPA.
+
+2. **Mobile push delivery via Apple and Google (United States).** When Rivet pushes a notification to your phone, the payload is intentionally minimal — typically just an alert subject line. The actual content (voicemail transcript, message body) is fetched by your device over HTTPS from the Canadian database after you tap the notification. Apple and Google do not see client information in the push payload.
+
+These are documented in the DPA as in-transit operational dependencies, not as places where client information is held at rest.
+
+## When this page changes
+
+This page reflects the architecture as of the most recent material change. The Data Processing Agreement version is the canonical record — when sub-processors are added or removed, when a sub-processor's processing location changes, or when retention defaults shift, the DPA gets a new version and you're asked to re-accept. This page is updated in lockstep.
+
+The most recent material change was June 24, 2026 (the Supabase migration). Earlier material changes are listed in the changelog.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="The Data Processing Agreement" icon="file-signature" href="/privacy/data-processing-agreement">
+    The full sub-processor table, retention schedule, and breach-notification timeline.
+  </Card>
+  <Card title="Voicemail processing in Canada" icon="microphone" href="/privacy/voicemail-transcription-canadian-processing">
+    Step-by-step path a voicemail takes from your client's phone to your inbox.
+  </Card>
+  <Card title="Encryption" icon="lock" href="/privacy/encryption">
+    What's encrypted at rest, in transit, and on your device.
+  </Card>
+  <Card title="Breach response" icon="triangle-exclamation" href="/privacy/breach-response">
+    The 72-hour notification commitment in the DPA.
+  </Card>
+</CardGroup>

@@ -1,0 +1,96 @@
+---
+title: "What measurement-based care is in Rivet"
+description: "Validated measures administered in session, scored live, with results captured for your record."
+---
+
+Measurement-based care (MBC) is the practice of giving your clients validated
+outcome measures on a regular schedule and using the results to guide care.
+Inside Rivet, that means three things:
+
+1. You can open a validated measure during a video session and push it to
+   your client's device in one tap.
+2. Scores compute live as your client answers — totals, subscales, severity
+   bands, and any high-risk item flags appear in your view as they fill.
+3. The completed measure copies into your session notes — the score block,
+   the severity band, and (for SOAP / DAP) the underlying responses if you
+   want them.
+
+The library covers the screening measures you actually use:
+PHQ-9, GAD-7, K10, DASS-21, PCL-5, PSS-10, ISI, AUDIT, plus child / adolescent
+versions, ACT process measures, eating, OCD, ADHD, bipolar, and the
+clinician-administered six (HAM-D, HAM-A, Y-BOCS, YMRS, YGTSS, C-SSRS).
+
+## What that actually means
+
+The transparent version, so you know what to trust.
+
+**Live scoring.** Every standardized scale has its scoring built in.
+Rivet sums the items, applies any subscale multipliers (DASS-21 × 2,
+WHO-5 × 4), looks up the matching severity band, and renders the score
+in your view as the client fills. Reverse-scored items (PSWQ, EPDS,
+PSS-10, DERS-18, SDQ, SCS-SF and others) are reversed for you, not in
+the form wording. The math is the same math the source paper specifies.
+
+**Completed responses save to the client's record.** When your client
+submits, their item-by-item answers, the computed score, and the
+severity band are saved to the client's record. The score feeds the
+outcomes view and the score-over-time charts visible when you open the
+client's contact. To bring the result into your EHR, use "Copy for
+session notes" or "Download" — that step is what gets it into Jane,
+Owl, or your paper chart.
+
+**Transparent scoring.** Every score Rivet displays maps back to a published
+algorithm. The score block in your notes includes the subscale label, the
+numeric score, the severity band, and any cutoff that fired. Nothing is
+inferred or estimated.
+
+## What MBC in Rivet is not
+
+- **Not a reminder system.** Rivet doesn't send scheduled nudges or
+  follow-up pings to clients between sessions. The delivery is either
+  in-session or a one-time link — administration is a clinical act, not
+  an automated one.
+- **Not a diagnostic engine.** Severity bands and cutoffs are surfaced as
+  the published algorithm defines them. Interpretation, diagnosis, and
+  treatment decisions are yours.
+
+<Note>
+  Measures can be administered during a video session (the client fills
+  on their device while you watch the score update) or sent as a link
+  from the conversation thread for the client to complete on their own
+  time. The in-session path is the one the research supports most
+  strongly. See
+  [Administering measures in session](/measurement-based-care/administering-measures-in-session).
+</Note>
+
+## What flows into your notes
+
+When you click "Copy for session notes" or "Download" on a completed measure:
+
+- The measure title and timestamp
+- Every answered item — verbatim wording on the question, your client's
+  response on the answer
+- A "Score:" block at the bottom: each subscale's label, score, severity
+  band (where defined), and any cutoff that fired ("[Cutoff: probable
+  PTSD]", "[Cutoff: clinical insomnia]")
+- Any per-field notes you typed alongside the form during the session
+  (private to you, never sent to the client)
+
+If the measure is a SOAP or DAP note, the score from a separately-administered
+measure earlier in the same session can autofill into the Objective or
+Data section — so a PHQ-9 score and its band land in your note without
+re-typing.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="The evidence base" icon="book" href="/measurement-based-care/the-evidence-base">
+    Why MBC matters clinically.
+  </Card>
+  <Card title="Administering measures in session" icon="clipboard-check" href="/measurement-based-care/administering-measures-in-session">
+    The collaborative fill flow.
+  </Card>
+  <Card title="Clinical change thresholds" icon="ruler" href="/measurement-based-care/clinical-change-thresholds">
+    What counts as a meaningful change on PHQ-9, GAD-7, PCL-5, and more.
+  </Card>
+</CardGroup>

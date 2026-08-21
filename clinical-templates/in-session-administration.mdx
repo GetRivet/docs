@@ -1,0 +1,137 @@
+---
+title: "Filling a template in-session"
+description: "The collaborative flow — your client fills on their device, you see the score rise on yours, and the form exports to your chart at the end."
+---
+
+A live template fill in Rivet is a two-screen experience. You open the form
+from your top-right corner, the client sees it appear on their device,
+and as they answer, you watch the responses populate and the score rise on
+your side. When it's done, you copy or download it into your chart.
+
+## Before you start
+
+You and the client are in an active video session. You'll find the template
+you want in the picker — see
+[Finding the right template](/clinical-templates/finding-a-template).
+
+<Tip>
+  For the standard intake stack (PHQ-9 + GAD-7 + a substance-use screen),
+  many practitioners send the templates as an async link in the intake
+  email so they're already filled when the session starts. The in-session
+  flow is for measures you're administering live, or for worksheets you're
+  building together.
+</Tip>
+
+## The flow
+
+<Steps>
+  <Step title="Open the picker from the top-right corner">
+    Tap **Clinical templates ▾**. The picker slides up with categories and search.
+  </Step>
+  <Step title="Pick a template">
+    Tap the template — for example, **PHQ-9**. A small toast appears on
+    both screens: "PHQ-9 opened."
+  </Step>
+  <Step title="The client sees the form, you see the read-only preview">
+    On the client's device, the questions render full-width with large tap
+    targets. On your screen, you see the same form in a read-only preview
+    on the right side of the workspace. As the client taps an answer, it
+    populates on your side within a fraction of a second.
+  </Step>
+  <Step title="Watch the score update live">
+    Below the preview, the scoring pill updates in real time. For PHQ-9
+    you'll see the running total, the severity band as soon as it crosses
+    a threshold (Minimal → Mild → Moderate at the right cuts), and a risk
+    flag if Item 9 is answered above zero.
+  </Step>
+  <Step title="Add your annotations">
+    Each item on your side has a small "Notes" field that only you see.
+    Use it for clinical observations — "client paused on Item 6," "answered
+    quickly without reading." These annotations export with the response
+    but are never sent to the client's device.
+  </Step>
+  <Step title="When the client finishes">
+    They tap **Submit** on their device. You get a confirmation on yours.
+    The score and band freeze on the value at submit.
+  </Step>
+  <Step title="Copy or download">
+    Tap **Copy for session notes** to put a formatted text version on your
+    clipboard — ready to paste into Jane, Owl, your paper chart, or your
+    EHR of choice. Tap **Download** to save it as a PDF.
+  </Step>
+</Steps>
+
+## What the client experiences
+
+The client sees:
+
+- The template title and stem prompt at the top
+- One question per screen on a phone, or all questions visible on a tablet
+  or laptop
+- Large, accessible tap targets for choice questions
+- A progress indicator at the bottom
+
+They do **not** see:
+
+- The numerical scores on each option
+- The running total
+- The severity band
+- Your private annotations
+- The category label
+
+Their job is to answer honestly. Your job is to interpret. The renderer
+keeps those two roles separate.
+
+## When the connection drops
+
+The in-flight template state is held in a short-lived server cache. If the
+client's connection drops mid-fill or your browser refreshes, the form
+resumes on the same item with the answers already entered. Anything they
+typed before the drop is preserved.
+
+The in-flight reconnect cache holds only what's needed to resume — it
+isn't linked to the client's record until the client taps Submit.
+
+## When you both finish — and what's saved
+
+When the client taps Submit, Rivet saves the completed responses — every
+item answer, the computed score, and the severity band — to their client
+record. The score appears on the client's outcomes view and feeds the
+score-over-time chart.
+
+The Copy and Download buttons are how you get the completed assessment into
+your EHR (Jane, Owl, paper). The record in Rivet and the record in your
+EHR can sit side by side.
+
+See [What's in the template library](/clinical-templates/overview) for the
+full picture of what saves where.
+
+## Practitioner-private notes
+
+SOAP, DAP, and the treatment-plan template are the exception to "the
+client fills, you watch." Those render only on your screen. You fill them
+while the client is talking; the note never appears on the client's device.
+
+As you type, the note saves automatically as an unsigned draft on the
+client's record. The video call can end while you're still writing — the
+draft stays. When you're ready to lock it, sign the note; after signing,
+corrections go in as dated addenda, not edits.
+
+To send the note to your EHR, use Copy for session notes or Download as
+PDF — see [Exporting notes](/documentation/exporting-notes).
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Finding the right template" icon="magnifying-glass" href="/clinical-templates/finding-a-template">
+    The picker, categories, and the choice between sending async vs
+    filling in the session.
+  </Card>
+  <Card title="What's in the library" icon="layer-group" href="/clinical-templates/overview">
+    Measures, worksheets, private notes, and the storage stance behind
+    them.
+  </Card>
+  <Card title="PHQ-9" icon="chart-column" href="/clinical-templates/screening/phq-9">
+    The most-administered template — start here for the measure mechanics.
+  </Card>
+</CardGroup>

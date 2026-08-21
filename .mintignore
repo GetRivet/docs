@@ -5,3 +5,9 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Internal — not part of the published site
+CLAUDE.md
+AGENT-CONTRACT.md
+build-search-index.cjs
+search-index.json

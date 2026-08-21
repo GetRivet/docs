@@ -1,0 +1,180 @@
+---
+title: "Practitioner controls"
+description: "Spacebar start and stop, speed changes mid-set, mid-session reconfigure, and the deliberate clinical choice not to auto-advance between sets."
+---
+
+The EMDR Workspace gives you exactly the controls you need to drive the
+session from the keyboard, the trackpad, or your phone. Nothing more,
+nothing less.
+
+## Starting a set
+
+Three ways to start the first set:
+
+1. **Configure modal → Start Set 1** — sets the configuration and starts
+   the set in one tap.
+2. **Spacebar** — once the Workspace is mounted and you've acknowledged the
+   photosensitive epilepsy warning, pressing **Space** starts or stops the
+   current set.
+3. **Corner badge** — a small floating control in the corner of the
+   screen. Tap to start, tap to stop. This is the universal control —
+   works on mobile, on desktop, with or without a keyboard.
+
+<Tip>
+  Pressing **Space** is a no-op until you've explicitly opted into EMDR for
+  the session via the toolbar button. This is intentional — it prevents a
+  stray spacebar from triggering BLS during a non-EMDR session.
+</Tip>
+
+The spacebar handler is input-aware. If your cursor is in a text field,
+Space behaves normally (typing a space). It only catches Space when no
+text field is focused.
+
+## Stopping a set
+
+Three ways to stop a set before its countdown reaches zero:
+
+1. **Spacebar** — same key, toggles to stop.
+2. **Corner badge** — same control, now showing "Stop" with a pulsing
+   countdown.
+3. **End set** button on the practitioner overlay.
+
+When the set ends — either because you stopped it or the countdown ran out
+— the Workspace automatically transitions to the **between-sets** card to
+capture the SUDS.
+
+## Between-sets advancement
+
+This is where Rivet deliberately does **less** than a generic-timer tool.
+
+**Rivet does not auto-advance between sets.** After a set ends and you
+capture the SUDS, the next set does not begin automatically when you tap
+Continue. The Workspace returns to the running state with the practitioner
+overlay re-mounted, but the BLS itself is **stopped**. You start the next
+set explicitly — Space, badge, or Start.
+
+This is a clinical decision, not a missing feature. EMDR is not a
+fixed-interval protocol. The decision to continue, to adjust the rate, to
+swap to a different dual-task category, to switch a modality off, or to
+move into closure — that decision is made between every set, not on a
+timer. Auto-advance would force the protocol into a pace the clinical work
+doesn't respect.
+
+If you want to run 4 back-to-back sets with no decisions in between, set
+the count to 4 and start each one explicitly. That's 4 spacebar taps, or 4
+badge taps, with the between-sets card between each. Fast for an experienced
+practitioner. Right for the clinical work.
+
+## Adjusting speed and volume during a set
+
+You don't have to stop a set to change the pace. While BLS is running, a
+small speed stepper and volume slider sit on your overlay — tap **−** or
+**+** to nudge the speed in small steps, or drag the volume slider. Both
+take effect immediately, with no restart and no gap in the set.
+
+The picture, the sound and any paired phone all re-converge on the next
+pass, so you won't hear the tone wander off the movement while the new pace
+settles. See [One movement, not three](/emdr/staying-in-sync).
+
+The speed stepper stops at 2 movements per second. Published EMDR protocols
+sit below that, and faster flicker carries photosensitivity risk — which is
+the reason to trust the control rather than watch it. Move it freely inside
+the range; you can't push past the ceiling from here any more than you can
+from the Configure modal.
+
+## Mid-session reconfigure
+
+Open the **EMDR** toolbar button again at any point and the Configure
+modal opens — with your current configuration pre-loaded. Change anything:
+rate, stimulus, modality, sound, path, backdrop. Hit **Apply changes**
+(the primary button changes from "Start Set 1" when the Workspace is
+already running).
+
+The new configuration takes effect when the next set starts. The currently
+running set, if any, continues with its original configuration to avoid
+mid-set jumps.
+
+## If the connection degrades mid-set
+
+**Stop the set yourself.** A set runs its own timer regardless of what the
+connection is doing — Rivet will not stop it for you, and it will not
+restart it for you either.
+
+So if the video stalls, the audio breaks up, or you lose sight of your
+client's face partway through a set, press Space or tap **End set**, get the
+connection back, and start the next set when you can see them again.
+Stimulation your client is receiving while you can't observe them isn't
+stimulation you're running.
+
+This is the one place where the tool leans on you rather than on a rule.
+Deciding a connection has degraded far enough to interrupt a set is a
+clinical judgement, and a timer isn't in a position to make it.
+
+## Ending the EMDR portion
+
+Two ways to end:
+
+1. Reach your configured set count and let the session arc card render
+   naturally. Tap **Done** to close the Workspace.
+2. Open the host panel and tap **End EMDR** at any point to close out
+   early.
+
+Closing the EMDR Workspace **does not end the video call**. You return to
+the regular video session with the toolbar and your video tiles. The call
+ends when you tap End in the call toolbar.
+
+## What's not a control
+
+A few things you might look for and not find:
+
+- **No tempo ramp.** The rate doesn't gradually accelerate over a set —
+  it runs at the configured rate the entire time. If you want acceleration,
+  configure a slower rate for the first sets and a faster rate for later
+  sets via mid-session reconfigure. The **Auto-vary** toggle adds gentle
+  modulation within bounds but is not a ramp.
+- **No A/B preset switching.** You can't save two configurations and
+  toggle between them. The Workspace remembers your last configuration,
+  which is the most useful default for the next session.
+- **No client-facing controls.** The client has no buttons. They watch the
+  stimulus, hear the audio, and tell you their SUDS. Nothing on their
+  screen is interactive during BLS, and none of your side reaches theirs —
+  not the speed control, not the readouts, not the prompts, not the
+  ratings, not the session curve.
+- **No recording.** There's no recording of the session and nothing
+  transcribes it.
+
+## Sending a blink cue (Flash mode)
+
+In Flash mode, there's no moving stimulus to start or stop — instead a
+**Flash** button sits on your overlay. Tap it whenever you're ready for
+the client to blink, and a gentle cue plays on their screen — the
+positive-focus text pulses softly and a quiet chime sounds. You're
+running the blink sequence verbally; the button is only the signal. See
+[Setting up an EMDR session](/emdr/setting-up-an-emdr-session) for how to
+configure Flash mode.
+
+## SUDS log
+
+A **View session log** button in the host panel surfaces the SUDS list for
+the current session in a scrollable list — useful for reviewing earlier
+sets without ending. The list is the same data the Copy button on the
+session arc card uses.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Setting up an EMDR session" icon="sliders" href="/emdr/setting-up-an-emdr-session">
+    The Configure modal walkthrough — every control, every default.
+  </Card>
+  <Card title="The session arc" icon="line-chart" href="/emdr/the-session-arc">
+    The closing card with the SUDS trajectory and the Copy export.
+  </Card>
+  <Card title="Photosensitive epilepsy safety" icon="triangle-alert" href="/emdr/photosensitive-epilepsy-safety">
+    The first-use warning gate that intercepts Space and Start until
+    acknowledged.
+  </Card>
+  <Card title="One movement, not three" icon="waves" href="/emdr/staying-in-sync">
+    Why speed changes land cleanly, how a paired phone joins the beat, and
+    what to do when the connection degrades.
+  </Card>
+</CardGroup>

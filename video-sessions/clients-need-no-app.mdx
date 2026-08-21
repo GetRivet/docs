@@ -1,0 +1,99 @@
+---
+title: "Your clients don't install anything"
+description: "Browser-only join — why a click-and-you're-in experience matters for showing up, and what your client actually sees."
+---
+
+The single biggest reason clients no-show a virtual session is friction at
+the door — a download prompt, an "update your app" notice, an account
+creation form. Rivet video removes all of it. Your client clicks one link
+and is in the waiting room. That's the entire flow.
+
+## What "browser-only" actually means
+
+When a client opens `getrivet.ca/your-name` on session day:
+
+- **No download.** The waiting room is a webpage. Their browser handles the
+  video.
+- **No account.** They type their first name and phone, tap Join. Nothing
+  saved on their device, no password to remember.
+- **No software check.** Any reasonably recent Chrome, Safari, Firefox, or
+  Edge works. iPhones and Android phones work. iPads work. Old laptops with
+  a browser they haven't updated in a year — usually work.
+- **No browser extension.** Some platforms still ask for a browser plugin
+  for screen share or audio. Rivet uses only what's already built into the browser.
+
+This matters because the people most likely to no-show are also the people
+most likely to bounce off a download prompt — clients in crisis, first
+sessions, anyone whose phone is the only device they have. Removing the
+download step is the single biggest reliability gain available.
+
+## What the client sees, step by step
+
+<Steps>
+  <Step title="They tap your link">
+    From your intake email, calendar invite, or signature.
+    `getrivet.ca/your-name` opens to your public waiting room.
+  </Step>
+  <Step title="A small form">
+    First name. Phone number. Tap Join.
+  </Step>
+  <Step title="The pre-join screen">
+    A 4:3 self-preview frame appears, mirrored like a selfie camera. A
+    five-bar mic level meter sits in the corner. Mic and camera toggle
+    buttons below. They check their setup and tap Join Session.
+  </Step>
+  <Step title="A waiting card with their own preview">
+    "Connecting… Waiting for \{your practice name\} to join." They see
+    themselves in the centered preview the whole time.
+  </Step>
+  <Step title="The session starts">
+    Your video fills the main stage. Their own camera appears as a small
+    tile bottom-right. Mic, camera, and an end-call button at the bottom.
+  </Step>
+</Steps>
+
+## Why we don't ship a "Rivet for clients" app
+
+Every "download our app" requirement is a pre-session task you've handed your
+client. Most clients won't do it. Some will do it five minutes before session
+time and find the install failed. A small number will refuse. None of those
+outcomes are worth the trade.
+
+A native client app would offer marginal improvements — slightly better
+echo cancellation on some devices, push notifications for the waiting room
+— and meaningful costs (App Store reviews, version drift, the install step
+itself). Browser-only wins for the same reason the web won for most consumer
+software: the cost of entry is zero.
+
+## What clients are told before session day
+
+Most practitioners pre-empt the few questions clients do have. The version
+that works for most therapists is two lines in the intake email:
+
+> Your sessions happen at **getrivet.ca/your-name**. Open the link a few
+> minutes before our session time. You don't need to download anything.
+
+That's enough. The pre-join screen handles the rest — clients don't need
+instructions for a self-explanatory camera/mic check.
+
+## What if a client's browser is genuinely too old?
+
+Rare. Any browser updated since roughly 2020 works.
+If a client lands on the waiting room and gets "Couldn't start",
+the fix is almost always one of: update Chrome/Safari, allow camera and mic
+permission for the site, or close other apps using the camera. See
+[Client can't join](/troubleshooting/client-cant-join-session).
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="The pre-join screen" icon="eye" href="/video-sessions/the-pre-join-experience">
+    What the client sees before joining.
+  </Card>
+  <Card title="Sharing the link with clients" icon="paper-plane" href="/video-sessions/sharing-with-clients">
+    Where to put your slug URL so clients find it.
+  </Card>
+  <Card title="Audio and video quality" icon="signal" href="/video-sessions/audio-and-video-quality">
+    The practical tips clients ask about: lighting, mic, internet.
+  </Card>
+</CardGroup>

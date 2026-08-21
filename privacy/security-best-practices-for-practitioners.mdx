@@ -1,0 +1,148 @@
+---
+title: "Security best practices for practitioners"
+description: "The handful of habits that keep your account, your sign-in email, and your device honest."
+---
+
+The strongest encryption Rivet can deploy doesn't help if someone
+opens your email, reads your magic-link, and signs in as you. Most
+practitioner-side incidents are device-side or email-side — and most
+of them are preventable with a small number of habits. None of what
+follows is novel. All of it matters.
+
+## Your sign-in email is the master key
+
+Rivet signs you in by sending a one-tap magic link to your email
+address. That makes your **email account the master key to your
+practice phone and your inbox**. Treat it accordingly.
+
+<Steps>
+  <Step title="Use a long, unique password on your sign-in email">
+    Not your dog's name. Not a password you use anywhere else. A
+    password manager is the easiest way to get this right — you don't
+    have to remember it, you just have to use it.
+  </Step>
+  <Step title="Turn on two-factor authentication on your email">
+    Gmail, Outlook, iCloud — every major email provider supports it.
+    Use an authenticator app (Google Authenticator, Authy, 1Password,
+    or your phone's built-in option), not SMS. SMS 2FA is better than
+    nothing but worse than an app.
+  </Step>
+  <Step title="Don't share the email account">
+    The sign-in email is yours alone. If you have a clinic admin
+    helping with your practice, give them access to the practice
+    workflows they need — not to your sign-in email.
+  </Step>
+  <Step title="Audit the email account quarterly">
+    Once a quarter, open your email provider's security page. Check
+    the active sessions, the connected devices, and any third-party
+    apps with access. Remove anything you don't recognize.
+  </Step>
+</Steps>
+
+## Turn on biometric unlock on your phone
+
+The Rivet mobile app supports **Face ID, Touch ID, or fingerprint
+unlock** as a screen lock over your signed-in session. Turn it on the
+day you install the app.
+
+What biometric unlock does:
+
+- Keeps your session signed in (so a missed call still rings) but
+  requires your face or fingerprint to open the app's content.
+- Means a lost or stolen phone doesn't expose your inbox to whoever
+  picks it up.
+- Lets you sign out of the email account on the phone after the
+  initial sign-in, so the magic link path can't be replayed by
+  someone with physical access.
+
+To turn it on: open the Rivet app, head to Account → Biometric
+unlock. The toggle prompts your face or fingerprint as proof, then
+flips on.
+
+## Use a screen lock during sessions
+
+When you're in a video session in your office, your screen is showing
+client information to anyone who happens to walk in. The simplest
+control:
+
+- Set your operating system's lock screen to engage on a short
+  timeout (one minute is reasonable).
+- Lock your screen explicitly when you step away — even for 30
+  seconds.
+- Position your monitor so it doesn't face a window or a hallway.
+
+For the mobile app, the device's own auto-lock plus biometric unlock
+on Rivet covers it.
+
+## Secure the device, not just the app
+
+A few practices that close the device-side loop:
+
+- **Keep your operating system updated.** Most exploits target
+  patched vulnerabilities — running an OS that's three years behind
+  is the single largest avoidable risk.
+- **Don't sideload apps.** Install Rivet from the App Store or Play
+  Store, not from a link.
+- **Don't sign in to Rivet on a shared computer.** If you absolutely
+  must, use a private browsing window and sign out completely when
+  you're done.
+- **Avoid public Wi-Fi for client calls.** A coffee-shop network is
+  fine for reading email; for a video session, tether to your phone
+  or use a VPN.
+
+## Recognize the phishing patterns
+
+Two patterns come up in mental-health practices specifically:
+
+**The "urgent client" email.** A message claiming to be from a client,
+asking you to click a link to reschedule, see a document, or "verify
+your account." Real clients reach you on your Rivet number. Anyone
+asking you to click a link in an email to access your Rivet account
+is almost certainly not Rivet — Rivet's only emailed link is the
+magic-link itself, and that link only signs you in. It never asks for
+a password, a payment, or a verification code.
+
+**The "Rivet support" message.** Rivet contacts you from
+`hello@getrivet.ca` or `adam@getrivet.ca`. If a message claiming to
+be from Rivet asks you to forward your magic link, share your
+session, or install software, it isn't Rivet. Email
+`hello@getrivet.ca` directly to verify — don't reply to the
+suspicious message.
+
+## When something looks wrong
+
+Anything that smells off — a sign-in you didn't make, a session you
+don't recognize, a magic-link arriving without you having requested
+it — email `hello@getrivet.ca` immediately. The Privacy Officer
+opens the breach response runbook on **suspicion**, not confirmation
+— see [breach response](/privacy/breach-response). A false alarm
+costs twenty minutes. A real incident handled late costs much more.
+
+## Account hygiene checklist
+
+Run through this once a quarter — it's a five-minute check that
+covers most of what matters:
+
+- [ ] Your sign-in email password is long and unique
+- [ ] Two-factor authentication is on for your sign-in email
+- [ ] Biometric unlock is enabled on the Rivet mobile app
+- [ ] Your phone's operating system is up to date
+- [ ] Your desktop browser is up to date
+- [ ] You can identify every active session on your sign-in email
+- [ ] You know who to contact if something looks wrong
+  (`hello@getrivet.ca`)
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Encryption" icon="lock" href="/privacy/encryption">
+    What Rivet protects at the system level — the floor your habits
+    build on.
+  </Card>
+  <Card title="Breach response" icon="triangle-exclamation" href="/privacy/breach-response">
+    What happens if something does go wrong.
+  </Card>
+  <Card title="Your role as custodian" icon="user-shield" href="/privacy/your-role-as-custodian">
+    The accountability that your habits protect.
+  </Card>
+</CardGroup>

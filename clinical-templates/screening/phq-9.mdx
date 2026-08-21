@@ -1,0 +1,190 @@
+---
+title: "PHQ-9 — Patient Health Questionnaire"
+description: "The standard depression severity scale. 9 items, 0–27 total, severity bands from Minimal to Severe, with Item 9 risk flagging for suicidal ideation."
+---
+
+The PHQ-9 is the dominant standardized depression-severity screening
+instrument in primary care, mental health, and outcome-informed therapy.
+If you administer one depression measure, it's almost always this one.
+
+## What it measures
+
+Depression severity over the last two weeks, mapped to DSM-5 Major
+Depressive Disorder criteria. Nine symptom items — anhedonia, depressed
+mood, sleep, fatigue, appetite, guilt/worthlessness, concentration,
+psychomotor agitation/retardation, and suicidal ideation. Each item is
+rated on a 4-point frequency scale.
+
+A tenth item captures functional impairment but is not included in the
+total score — it's there for context, not for the band.
+
+## When to use it
+
+- **Intake.** As a baseline measure on the first session — typically sent
+  async ahead of time.
+- **Every 2–4 weeks during treatment.** To track response without
+  screening burnout.
+- **Pre/post a discrete intervention.** Around a CBT protocol, an EMDR
+  reprocessing target, or a medication change.
+- **Discharge.** Outcome documentation.
+
+Pairs naturally with the [GAD-7](/clinical-templates/screening/gad-7) as
+the standard depression-anxiety baseline.
+
+## How clients fill it
+
+Two minutes on a phone, slightly less on a laptop. The 2-week stem
+prompt appears at the top — "Over the last 2 weeks, how often have you
+been bothered by any of the following problems?" — followed by the nine
+items, each with the same four-option frequency scale:
+
+- Not at all
+- Several days
+- More than half the days
+- Nearly every day
+
+Item 10 (functional impairment) uses a different four-option scale (Not
+difficult at all → Extremely difficult) and is shown for context.
+
+## How Rivet scores it
+
+Each of the four response options carries a score:
+
+- Not at all → 0
+- Several days → 1
+- More than half the days → 2
+- Nearly every day → 3
+
+The total is the sum of items 1–9. Item 10 is not summed into the total.
+Range: 0–27.
+
+The score appears live in your scoring pill as the client answers — you
+see the running total and the current severity band update with each tap.
+
+## Severity bands
+
+| Total | Severity |
+|---|---|
+| 0–4 | Minimal |
+| 5–9 | Mild |
+| 10–14 | Moderate |
+| 15–19 | Moderately severe |
+| 20–27 | Severe |
+
+A score of 10 or higher is the screening threshold widely cited for
+further evaluation of major depression (Kroenke 2001).
+
+## Clinical change
+
+A drop of 5 points on the PHQ-9 is the convention most often cited as
+clinically meaningful improvement (per the follow-up literature around
+Kroenke et al.). This is a clinical convention, not a Rivet calculation —
+the in-session scoring pill shows the current total only. If you want
+to compare two PHQ-9s administered weeks apart, you're reading them off
+your chart.
+
+## Item 9 — suicidal ideation
+
+<Warning>
+  **Any positive answer on Item 9 warrants suicide-risk follow-up
+  regardless of the total score.** A PHQ-9 of 6 with Item 9 answered
+  "Several days" matters more than a PHQ-9 of 22 with Item 9 at zero.
+
+  Rivet surfaces a flag in the scoring pill when Item 9 is above zero.
+  The clinical decision about what to do next — safety planning, C-SSRS,
+  consult, hospitalization, all of the above — is yours.
+</Warning>
+
+Item 9 reads: "Thoughts that you would be better off dead, or of hurting
+yourself in some way." A "Several days" answer means the thoughts were
+present on several days in the past two weeks, which is a clinically
+significant signal even at low frequency.
+
+## Using it in a Canadian practice
+
+**No licence, no fee.** The PHQ-9 is free to use in clinical practice and you
+don't need permission to administer it — whether you send it ahead of a session
+or run it on the call.
+
+**Your client's answers stay in Canada.** A completed PHQ-9 is health
+information about a named person. The answers are stored encrypted in a Montreal
+data centre and land in that client's chart against the session they belong to.
+Nothing goes to an outside service to be scored — the severity band and the Item
+9 flag are computed from the answers themselves.
+
+**Getting it into your file of record.** The scored result copies out formatted
+for a progress note, so it pastes into Jane, Owl or whatever holds the record.
+You're not retyping a total, and the band travels with it.
+
+**What you document is yours.** Rivet flags a positive Item 9 and timestamps
+when the response came in. What your College expects you to record about that —
+and what you do next — sits with you.
+
+**English only.** Validated French translations of the PHQ-9 exist, but the
+version here is English. If you practise in French, you'll be working from your
+own copy for that client.
+
+## When NOT to use it
+
+- **Clients under 18.** The PHQ-9 was validated in adults. For
+  adolescents, the PHQ-A is the age-appropriate version.
+- **As a sole diagnostic instrument.** The PHQ-9 is a screening measure.
+  A score of 22 doesn't diagnose Major Depressive Disorder; the clinical
+  interview does.
+- **As an outcome measure on its own without paired anxiety screening.**
+  Comorbidity is the rule, not the exception — pairing with GAD-7 catches
+  the common presentation that PHQ-9 alone would miss.
+
+## PHQ-9 vs the other depression measures
+
+The PHQ-9 is the default. The others earn their place in specific
+situations.
+
+- **vs [QIDS-SR-16](/clinical-templates/screening/qids-sr-16)** — the QIDS
+  spreads sixteen items across the DSM symptom domains, giving sleep four
+  items and appetite four where the PHQ-9 gives each one. Reach for it when
+  you want that resolution; reach for the PHQ-9 when you want the measure a
+  referrer will recognise without explanation.
+- **vs [CES-D-R](/clinical-templates/screening/ces-d-r)** — twenty items, a
+  past-week frame rather than two weeks, and two separate suicidality items
+  instead of the PHQ-9's single Item 9. Often chosen for continuity when a
+  client already has older CES-D scores in their file.
+- **vs [WHO-5](/clinical-templates/screening/who-5)** — five items about
+  well-being rather than symptoms. Useful with a client who bristles at
+  problem-framed questionnaires, but a low WHO-5 is the signal to follow up
+  with a PHQ-9, not a substitute for one.
+- **vs [PHQ-A](/clinical-templates/child/phq-a)** — the same nine symptoms in
+  adolescent wording, for ages 11–17, scored against a cutoff of 11 rather
+  than 10. Use it for anyone under 18.
+- **vs the BDI-II** — the Beck Depression Inventory is a licensed instrument
+  sold by Pearson and paid for per use. Rivet doesn't include it, and that
+  was deliberate: the library was built from measures you can administer
+  without a per-administration fee. If your practice already licenses the
+  BDI-II, you'll keep running it wherever you licensed it.
+
+## Citation
+
+Kroenke, K., Spitzer, R. L., & Williams, J. B. W. (2001). "The PHQ-9:
+Validity of a brief depression severity measure." *Journal of General
+Internal Medicine*, 16(9): 606–613.
+
+Copyright Pfizer Inc. Explicitly released by Pfizer in 2010 for free
+public use without restriction. Rivet preserves the canonical item
+wording verbatim — paraphrase would break instrument validity, because
+the published severity bands only apply to the published item wording.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="GAD-7" icon="chart-column" href="/clinical-templates/screening/gad-7">
+    The companion anxiety measure — administered alongside PHQ-9 as the
+    standard baseline.
+  </Card>
+  <Card title="Screening overview" icon="clipboard-check" href="/clinical-templates/screening/overview">
+    When to screen, picking between overlapping depression measures, and
+    the risk-flag rule.
+  </Card>
+  <Card title="Filling a template in-session" icon="users" href="/clinical-templates/in-session-administration">
+    The live collaborative flow you'll use when administering this measure.
+  </Card>
+</CardGroup>

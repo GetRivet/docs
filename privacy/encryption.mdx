@@ -1,0 +1,126 @@
+---
+title: "Encryption"
+description: "What's encrypted, where, and how — HTTPS in transit, AES-256 at rest, WebRTC DTLS-SRTP for video, biometric-locked sessions on your phone."
+---
+
+Encryption is the technical floor of any privacy posture. Rivet uses
+it in three layers — in transit, at rest, and on your device — and
+each layer is specific to the channel.
+
+Honest encryption claims are load-bearing in mental health, so what
+follows is exact about what's covered, and equally exact about what
+*isn't*.
+
+## In transit
+
+Every connection between your devices and Rivet's servers, and between
+Rivet's servers and its sub-processors, uses **HTTPS over TLS 1.2 or
+higher**.
+
+- The web app at `next.getrivet.ca` is HTTPS-only. The browser refuses
+  to connect over plain HTTP.
+- HTTP Strict Transport Security (HSTS) is set on every Rivet domain
+  so a browser never falls back to an unencrypted connection.
+- The mobile app's network calls to Rivet's APIs are HTTPS-only.
+- API calls from Rivet's worker to Supabase, Twilio, and Stripe are
+  HTTPS-only.
+- Webhook calls from Twilio and Stripe back to Rivet are HTTPS-only,
+  with signature validation (HMAC-SHA1 for Twilio, HMAC-SHA256 for
+  Stripe) so Rivet can verify the call came from the right place.
+
+## At rest
+
+The information Rivet holds about your practice and your clients is
+encrypted on disk:
+
+| Layer | What's encrypted | How | Where |
+|---|---|---|---|
+| Database | Every row in every table | Supabase platform-managed AES-256 disk encryption | Supabase `ca-central-1` (Montreal) |
+| Voicemail greeting audio (your outgoing prompt) | The recorded file | Cloudflare R2 platform-managed encryption | Cloudflare R2, Eastern North America location hint |
+| Mobile session token | Your signed-in session on your phone | iOS Keychain (Secure Enclave) on iOS; Android Keystore (TEE-backed) on Android | On your device |
+| Web session | Your signed-in session in the browser | Stored in the browser's local storage; the connection between your browser and Rivet is HTTPS-only | On your device |
+| Voicemail audio (Twilio storage) | The 30-day platform retention copy held by Twilio | Twilio's platform-managed encryption | Twilio, United States (deleted at 30 days) |
+| Audit log | The append-only event log Rivet writes | Same platform AES-256 encryption as the rest of the database | Supabase `ca-central-1` (Montreal) |
+
+Mobile sessions never end up in plaintext storage. If your phone is
+lost or stolen, the session is protected by your device's lock screen
+and by the biometric unlock you've set up in the Rivet app — see
+[security best practices for
+practitioners](/privacy/security-best-practices-for-practitioners).
+
+## Video sessions — WebRTC DTLS-SRTP
+
+When you and a client are in a Rivet video session, the audio and video
+streams travel directly between your devices using **WebRTC** with
+**DTLS-SRTP** encryption. That's the same encryption pattern your phone
+uses for FaceTime or your browser uses for Google Meet.
+
+- Audio and video are encrypted at the source (your microphone and
+  camera) and decrypted only at the destination (your client's screen
+  and speakers).
+- The signaling that sets up the connection — telling each side where
+  to find the other — runs through Rivet's servers over HTTPS. The
+  media itself does not.
+- When a direct peer-to-peer connection isn't possible (some corporate
+  firewalls block it), encrypted media is relayed through Metered.ca's
+  TURN servers in Canada. **The TURN relay cannot decrypt the media**
+  — it forwards encrypted packets and that's all.
+- **Sessions are not recorded.** The architecture has no recording
+  path.
+
+The architecture choice — peer-to-peer DTLS-SRTP, no recording — is
+why video is the most strongly protected channel in Rivet.
+
+## What encryption Rivet does *not* claim
+
+Honesty here matters as much as anywhere in the product.
+
+- **SMS and voicemail audio at the carrier layer are not encrypted.**
+  The cellular network and the public phone system are inherently
+  unencrypted. Rivet can't encrypt the carrier last mile and doesn't
+  claim to. Inside Rivet's systems, voicemail audio and SMS metadata
+  are encrypted at rest and in transit — but the carrier leg between
+  the caller's phone and Twilio's network is what it is.
+- **In-app messages and voicemail transcripts are encrypted at rest
+  and in transit, but Rivet's servers can read them** to deliver the
+  service to you. Rivet doesn't claim end-to-end encryption of message
+  or voicemail content.
+- **End-to-end encryption applies to video sessions specifically** —
+  between the two participating browsers / apps. It's not a claim that
+  applies to the inbox or the conversation history.
+
+## How this maps to the channels you use
+
+| Channel | Encryption posture |
+|---|---|
+| Phone call (PSTN to your Rivet number) | Carrier unencrypted; Rivet's handling encrypted |
+| Voicemail audio | Carrier unencrypted; Twilio storage encrypted; Rivet's processing local in Canada |
+| Voicemail transcript | Encrypted in transit (HTTPS); encrypted at rest (AES-256 on the database) |
+| SMS to your Rivet number | Carrier unencrypted; Rivet's storage encrypted at rest and in transit |
+| Web app session | HTTPS in transit; browser local storage at rest |
+| Mobile app session | HTTPS in transit; Keychain / Keystore at rest; biometric-locked on device |
+| Video session | WebRTC DTLS-SRTP, peer-to-peer; relay (when used) carries encrypted media only |
+| Push notification payload | HTTPS to Apple / Google push services; carries an identifier, not transcript content |
+
+## Practical implication
+
+Inbound SMS and voicemail aren't a place for clinical detail — not
+because Rivet handles them carelessly inside its systems, but because
+the carrier last mile is inherently insecure. That's why Rivet
+auto-replies are written for triage and scheduling, not for clinical
+exchange, and why the channel-security position is that **clinical
+conversation belongs in a video session**.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Voicemail processing in Canada" icon="microphone" href="/privacy/voicemail-transcription-canadian-processing">
+    Where the audio actually gets transcribed.
+  </Card>
+  <Card title="Audit logging" icon="list-check" href="/privacy/audit-logging">
+    What Rivet records about access to encrypted data.
+  </Card>
+  <Card title="Security best practices for practitioners" icon="key" href="/privacy/security-best-practices-for-practitioners">
+    The handful of habits that close the loop on the device side.
+  </Card>
+</CardGroup>

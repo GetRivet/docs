@@ -1,0 +1,149 @@
+---
+title: "The session workspace"
+description: "A tour of the in-call layout — the main stage, your own camera tile, the toolbar, and every button on it."
+---
+
+Once you and your client have both joined, the pre-join card slides away
+and the workspace mounts. The layout is intentionally close to what every
+practitioner has already used in Zoom or Google Meet — your client fills
+most of the screen, you sit in a corner tile, the toolbar lives at the
+bottom. The differences are clinical: EMDR is one tap away, the
+screen-share button opens a picker that includes the whiteboard, and your
+own face stays visible to your client even when you're sharing.
+
+## The layout
+
+```
+┌──────────────────────────────────────────────────────┐
+│                                                      │
+│                                                      │
+│             Your client's video                      │
+│             (main stage, full-bleed)                 │
+│                                                      │
+│                                                      │
+│                                          ┌─────────┐ │
+│                                          │ You     │ │
+│                                          │ (PiP)   │ │
+│                                          └─────────┘ │
+│                                                      │
+│        ┌──── toolbar (bottom-center) ────┐          │
+│        │  🎤   📷   🖥️   🧠   📞       │          │
+│        └─────────────────────────────────┘          │
+└──────────────────────────────────────────────────────┘
+```
+
+- **Main stage** — your client's video. Object-fit to contain so their
+  whole frame is visible regardless of their aspect ratio.
+- **PiP tile (bottom-right)** — your own camera, mirrored. This is what
+  your client sees of you in their main stage.
+- **Toolbar (bottom-center)** — five buttons that cover everything you'll
+  do during a session.
+
+## The toolbar
+
+From left to right:
+
+### Microphone (mute / unmute)
+
+Tap to mute, tap to unmute. The icon flips to show current state — a
+slash through the mic means muted. When you're muted, the toolbar tile
+also gets a quiet "muted" badge so you can see it at a glance.
+
+If you join the call from the pre-join screen with mic off, the toolbar
+button starts in the muted state. Tap once to unmute.
+
+### Camera (on / off)
+
+Tap to turn your camera off, tap again to turn it back on. When your
+camera is off, your client sees a clean placeholder where your face was.
+Your audio keeps working.
+
+### Share screen
+
+Opens a small picker with two options:
+
+- **Share Screen** — your operating system's standard screen picker opens.
+  Pick a window or your whole screen. Your client sees the shared content
+  in their main stage and your camera shrinks to a corner tile on their
+  side. See [Sharing your screen](/video-sessions/screen-sharing).
+- **Whiteboard** — mounts an interactive whiteboard in the same shared
+  surface. You draw, your client sees it. See
+  [Whiteboard](/whiteboard/overview).
+
+While you're sharing, the same button flips to "Stop sharing" — tap to
+end the share and return to the standard video layout.
+
+This button is host-only. Your client doesn't see a share button on their
+side and can't initiate a share themselves.
+
+### EMDR
+
+Opens the EMDR configuration modal. From there you set the speed
+(0.4–2.0 Hz), the bilateral stimulation modality (visual, auditory, or
+both), and any dual-task prompt, then tap Start Set 1. The EMDR workspace
+takes over the main stage — the client sees the BLS, you see a
+practitioner-only HUD with controls and SUDS prompts between sets.
+
+This button is host-only. The client never sees an EMDR button and
+can't trigger BLS. See [EMDR overview](/emdr/overview).
+
+<Warning>
+  EMDR's bilateral stimulation has a hard 2.0 Hz speed cap, and the first
+  time you open EMDR you'll see a one-time photosensitive epilepsy
+  advisory. Read
+  [Photosensitive epilepsy safety](/emdr/photosensitive-epilepsy-safety)
+  before your first EMDR session.
+</Warning>
+
+### End call
+
+The red phone button on the far right. Tap to end the session. Both you
+and your client see a summary card with the session duration.
+
+A single tap on End Call triggers a full teardown — the camera, mic,
+EMDR audio, screen share, whiteboard, templates — everything that was
+running shuts down at once so nothing bleeds onto the post-call screen.
+See [Ending a session](/video-sessions/ending-a-session).
+
+### Clinical templates (floating button)
+
+A **Clinical templates** button sits in the top-right corner of the
+session — separate from the bottom toolbar. Tap it to search the template
+library, push a form to your client, or open a private note you fill
+yourself. This button is host-only; your client never sees it.
+
+## Where the client's experience differs
+
+The client's toolbar shows mic, camera, and end-call only. They never see
+the share-screen, EMDR, or whiteboard buttons. This is deliberate —
+clinical tools belong to the practitioner.
+
+The client can still mute themselves, turn off their camera, and end the
+call. The end-call button on either side closes the session for both.
+
+## What's NOT in the workspace
+
+- **A chat panel.** Conversations happen out-of-call in the SMS thread,
+  not in a sidebar inside the session. Keeps the focus on the
+  client.
+- **A participants list.** It's a 1:1 session; there are no other
+  participants.
+- **Layout switcher (gallery vs. speaker view).** With 1:1 sessions, the
+  layout is always client-as-main + you-as-PiP. No layout choices to
+  make.
+- **Reactions, emoji, hand-raise.** Not part of a therapy session.
+- **Record button.** Sessions are never recorded.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="In-session controls" icon="sliders" href="/video-sessions/in-session-controls">
+    The mute, camera, and copy-link details.
+  </Card>
+  <Card title="Sharing your screen" icon="rectangle-list" href="/video-sessions/screen-sharing">
+    What happens when you tap Share Screen.
+  </Card>
+  <Card title="Ending a session" icon="circle-stop" href="/video-sessions/ending-a-session">
+    The end-call teardown and the summary card.
+  </Card>
+</CardGroup>

@@ -1,0 +1,177 @@
+---
+title: "Reviewing and editing notes"
+description: "The hands-free dictation flow, the snippet library, and how to work the note overlay during and after a session."
+---
+
+The note overlay is designed to keep your hands free while you're still
+present with the client, and to type fast when the session is over.
+Three things make that work: voice-to-text dictation on every text
+field, a snippet rail of one-tap clinical phrases, and a docked-sidebar
+layout that lets the note sit alongside the video tile instead of
+covering it.
+
+## Open the note from the picker
+
+Click **Clinical templates ▾** in the top-right corner of your session
+(host-only — your clients don't see this button). The picker groups
+templates by category; **Your notes (private)** sits at the bottom of
+the list. Pick SOAP, DAP, or Treatment plan.
+
+The note opens in your overlay. Your client's screen doesn't change —
+no notification, no overlay, nothing. The note is rendering on your
+device alone (see [How documentation works](/documentation/overview)
+for the full picture).
+
+## Dictate hands-free
+
+Every text field in a SOAP or DAP note has a small microphone icon at
+the corner of the textarea. Tap it to start dictation. The icon
+turns red. As you speak, the text streams into the textarea — interim
+words in light grey, finalized phrases in normal text. Tap again to
+stop.
+
+Dictation uses the browser's built-in voice-to-text — the same engine
+that powers iOS keyboard dictation, Chrome's voice typing, and
+Android's keyboard mic. A few things follow from that:
+
+- **Mobile Safari times out after ~30 seconds** of continuous use.
+  Rivet auto-restarts the recognizer if you haven't tapped stop, so
+  you can keep talking through the timeout.
+- **Browser support is uneven.** Chrome (desktop + Android), Edge, and
+  Safari all support it. Firefox does not — the mic button won't
+  appear there.
+- **First use prompts for mic permission.** Once granted, the browser
+  remembers it for the site. If you denied accidentally, look for the
+  mic-blocked icon in your address bar.
+- **Rivet never receives the audio.** The browser sends recognized
+  *text* into your textarea. The audio goes to the browser's
+  dictation engine (which may use the vendor's cloud for processing
+  — same posture as keyboard dictation on your phone). Rivet's
+  servers see neither.
+
+<Tip>
+  Dictation is especially useful for the Subjective and Data fields —
+  longer narrative content. The Plan section is usually short and
+  bullet-shaped; typing is often faster there.
+</Tip>
+
+## Use snippets for the phrases you write every time
+
+When your cursor lands in a text field, a row of chips appears below
+the field — the **snippet rail**. Each chip is a quick-insert clinical
+phrase. Tap a chip and the phrase appends at your cursor.
+
+The default snippets are:
+
+- `+ congruent affect` → *Client presented with affect congruent to content.*
+- `+ euthymic mood` → *Mood appeared euthymic.*
+- `+ safety plan reviewed` → *Safety plan reviewed; client denied SI / HI / intent / means.*
+- `+ homework assigned` → *Homework assigned: *
+- `+ good rapport` → *Therapeutic rapport remained strong.*
+- `+ engaged` → *Client was engaged and collaborative throughout the session.*
+- `+ no SI/HI` → *No suicidal or homicidal ideation reported or observed.*
+
+These are starting points. Click **⚙ Manage** at the end of the rail to
+edit, delete, or add your own. The list lives in your browser's local
+storage — it persists across sessions on the same browser, and it never
+leaves your device.
+
+Practitioners build up a personal snippet library over a few weeks of
+use. Phrases like *"continued progress on grounding skills"* or
+*"reviewed values-clarification work from last session"* or *"recommend
+bridging to mood diary between sessions"* — anything you find yourself
+typing more than twice. The snippet rail makes the second-and-third use
+a tap instead of a sentence.
+
+## Dock the note alongside the video tile
+
+By default the note opens as a centered overlay covering the video
+area. On a desktop screen you can flip it into a **docked sidebar**:
+the note slides to the right edge of the window and the video tile
+shrinks to fit alongside it. Click the dock toggle in the note's
+header (top-right corner of the overlay).
+
+Docked mode is the right shape for the second half of a session, when
+you're typing the note while the client is still on screen. You can
+see them, they can see you, and the note has its own column.
+
+Dock vs centered is a per-template, per-session preference. It doesn't
+persist across sessions — open the note, dock it if you want it docked.
+
+## Pause mid-note: minimize
+
+Click the minimize button (top-right of the overlay) to tuck the note
+into a small docked card without losing your in-progress text. The
+field values stay in browser memory. You can open another template
+(a worksheet, a screening scale) and come back to the SOAP note when
+you're ready. Tap the minimized card to restore.
+
+Minimizing also leaves the snippet rail's session preferences in place,
+so the snippets you've used most recently stay handy when you reopen.
+
+## Edit fields like any browser form
+
+Fields are regular browser textareas. All the editing affordances you
+expect work — cursor positioning, copy, paste, undo (Cmd/Ctrl+Z), find
+(in long fields), and so on. There's no "save" button: changes apply
+to the in-memory draft as you type.
+
+The fields that auto-filled from earlier templates (see
+[Auto-fill from templates](/documentation/auto-fill-from-templates))
+arrive with content already there. Edit freely — append, prepend,
+delete, restructure. The note saves automatically to the client's record
+as you type; there is no separate Save step.
+
+Once you sign the note the body is locked. After signing, corrections
+go in as dated addenda — use the **Add addendum** button on the note
+rather than editing the original. This keeps the record auditable.
+
+## Add a private per-field annotation
+
+Every field has a **✎ note** button beside its label. Click it to open
+a small textarea below the field. Type a private practitioner-only
+observation — something for your clinical reasoning that you don't want
+in the main field, but you want preserved when you export.
+
+Private annotations land in the exported PDF as italic *Therapist note:*
+paragraphs indented below the field. They never go to the client
+(practitioner-private notes don't go to the client in the first place,
+but the annotation pattern works the same way it does on every other
+template — see [Private annotations](/documentation/private-annotations)).
+
+## Finish the note after the call ends
+
+When the video call ends, your in-progress note is still in the
+overlay. The session-summary footer appears with a **Download session
+summary** button. You can:
+
+- Keep typing — the note doesn't disappear when the call ends.
+- Export the individual note (Copy or Download — see
+  [Exporting notes](/documentation/exporting-notes)).
+- Export the session summary (every template + your note as a single
+  PDF).
+- Close the overlay (the X button in the top-right) — the note remains
+  saved as a draft on the client's record.
+
+<Warning>
+  The note body saves to the client's record automatically, so closing
+  the overlay won't lose your progress. Per-field ✎ annotations are
+  local — those are gone when you close. Export before you close if you
+  need the annotations in your clipboard copy or PDF, or if you want the
+  note in your EHR right now.
+</Warning>
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Private annotations" icon="lock" href="/documentation/private-annotations">
+    The per-field practitioner-only notes that travel with the export.
+  </Card>
+  <Card title="Exporting notes" icon="file-export" href="/documentation/exporting-notes">
+    The three export paths — clipboard, per-note PDF, session-summary
+    PDF.
+  </Card>
+  <Card title="Auto-fill from templates" icon="wand-magic-sparkles" href="/documentation/auto-fill-from-templates">
+    What lands in the fields automatically when you open the note.
+  </Card>
+</CardGroup>

@@ -1,0 +1,161 @@
+---
+title: "Best practices for virtual EMDR"
+description: "Client environment, browser window, headphones, and how to choose between EMDR 2.0 and Classic — the operational notes that make remote BLS work."
+---
+
+EMDR over video adds a few constraints that aren't there in the in-office
+version — bandwidth, screen size, audio delivery, client environment. None
+of them are blockers, but each one rewards a small amount of preparation
+before the session.
+
+## The client's environment
+
+Before the first session, send a short pre-session note covering the
+basics. The defaults that matter:
+
+- **Private, quiet room** — a door that closes. EMDR work is emotionally
+  intense; the client needs to know no one else can hear or see them.
+- **Stable seating** — a desk chair or armchair, not a couch they sink
+  into. Posture matters for visual tracking and for the body scan.
+- **Good lighting on their face** — front-lit so you can read their
+  expression. Backlight from a window is the worst case.
+- **Plug in or charge to 50%+** — a phone dying mid-set is a real
+  failure mode. Have them plug in before joining.
+- **Tissues nearby** — practical, and signals you've thought through the
+  hour.
+
+This is not Rivet-specific — it's standard telehealth prep. Roll it into
+your existing pre-session note.
+
+## The browser window
+
+The BLS canvas fills whatever viewport the client is in. That means:
+
+- **Phone in portrait** works but the canvas is tall and narrow. Horizontal
+  paths read smaller relative to the screen. A phone in **landscape** gives
+  the stimulus more horizontal range — recommend it for the first session.
+- **Tablet** is the sweet spot. iPad in landscape, Android tablet, both
+  give a comfortable canvas with the client at a natural distance.
+- **Laptop or desktop** works well — full-screen the browser so menu bars
+  and tabs don't pull focus.
+- **External monitor with the client at 24"+ distance** — large stimulus,
+  natural eye movement range. Excellent for in-office hybrid setups.
+
+In your pre-session note, ask the client to **maximize or full-screen the
+browser window** before they join. Browsers handle full-screen with F11
+(Windows / Linux) or Cmd+Ctrl+F (macOS), or the maximize button on the
+title bar.
+
+## Headphones for the audio modality
+
+If you're running EMDR 2.0 (the default), the audio modality is on. For
+the audio to work as bilateral stimulation, the client needs **stereo
+audio output** with a clear separation between left and right.
+
+Recommend, in order:
+
+1. **Over-ear or on-ear headphones** — best. Full L↔R separation.
+2. **Wired earbuds** — equivalent, smaller footprint. Have these as a
+   fallback if the client doesn't have headphones.
+3. **AirPods or Bluetooth earbuds** — work, but warn the client that
+   Bluetooth audio occasionally hiccups and the audio modality could
+   stutter during reconnects.
+4. **Laptop speakers** — work, but the L↔R panning is much weaker when
+   both speakers are 6 inches apart. Acceptable for trial; suboptimal for
+   ongoing work.
+5. **Phone speakers** — single mono output on most phones. **Audio
+   modality is functionally lost.** Either switch to visual + haptic, or
+   ask the client to add earbuds.
+
+Mention headphones explicitly in your pre-session message. The single
+biggest preventable failure mode is a client with great visual and a
+mono speaker.
+
+## EMDR 2.0 vs Classic — choosing
+
+Rivet defaults to EMDR 2.0 as the launch mode. The published outcomes are
+equivalent to Shapiro standard with fewer sets needed. But the choice
+matters per client.
+
+Reach for **EMDR 2.0** when:
+- You're trained in EMDR 2.0 and comfortable with the dual-task pacing
+- The client tolerates the multimodal stimulation (visual + audio)
+- The client engages well with cognitive load — they can count
+  backward, name categories, do mental math without overwhelm
+- You want shorter sessions or fewer sessions to reach the same SUDS
+  reduction
+
+Reach for **Classic** when:
+- You're trained in Shapiro standard EMDR and want to stay in that
+  protocol
+- The client is overwhelmed by multimodal stimulation
+- The client has cognitive load limits — head injury history, ADHD,
+  active substance withdrawal — that make dual-task prompts counter-
+  productive
+- The session is doing resource installation (Phase 2) where the
+  goal is calming, not loading
+
+This is a per-client and per-session choice, not a permanent setting.
+Switch between the modes in the Configure modal at any time.
+
+## Pace within the session
+
+A few orienting notes that come from EMDR clinical practice, not from
+Rivet's tooling:
+
+- **Start with a brief test set.** Before any reprocessing, run a short
+  set with neutral content — count backward from 50 by 3s, looking at the
+  butterfly, for 20 seconds. Check the client tolerates the stimulus
+  before introducing the target.
+- **Watch the SUDS curve as you go.** Each between-sets card shows the
+  sparkline so far. A descending line is the typical pattern. A flat or
+  rising line is a clinical signal — adjust the rate, switch the
+  dual-task category, or check the target.
+- **Plan for closure.** Don't run reprocessing into the last 5 minutes of
+  the hour. Whatever the SUDS arc looks like at that point, you need time
+  for the Container resource or another closure tool. The
+  [Container template](/clinical-templates/emdr/container) lives in the
+  EMDR templates section for this reason.
+
+## Network conditions
+
+Rivet's video is end-to-end encrypted. About 90–95% of sessions connect
+directly between you and the client; 5–10% go through a relay when a
+direct connection isn't possible — the relay passes encrypted data it
+can't read.
+
+A weak connection degrades video here the way it does anywhere. **Rivet
+will not stop a set for you** — a set runs its own timer regardless of what
+the connection is doing. So if the picture stalls, the sound breaks up, or
+you lose sight of your client's face partway through a set, stop the set
+yourself, get the connection back, and start the next one when you can see
+them again. See [Practitioner controls](/emdr/practitioner-controls).
+
+Worth agreeing on this with your client before the first set, the same way
+you'd agree what happens if the call drops mid-hour: if either of you loses
+the other, the set stops.
+
+## What to do at session end
+
+After the last set's SUDS, the session arc card renders. Before tapping
+Done, **tap Copy** to drop the session summary on your clipboard. Paste
+it into your session note or your EHR. The values clear when the
+Workspace closes — Copy is the export path.
+
+See [The session arc](/emdr/the-session-arc).
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Setting up an EMDR session" icon="sliders" href="/emdr/setting-up-an-emdr-session">
+    The Configure modal walkthrough — mode, rate, modalities, dual-task.
+  </Card>
+  <Card title="Practitioner controls" icon="hand" href="/emdr/practitioner-controls">
+    Spacebar start and stop, speed changes mid-set, and what to do when the
+    connection degrades.
+  </Card>
+  <Card title="Who should not use EMDR" icon="circle-x" href="/emdr/who-should-not-use-emdr">
+    Contraindications, training requirements, and what the Workspace is
+    and isn't.
+  </Card>
+</CardGroup>

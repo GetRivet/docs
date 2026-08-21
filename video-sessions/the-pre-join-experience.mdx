@@ -1,0 +1,125 @@
+---
+title: "The pre-join screen"
+description: "What you and your client see right before the call starts — selfie-mirror preview, mic level meter, mic and camera toggles, and the Join gesture."
+---
+
+Both you and your client land on the same pre-join screen the moment a
+session starts. The screen exists for one reason: nobody should join a
+clinical session without confirming their camera is framed right and their
+mic is hearing them. This is the standard Zoom, Google Meet, and Microsoft
+Teams pattern, built into Rivet from day one.
+
+## What's on the screen
+
+- **Practice name** at the top
+- **"Check your camera and microphone, then join."** subtitle
+- **A 4:3 self-preview frame**, rounded, with a brand-color glow around it
+- **A 5-bar microphone level meter** overlaid at the bottom-left of the
+  preview, lit from left as input level rises
+- **Microphone and camera toggle pills** directly under the preview
+- **A "Join session" button** at the bottom
+
+The preview is mirrored — when you raise your right hand it appears on the
+right side of the frame, the same way a bathroom mirror works. This is the
+universal convention for self-view.
+
+## Camera and mic turn on automatically (when the browser allows)
+
+On Chrome and Firefox, if you've previously granted camera and mic
+permission to `meet.getrivet.ca`, the camera and mic come on automatically
+within about a second of the pre-join screen appearing. You don't tap
+anything — you just see yourself, the meter starts moving as you speak.
+
+On Safari (macOS and iOS), browsers require an explicit user gesture before
+they'll start the camera and mic. The first tap anywhere on the page —
+the camera toggle, the mic toggle, or even the Join Session button —
+counts as that gesture and triggers the permission prompt. Either way, by
+the time you tap Join Session, the camera and mic are running.
+
+<Note>
+  If neither auto-enables, tap the camera or mic toggle. The first tap
+  triggers the browser's permission prompt. Allow access, and both come
+  online.
+</Note>
+
+## Toggling mic and camera before you join
+
+The mic and cam pills are toggle buttons. Tap to turn off, tap to turn on.
+Whatever state you leave them in when you tap Join Session is the state
+you'll be in when the session starts:
+
+- **Tap Join Session with the mic off** → you join muted. Tap the mic
+  button in the in-call toolbar to unmute.
+- **Tap Join Session with the camera off** → you join with no video.
+  Your client sees a placeholder where your face would be. Tap the camera
+  button in-call to turn it on.
+
+Joining muted or camera-off is a first-class option. Useful if you want
+to confirm the call connected before showing your face — e.g. if you're
+unsure whether you're in the right session.
+
+## What the client sees vs. what you see
+
+On the pre-join screen, both sides see the same layout. The selfie-preview
+is each person's own camera — you see yourself, the client sees themselves.
+The "Join session" button locks in local mic and camera for each side.
+
+After your client taps Join, they move straight into the calm waiting space.
+There's no separate "in line" screen — the device check flows directly into
+the calm room. When you arrive, your video appears and the session begins.
+They don't need to tap anything else.
+
+## While your client waits
+
+Once your client taps Join, they move past the camera check into a quiet
+waiting space. They see a calm scene with gentle background music — laid out
+the same way the session will be, so your arrival feels like a natural
+continuation rather than a jump cut.
+
+They can mute the music at any time with the button in the toolbar. Their
+camera and mic stay ready throughout.
+
+When you join, your video appears on their screen. The music fades and the
+session begins from there.
+
+## The mic level meter
+
+Five horizontal bars at the bottom-left of the preview. As your mic picks
+up sound, bars light up from left to right. This is the single most
+useful piece of pre-join feedback:
+
+- **No bars light up when you talk** → your mic isn't connected, isn't
+  permitted, or another app has hijacked it (a common one on macOS: a
+  paired iPhone within Bluetooth range steals the mic via Continuity).
+  Tap the mic button to confirm permission. Disconnect Bluetooth or sleep
+  the nearby iPhone.
+- **All five bars max immediately on every word** → your mic gain is too
+  high, or your mouth is too close. Move back a few inches.
+- **Two to four bars on normal speech** → good. Join.
+
+## Joining the session
+
+Once you tap **Join session**:
+
+1. The pre-join card slides away.
+2. A short "Connecting…" card appears.
+3. Once both sides connect, the in-call workspace mounts: your client fills
+   the main stage, your own camera shrinks to a corner tile, the toolbar
+   appears at the bottom.
+
+If your client is already in the calm waiting space when you tap Join,
+the connection is nearly instant.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="The session workspace" icon="display" href="/video-sessions/the-session-workspace">
+    What happens after you tap Join Session.
+  </Card>
+  <Card title="In-session controls" icon="sliders" href="/video-sessions/in-session-controls">
+    Mute, camera, layout, share — every button explained.
+  </Card>
+  <Card title="Audio and video quality" icon="signal" href="/video-sessions/audio-and-video-quality">
+    Lighting, mic placement, browser choice — the practical setup tips.
+  </Card>
+</CardGroup>

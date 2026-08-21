@@ -1,0 +1,113 @@
+---
+title: "Exporting the whiteboard as PDF"
+description: "Copy to clipboard, save as PNG, or save as a vector PDF for the chart. All three keep the drawing on your machine."
+---
+
+The whiteboard ends when the session does. If you want a copy of what you
+and the client built — a finished CBT triangle, a thought record you
+filled in together, a body diagram, a brainstormed homework list — on your
+own machine, export it before you stop sharing.
+
+There are three export paths, each one tap away from the canvas. Separately,
+a non-empty board also saves to the client's chart on its own — see
+[what the whiteboard is in a session](/whiteboard/overview#what-ends-when)
+— so a chart copy doesn't depend on remembering to export before the call
+ends.
+
+## The Export menu
+
+Top-right of the whiteboard, there's an **Export ▾** button. Tap it and a
+small dropdown appears with three options:
+
+- **Copy to clipboard** — copies a PNG of the canvas to your clipboard so
+  you can paste it directly into an EHR note, a message, or a document.
+- **Download PNG** — saves a PNG file to your downloads folder.
+- **Download PDF** — saves a letter-sized PDF, orientation auto-picked from
+  whether your canvas is wider than it is tall.
+
+All three capture what's visible on the canvas at the moment you tap —
+including the client's marks if Two-way has been ON. If you want a clean
+version, run **Clear client marks** first (see
+[client collaboration](/whiteboard/client-collaboration)).
+
+## File names
+
+Saved files are named with the timestamp of the export:
+
+- `whiteboard-2026-06-21-1543.pdf`
+- `whiteboard-2026-06-21-1543.png`
+
+No client name, no session reference — the file name is generic on purpose
+so the file doesn't carry identifying information until you rename it for
+the chart.
+
+## Quality
+
+The PDF and PNG both render at high resolution. Text stays crisp at any
+zoom, lines stay smooth, and the export is sized to fit a standard letter
+page without cropping. A diagram that takes up half your screen during the
+session prints cleanly at full page size.
+
+## Taking the export into the chart
+
+The export is a file on your machine — Rivet doesn't upload it anywhere.
+That keeps the whiteboard's privacy posture clean: the drawing was
+end-to-end encrypted during the session, and the artifact stays on your
+device unless you actively put it somewhere.
+
+Practitioners typically:
+
+1. Save the PDF.
+2. Open the client's chart in their EHR (Jane, Owl, or whatever you use).
+3. Attach the PDF to the session note.
+4. Rename the file with the client identifier their EHR expects.
+
+If you use Copy to clipboard instead, the PNG goes straight into whatever
+field you paste into — handy for inline session notes that accept images.
+
+<Tip>
+  Export early if the session has been long. A 90-minute session with
+  multiple presets and lots of client annotations can produce a busy
+  canvas; pulling the PDF before things get crowded gives you a cleaner
+  snapshot to put in the chart.
+</Tip>
+
+## Privacy of the export
+
+The export happens entirely on your computer. No round-trip through
+Rivet's servers, no upload anywhere. The drawing data is taken from the
+canvas in your browser, rendered to PNG or PDF locally, and either copied
+to your clipboard or saved to your downloads folder.
+
+This means the export inherits whatever privacy posture your machine has.
+Treat the file like any other PHI artifact — if your machine is encrypted
+at rest (it should be), the export is too; if you're on a shared computer,
+clear your downloads folder when you're done.
+
+## What gets exported
+
+Everything visible on the canvas at the moment you tap Export — your
+drawings, your text, dropped presets, sticky notes, and any client
+annotations that haven't been cleared. The export is a snapshot.
+
+What does NOT get exported:
+
+- Pointer / cursor positions (yours or your client's)
+- Laser pointer trails (they're transient)
+- The toolbar, the export menu, the Two-way toggle — only the canvas
+  content
+- Your video tile or the client's
+
+## Related articles
+
+<CardGroup cols={3}>
+  <Card title="Overview" icon="circle-info" href="/whiteboard/overview">
+    What the whiteboard is.
+  </Card>
+  <Card title="Letting your client draw" icon="users" href="/whiteboard/client-collaboration">
+    Clear client marks before export.
+  </Card>
+  <Card title="Notes & documentation" icon="folder-open" href="/documentation/index">
+    Where the export fits into your charting workflow.
+  </Card>
+</CardGroup>

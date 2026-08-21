@@ -1,0 +1,140 @@
+---
+title: "Failed payments"
+description: "Your payment retries automatically. Your service stays on during the retry window."
+---
+
+If your monthly charge fails — expired card, insufficient funds, a bank
+flagging the transaction, anything that couldn't process on the
+first try — your Rivet service **stays on**. The system runs an automatic
+retry schedule for the next several days, you get an email each time,
+and you have plenty of room to fix it before anything changes inside
+Rivet.
+
+## What "your service stays on" means
+
+During the retry window:
+
+- Your **phone line** keeps receiving calls and SMS.
+- **Voicemails** keep being transcribed and auto-replied to.
+- **Video sessions** keep working.
+- The **app** stays accessible — no blocker over the inbox.
+- Your **clients see no difference**.
+
+We don't want a transient payment hiccup to cause your practice line to
+go silent. Automatic retries are designed exactly for this — most
+failures are recoverable within a day or two, and gating service on the
+first failure would be heavy-handed.
+
+## The retry schedule
+
+The charge is attempted again on this schedule:
+
+| Attempt | Timing |
+|---|---|
+| 1 | Day of original charge |
+| 2 | About 3 days later |
+| 3 | About 5 days after that |
+| 4 | About 7 days after that |
+
+Each attempt sends you an email. The email includes:
+
+- The amount that failed.
+- The reason from the card network (e.g.
+  `insufficient_funds`, `expired_card`, `card_declined`).
+- A link to your **billing portal** to update the card.
+
+If a retry succeeds, the cycle ends and you go back to normal monthly
+billing.
+
+## When service is paused
+
+If every retry fails through to the end of the schedule (about
+**14–16 days** after the original charge), Rivet treats your
+subscription as in the same state as a fully expired trial — the
+**day-15 blocker** appears over your inbox, and your subscription
+status flips to expired in the background.
+
+What happens at that point:
+
+- The **back-end stays running** (same posture as the trial-expired
+  state). Inbound voicemails are still captured, auto-replies still
+  fire, your clients' experience doesn't change yet.
+- The **blocker over your inbox** prevents you from managing
+  conversations from the app until payment is resolved.
+- The **Activate my account** button on the blocker takes you to the
+  payment page, where you enter a fresh card and resume the
+  subscription.
+
+Once you fix the payment, the blocker disappears within a minute and
+service resumes normally.
+
+If the unpaid state continues beyond 30 days, see
+[Canceling your account](/account/canceling-your-account) for what
+happens to your number and data.
+
+## Fixing a failed payment
+
+<Steps>
+  <Step title="Open the most recent payment failure email">
+    Subject line will be something like "Your payment to Rivet
+    Systems Inc. failed" or "Your payment is overdue."
+  </Step>
+  <Step title="Click Update payment method">
+    Takes you to your billing portal.
+  </Step>
+  <Step title="Enter the new card details">
+    Or update the expiration date if the existing card is just
+    expired.
+  </Step>
+  <Step title="The charge retries immediately">
+    No need to wait for the next scheduled retry. If the new card
+    works, your subscription is back to normal within minutes.
+  </Step>
+</Steps>
+
+If you can't find the email, request a fresh billing portal link from
+**hello@getrivet.ca**. We'll generate one for the address on your account.
+
+## Common reasons a card fails
+
+In rough order of how often they show up:
+
+- **Expired card.** The most common one. Update the expiration in the
+  customer portal; the card itself is otherwise fine.
+- **Insufficient funds.** The charge retries automatically a few days
+  later — most cards have funded by then. If not, add a backup card
+  to the portal and the backup is charged instead.
+- **Bank declined.** Sometimes the bank flags a recurring charge as
+  suspicious if your spending pattern has changed. A one-line call to
+  your bank ("approve a recurring charge from Rivet Systems Inc.")
+  usually resolves this.
+- **Card was replaced** (the bank issued a new number after a fraud
+  flag, theft, or routine reissue). The old number stops working
+  immediately. Update the card in the portal.
+
+## Why we don't pause service immediately
+
+A few reasons:
+
+- **Most failures are transient.** Insufficient funds clears in a
+  couple of days; expiring cards are usually replaced before they
+  fail; bank flags resolve with a phone call. Pausing service on
+  attempt one would punish people for things that fix themselves.
+- **Your clients shouldn't be involved.** If your card fails and
+  service halts, your clients see "Sorry, this practice line isn't
+  accepting calls right now" — a confusing message about a problem
+  that isn't theirs. Keeping service on means the failure is between
+  you and us; your clients never know.
+- **The retry window is long enough.** Two weeks is plenty of time
+  for most practitioners to notice and act, even on a vacation week.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Payment methods" icon="credit-card" href="/billing/payment-methods">
+    Where the customer portal lives and how to add a backup card.
+  </Card>
+  <Card title="Invoices and receipts" icon="receipt" href="/billing/invoices-and-receipts">
+    Where payment and invoice emails are sent.
+  </Card>
+</CardGroup>

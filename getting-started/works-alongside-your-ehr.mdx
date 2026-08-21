@@ -1,0 +1,135 @@
+---
+title: "Works alongside your EHR"
+description: "Rivet sits beside Jane, Owl, Practice Better — it doesn't replace them. Here's how the handoff works."
+---
+
+You probably already have an electronic health record (EHR) — Jane, Owl,
+Practice Better, JaneApp, JulieDesk, or one of the dozens of others. That
+software charts, schedules, bills insurance, and handles a hundred
+practice-management details Rivet doesn't try to compete with.
+
+Rivet handles the parts your EHR was never built for: the phone line, the
+voicemail inbox, the live video session, the EMDR workspace, the
+in-session whiteboard. The two tools coexist comfortably.
+
+## What lives in your EHR vs. what lives in Rivet
+
+<CardGroup cols={2}>
+  <Card title="Your EHR" icon="folder-open">
+    - The official client chart
+    - Appointment scheduling
+    - Insurance billing
+    - Treatment plans
+    - Long-term documentation (months and years of history)
+    - HCAI (Ontario auto-insurance) submissions
+    - Direct-billing
+  </Card>
+  <Card title="Rivet" icon="rivet">
+    - The phone line for incoming/outgoing client calls
+    - Voicemail transcription + inbox
+    - SMS conversations with clients
+    - The live video session room
+    - EMDR bilateral stimulation
+    - In-session whiteboard
+    - Clinical templates (intake, thought records, measures)
+    - Session notes (written in Rivet, exported to your EHR)
+  </Card>
+</CardGroup>
+
+## The session-note handoff
+
+This is the most common place the two tools interact, so it's worth
+spelling out.
+
+After a video session in Rivet, you write the note in Rivet's notes
+surface. The note has two parts: a **shared part** (the chart-ready
+paragraph that summarises the session) and a **practitioner-private**
+part (your own observations that nobody else needs to see).
+
+When the note is ready:
+
+<Steps>
+  <Step title="Copy the note to your clipboard">
+    Open the note on the client's record and tap **Copy for Jane**. One
+    click copies the note as plain text — section headings and content —
+    ready to paste anywhere.
+  </Step>
+  <Step title="Open the client's chart in your EHR">
+    In Jane, that's the client profile → New chart entry. In Owl, it's
+    the appointment's note field. In Practice Better, it's the SOAP /
+    DAP note editor for the session.
+  </Step>
+  <Step title="Paste">
+    The text drops in clean. Edit anything that needs your EHR's
+    template formatting around it, and save.
+  </Step>
+</Steps>
+
+For practitioners who'd rather keep PDFs as part of their record, the
+notes surface also exports a clean PDF — same chart-ready content,
+attachable to the client's file in your EHR's document manager.
+
+## What Rivet doesn't pull from your EHR
+
+Rivet doesn't read your appointment schedule. Doesn't pull client
+contact information. Doesn't know what your fee structure is. By
+design.
+
+This is partly a pragmatic choice — every EHR works differently, and
+integration would mean building a Jane integration, an Owl integration,
+a Practice Better integration, and so on. But it's also a privacy
+choice: the less data Rivet pulls from another system, the cleaner the
+boundary between what belongs to your EHR and what belongs to Rivet.
+
+What you give Rivet, you give it directly. Your clients' phone numbers
+arrive when they first call or text your Rivet line. Their names show up
+when they introduce themselves on a call. You can build out a contact
+record inside Rivet as you go.
+
+## Why not just use the video module in your EHR
+
+A few EHRs (Jane and Owl among them) have a video module bundled in.
+Those are fine for short, low-complexity sessions — a follow-up where
+all you need is a video call. They aren't built for the things therapy
+sessions specifically need:
+
+- A waiting room with the same URL every session, so clients save it
+  once and use it forever
+- A whiteboard your client can draw on alongside you
+- EMDR bilateral stimulation with the right Hz range and clinical
+  safety controls
+- Clinical templates (intake, thought records, measures) you can pull
+  into the session in one click
+- A note-taking surface designed for therapy notes, not generic visit
+  notes
+
+If your EHR's video does what you need, use it. If you find yourself
+opening separate tools for the whiteboard, the EMDR, or the templates,
+that's the gap Rivet fills.
+
+## The two-tool pattern in practice
+
+Most Rivet practitioners settle into something like this:
+
+- **Booking and rebooking** happens in the EHR. Email reminders go
+  through the EHR. Insurance forms go through the EHR.
+- **The day-of session experience** happens in Rivet. Client gets a text
+  reminder from your Rivet line ten minutes before, taps your URL,
+  joins the waiting room, runs the session, ends.
+- **The note gets written in Rivet** because that's where the session
+  was. A copy goes to the EHR chart for the official record.
+- **Phone calls and texts between sessions** happen in Rivet — your
+  clients have your Rivet number, not your personal cell.
+
+Two tools, clean boundaries, no double-entry.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Notes and your EHR" icon="folder-open" href="/documentation/notes-and-your-ehr">
+    The full notes-export workflow with EHR-specific paste tips.
+  </Card>
+  <Card title="Exporting notes" icon="file-export" href="/documentation/exporting-notes">
+    Clipboard vs. PDF — when to use which.
+  </Card>
+</CardGroup>

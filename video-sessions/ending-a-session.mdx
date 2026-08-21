@@ -1,0 +1,104 @@
+---
+title: "Ending a session"
+description: "What the end-call button does, what your client sees, and why every in-session surface closes at once."
+---
+
+The red phone button on the right end of the toolbar ends the call. One
+tap, and the call ends for both of you. There's no "are you sure?" prompt
+— if your finger slipped, your client gets the summary card too, and the
+two of you can rejoin via the same slug URL.
+
+## What happens when you tap End Call
+
+A coordinated teardown runs. Everything that was active during the session
+shuts down in the same instant:
+
+- The video and audio connection closes.
+- Your camera and microphone release.
+- Any screen share stops.
+- The EMDR workspace (if it was open) hard-stops: the bilateral
+  stimulation stops, the audio stops, and the shared canvas closes.
+- The whiteboard (if it was open) closes.
+- Any in-session clinical template panels close.
+
+This is one tap, one event, one moment. You don't have to remember to
+stop the EMDR before ending the call or to stop the share before stopping
+EMDR. The end-call button is the safe state.
+
+## What you see after End Call
+
+A "Session ended" summary card with:
+
+- A checkmark
+- The session duration (e.g. "47 minutes")
+- "with \{practice name\}" (on the client's side) or "with \{client first
+  name\}" (on yours, when the session came from a queued waiting room)
+- The start and end times of the call
+- A Close button
+
+If you came from the in-app waiting room queue (your most common path),
+the summary card has a **"Back to app"** or "Return to waiting room"
+button that takes you back to your inbox. If the next client is already
+waiting, you'll see them in the queue and can start their session right
+away.
+
+## What your client sees
+
+The same summary card on their side — checkmark, "Session ended", the
+duration, and a Close button. They can close the tab.
+
+Some clients close their browser, some don't. There's no impact on either
+your inbox or the client's data — the session is fully torn down on
+both sides the moment you ended it.
+
+## Sessions that end abnormally
+
+A few unusual cases:
+
+- **The client closes their browser without tapping End Call.** Their
+  peer disconnects, you see "Connection lost". You can tap End Call on
+  your side to confirm the session over.
+- **Your internet drops mid-call.** The connection times out. The
+  call shows as ended. If you rejoin via the same slug URL within a few
+  minutes, the client (if they're still waiting) can rejoin too — a new
+  session minted.
+- **The 90-minute session timer fires.** Rivet sessions are minted with
+  a generous expiration window. If you cross it, the session ends and
+  both sides see the summary card. Rejoin via the slug URL.
+- **You close YOUR browser without tapping End Call.** Same as the client
+  closing theirs — peer disconnects, your client sees "Connection lost."
+  The session marks itself ended on the server side a few seconds later.
+
+## No recording
+
+Worth restating directly here: nothing about End Call writes a recording
+or transcript to disk. Rivet doesn't have a recording feature. There's
+nothing to "stop recording" because nothing was recording.
+
+If you want a record of what was discussed, write a session note. See
+[Documentation overview](/documentation/overview).
+
+## What's left behind after the call
+
+- **A "Video call completed · \{duration\}" event card** in the SMS thread
+  with that client (when the session came from a queued waiting-room
+  check-in or an in-thread invite). Tells you the call happened, when,
+  and how long. No content, no transcript.
+- **The waiting-room queue entry** disappears once the call ends. It
+  clears within seven days regardless.
+- **No media files.** No video, no audio, no chat log. None of those
+  exist.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="The session workspace" icon="display" href="/video-sessions/the-session-workspace">
+    Where the End Call button lives.
+  </Card>
+  <Card title="Documentation overview" icon="folder-open" href="/documentation/overview">
+    Writing the session note after the call.
+  </Card>
+  <Card title="Audit logging" icon="shield-check" href="/privacy/audit-logging">
+    What Rivet records about the session (timestamps + duration, no content).
+  </Card>
+</CardGroup>

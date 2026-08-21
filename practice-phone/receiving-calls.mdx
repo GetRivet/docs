@@ -1,0 +1,68 @@
+---
+title: "Receiving calls on your practice line"
+description: "What happens when a client dials your Rivet number — on the lock screen and inside the app."
+---
+
+When a client dials your Rivet practice number, the call rings through to the Rivet app on your phone. You answer it the way you'd answer any phone call: tap accept on the lock screen, talk, hang up. If you don't pick up, the caller hears your greeting and lands in your voicemail inbox — and gets a text reply within seconds.
+
+## On the iPhone
+
+Incoming calls use CallKit — the standard iOS phone-call interface. The ring looks identical to a regular phone call:
+
+- Full-screen incoming call UI on the lock screen, with Accept and Decline buttons.
+- The caller's number (or name, if they're in your Contacts) shows at the top.
+- The label below the name reads "Rivet audio" — that's how you can tell it's a call to your practice line and not a personal call.
+- Standard iOS phone controls during the call: mute, speaker, keypad, end.
+
+You can pick up from the lock screen, from a banner if the phone is unlocked, or from the in-app incoming-call screen.
+
+## On Android
+
+Android uses a full-screen incoming-call notification. It behaves the same way to you:
+
+- Full-screen ring on the lock screen with Accept and Decline buttons.
+- The caller's number and (if known) name show at the top.
+- Standard call controls during the call.
+
+Rivet on Android is designed to ring even when the app has been swiped away from the recent-apps list.
+
+## When you can't pick up
+
+If you don't accept within the ring window:
+
+1. The caller hears your active greeting (default or custom — see [Recording a greeting](/practice-phone/voicemail-greeting)).
+2. After the beep, they can leave a voicemail.
+3. The voicemail is recorded, transcribed in Canada, categorized, and lands in your inbox.
+4. The caller receives the auto-reply text matching the kind of call they left.
+
+The whole loop completes in well under a minute. You can see the missed call in **Recents** and the voicemail in the **Voicemail** tab. If they didn't leave a message at all, you'll see only the missed call in Recents — and the caller still gets the "Missed Call" category auto-reply, which invites them to text you back.
+
+## When the phone is off, in airplane mode, or out of service
+
+The call still goes through the same path:
+
+1. Rivet receives the call.
+2. It tries to ring your device.
+3. If the device can't be reached (off, no network, on a call), it falls through to voicemail.
+
+Voicemail, transcription, and auto-reply happen the same way. The only thing you miss is the chance to pick up live.
+
+## When you don't want to be rung
+
+Rivet doesn't have a custom "do not disturb." Use the OS-level controls you already have:
+
+- **iOS Focus modes** — Personal, Work, Sleep. Set the Rivet app to be silenced during Focus times, or use a Work focus that allows it.
+- **Android Do Not Disturb** — turn off Rivet's notification access for the time window you want quiet.
+
+Calls that come in while you're silenced still land in voicemail and still trigger an auto-reply. The caller experience is unchanged.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Calls during a session" icon="video" href="/practice-phone/in-session-call-handling">
+    What happens when a client calls while you're already in a video session.
+  </Card>
+  <Card title="The voicemail inbox" icon="voicemail" href="/practice-phone/voicemail">
+    Where missed calls become a row you can scan and act on.
+  </Card>
+</CardGroup>

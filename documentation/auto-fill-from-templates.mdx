@@ -1,0 +1,171 @@
+---
+title: "Auto-fill from clinical templates"
+description: "When you open a SOAP or DAP note, scores and worksheet content from the session pre-fill the right sections. Deterministic, no AI."
+---
+
+The point of doing structured clinical templates in-session is that the
+relevant content is already captured by the time you sit down to write
+the note. Rivet uses that fact: when you open a SOAP or DAP note,
+the right fields pull text from completed templates earlier in the same
+session and drop it into your draft.
+
+You can edit, append, or delete the auto-filled text — it's a starting
+point, not a final answer. But the typing you don't have to do is
+typing you don't have to do.
+
+## What gets pulled where
+
+### SOAP — Subjective section
+
+Score summaries from any screening measure the client filled out earlier
+in the session. The full list:
+
+- **Depression**: PHQ-9, QIDS-SR-16, CES-D-R, EPDS, PHQ-A
+- **Anxiety**: GAD-7, PSWQ, SPIN, OCI-R
+- **Distress + trauma**: K10, DASS-21, PCL-5, ITQ, PSS-10, CPSS-5, ACE
+- **Functioning**: WHO-5, WHODAS-12, WAI-SR
+- **Eating**: SCOFF, EDE-Q
+- **Substance**: AUDIT, AUDIT-C, DAST-10, CAGE-AID, CRAFFT
+- **Attention + mood**: ASRS-v1.1, SNAP-IV, MDQ
+- **Sleep**: ISI
+- **Emotion regulation**: DERS-18, ERQ, AAQ-II, MAAS, CFQ-7, SCS-SF
+- **Personality + risk**: BSL-23, MSI-BPD, ASQ, RFL-12
+- **Support + youth**: MSPSS, SDQ-self, RCADS-parent
+- **Sleep diary, mood diary**: narrative content
+
+Each one renders as a one-line score summary with the severity band —
+e.g. `PHQ-9 total: 14 (Moderate)` — and lands at the top of the Subjective
+field. You then add the narrative around it.
+
+### SOAP — Objective section
+
+EMDR + behavioural worksheet content as narrative:
+
+- **Target identification** (negative cognition, positive cognition,
+  VOC, SUDS baseline, body sensation)
+- **SUDS check-in**
+- **Thought record**
+- **Behavioural activation log**
+- **Exposure log**
+
+These produce labelled-line blocks that read naturally inside a clinical
+note — the kind of content a practitioner would otherwise hand-copy from
+the worksheet into the note field.
+
+### SOAP — Assessment section
+
+Clinical-reasoning support:
+
+- **Safety plan** (when the client filled the 6-step Stanley-Brown-style
+  template earlier in the session)
+- **Cognitive distortions** (Distortion check with the practitioner-
+  selected pattern)
+- **CPT stuck-point log** (for CPT-trained practitioners)
+
+### DAP — Data section
+
+DAP collapses Subjective + Objective, so the Data section receives the
+combined pull — every screening score listed above **plus** every EMDR
++ behavioural-worksheet narrative listed above. It's the single home
+for everything-the-session-produced.
+
+### DAP — Assessment section
+
+Same as SOAP — safety plan, cognitive distortions, CPT stuck-point.
+
+### Plan and treatment-plan sections
+
+No auto-fill. The Plan section is yours to write — interventions for
+next session, homework, referrals, follow-up. Same for every section of
+the treatment-plan template (Presenting concern, Goals, Objectives,
+Interventions, Measures, Review). These are formulation and decision-
+making fields where pre-filling would be misleading.
+
+## Deterministic, no AI, no inference
+
+The auto-fill engine is a deterministic merge. When you open a SOAP
+note:
+
+1. When you open the note, Rivet checks each field to see which
+   session templates it should pull from.
+2. For each field, it looks up the relevant completed template in
+   your session — checking completed, minimized, and active templates,
+   in that order.
+3. If the source template has been answered, Rivet formats the content
+   for clinical reading (scores as one-line summaries, worksheets as
+   labelled narrative blocks) and inserts it into the note field before
+   the overlay opens.
+4. An "auto-filled" badge appears beside the field so you can see which
+   sections were pre-populated.
+
+There's no LLM, no semantic matching, no inference about what you
+meant. The mapping from each clinical template to its destination field
+is fixed. If PHQ-9 is in the session, the PHQ-9 score lands in
+Subjective. If it isn't, the field is empty. That's it.
+
+<Note>
+  This is the design that replaces an AI-scribe pipeline. The structured
+  data was already captured — by the client, into the right
+  template — so the note doesn't need an LLM to extract it again. See
+  [Why no AI transcription](/documentation/why-no-ai-transcription).
+</Note>
+
+## What auto-fill **doesn't** do
+
+- It doesn't write your formulation. The Assessment section gets the
+  raw safety-plan content if there's a safety plan, but the clinical
+  interpretation is yours.
+- It doesn't generate language. There's no paraphrasing, summarizing,
+  or rewording. The text that lands in your field is the same text the
+  template would produce on a clipboard copy.
+- It doesn't overwrite your edits. Once you've typed in a field, the
+  auto-filled prefix is part of your draft — re-running the auto-fill
+  would not "refresh" your typing.
+- It doesn't reach across sessions. Auto-fill pulls from templates
+  completed earlier in the **same** video call. Last week's PHQ-9
+  doesn't carry forward — see [Notes and your EHR](/documentation/notes-and-your-ehr)
+  for how that lives in your chart instead.
+
+## A small example
+
+You run a 50-minute follow-up. The client fills PHQ-9 in the first 5
+minutes (score 14, moderate) and a thought record in the middle 20
+minutes. You open a SOAP note in the last 10 minutes.
+
+The Subjective field opens with:
+
+```
+PHQ-9: 14 (moderate)
+```
+
+The Objective field opens with the thought-record content rendered as
+labelled lines:
+
+```
+Situation:
+What was happening?: Got an email from my boss about Monday's meeting
+Your thought and feeling:
+What you felt: anxious
+How strong was it?: 8
+The thought that went through your mind: "I'm going to be fired"
+…
+```
+
+You type the Subjective narrative around the score, add your Objective
+observations above the thought-record block, write your Assessment and
+Plan from scratch, and the note is ready to export. Five minutes of
+typing instead of fifteen.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="SOAP vs DAP" icon="scale-balanced" href="/documentation/soap-vs-dap">
+    Picking the note format that fits your workflow.
+  </Card>
+  <Card title="Why no AI transcription" icon="microphone-slash" href="/documentation/why-no-ai-transcription">
+    Why deterministic auto-fill replaces an AI scribe.
+  </Card>
+  <Card title="Exporting notes" icon="file-export" href="/documentation/exporting-notes">
+    Getting the finished note out of Rivet and into your EHR.
+  </Card>
+</CardGroup>

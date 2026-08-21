@@ -1,0 +1,213 @@
+---
+title: "The Data Processing Agreement"
+description: "The DPA you accept at signup — what it covers, who the sub-processors are, and what happens when you cancel."
+---
+
+When you sign up for Rivet, you accept the **Data Processing Agreement**
+(DPA). The DPA is the written agreement that papers the agency
+relationship between you (the custodian) and Rivet (your agent under
+PHIPA s.2 and provider of electronic services under O. Reg. 329/04
+s.6(3)). It's the document your College, your compliance officer, or
+your insurer will ask for.
+
+The DPA is short on purpose — the obligations are specific and verifiable.
+
+The current version is **v2.0**, effective June 24, 2026. The earlier
+v1.0 was retired on the same date; if you were a subscriber before
+then, you'll have been asked to re-accept v2.0 at your next sign-in.
+
+## What the DPA covers
+
+### 1. Roles
+
+You are the **health information custodian** under Ontario's PHIPA (or
+the equivalent under your province's health-privacy statute). Rivet is
+your **agent** and a **provider of electronic services**. Rivet doesn't
+provide health care and isn't a custodian itself.
+
+### 2. What Rivet may do with client information
+
+Rivet uses client information **only** to provide and support the service
+to you, and only as you direct or as required by law. Specifically:
+
+- No use for Rivet's own purposes.
+- No use for marketing — to anyone.
+- No transmission of session content to any third-party AI service. This
+  covers every modality the service supports — voice calls, voicemail,
+  video sessions, EMDR sessions, whiteboard content, clinical assessment
+  templates, SMS messages, and notes auto-fill. Progress note content
+  and assessment responses — the highest-sensitivity PHI Rivet holds —
+  are processed exclusively on Canadian hardware and are never sent to
+  any cloud AI service.
+- No recording of video sessions.
+
+### 3. Safeguards
+
+Rivet maintains administrative, technical, and physical safeguards
+appropriate to the sensitivity of the information:
+
+- **Canadian-resident storage** — all client information at rest lives
+  on Canadian infrastructure. Your database records live in Supabase's
+  Canadian region; greeting audio files live in a Cloudflare R2 bucket
+  pinned to a Canadian jurisdiction.
+- Encryption in transit (HTTPS/TLS on every domain; WebRTC DTLS-SRTP for
+  video).
+- Encryption at rest (AES-256 platform encryption on the database;
+  iOS Keychain / Android Keystore for the mobile session token).
+- Access controls limited to need-to-know, with audit logging on every
+  staff access event.
+- Voicemail transcription and intent classification run locally on
+  Canadian hardware. No cloud AI service receives client audio or
+  transcripts.
+- AI-assisted notes auto-fill, where available, runs on the same
+  Canadian hardware. No session content is sent to any third-party AI
+  service for note generation.
+- Append-only audit log of significant access events (see [audit
+  logging](/privacy/audit-logging)).
+- Daily encrypted backups, used only for disaster recovery.
+
+### 4. Sub-processors
+
+Rivet uses a fixed list of sub-processors to deliver the service. Each
+operates under their own published data-handling commitments and is
+contractually bound to use information only to deliver their service to
+Rivet.
+
+| Sub-processor | What they do | Processing location |
+|---|---|---|
+| **Supabase** | Database storage (Postgres + Auth) | Canada (`ca-central-1`) |
+| **Cloudflare (R2)** | Object storage for greeting audio | Canada |
+| **Cloudflare (Workers, KV, Durable Objects)** | Application hosting, video signaling, transient session state | Global edge network (no client information at rest) |
+| **Twilio** | Telephony (voice + SMS) and recording capture | United States |
+| **Metered.ca** | WebRTC TURN relay for video sessions when a direct peer connection isn't possible. Cannot decrypt session media. | Canada |
+| **Stripe** | Payment processing (no PHI sent) | United States and Canada |
+| **Resend** | Transactional email delivery (magic-link sign-in, system notifications); message bodies contain no PHI | United States |
+| **Apple** | Push notification delivery on iOS (payloads minimized to alert subject lines) | United States |
+| **Google** | Push notification delivery on Android via Firebase Cloud Messaging (payloads minimized to alert subject lines) | United States |
+| **Expo / EAS** | Mobile app build and over-the-air update delivery | United States |
+
+Persistent records at rest stay in Canada (Supabase `ca-central-1` and
+the Cloudflare R2 Canadian bucket). Sub-processors outside Canada
+either deliver in-transit services that don't retain client information
+beyond the operational minimum (telephony, push, email), or receive
+only non-PHI inputs (Stripe receives billing identifiers, not client
+information).
+
+The DPA commits Rivet to give you notice before adding a new
+sub-processor that handles client information.
+
+### 5. Breach cooperation
+
+If Rivet becomes aware of a privacy breach affecting your practice,
+Rivet notifies you **within 72 hours** and gives you the facts you need
+to meet your own statutory notification duties. Where 72 hours isn't
+practicable because investigation is ongoing, Rivet sends an initial
+notification within the 72-hour window stating what's known and what's
+still being investigated, then follows up as facts develop.
+See [breach response](/privacy/breach-response) for the full flow.
+
+### 6. Retention and deletion
+
+The DPA inlines the retention schedule rather than pointing at it by
+reference. While you're a subscriber, Rivet retains data on this schedule:
+
+| What | Where | How long |
+|---|---|---|
+| Voicemail recordings | At the telephony provider | 30 days, then deleted |
+| Voicemail PII (caller phone, caller name, transcripts) | In your Rivet database | 90 days, then nulled |
+| SMS message bodies | In your Rivet database | 90 days, then replaced with `[purged]` |
+| SMS records | At the telephony provider | 90 days, then deleted |
+| Call records | At the telephony provider | 90 days, then deleted |
+| Conversation metadata (phone number, last-activity timestamp) | In your Rivet database | While you're a subscriber |
+| Clinical records (progress notes, assessment responses, risk assessments, and client record fields) | In your Rivet database | Retained by Rivet for the duration of the active account, so you can view and export them at any time. On account closure, records are made available for export and deleted on your instruction or at the end of a 90-day wind-down. The ongoing retention obligation — commonly at least 10 years from the last clinical interaction — is yours as custodian, met through your own system of record after export from Rivet. The 30- and 90-day purge cycles for voicemail and messaging data do not apply to clinical records. |
+| Audit log | In your Rivet database | Indefinite (compliance evidence) |
+
+On termination, Rivet returns or securely deletes the client information
+you choose to take with you, within 30 days — except where Canadian law
+requires retention (for example, billing records under CRA rules, or
+audit-log evidence retained for compliance purposes).
+
+### 7. Access and correction
+
+On request, Rivet gives you the information you need to respond to a
+client's PHIPA s.52 access request or s.55 correction request — voicemail
+transcripts, conversation history, session metadata.
+
+### 8. Service scope
+
+The DPA enumerates the parts of the service that handle client
+information, so a reviewer can see exactly what's in scope:
+
+- Your dedicated Canadian practice phone line (voice and SMS).
+- Voicemail capture, on-premises transcription, and intent classification.
+- Automated SMS auto-responses under your configured policy.
+- Two-way SMS messaging with the conversation-first inbox.
+- Video sessions (no recording) accessed via your
+  `getrivet.ca/your-name` waiting-room URL.
+- EMDR bilateral-stimulation tools rendered within the video session.
+- The whiteboard surface, synchronized between you and your client,
+  with optional per-client persistence.
+- Clinical assessment templates (PHQ-9, GAD-7, EMDR-specific scales,
+  clinician-administered measures, and others).
+- AI-assisted notes auto-fill, where available, on Canadian hardware.
+- Progress note creation, signing, and append-only addendum correction.
+- Client record (date of birth, emergency contact, referral source,
+  consent log, and derived risk level).
+- Structured clinical record export — a per-client document built from
+  source data that assembles progress notes and completed assessment
+  responses (full item-by-item questions, answers, and scores) with an
+  optional date filter.
+- The native iOS and Android apps.
+- Push notifications via Apple, Google, and web push.
+
+When the scope changes materially, the DPA gets a new version and you're
+asked to re-accept.
+
+### 9. Your obligations
+
+You agree to:
+
+- Hold the authority — and obtain the client consents — required to use
+  Rivet on your clients' behalf.
+- Configure your auto-reply messages so the service is used within your
+  College's professional standards.
+- Handle client access, correction, and consent-withdrawal requests as
+  the custodian, with Rivet's reasonable assistance.
+
+### 10. Order of precedence
+
+If the DPA conflicts with the Terms of Service on a matter of privacy or
+PHI, the DPA controls.
+
+### 11. Governing law
+
+Ontario law applies. Disputes proceed in Ontario courts.
+
+## Where to read the full text
+
+The complete DPA text is presented to you at signup, and an electronic
+acceptance record is preserved — including a SHA-256 hash of the exact
+text you saw at the time you accepted. If you need a fresh copy or want
+to verify your current acceptance, email `hello@getrivet.ca`.
+
+## When the DPA changes
+
+Material changes to the DPA — a new sub-processor that handles client
+information, a change in retention defaults, a change in Rivet's role —
+are surfaced to you for re-acceptance before they take effect for your
+account. Cosmetic edits (clarifications, formatting) don't require
+re-acceptance but are noted in the document's revision history.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="PHIPA and Rivet" icon="scale-balanced" href="/privacy/phipa-and-rivet">
+    The legal characterization the DPA papers.
+  </Card>
+  <Card title="Client data handling" icon="database" href="/privacy/client-data-handling">
+    The retention schedule the DPA inlines.
+  </Card>
+  <Card title="Breach response" icon="triangle-exclamation" href="/privacy/breach-response">
+    The notification flow the DPA commits to.
+  </Card>
+</CardGroup>

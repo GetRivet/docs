@@ -1,0 +1,151 @@
+---
+title: "How Rivet and your EHR fit together"
+description: "Rivet holds the session's clinical record — notes, measures, and risk — while your EHR remains the system of legal record. The two coexist, and you control the handoff."
+---
+
+Rivet is the **session layer**. Your EHR — Jane, Owl, or whatever
+system you already run — is the **system of legal record** for your
+practice. They aren't competing. They're doing different jobs, and
+they coexist.
+
+## What Rivet now holds
+
+Rivet holds a clinical record tied to each session: the progress notes
+you write in Rivet, the item-by-item responses and scores from
+assessments you administer during the video session, and a risk level
+derived from those assessments. These live on Rivet's Canadian
+infrastructure alongside your voicemails, messages, and call history.
+
+| In Rivet | In your EHR |
+|---|---|
+| Voicemails (audio + transcript) | Diagnoses |
+| Inbound and outbound SMS | Treatment plans |
+| Call history | Therapeutic formulations |
+| Video session metadata (who joined, how long) | Billing records |
+| Assessment responses (item-by-item answers and scores) | The longitudinal chart |
+| Assessment scores and severity bands | |
+| Derived risk level (from C-SSRS or PHQ-9 item 9) | |
+| Progress notes (signed and locked; corrections via addenda) | |
+| Client record fields (date of birth, emergency contact, referral source, consent log) | |
+
+## How the two systems coexist
+
+Your EHR is the system of legal record. Rivet doesn't replace it and
+isn't trying to. The clinical record Rivet holds is the **session
+record** — what happened in this session, measured and noted while
+it was happening. It's the data you need to get a clean entry into
+Jane or Owl.
+
+The handoff from Rivet into your EHR works in three forms:
+
+- **Copy for Jane** — plain text of a single note, ready to paste.
+- **Per-note PDF** — one note, formatted for printing or attachment.
+- **Structured client export** — a document built from source data that
+  assembles every note and every completed assessment's full
+  question-and-answer record into one printable file, with an optional
+  date filter. This is the file you'd attach to a referral, hand to a
+  covering colleague, or produce in response to a records request.
+
+The export includes every note regardless of whether it's been signed
+in Rivet, labeled clearly ("Signed in Rivet" or "Draft — not signed in
+Rivet"). For practitioners who finalize and legally sign in Jane or
+Owl, the export is the bridge — not a gate.
+
+## Progress notes: signed and immutable
+
+A progress note you write in Rivet can be signed and locked. Once
+signed, the note body doesn't change. Corrections go through
+**append-only addenda** — a dated entry is appended to the note, never
+editing the original. That's the defensible shape for a correction
+trail.
+
+Signing a note in Rivet is not the load-bearing legal signature for
+practitioners who finalize in their EHR. It's an integrity commitment —
+it means the note body at the time of export is the note body as you
+wrote it. Your EHR remains where the legally-signed record lives.
+
+## The measurement-data distinction is still real
+
+When you push a PHQ-9 or a GAD-7 in a session, the client fills it
+out and Rivet stores the full response — item by item — alongside the
+computed score and severity band. That full response is what goes into
+the structured export.
+
+What the export contains:
+
+- Every completed assessment: the question text, the client's answer,
+  the score, and the severity band.
+- Every progress note: the note body, addenda (if any), and sign status.
+
+What stays in your EHR and doesn't move to Rivet:
+
+- Your clinical interpretation of why the measure came back at that
+  score for this specific client.
+- Diagnoses, treatment plans, and therapeutic formulations.
+- The longitudinal record your EHR owns.
+
+The score is the data point. The narrative, the formulation, and the
+plan are the chart. Rivet captures what happened in the session; your
+EHR holds the interpretation and the long-term record.
+
+## Worksheet annotations are still session-only
+
+The scratch annotations you jot on a worksheet during a session — the
+"note" textareas next to individual assessment items — are
+**practitioner-private**. They live in your browser's memory only,
+never sync to a server, and never reach your client.
+
+They appear in the copy-to-clipboard and PDF export when you choose to
+include them — that's the only path. If you close the session without
+exporting, the annotations are gone. That's intentional: they're
+session scratchpad, not chart data. Progress notes, by contrast, are
+saved and retained.
+
+## Retention
+
+Clinical records in Rivet — progress notes, assessment responses, risk
+assessments, and client record fields — are retained for the duration
+of your account and for no less than **10 years from the date of your
+last clinical interaction with a client**. For a client who was a
+minor at the time of service, the floor is 10 years after they reach
+the age of majority.
+
+This floor reflects the College-level professional-record-retention
+obligation that applies to your practice — the same retention logic
+your EHR applies to the chart.
+
+You are the custodian and you direct retention and deletion. You can
+export at any time. If you close your account, your clinical records
+are made available for export and deleted on your instruction or at
+the end of a 90-day wind-down.
+
+Voicemail audio, transcripts, SMS history, and session metadata retain
+their existing shorter windows: audio at 30 days, caller information
+and conversations at 90 days.
+
+## What this means for your College
+
+The defensible answer to *"where does your clinical record live?"* is:
+
+> The session record — notes, measures, and risk level — lives in
+> Rivet on Canadian infrastructure. My practice's system of legal
+> record remains Jane (or Owl). I use Rivet's export to transfer the
+> session record into Jane after each session. Neither system holds
+> the record alone; they coexist.
+
+Both systems are doing their job. The session record is available to
+export and produce at any time.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Client data handling" icon="database" href="/privacy/client-data-handling">
+    Retention defaults for every category Rivet stores.
+  </Card>
+  <Card title="PHIPA and Rivet" icon="scale-balanced" href="/privacy/phipa-and-rivet">
+    The legal characterization that supports the coexistence model.
+  </Card>
+  <Card title="Works alongside your EHR" icon="link" href="/getting-started/works-alongside-your-ehr">
+    How Rivet fits next to Jane, Owl, Practice Better, and paper.
+  </Card>
+</CardGroup>

@@ -1,0 +1,115 @@
+---
+title: "Choosing your Rivet phone number"
+description: "How the area-code cascade picks three local Canadian numbers near you — and how to pin a specific area code."
+---
+
+The last step of signup is picking the phone number your practice will use.
+Three Canadian numbers appear, picked live from the carrier and as close to
+your city as available stock allows.
+
+## How Rivet picks three numbers
+
+After you enter your city, Rivet asks the carrier for available numbers in
+this order:
+
+<Steps>
+  <Step title="Numbers in your city + your area code">
+    If you've typed an area code into the picker (the small field below
+    the three options), Rivet uses it as a strict filter. Only numbers in
+    that area code, near that city, are returned.
+  </Step>
+  <Step title="Numbers in your city">
+    With no area code typed, Rivet asks for any local number near the city
+    you entered.
+  </Step>
+  <Step title="Numbers in that area code">
+    If the city search comes back empty, Rivet falls back to the area
+    code on its own.
+  </Step>
+  <Step title="Any available Canadian number">
+    A final fallback so signup never dead-ends. In practice you'll only
+    see this if you've typed a city the carrier doesn't recognise.
+  </Step>
+</Steps>
+
+The first three available numbers from whichever step succeeds are what
+you see. Tap **Find more** with a different area code to refresh the list.
+
+## Why area code matters to your clients
+
+For most people, area code is the first thing they read on an incoming
+call. A 519 number says "Windsor" to a Windsor-area client; a 902 number
+says "East Coast." Both are local Canadian numbers, but the perceived
+distance matters when a client is deciding whether to pick up.
+
+If you see 902 in your three options when you typed "Windsor," the
+carrier returned a Windsor, **Nova Scotia** number — Canada has multiple
+Windsors. Type `519` or `226` in the area-code field and tap
+**Find more** to pin Windsor, Ontario.
+
+Common Canadian area codes:
+
+| Area code | Region |
+|---|---|
+| 519 / 226 / 548 | Southwestern Ontario (Windsor, London, Kitchener) |
+| 416 / 647 / 437 | Toronto |
+| 905 / 289 / 365 | GTA (Mississauga, Hamilton, Niagara) |
+| 613 / 343 | Ottawa, Eastern Ontario |
+| 514 / 438 | Montreal |
+| 418 / 581 | Quebec City |
+| 604 / 778 / 236 | Vancouver, BC Lower Mainland |
+| 250 | Rest of BC (Victoria, Kelowna) |
+| 403 / 587 / 825 | Calgary, Southern Alberta |
+| 780 / 587 / 825 | Edmonton, Northern Alberta |
+| 902 / 782 | Nova Scotia + PEI |
+| 506 | New Brunswick |
+| 709 | Newfoundland and Labrador |
+| 204 / 431 | Manitoba |
+| 306 / 639 | Saskatchewan |
+
+<Tip>
+  If you serve clients across two area codes (say, 519 and 226 in
+  Southwestern Ontario), either one reads as local. Pick whichever number
+  pattern you like the look of.
+</Tip>
+
+## What if none of the three feel right
+
+Type a different area code in the picker's area-code field and tap
+**Find more**. Rivet refreshes against the new filter and shows three new
+options. You can iterate as many times as you want before committing.
+
+If the carrier has no stock in a given area code (rare for major metros,
+occasional for small regions), Rivet shows an empty state with a message
+that says so. Try a neighbouring area code, or go back to the previous
+step and pick a larger nearby city.
+
+## Can you change the number later
+
+Not easily. The number you pick during signup is the one your clients
+will save to their contacts, and your auto-reply will identify you as
+"calling from" that number on every outbound text. Treat this picker like
+picking a custom phone number — print it on a card and you live with it.
+
+If you absolutely need to change numbers later (you moved provinces, you
+mistyped the area code, the chosen number turns out to be confusable
+with a local pizza place), email **hello@getrivet.ca** and we'll work
+out a migration plan. Account changes that affect your line are not
+self-serve, because they affect every client who already has your
+number saved.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Your Rivet URL" icon="link" href="/getting-started/your-rivet-url">
+    The other identifier your clients will remember — your URL.
+  </Card>
+  <Card title="Changing your number" icon="phone-arrow-down-left" href="/account/changing-your-number">
+    The deliberate, supported path if you absolutely need to swap numbers
+    later.
+  </Card>
+  <Card title="Comparing practice numbers" icon="scale-balanced" href="https://getrivet.ca/practice-phone-canada">
+    How a Rivet number compares with a carrier line, a second SIM or an
+    answering service.
+  </Card>
+</CardGroup>

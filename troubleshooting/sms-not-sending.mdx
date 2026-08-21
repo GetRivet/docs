@@ -1,0 +1,99 @@
+---
+title: "SMS not sending"
+description: "When a text won't go through — number still provisioning, recipient format wrong, or carrier filtering on the other end."
+---
+
+If you tap Send on a reply and nothing happens — or the message shows up
+but never marks delivered — work through these three causes.
+
+## 1. Your Rivet number is still being provisioned
+
+If you signed up in the last few minutes and try to send a text right
+away, the send fails because Rivet hasn't finished allocating your
+number yet. Provisioning normally takes 60 to 120 seconds.
+
+**Symptom:** The welcome screen still says "Setting up your number" or
+the app shows your number as "pending." Sends from this state silently
+fail.
+
+**Fix:** Wait until the welcome screen flips to "ready" (you'll get an
+SMS at your personal number when it does). Then retry the send.
+
+## 2. The recipient number isn't in the right format
+
+Rivet sends SMS only to North American numbers — Canada and the US, with
+the `+1` country code. Anything outside that is rejected.
+
+**What works:**
+
+- `+15195551234`
+- `5195551234` (Rivet adds the `+1` automatically)
+- `(519) 555-1234`
+- `519-555-1234`
+
+**What doesn't:**
+
+- A UK or European number. Outbound to non-NA numbers is disabled across
+  the board.
+- A number with the wrong country code.
+- A number that's missing a digit (a typo — the send fails with a
+  bad-recipient error, which surfaces in the message thread).
+
+<Note>
+  Inbound SMS works from anywhere — clients in other countries can text
+  your Rivet number and the message arrives in your inbox normally. Only
+  outbound is restricted to North America, for cost-abuse reasons.
+</Note>
+
+## 3. Carrier filtering on the recipient's side
+
+Rare, but it happens. Some Canadian mobile carriers (Bell, Telus,
+Rogers) filter messages from numbers they don't recognise, especially
+messages with URLs or that look templated. The send leaves Rivet, but
+the carrier silently drops it before delivery.
+
+**Symptoms:** The message shows as sent in the thread, but the recipient
+says they never got it. Other messages to the same recipient sometimes
+land, sometimes don't.
+
+**What helps:**
+
+- Avoid URLs in the first message to a brand-new contact. Once they've
+  texted you back, you've built reputation with the carrier and links
+  are fine.
+- Keep messages short and human ("Hi, this is Sarah from Riverside —
+  can we reschedule for Thursday?") rather than templated.
+- If filtering persists for a specific client, ask them to text you
+  first. The carrier whitelists outbound replies to a number that's
+  already messaged you.
+
+This is a known and unfortunate part of how Canadian SMS carriers
+work — there isn't a guaranteed fix on Rivet's side. Toll-free upgrades
+mitigate it but cost more and aren't worth it for most practitioners.
+
+## What about messages that look sent but aren't delivered?
+
+The thread shows your reply with no "Delivered" tag, or there's a small
+warning icon next to it.
+
+If the icon shows, hover (desktop) or tap (mobile) — it'll tell you the
+error code. The most common are:
+
+- **30003** — the recipient's phone is unreachable (off, no signal, or
+  the number is no longer in service). Retry later; if it persists for
+  the same recipient, the number may have changed.
+- **30005** — unknown destination. Usually a typo in the number.
+  Confirm with the client and update the contact.
+- **30007** — message blocked by the carrier. This is the filtering
+  case above.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Calls not coming through" icon="phone-slash" href="/troubleshooting/calls-not-coming-through">
+    Same loop, but for inbound calls instead of outbound text.
+  </Card>
+  <Card title="Contacting support" icon="envelope" href="/troubleshooting/contacting-support">
+    What to send if filtering keeps happening to the same recipient.
+  </Card>
+</CardGroup>

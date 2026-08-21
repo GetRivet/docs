@@ -1,0 +1,161 @@
+---
+title: "The session arc"
+description: "The closing card at the end of an EMDR session — SUDS trajectory curve, stats tiles, and a one-tap Copy of the session summary for your chart."
+---
+
+The session arc card is the closing surface of the EMDR Workspace. It
+renders after the last set's SUDS is captured and gives you a clean
+session-level read before you close the session — plus a one-tap export of
+a plain-text session summary that drops into your chart.
+
+## What the arc card shows
+
+A glass-card overlay centered on the dimmed session canvas. Top to bottom:
+
+- **Session complete** title with a green check icon
+- A **mode pill** showing whether the session ran in EMDR 2.0, Classic, or
+  Flash — Beta
+- The **SUDS curve** — a graph of the session's SUD trajectory, with a dot
+  at each captured reading and a label below it
+- Three **stat tiles** — SUDS arc, Passes, Modalities
+- Two buttons — **Copy** and **Done**
+
+## The SUDS curve
+
+The curve plots every SUD value the session captured, with the y-axis
+running from 10 (top) to 0 (bottom). The shape of the curve is the
+diagnostic surface — a steady descent reads as productive reprocessing; a
+flat or rising curve is a signal that the work didn't settle.
+
+Each dot is labeled by what it captured — "Pre" for a baseline reading,
+"Set 1," "Set 2," and so on for between-sets readings, and "End" for the
+end-of-session reading. The area beneath the curve is shaded lightly to
+give a visual sense of cumulative distress over the session.
+
+When a session captures both a baseline and an end reading, the headline
+delta on the SUDS arc tile is baseline → end — a true pre/post read.
+Sessions without both anchors fall back to first captured → last
+captured, the same as before.
+
+## The stat tiles
+
+Three tiles render the session-level numbers at a glance.
+
+**SUDS arc**
+The first SUDS, an arrow, the final SUDS, and the delta in parentheses.
+Example: `7 → 1 (-6)`. A negative delta is the typical productive outcome.
+
+**Passes**
+The total number of bilateral passes across all sets. This is the count of
+L↔R sweeps the stimulus made — useful as a session-volume number when
+comparing across sessions.
+
+**Modalities**
+Chips naming what ran — visual, audio. Useful for the chart record:
+"today's session ran visual and audio at 1.5 Hz."
+
+**VOC arc**
+Shows only when the session captured a VOC reading at both baseline and
+end — the belief-strength shift, `2 → 6`. See
+[The SUDS scale](/emdr/the-suds-scale) for what VOC captures and when.
+
+## The Copy button
+
+Tap **Copy** and a plain-text session summary lands on your clipboard.
+
+The format, for a session that used baseline + end check-ins with an
+on-demand reading mid-session and an optional VOC at both ends:
+
+```
+EMDR session — Classic EMDR
+Client: [name if captured]
+Date: 2026-06-21
+Duration: 28 min
+Sets: 4
+Passes: 168
+Modalities: visual
+Stimulus: dot
+Path: horizontal
+Rate: 1.0 Hz
+Backdrop: photo_forest
+
+SUDS by set:
+  Pre-session SUD: 7
+  Set 3 SUD: 5
+  End of session SUD: 1
+SUD 7 -> 1 (pre -> end)
+Pre-session VOC: 2
+End of session VOC: 6
+```
+
+A session that used every-set check-ins (the EMDR 2.0 default) lists a
+SUD line for every set instead, and the summary line falls back to
+`SUDS arc: first → last` when there's no baseline or end anchor to pair.
+
+Paste this directly into your EHR session note, into a session log you
+keep yourself, or into a SOAP-note Rivet template. It captures everything
+your chart needs from the session without any extra typing.
+
+The button briefly shows a green check + "Copied" state to confirm. If
+your browser blocks clipboard access, the Workspace falls back to an
+older copy method that works in older browsers.
+
+## The Done button
+
+**Done** closes the Workspace and returns you to the regular session view.
+The video call continues — closing the EMDR Workspace does **not** end
+the call. You can take time for closure work, the Container resource, or
+just talk before ending the session normally.
+
+This is intentional. The session arc card is the end of the **bilateral
+stimulation portion**, not the end of the therapy hour.
+
+## Where the arc goes
+
+- The SUDS values come from your browser's session storage for the
+  duration of the session
+- The stat tiles are computed from those values plus the session config
+- When the arc card renders, the outcome saves to the client's chart
+  automatically — no extra tap needed
+- The Copy button is still there any time you want the plain-text summary
+  on your clipboard too, for pasting into an EHR note or a session log
+
+If the session isn't linked to a client — a call that didn't start from a
+client check-in — there's nowhere on the chart to save the outcome. The
+privacy callout on the card tells you plainly when that's the case; Copy
+still works.
+
+<Note>
+  A linked session's outcome is on the client's chart the moment the arc
+  card renders. Copy is for a second copy in your own workflow — an EHR
+  note, a session log — not the only way to keep it.
+</Note>
+
+## What the arc card isn't
+
+- **Not a clinical assessment.** The SUDS curve is a process measure, not a
+  validated PTSD outcome measure. Pair with a PCL-5 across sessions to
+  track diagnostic and outcome change.
+- **Not auto-sent.** Rivet doesn't send the session summary to an EHR or
+  to your client. You decide where it goes — paste destination, your call.
+- **Not a recording.** There is no audio, no video, no transcript. The
+  session arc is a numeric summary built from your between-sets captures.
+- **Not editable.** If a SUDS value was captured wrong, edit it in the
+  Copy output before you paste. The card itself is read-only at this
+  point in the flow.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="The SUDS scale" icon="activity" href="/emdr/the-suds-scale">
+    Wolpe's 0–10 scale, the between-sets capture flow, and the session
+    sparkline.
+  </Card>
+  <Card title="Practitioner controls" icon="hand" href="/emdr/practitioner-controls">
+    Spacebar start, pause, and the controls that bring you to the arc.
+  </Card>
+  <Card title="EMDR templates" icon="folder" href="/clinical-templates/emdr/overview">
+    Calm place, Container, Body scan — pair with the Workspace for full
+    Phase 2 and Phase 7 closure.
+  </Card>
+</CardGroup>

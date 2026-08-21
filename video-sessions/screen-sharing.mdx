@@ -1,0 +1,133 @@
+---
+title: "Sharing your screen"
+description: "Screen share where your client sees your shared content as the main stage AND your face in a corner tile. Your presence stays in the call."
+---
+
+When you share your screen during a therapy session, your face matters. A
+client watching a safety plan, an EMDR target image, or a worksheet
+shouldn't lose sight of you in the same moment you're handing them
+something emotionally weighted. Rivet's screen share keeps your camera
+visible to the client as a corner tile throughout the share.
+
+This is the single most important way Rivet's video differs from generic
+meeting tools.
+
+## How it works
+
+When you tap **Share Screen** in the toolbar, a small picker appears with
+two choices:
+
+- **Share Screen** — opens your browser's native screen picker (Chrome,
+  Safari, Firefox each have their own). You pick a window, a tab, or
+  your whole screen. The share starts.
+- **Whiteboard** — mounts the in-session whiteboard instead of a real
+  screen share. See [Whiteboard](/whiteboard/overview).
+
+When the share is live, the client's view becomes:
+
+```
+┌──────────────────────────────────────────────┐
+│                                              │
+│                                ┌──────────┐  │
+│                                │   You    │  │  ← your cam, corner tile
+│                                └──────────┘  │
+│                                              │
+│       Your shared content                    │
+│       (main stage, full-bleed)               │
+│                                              │
+│                                              │
+└──────────────────────────────────────────────┘
+```
+
+Both your camera and your shared content reach the client at the same
+time. The client's screen shows the shared content in the main stage
+and your face in the corner.
+
+Your own view stays mostly the same — you see the client's video as the
+main stage, your own camera and a small preview of what you're sharing.
+
+## Why your face stays visible when you share
+
+In Zoom, Meet, and most generic meeting tools (until very recently), when
+the host shares their screen, the host's camera is replaced by the shared
+content. The client sees the screen but loses the host's face entirely
+for the duration of the share.
+
+For a therapist sharing a safety plan with a client in crisis, that's not
+ideal. For an EMDR session sharing a target image, it can be actively
+counterproductive — EMDR depends on the therapist's continuous co-regulating
+presence and clients can read the disappearance as withdrawal.
+
+Rivet adds the screen while keeping your camera running. Your client sees both.
+
+## Bandwidth and quality during a share
+
+While you're sharing, your camera automatically drops to a lower
+resolution — the face tile is small enough that you won't see the
+difference, and the reduced camera load gives the screen share more
+room on the connection. When you stop sharing, your camera resolution
+returns automatically.
+
+## What happens on slower or older browsers
+
+On very old browsers (rare in 2026), the face tile can't appear
+alongside the shared content. In that case, the screen replaces your
+camera for the duration of the share — the client still sees your
+shared content, just not your face while sharing. Most sessions never
+hit this path.
+
+## Stopping a share
+
+Three ways to stop:
+
+- **Tap Share Screen again in the toolbar.** Most reliable.
+- **Tap "Stop sharing" in your browser's native sharing bar.** The black
+  bar at the top of your screen Chrome/Safari put up while you're
+  sharing. Same result.
+- **End the call.** Tearing down the call tears down the share.
+
+Once the share stops, the layout snaps back to standard — client's
+video fills the main stage, your camera returns to its corner tile, your
+camera resolution returns to full.
+
+## What's safe to share
+
+What you share is end-to-end encrypted, the same as the audio and
+video. It's not stored, and it's not recorded.
+
+A few practical caveats:
+
+- **Anything visible on the shared screen is visible to the client.**
+  Close email, hide notifications, and pick a specific window rather than
+  your whole screen if you want to be precise.
+- **Notifications that pop up during a share are visible.** Turn on Do
+  Not Disturb (macOS Focus / Windows Focus Assist) before sharing.
+- **System audio is not shared.** Rivet shares video only — if you play
+  a sound on your computer, the client doesn't hear it. If you need to
+  share audio for a clinical reason (e.g. a guided meditation track), use
+  the EMDR auditory bilateral stimulation instead, which is purpose-built
+  for in-session audio.
+
+## What's not in scope
+
+- **Tab audio.** Some tools let you share a Chrome tab including the audio
+  playing in it. Rivet doesn't (the use case for therapy is narrow, and
+  the cross-browser story is unreliable).
+- **Annotation on top of the share.** Use the whiteboard if you want a
+  drawable surface — it's the same workflow.
+- **Client initiating a share.** The Share Screen button is host-only.
+  Clients can't share their screen back to you.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Whiteboard" icon="pen-line" href="/whiteboard/overview">
+    The drawable alternative to a screen share.
+  </Card>
+  <Card title="The session workspace" icon="display" href="/video-sessions/the-session-workspace">
+    Where the Share Screen button lives.
+  </Card>
+  <Card title="EMDR overview" icon="waveform" href="/emdr/overview">
+    Bilateral stimulation in the same session.
+  </Card>
+</CardGroup>

@@ -1,0 +1,125 @@
+---
+title: "Canadian sales tax"
+description: "HST, GST, and PST — calculated automatically based on your billing address."
+---
+
+Rivet's $65 / month price is **before sales tax**. The applicable
+Canadian sales tax — HST, GST, or GST + PST depending on your province
+— is added on top of the $65 at checkout and calculated automatically;
+you don't configure anything, and we don't either.
+
+## What you pay, by province
+
+The total you see at checkout, and on every monthly invoice, is $65
+plus the relevant tax rate for your billing address. As of writing:
+
+| Your province | Tax | Rate | Monthly total |
+|---|---|---|---|
+| Ontario | HST | 13% | $73.45 |
+| Newfoundland | HST | 15% | $74.75 |
+| Nova Scotia | HST | 15% | $74.75 |
+| New Brunswick | HST | 15% | $74.75 |
+| Prince Edward Island | HST | 15% | $74.75 |
+| British Columbia | GST + PST | 5% + 7% | $72.80 |
+| Saskatchewan | GST + PST | 5% + 6% | $72.15 |
+| Manitoba | GST + RST | 5% + 7% | $72.80 |
+| Quebec | GST + QST | 5% + 9.975% | $74.73 |
+| Alberta | GST | 5% | $68.25 |
+| Yukon | GST | 5% | $68.25 |
+| Northwest Territories | GST | 5% | $68.25 |
+| Nunavut | GST | 5% | $68.25 |
+
+Rate changes are tracked automatically. If a province updates its
+rate, your next invoice reflects the new rate without us touching
+anything.
+
+## How your province is determined
+
+From the **billing address** you enter at checkout. The form includes
+a country, province, and postal code. The province
+determines the rate; the postal code is for tax-authority compliance
+when a province has sub-provincial rate variations (rare, but the
+mechanism exists).
+
+If you move provinces:
+
+<Steps>
+  <Step title="Open your billing portal">
+    Via any past invoice email, or request a fresh link from
+    hello@getrivet.ca.
+  </Step>
+  <Step title="Update your billing address">
+    The "Billing information" section. Change the province and
+    postal code to your new location.
+  </Step>
+  <Step title="Save">
+    The next monthly invoice uses the new province's rate. Past
+    invoices stay as issued.
+  </Step>
+</Steps>
+
+The transition month uses whichever province's rate was on file at
+the moment the charge ran. If you moved on the 5th and got charged
+on the 18th, the new province's rate applies.
+
+## Claiming input tax credits
+
+Your Rivet subscription is a normal business expense. If you're
+registered for GST/HST and use Rivet to deliver your practice's
+services, the GST/HST on each invoice is recoverable as an input tax
+credit. Standard CRA rules apply — your bookkeeper handles this.
+
+Every Rivet invoice includes:
+
+- Our business name (**Rivet Systems Inc.**).
+- Our registered business address (Belle River, Ontario).
+- Our **GST/HST number**.
+- The tax amount broken out as its own line.
+
+That's the exact set of fields the CRA requires on an input-tax-credit
+document. Your bookkeeper can claim the credit straight from the
+invoice PDF.
+
+## Are health-care services tax-exempt?
+
+A common question for therapists and other regulated practitioners.
+Health-care services your clients receive *from you* may be GST/HST
+exempt under the CRA's health-services rules — but the tools you use
+to deliver them aren't. Software subscriptions like Rivet are
+taxable supplies regardless of how the underlying practice is
+classified.
+
+If you're a regulated practitioner uncertain about your own
+tax-exempt status, talk to an accountant familiar with your province.
+We can't advise on the exemption status of your specific practice.
+
+## Why tax calculation is handled automatically
+
+A short rationale, for transparency:
+
+- **Provincial rates change.** Our payment provider has compliance staff whose
+  full-time job is tracking these changes; we'd be re-implementing
+  their work badly.
+- **Sub-provincial nuances matter.** Some municipalities have transient
+  accommodation taxes, some have rate-variation rules; the tax engine
+  encodes these correctly for the categories that apply to digital
+  services.
+- **Audit defensibility.** When a CRA auditor asks why a specific
+  invoice charged 13% instead of 15%, there's a documented ruling for
+  every charge. Building our own would mean defending our own table of
+  rules; using a dedicated tax engine means the answer is "their
+  published methodology."
+
+The downside: we can't override the calculated rate. If you believe the
+rate on your invoice is wrong, email us and we'll look into it.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Invoices and receipts" icon="receipt" href="/billing/invoices-and-receipts">
+    Where the sales-tax line shows up on each invoice.
+  </Card>
+  <Card title="Payment methods" icon="credit-card" href="/billing/payment-methods">
+    The checkout page where you set your billing address.
+  </Card>
+</CardGroup>

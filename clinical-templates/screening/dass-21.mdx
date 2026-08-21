@@ -1,0 +1,147 @@
+---
+title: "DASS-21 — Depression, Anxiety, Stress Scales"
+description: "Three subscales in one 21-item form — when symptoms overlap and you need to separate depression, anxiety, and stress arousal."
+---
+
+The DASS-21 splits negative emotional state into three distinct subscales:
+Depression, Anxiety, and Stress. That separation is the reason to use it.
+A client whose PHQ-9 is moderate and whose GAD-7 is also moderate may
+look like a clean depression-plus-GAD case — but the DASS-21 can show that
+the bulk of the load is actually non-specific stress arousal, which
+points your treatment plan somewhere different.
+
+Twenty-one items, one week look-back, three subscale scores. Free for
+clinical use — Lovibond's stated position: "Researchers and clinicians
+are welcome to use the DASS in their work."
+
+## What it measures
+
+Three independent dimensions, seven items each:
+
+- **Depression (D)** — dysphoria, hopelessness, devaluation of life,
+  self-deprecation, anhedonia, inertia.
+- **Anxiety (A)** — autonomic arousal, situational anxiety, subjective
+  experience of anxious affect.
+- **Stress (S)** — chronic non-specific arousal: difficulty relaxing,
+  nervous energy, irritability, agitation, impatience.
+
+The Stress subscale is the differentiator. It captures the
+overactivated, can't-wind-down state that PHQ-9 and GAD-7 don't reach.
+
+## When to use it
+
+- **Mixed presentations.** A client whose symptoms blur across
+  depression and anxiety — the DASS-21 separates them.
+- **Burnout and adjustment work.** The Stress subscale is where
+  burnout shows up most cleanly.
+- **Pre/post a specific intervention.** All three subscales are
+  sensitive to change.
+- **Less often weekly than PHQ-9** — 21 items is long for routine
+  monitoring. Monthly is the common cadence.
+
+## How clients fill it out
+
+Each item rated 0-3 over the past week (Did not apply to me at all →
+Applied to me very much, or most of the time). Five to seven minutes.
+Reading level grade 7-8.
+
+## Scoring and severity cutoffs
+
+Each subscale is the sum of its seven items, **multiplied by 2**, then
+matched against severity bands.
+
+### Why the × 2 transformation matters
+
+The DASS-21 is a short form of the original 42-item DASS. Lovibond
+published the severity bands using the 42-item norms. To make a
+21-item subscale comparable, each subscale total is doubled — that
+puts a DASS-21 score on the same scale as the 42-item norms the bands
+were derived from.
+
+Skipping the × 2 step puts every client in a falsely low band. Rivet
+applies it automatically — the multiplier is part of the scoring
+config, so the score you see on screen and in the session note is
+already transformed.
+
+### Severity bands (after × 2)
+
+| Severity | Depression | Anxiety | Stress |
+|---|---|---|---|
+| Normal | 0-9 | 0-7 | 0-14 |
+| Mild | 10-13 | 8-9 | 15-18 |
+| Moderate | 14-20 | 10-14 | 19-25 |
+| Severe | 21-27 | 15-19 | 26-33 |
+| Extremely severe | 28+ | 20+ | 34+ |
+
+(Bands per the Lovibond DASS site at psy.unsw.edu.au/dass.)
+
+## Clinical change
+
+Each subscale tracks independently — a meaningful improvement in
+Anxiety with no movement in Depression is a real and common pattern.
+A one-band drop on any subscale is typically interpreted as
+clinically meaningful.
+
+## Risk flagging
+
+The DASS-21 doesn't include a suicide item. If your client lands in
+Severe or Extremely Severe on Depression, pair with a risk-specific
+instrument (C-SSRS) and pick up risk in conversation.
+
+## DASS-21 vs PHQ-9 and GAD-7
+
+The [PHQ-9](/clinical-templates/screening/phq-9) and
+[GAD-7](/clinical-templates/screening/gad-7) pair covers depression and
+generalized anxiety. The DASS-21 covers those two and adds a third thing
+neither one measures: general stress and arousal — tension, agitation,
+being easily upset — that belongs to neither diagnosis. When a client is
+clearly struggling and the depression and anxiety numbers come back
+unremarkable, that third subscale is usually where the answer is.
+
+The trade-off is length and recognition. Twenty-one items against sixteen,
+a past-week frame rather than two weeks, and a scoring step the PHQ-9 and
+GAD-7 don't have — each subscale sum is doubled before you read it against
+the published bands. The PHQ-9/GAD-7 pair is also what a referrer or
+insurer expects to see. Most practices use the pair as the routine measure
+and bring in the DASS-21 when the picture needs separating.
+
+## Is it free to use?
+
+**Yes.** The authors' stated position is that “researchers and clinicians are welcome to use the DASS in their work”.
+
+## Citation
+
+Lovibond, S. H., & Lovibond, P. F. (1995). *Manual for the Depression
+Anxiety Stress Scales* (2nd ed.). Psychology Foundation of Australia.
+
+Lovibond, P. F., & Lovibond, S. H. (1995). "The structure of negative
+emotional states: Comparison of the Depression Anxiety Stress Scales
+(DASS) with the Beck Depression and Anxiety Inventories." *Behaviour
+Research and Therapy,* 33(3): 335-343.
+
+Free clinical use. Verbatim canonical wording.
+
+## When not to use it
+
+- **You want a single distress number, not three subscales.** Use
+  the K10.
+- **You want a DSM-aligned depression score.** Use the PHQ-9.
+- **You want a generalized-anxiety-disorder-aligned score.** Use
+  the GAD-7.
+- **Children or adolescents.** Use age-appropriate measures
+  (SDQ, RCADS).
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="K10" icon="chart-line" href="/clinical-templates/screening/k10">
+    The single-score Canadian distress screener.
+  </Card>
+  <Card title="PSS-10" icon="wind" href="/clinical-templates/screening/pss-10">
+    Stress-specific when the DASS Stress subscale is your only
+    focus.
+  </Card>
+  <Card title="PHQ-9" icon="chart-column" href="/clinical-templates/screening/phq-9">
+    DSM-aligned depression score for the depression-specific work.
+  </Card>
+</CardGroup>

@@ -1,0 +1,97 @@
+---
+title: "Getting notes out of Rivet"
+description: "Three paths for moving notes into your existing practice record — plain text, per-note PDF, and a full client export with a date-range filter."
+---
+
+Rivet holds your session. Your record of practice stays where it already lives — in Jane, Owl, your paper chart, or wherever you work today. Three export paths get notes from Rivet into that system, depending on how much you want to move at once.
+
+Every note is available for export regardless of whether it has been signed in Rivet. Signed and draft notes are labeled differently so you know the status when you paste or attach them.
+
+## Copy for Jane
+
+The fastest path. Open a note on the client's record and tap **Copy for Jane**. The note formats as plain text — section headings and content — and lands on your clipboard. Paste it into your EHR's note field, an encrypted message, or anywhere else that accepts text.
+
+The pasted text is labeled at the top so the status is clear when it lands in Jane:
+
+```
+DAP note — Signed in Rivet · June 20, 2026
+```
+
+or
+
+```
+DAP note — Draft, not signed in Rivet
+```
+
+Whether you then sign the note in your EHR is a separate step — the label doesn't substitute for that. For practitioners who sign in Jane, the EHR signature is the legally significant one; signing in Rivet is a record-keeping step within the Rivet system.
+
+## Per-note PDF
+
+Open a note and tap **Download PDF**. Rivet builds a print-ready document and opens your browser's print dialog. Choose **Save as PDF** and the file lands on your disk.
+
+The PDF includes the note sections, the client name, the session date and time, and the same Signed/Draft label as the plain-text export. It's designed to attach to a client's file in your EHR's document manager or to print and place in a paper chart.
+
+## Full client export
+
+The full export assembles a clinical record document from a date range you set — all the notes and assessments for that client over that period, in one PDF.
+
+Open the client's record and tap **Export record**. Set a date range and tap **Generate**. The export includes:
+
+- **Every progress note** in the range, with its full text and its Signed/Draft label
+- **Every completed assessment** in the range — the question text, the client's response for each item, the total score, and the severity band
+- The client's name and the date range at the top of the document
+
+The result is a document that reads like a chart section: notes in order, assessments following as attachments. It's useful for discharge summaries, handoffs to another practitioner, or responding to a college records request.
+
+The date-range picker lets you scope the export to a particular episode of care rather than pulling the full history every time.
+
+## What's in the export, what isn't
+
+Any of the three exports includes:
+
+- The note text (all sections)
+- The client name and session date
+- The sign status and date, or a Draft label
+- For the full export: completed assessment responses, scores, and severity bands
+
+Not included in any export:
+
+- Audio or video from the session — Rivet doesn't record sessions
+- Notes or assessments outside the scoped client and date range
+- Billing or scheduling information — that lives in your EHR
+
+## The two-tool pattern in practice
+
+If Jane or Owl is your system of record, the workflow most practitioners use:
+
+<Steps>
+  <Step title="Write and save the note in Rivet after the session">
+    The draft persists on the client's record.
+  </Step>
+  <Step title="Sign the note in Rivet when it's ready">
+    Optional but recommended before the next session — signed notes are labeled as finalized when they land in your EHR.
+  </Step>
+  <Step title="Copy for Jane, paste into your EHR's note field">
+    Then sign in your EHR as you normally would. That signature is the one your college expects.
+  </Step>
+  <Step title="Attach the PDF if your EHR supports it">
+    Especially useful for intakes and sessions with multiple completed assessments.
+  </Step>
+  <Step title="Use the full client export for summaries and requests">
+    End of an episode, discharge, or records request — the date-range export produces a clean document without reconstructing it from individual notes.
+  </Step>
+</Steps>
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Progress notes" icon="file-pen" href="/client-record/progress-notes">
+    Writing, signing, and correcting notes before you export them.
+  </Card>
+  <Card title="Your client record" icon="user-circle" href="/client-record/overview">
+    The record the notes live on between sessions.
+  </Card>
+  <Card title="Works alongside your EHR" icon="hospital" href="/getting-started/works-alongside-your-ehr">
+    The broader picture of how Rivet sits beside Jane, Owl, or whatever you already run.
+  </Card>
+</CardGroup>

@@ -1,0 +1,214 @@
+---
+title: "Video issues"
+description: "Black screen, choppy video, the wrong camera on stage — what to check, in the order that fixes the most common cases."
+---
+
+When video breaks, the cause is usually one of: another app holding the
+camera, a browser permission, or a bandwidth problem. Work through these
+in order.
+
+## Black screen — camera not detected
+
+The pre-join shows a black self-preview, or the session starts with no
+video coming from you.
+
+<Steps>
+  <Step title="Close other camera apps">
+    Zoom, Microsoft Teams, Google Meet, Loom, OBS, the macOS Photo Booth —
+    only one app at a time can access the camera. If Zoom is open in
+    another tab or window, it's holding the camera and the browser can't
+    open it. Quit Zoom (and Teams, and any other meeting app), then refresh
+    the Rivet tab.
+  </Step>
+  <Step title="Check the browser permission">
+    Click the camera icon in the address bar. Make sure permission is set
+    to Allow for `getrivet.ca` (or your custom domain). If it's blocked,
+    change it to Allow and refresh the page.
+  </Step>
+  <Step title="Verify the physical camera">
+    On a laptop, check that the privacy shutter isn't closed. Some
+    ThinkPads, Dells, and HPs have a sliding shutter over the webcam.
+    On a Mac, the green LED next to the camera should be on once the
+    browser opens it — if not, the OS hasn't connected to the camera at
+    all (often the "close other apps" step above).
+  </Step>
+</Steps>
+
+## Permission denied — the prompt was dismissed
+
+If you (or your client) accidentally tapped Block on the camera/mic
+permission prompt, the browser remembers that decision and won't ask
+again. The session loads but the video is black.
+
+**Fix in Chrome / Edge:** Click the lock icon in the address bar →
+**Site settings** → Camera → **Allow**. Same path for Microphone.
+Refresh the page.
+
+**Fix in Safari (Mac):** Safari menu → **Settings for getrivet.ca** →
+Camera: Allow. Microphone: Allow. Refresh.
+
+**Fix on iPhone:** Settings → Safari → Camera → Ask or Allow. Settings →
+Safari → Microphone → Ask or Allow. Then close Safari completely and
+reopen the link.
+
+## Choppy or freezing video
+
+Almost always one of two things: CPU saturation or bandwidth.
+
+**CPU:** Quit other apps. Especially ones using video — a second browser
+window with YouTube playing, a screen-recording app, anything that's
+encoding or decoding video alongside Rivet. On an older laptop, even a
+crowded Chrome with 30 tabs can starve the encoder.
+
+**Bandwidth:** Same test as audio — check Wi-Fi signal, check if
+something else on the network is downloading, ask whether the connection
+is wired or wireless. The connection adapts down to about 250 kbps
+before it gives up; if the network can't sustain that, video will
+stutter or freeze.
+
+**The quick fix when both fail:** Turn off your video for the rest of
+the session. Audio-only delivers a usable session on connections that
+can't sustain video.
+
+## Wrong camera selected
+
+You have a webcam plugged in, but the laptop is using its built-in
+camera (or vice versa). The browser picks one at session start; switching
+mid-session means opening browser settings.
+
+**Fix in Chrome:** Click the lock icon → Site settings → scroll down to
+Camera → pick the device you want from the dropdown → refresh the page.
+
+**Fix in Safari:** Settings for getrivet.ca → Camera → choose the device.
+
+Most browsers remember the choice for next time.
+
+## The "starting…" spinner that never resolves
+
+The session shows "Connecting…" and never progresses to live video.
+
+This is usually a network problem at the connection stage. Two
+fixes:
+
+<Steps>
+  <Step title="Refresh and rejoin">
+    Most reliable single fix. Close the tab, open the session link again,
+    rejoin. The connection retries from scratch.
+  </Step>
+  <Step title="Try a different network">
+    Some corporate and hospital networks block video call traffic.
+    Rivet has a relay fallback (handled automatically), but if even
+    that's blocked, switching to a phone hotspot or a home network
+    usually works.
+  </Step>
+</Steps>
+
+## What you'll see if the connection has trouble
+
+Rivet shows you what's happening in plain language. You don't have to
+guess or refresh blindly. There are a small handful of states you
+might see during a degraded call — here's what each one means and
+what (if anything) you should do.
+
+### "Reconnecting…" — small banner at the top
+
+The signaling connection to our server blipped briefly. Audio and
+video usually keep flowing during this — they go peer-to-peer and
+don't depend on the signaling channel for the moment. Rivet is
+silently re-establishing the channel in the background. The banner
+only appears after about 30 seconds of trying — most reconnects happen
+faster than that and you never see anything.
+
+**What to do:** nothing. The banner auto-clears the moment it's back.
+
+### "Other person disconnected, waiting…" — small banner at the top
+
+Your client's (or practitioner's) tab refreshed, their WiFi blipped,
+or their browser crashed. Rivet is holding the call open for up to
+30 seconds while they come back. Your audio and video stay live on
+your end; the other tile may show their last frame frozen until they
+return.
+
+**What to do:** nothing. If they come back within 30 seconds, the
+banner clears and the call resumes. If they don't, you'll see "The
+other person left" and the call ends naturally.
+
+### "Audio only — video paused, weak connection" — small banner at the top
+
+The network on your side is genuinely struggling — sustained packet
+loss, not just a short blip. To preserve your audio, Rivet has paused
+sending your video. The other person sees your last frame frozen.
+Your audio continues uninterrupted, which is the important part for
+a session.
+
+**What to do:** nothing required. When the network clears for 30
+seconds straight, video auto-resumes. If you'd rather stay video-off
+even after the network recovers, just tap the camera button to mark
+your preference — Rivet honours it.
+
+### "Connection needs to refresh — click below to rejoin" — full-screen card with a Rejoin button
+
+The other person reconnected after a tab refresh or crash, and the
+specific way browser video connections work means your end can't
+keep talking to their fresh connection. Rivet surfaces a **Rejoin
+call** button so one click rebuilds the call cleanly.
+
+**What to do:** click the Rejoin call button. The page reloads, you go
+straight back into the same session (no waiting room, no re-entering
+your details), and the conversation continues.
+
+### "Session ended" — full-screen card
+
+The call ended cleanly. This appears when either party clicked End
+deliberately, or when both sides have been disconnected for longer
+than the 10-minute grace window.
+
+**What to do:** open the session URL again to start fresh.
+
+## If your tab crashes or you accidentally close it mid-session
+
+Rivet auto-rejoins. When you re-open the session URL within 10 minutes
+of the disconnect, you go straight back into the call — no waiting
+room, no re-entering your details, no fresh negotiation that the
+client sees.
+
+How it works behind the scenes: when you first connect to a session,
+the server hands your browser a one-time rejoin token. Your browser
+stashes it tied to that specific session URL. When the same browser
+opens the same URL within the grace window, it presents the token,
+the server recognises you, and slots you back into your previous role
+— practitioner or client, whichever you were.
+
+What this does **not** cover yet:
+- If you reload after **more than 10 minutes**, you go through the
+  pre-join screen again (the rejoin token has expired).
+- If you sign out, close your browser entirely, or open a different
+  browser, the token is on the original browser only — you'd need to
+  rejoin via the URL the normal way.
+- If you click End deliberately, the rejoin path closes — opening the
+  same URL gives you the fresh pre-join screen.
+
+## When your client has trouble
+
+Most session-quality issues are network on one end or the other.
+Before troubleshooting their setup, ask them to:
+
+1. **Reload their tab.** If you're connected and they aren't, this
+   often fixes it within five seconds — Rivet's auto-rejoin path
+   takes them straight back in.
+2. **Check their WiFi strength.** Bars matter; if they're seeing one
+   or two, suggest they move closer to the router or hotspot off
+   their phone.
+3. **Close other tabs / apps.** Browser memory pressure shows up as
+   choppy video before it shows up as anything else.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Audio issues" icon="volume-high" href="/troubleshooting/audio-issues">
+    Echo, one-way audio, sample-rate mismatches.
+  </Card>
+  <Card title="Client can't join" icon="door-closed" href="/troubleshooting/client-cant-join-session">
+    When the problem is on your client's side, not yours.
+  </Card>
+</CardGroup>

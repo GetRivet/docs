@@ -1,0 +1,120 @@
+---
+title: "What's in the template library"
+description: "Standardized measures, therapeutic worksheets, and progress notes — what each is for and what saves to the client's record."
+---
+
+The Rivet template library has three kinds of structured forms, and the
+difference between them shapes how each one is used in the room.
+
+## The three kinds of templates
+
+**Standardized measures.** PHQ-9, GAD-7, K10, DASS-21, PCL-5, AUDIT, and the
+rest of the screening scales. Verbatim canonical wording from the published
+source. Numerical scoring with severity bands. The client fills these — either
+during the call or as an async link before the call.
+
+**Therapeutic worksheets.** Thought records, behavioural experiments, exposure
+logs, EMDR safe-place setup, target identification, SUDS check-ins. Used
+collaboratively during a session — the client writes, you watch, you prompt.
+No "score" — these are clinical artifacts, not measurements.
+
+**Practitioner-private notes.** SOAP, DAP, treatment plan. You fill these on
+your side; the client never sees them and nothing about them is sent to
+their device. The template renders on your screen only.
+
+## What you see in the picker
+
+Templates are grouped by category in the picker, regardless of where you open it from:
+
+- **Screening scales** — PHQ-9, GAD-7, QIDS-SR-16, CES-D-R, SPIN, K10,
+  DASS-21, PCL-5, AUDIT-C, and the other validated measures
+- **Substance use** — AUDIT, AUDIT-C, DAST-10, CRAFFT, CAGE-AID
+- **CBT** — Thought records, distortion checks, behavioural experiments,
+  exposure logs, problem-solving worksheets
+- **EMDR** — Phase tools: safe place, container, body scan, future template,
+  resource development
+- **Crisis** — Stanley-Brown safety plan, RFL-12, ASQ
+- **Outcome tracking** — Session check-ins, ORS/SRS-style measures
+- **Children + adolescents** — Age-appropriate versions of common measures
+- **Clinician-administered** — Forms you fill about the client (HAM-D,
+  MADRS), not self-report
+- **Your notes (private)** — SOAP, DAP, treatment plan — never shared
+
+## How scoring works
+
+When a template carries a scoring config (most screening measures do), Rivet
+computes the score live as the client answers. You see:
+
+- The running total for each subscale
+- The severity band label as soon as the score crosses a threshold
+- A risk flag if a critical item triggers a cutoff (PHQ-9 Item 9, CES-D-R
+  Items 14 and 15, suicidality items on QIDS and elsewhere)
+
+The scoring is deterministic and transparent — sum the item scores per
+subscale, look up the band by total. No machine learning, no probability
+estimates. Every band cutoff in this knowledge base is the one Rivet uses
+internally.
+
+<Note>
+  Severity bands come from the published source for each measure. You can
+  cross-check any of them against the citation in the per-measure article.
+</Note>
+
+## What stays where
+
+During the session, the in-flight template state is held briefly so a
+dropped connection can resume the same form on reconnect. When the session
+ends, completed assessments and your progress notes remain on the client's
+record.
+
+What saves to the client's record:
+
+- **Completed assessment answers.** When your client submits, the
+  item-by-item responses, the computed score, and the severity band
+  are saved. They feed the score-over-time charts on the client's
+  outcomes view and are available when you review the record between
+  sessions.
+- **Progress notes.** SOAP and DAP notes save automatically as unsigned
+  drafts while you write. When you sign, the body is locked. Corrections
+  after signing go in as dated addenda — the note itself is not edited.
+- **Your export.** Tap "Copy for session notes" or "Download as PDF" to
+  get the note or assessment into your EHR. That step is how it reaches
+  Jane, Owl, or your paper chart.
+
+What does **not** save to the client's record:
+
+- **Per-field ✎ annotations.** The private scratch layer you add beside
+  individual fields stays local to your session. It is not stored on the
+  record. It travels only in your clipboard copy and PDF when you export.
+- **Anything the client said aloud.** Rivet doesn't record sessions.
+
+Practitioner-private notes (SOAP, DAP, treatment plan) render only on your
+screen — nothing is sent to the client's device.
+
+## Rivet and outcome tracking
+
+Live scoring during a session is the data-capture step. The client's
+record — the outcomes view — is where you see the trend. Each completed
+assessment feeds the score charts on the client's record, so when you
+administer the PHQ-9 at Week 4, the earlier scores are already there.
+
+The in-session template library handles real-time administration: the form,
+the live score, the conversation. The client record holds the longitudinal
+picture. See
+[Measurement-based care](/measurement-based-care/index) for what Rivet
+does on the outcomes-tracking side.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Filling a template in-session" icon="users" href="/clinical-templates/in-session-administration">
+    The live collaborative fill — how the practitioner and client both see
+    the form.
+  </Card>
+  <Card title="Finding the right template" icon="magnifying-glass" href="/clinical-templates/finding-a-template">
+    The picker, category groups, and how to send async vs fill in-session.
+  </Card>
+  <Card title="Screening overview" icon="clipboard-check" href="/clinical-templates/screening/overview">
+    When to screen, severity bands, and picking between overlapping measures.
+  </Card>
+</CardGroup>

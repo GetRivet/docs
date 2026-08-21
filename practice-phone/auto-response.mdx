@@ -1,0 +1,88 @@
+---
+title: "How auto-reply works"
+description: "Every missed call gets a text back, based on what kind of call it was. The text is a template you control — not AI."
+---
+
+When a caller leaves you a voicemail, Rivet sends them a text reply within seconds. The reply matches the kind of call they left — a new client gets a different message than a reschedule, which gets a different message than an insurance question.
+
+This is the loop that makes a caller's experience feel like an inbox instead of a black hole. Their phone buzzes before they put it back in their pocket.
+
+## The text is not AI
+
+The text your caller receives is a **plain text template** you can read in advance, edit, and turn off. Rivet does not generate the reply with a language model. The only AI step is picking the *category* — choosing which of twelve pre-written templates to send — and even that's a local model running on Canadian hardware, with the text it picked from being entirely under your control.
+
+Practically, this means: the worst case is the caller gets a slightly mismatched canned reply (e.g. a booking template for a call that was really about insurance). They never receive a hallucinated answer or an invented business detail.
+
+## The twelve categories
+
+Every voicemail gets tagged with one of these:
+
+| Category | What kicks it off |
+|---|---|
+| **Missed Call** | The caller hung up without leaving a voicemail, or left a recording too brief to transcribe. |
+| **New Client** | Someone introducing themselves as a prospective client. |
+| **Booking** | A request to book or schedule an appointment. |
+| **Reschedule** | An existing client wanting to move an appointment. |
+| **Urgent** | Time-sensitive but not crisis. |
+| **Emergency** | Crisis or emergency language in the voicemail. |
+| **Insurance** | An insurance, billing, or coverage question. |
+| **Referral** | A call from another provider referring a client. |
+| **Pricing** | A question about cost, rates, or fees. |
+| **Hours** | A question about when you're open or how to reach you. |
+| **Spam** | A vendor pitch or sales call rather than someone trying to reach you. Tagged in your inbox, and no reply is sent — a caller who was never a client doesn't get a text from your practice. |
+| **Other** | Anything that doesn't match the categories above. |
+
+The category is also the colored chip you see on each row in the inbox — so the categorization is visible to you, not just to the caller.
+
+## When each template fires
+
+The category is picked by a local language model reading the transcript. Once the category is picked:
+
+- If the category's reply is **enabled** (you've turned it on in settings) — the caller receives that category's specific text.
+- If the category's reply is **disabled** — the caller receives the *fallback* text, which is your generic "we got it, we'll be in touch" message.
+- If *all categories* are disabled — the fallback text becomes the universal reply. Rivet shows a "Active for all calls" badge on the fallback card so you can see this is what's happening.
+- The **Missed Call** category always sends — even from the carrier-level missed call with no voicemail. Otherwise the caller hears nothing back at all, which defeats the point.
+
+## The follow-up acknowledgment
+
+If the caller replies to your auto-response (e.g., they text back "yes, please call me at 4 about a new client intake"), Rivet sends a short follow-up acknowledgment — "Thanks, we've passed your details along" — and the conversation is then in your hands.
+
+**Important rule:** Rivet suppresses this follow-up acknowledgment if *you've* already replied manually to the conversation. So if you see the client text and reply right away, the canned acknowledgment doesn't stack on top of your real reply. The thread stays clean.
+
+## The master switch
+
+There's a single toggle at the top of the Auto-Reply settings that turns everything off. When the master is off:
+
+- No category-specific replies fire.
+- No fallback replies fire.
+- No follow-up acknowledgments fire.
+- Voicemails still record, transcribe, and tag normally — but the caller hears nothing back from Rivet.
+
+Use this if you want to handle every reply by hand for a stretch. Most practices leave the master on.
+
+## Per-contact suppression
+
+Some numbers — your spouse, your kids, friends who happen to dial the practice line by mistake — shouldn't ever get an auto-reply. You can mark a contact as **Personal** from the Contacts tab, and Rivet will skip auto-replies for that number entirely. See [Managing contacts](/practice-phone/managing-contacts) for the full pattern.
+
+## What this gives the caller
+
+Three things the carrier's voicemail doesn't:
+
+- **Acknowledgment.** Their phone buzzes within seconds. They know the message got through.
+- **A direction.** The text tells them what's next — wait for a callback, send more details, etc.
+- **A thread.** Their reply lands as a text, and you see it as part of the conversation, not a separate channel.
+
+## What you can change
+
+Everything except the category names. See [Customizing auto-reply](/practice-phone/customizing-auto-response) for the full controls.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Customizing auto-reply" icon="pen-to-square" href="/practice-phone/customizing-auto-response">
+    Edit the templates, toggle categories, or change the master switch.
+  </Card>
+  <Card title="Sending texts" icon="message" href="/practice-phone/sending-texts">
+    Send a manual reply that suppresses the canned follow-up.
+  </Card>
+</CardGroup>

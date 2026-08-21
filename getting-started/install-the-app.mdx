@@ -1,0 +1,103 @@
+---
+title: "Install the Rivet app on your phone"
+description: "What the native app gives you over the browser, where to download it, and how the magic-link sign-in works the first time."
+---
+
+The phone you keep in your pocket is the device that takes the call.
+Rivet's native iOS and Android apps are how voicemails ring, how a
+client's text wakes you up between sessions, and how you accept an
+incoming call without juggling tabs.
+
+The web app at `next.getrivet.ca` is the home for sessions — full video,
+side-by-side EMDR, screen share, the notes panel. The phone app is the
+home for everything that arrives between sessions.
+
+## Where to get it
+
+<CardGroup cols={2}>
+  <Card title="iOS — App Store" icon="apple" href="https://apps.apple.com/ca/app/rivet-for-therapists/id6775002918">
+    iPhone, iOS 16.4 or newer. Search the App Store for "Rivet for Therapists"
+    and look for the indigo glyph.
+  </Card>
+  <Card title="Android — Play Store" icon="android" href="https://play.google.com/store/apps/details?id=ca.getrivet.app">
+    Phone or tablet, Android 11 or newer. Same name, same indigo glyph.
+  </Card>
+</CardGroup>
+
+If you'd rather not search, the welcome screen inside Rivet has a QR
+code on desktop and direct-tap links on mobile.
+
+## Why install the native app at all
+
+The browser version of Rivet works fine for reading the inbox and
+sending messages. What it can't do:
+
+- **Ring like a phone.** An inbound call appears on your lock screen
+  with accept and decline — the same way a regular phone call does.
+  A browser tab can't do this.
+- **Wake you up.** Background push notifications work consistently on
+  the native app; browser push has gaps depending on which browser the
+  practitioner uses and whether the tab is open.
+- **Take an outbound call from your contacts.** The native app
+  registers as a calling app, so tapping a phone number in your
+  contacts surfaces "Call with Rivet" as an option.
+
+If you only use the web app, the missed-call rate goes up. The phone
+app closes that gap.
+
+## Signing in for the first time
+
+The flow is intentionally low-friction — no password to type on a
+small keyboard.
+
+<Steps>
+  <Step title="Open the app and tap 'Sign in with email'">
+    A single field appears asking for the email you used at signup.
+  </Step>
+  <Step title="Enter your email and tap Send">
+    Rivet sends a one-tap sign-in link to that address (also known as
+    a magic link).
+  </Step>
+  <Step title="Open the email on your phone, tap the link">
+    The link opens the Rivet app directly — no browser bounce. You land
+    signed in.
+  </Step>
+  <Step title="Accept the data processing agreement (DPA)">
+    First sign-in only. Required before the app opens. Re-readable
+    later under Account → Legal.
+  </Step>
+</Steps>
+
+If the magic-link email doesn't arrive in a minute, check spam. If
+it's not there either, the troubleshooting page for [magic-link
+delivery](/troubleshooting/magic-link-not-working) walks through the
+fixes.
+
+## After sign-in
+
+The app drops you on your inbox — same view as the web app, just
+shaped for the phone. The first time you receive a voicemail, you'll
+also see a permission prompt asking for notification access; accept it
+so the OS can wake the app for incoming calls and voicemails.
+
+If you didn't grant notification permission at signup and want to
+flip it on later: iOS Settings → Notifications → Rivet → toggle
+Allow Notifications. Android: Settings → Apps → Rivet → Notifications.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Open Rivet on your computer" icon="desktop" href="/getting-started/desktop-vs-mobile">
+    Why sessions belong on a real keyboard and screen.
+  </Card>
+  <Card title="Your first 10 minutes" icon="clock" href="/getting-started/first-10-minutes">
+    The setup loop from signup to a working line.
+  </Card>
+  <Card title="Test your line" icon="phone" href="/getting-started/test-your-line">
+    Ring your Rivet number from another phone and confirm the call
+    lands cleanly.
+  </Card>
+  <Card title="Calls not coming through" icon="phone-slash" href="/troubleshooting/calls-not-coming-through">
+    What to check when push notifications stop arriving.
+  </Card>
+</CardGroup>

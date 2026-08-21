@@ -1,0 +1,68 @@
+---
+title: "Your client record"
+description: "What's on the client record — identity information, a risk banner, a day-grouped activity timeline, and scored measure trends."
+---
+
+Opening a contact in Rivet opens a record. At the top sits a strip of identity information — name, date of birth, phone number, emergency contact, referral source, and consent notes. Below that, every interaction with this client appears on a timeline grouped by day: voicemails, text conversations, calls, video sessions, completed assessments, and progress notes. Alongside the timeline, a set of small charts shows each scored measure over time.
+
+If a recent clinical assessment raised a risk flag, a banner stays at the top of the record until a newer assessment updates it.
+
+On desktop, the client list and the record sit side by side. On mobile, open a contact to see the full record; individual entries open in a sheet above it.
+
+## Identity information
+
+The identity strip at the top of the record holds:
+
+- **Name and date of birth**
+- **Phone number** — the number associated with this client's calls and texts on your Rivet line
+- **Emergency contact**
+- **Referral source**
+- **Consent notes** — a free-text field for noting when and how consent was documented
+
+Edit any of these fields directly on the record. This information is stored in Rivet alongside the session history; it doesn't sync to or from your existing practice-management software.
+
+## The risk banner
+
+When a client completes a PHQ-9 with a non-zero Item 9, or when you administer a C-SSRS that raises items 4, 5, or 6, Rivet marks the contact as elevated risk and shows a banner at the top of the record. The banner shows which measure and which response triggered it.
+
+The flag stays visible every time you open this record until a newer administration of the same measure produces a different reading.
+
+Rivet doesn't send automatic notifications or escalations when a risk flag appears. The flag is for you. See [How Rivet flags clinical risk](/measurement-based-care/risk-flagging) for detail on what triggers each one.
+
+## The activity timeline
+
+The timeline runs down the record grouped by day, most recent at the top.
+
+Every interaction Rivet has with this client appears there:
+
+- **Voicemails** — tap to read the transcript or listen to the recording
+- **Text conversations** — the message thread for this client's phone number
+- **Video sessions** — the session record, including which assessments ran and whether a progress note was written
+- **Progress notes** — attached to the session that generated them; unsigned notes show a count on the client's row in the contact list
+
+Tap any entry to see the detail. A video session entry opens the session record, from which you can view completed assessments (with the full question-by-question responses) or open the progress note.
+
+## The outcomes strip
+
+Every scored measure this client has completed appears as a small chart — one per instrument — showing the score at each administration over time. Four PHQ-9 administrations over three months show as four points on the line. A first-ever GAD-7 shows a single point.
+
+The charts sit alongside the timeline on desktop; on mobile they appear in the record above the timeline entries.
+
+The same data lives in your EHR when you paste score blocks into your session notes. The outcomes strip puts the trajectory in front of you before the session starts — you can see the curve without opening old notes or switching to a different tool.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Progress notes" icon="file-pen" href="/client-record/progress-notes">
+    Writing, signing, and correcting a DAP or SOAP note on the record.
+  </Card>
+  <Card title="Getting notes out of Rivet" icon="file-export" href="/client-record/getting-notes-out">
+    The three paths for moving notes and the full record into your EHR.
+  </Card>
+  <Card title="How Rivet flags clinical risk" icon="triangle-exclamation" href="/measurement-based-care/risk-flagging">
+    What triggers the risk banner, and what Rivet does — and doesn't do — when one fires.
+  </Card>
+  <Card title="Tracking measures over time" icon="trending-up" href="/measurement-based-care/measure-trajectories">
+    The outcomes strip and what the score charts mean.
+  </Card>
+</CardGroup>

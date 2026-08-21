@@ -1,0 +1,86 @@
+---
+title: "Magic link not working"
+description: "The email arrived, you tapped the link, and nothing happened — or the wrong screen opened. The three causes and the fix for each."
+---
+
+The magic link is a one-time URL that signs you in and routes you into
+the app. If it doesn't work, one of these three things happened.
+
+## 1. The link expired
+
+Magic links expire one hour after Rivet sends them. If you requested one
+last night and came to it this morning, it's stale — the link will
+return an error page when you open it.
+
+**Fix:** Go to the sign-in screen, enter your email, and request a fresh
+link. The new link replaces the old one; the old one stops working the
+moment the new one is sent.
+
+## 2. You tapped the link on the wrong device
+
+The magic link signs in whichever device opens it. If the email landed
+on your work laptop and you tap it on your phone, your phone gets signed
+in — not the laptop. If you wanted both, you need a separate link sent
+to each device.
+
+**Fix:** Open the link on the device you want to use Rivet on. If you
+need to sign in on a second device, request a second link from the
+sign-in screen on that device.
+
+<Tip>
+  On iPhone and Android, tap the link directly from the email rather
+  than copy-pasting it into a browser. The Rivet app catches the link
+  and signs you in inside the app — exactly what you want. A copy-paste
+  lands you in the browser, which signs you in to the web app instead.
+</Tip>
+
+## 3. The iOS Universal Link race — link opens Safari instead of the app
+
+On iPhone, if you signed up before installing the Rivet app, the magic
+link sometimes opens in Safari instead of the app. This is an iOS quirk:
+when you sign up, the operating system doesn't know yet that
+`app.getrivet.ca` belongs to the Rivet app, because the app isn't
+installed. By the time you install it, the link in your email already
+exists and Safari has "claimed" it.
+
+**Fix (three options, any one works):**
+
+<Steps>
+  <Step title="Open the link from the app's sign-in screen">
+    Install Rivet from the App Store, open it, tap **Sign in with
+    email**, enter your email, and request a new link. The new link
+    knows about the installed app and opens it directly.
+  </Step>
+  <Step title="Long-press the link in Mail and pick Open in Rivet">
+    If "Open in Rivet" appears, tap it. iOS will then remember that
+    `app.getrivet.ca` belongs to Rivet for all future links.
+  </Step>
+  <Step title="Sign in via the web, then come back to the app">
+    Tap the link in Safari, sign in to the web app at
+    `next.getrivet.ca`, then open the Rivet app and sign in with the
+    same email there. The app sends its own fresh link, which now opens
+    correctly.
+  </Step>
+</Steps>
+
+## What if I still can't sign in after all of that?
+
+Email **hello@getrivet.ca** with:
+
+- The email address on your Rivet account
+- The device you're trying to sign in on (iPhone, Android, MacBook, etc.)
+- A screenshot of what you see when you tap the link
+
+We'll send you a one-time sign-in another way and figure out what's
+breaking on our end.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Can't log in" icon="user-lock" href="/troubleshooting/cant-log-in">
+    The link never arrived — start here instead.
+  </Card>
+  <Card title="Contacting support" icon="envelope" href="/troubleshooting/contacting-support">
+    What to include so we can fix it on the first reply.
+  </Card>
+</CardGroup>

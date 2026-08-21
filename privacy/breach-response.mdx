@@ -1,0 +1,172 @@
+---
+title: "Breach response"
+description: "How Rivet responds to a privacy or security incident — the five phases, who Rivet notifies, and how it helps you meet your statutory obligations."
+---
+
+A privacy or security breach is the moment a runbook earns its
+keep. Rivet operates a five-phase breach response process — detect,
+contain, assess, notify, recover — with explicit responsibilities and
+timelines.
+
+## What counts as a breach
+
+A breach is the unauthorized **access, use, disclosure, loss, theft,
+modification, or disposal** of personal information or personal health
+information that Rivet handles.
+
+Examples that open the runbook:
+
+- A credential (Supabase key, Twilio token, etc.) is exposed.
+- A bug in the application lets one business see another business's
+  data.
+- A practitioner's device is lost or stolen while signed in.
+- An SMS, voicemail, or session link is delivered to the wrong
+  recipient.
+- A sub-processor (Twilio, Supabase, Cloudflare, Stripe) reports an
+  incident affecting Rivet's data.
+
+The runbook opens on **suspicion**, not confirmation. A near-miss
+costs twenty minutes; a late response costs more.
+
+## The five phases
+
+### Phase 1 — Detect and record (first 30 minutes)
+
+The Privacy Officer opens an incident log — a timestamped running
+record stored in version control. Every action, decision, and time is
+logged from this point on. An initial severity is assigned (revisable
+as facts emerge):
+
+- **SEV-1** — PHI of one or more clients exposed outside Rivet, or
+  exposure of many records. Drop everything; counsel within hours.
+- **SEV-2** — Limited or uncertain exposure; internal-only exposure
+  of PHI; a single misdirected message. Same-day containment and
+  assessment.
+- **SEV-3** — Near-miss, no actual exposure. Logged, fixed, reviewed
+  at the next post-mortem.
+
+### Phase 2 — Contain (first hours)
+
+Stop the bleeding before investigating fully. Exposed credentials are
+rotated immediately under the credential rotation runbook.
+Compromised sessions or accounts are revoked. If a code path is
+leaking data, it's deployed-fixed or taken offline — a brief outage
+beats ongoing exposure. Logs are preserved before they roll off.
+
+### Phase 3 — Assess (parallel with or after containment)
+
+The facts that drive every notification decision are reconstructed
+from five log sources:
+
+1. **Cloudflare Worker logs** — every request and console event on
+   Rivet's Workers, with 7-day retention.
+2. **Supabase audit logs** — every API request against the database,
+   with the role used and the table accessed.
+3. **Twilio logs** — every webhook delivery, every SMS, every call.
+4. **Stripe logs** — every API call to payment infrastructure.
+5. **Rivet's worker logs** — the locally-running voicemail processor's
+   record of what it did with each job.
+
+The append-only audit log (see [audit
+logging](/privacy/audit-logging)) is the canonical "who accessed which
+PHI" record across these sources.
+
+The assessment answers: **what data**, **whose**, **how much**, **how
+sensitive**, **who saw it**, **what was the cause**, and — for any
+practitioner account information — does this rise to a **real risk of
+significant harm** (RROSH) under PIPEDA.
+
+### Phase 4 — Notify
+
+Rivet wears two hats and applies both.
+
+**For breaches affecting client information (Rivet as your agent):**
+
+- Rivet notifies you, the affected custodian(s), at the **first
+  reasonable opportunity** — same-day where possible. This is a hard
+  obligation, not a courtesy.
+- Rivet gives you the facts you need to meet *your* statutory duties
+  to your clients and to the Information and Privacy Commissioner of
+  Ontario under PHIPA s.12.3.
+- Rivet stays available as your contact through the entire
+  notification process.
+
+**For breaches affecting practitioner account data (Rivet as the
+controller under PIPEDA):**
+
+- Rivet makes the RROSH determination.
+- If the threshold is met, Rivet reports to the Office of the Privacy
+  Commissioner of Canada and notifies affected practitioners as soon
+  as feasible.
+- Every breach is recorded in the breach register, regardless of
+  whether RROSH is triggered — PIPEDA requires the record.
+
+The notification you'd receive from Rivet is direct and factual: what
+happened, when it was discovered, what data was involved, what Rivet
+has done about it, what it means for you as the custodian, and who to
+contact for follow-up. No speculation, no minimization, no
+over-promising. The Privacy Officer signs the notification personally.
+
+### Phase 5 — Recover and review
+
+Normal service is restored once the vulnerability is closed. Rivet
+monitors for recurrence or related activity. Within two weeks, a
+post-incident review documents the root cause, the timeline, what
+worked, what didn't, and concrete remediation actions with owners.
+The runbook, the privacy impact assessment risk register, and any
+relevant audit report are updated.
+
+## What you handle as the custodian
+
+When the breach affects a client of yours, you hold the obligations to
+**that client** and to the **Information and Privacy Commissioner of
+Ontario** under PHIPA s.12.3. Rivet's job is to give you the facts fast
+enough that you can act:
+
+- Notify each affected client at the first reasonable opportunity,
+  using Rivet's facts as your source of truth.
+- Determine, under PHIPA s.12.3, whether the IPC must be notified.
+  Counsel typically guides this decision for any incident involving
+  clinical content.
+- Document the breach in your own records. Rivet's notification
+  letter is designed to drop into your file as the source artifact.
+- Stay in contact with Rivet's Privacy Officer through the
+  investigation and review.
+
+You're not alone in this — the Privacy Officer is the named contact
+through every phase, by phone or email as you prefer.
+
+## Sub-processor incidents
+
+If a sub-processor reports a breach to Rivet, Rivet treats it as a
+Rivet breach. The same five phases run, the same notification flow to
+you, the same support through your downstream obligations. The
+incident log captures the sub-processor's role and the upstream
+notification timestamp so the chain of facts is clean.
+
+## Tabletop drills
+
+Rivet runs tabletop drills against the runbook twice a year — picking
+a scenario, walking the five phases, timing each step, and fixing
+what was slow or unclear. Drills are logged in the breach register
+as SEV-3 exercises.
+
+## Where to read more
+
+If your College, your insurer, or your compliance officer wants a
+walk-through of the full runbook, email `hello@getrivet.ca`.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Audit logging" icon="list-check" href="/privacy/audit-logging">
+    The canonical "who accessed what" record used during assessment.
+  </Card>
+  <Card title="Your role as custodian" icon="user-shield" href="/privacy/your-role-as-custodian">
+    What you handle for your clients when an incident affects them.
+  </Card>
+  <Card title="The Data Processing Agreement" icon="file-signature" href="/privacy/data-processing-agreement">
+    The agreement that commits Rivet to first-reasonable-opportunity
+    notification.
+  </Card>
+</CardGroup>

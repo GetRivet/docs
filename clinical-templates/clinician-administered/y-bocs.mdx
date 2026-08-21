@@ -1,0 +1,136 @@
+---
+title: "Y-BOCS — Yale-Brown Obsessive Compulsive Scale"
+description: "The 10-item clinician-administered OCD severity scale — the standard outcome measure in ERP and SSRI trials."
+---
+
+The Y-BOCS is the dominant clinician-administered OCD severity measure.
+It's the standard outcome in OCD treatment trials, ERP outcome research,
+and pharmacotherapy decisions for treatment-resistant cases. You fill it
+about the client after a structured interview. The client never sees the
+form.
+
+## What it measures
+
+Ten items, scored separately for obsessions and compulsions:
+
+- **Obsessions** (items 1-5): time spent, interference, distress,
+  resistance, control
+- **Compulsions** (items 6-10): time spent, interference, distress,
+  resistance, control
+
+Each item scores 0-4. Total range is 0-40.
+
+## When to use it
+
+- OCD severity tracking — the primary outcome in CBT-ERP and SSRI
+  treatment trials
+- ERP (Exposure-Response Prevention) treatment-response measurement
+- Tic-related OCD differential — often paired with the YGTSS in pediatric
+  and young-adult patients (roughly half of Tourette's cases carry
+  comorbid OCD)
+- Treatment-resistant OCD decision-making — clomipramine, augmentation,
+  deep TMS, gamma knife capsulotomy
+
+## How you fill it
+
+Solo fill. Open **Y-BOCS** from the templates picker and tap **New response**.
+The renderer presents the 10 items in two groups (Obsessions / Compulsions)
+with a header between them for visual chunking. Typical administration is
+20-30 minutes with the rater manual.
+
+The form never goes to the client — Y-BOCS is psychometrically a structured
+interview, not a self-report. The picker has no "Send to client" option for
+this measure.
+
+## Scoring and severity cutoffs
+
+### Total + subscales
+
+- **Total:** sum of all 10 items, 0-40
+- **Obsessions subscale:** sum of items 1-5, 0-20
+- **Compulsions subscale:** sum of items 6-10, 0-20
+
+### Severity bands (Goodman et al. 1989)
+
+| Total | Band |
+|---|---|
+| 0-7 | Subclinical |
+| 8-15 | Mild OCD |
+| 16-23 | Moderate OCD |
+| 24-31 | Severe OCD |
+| 32-40 | Extreme OCD |
+
+### Clinical change thresholds
+
+- **Response:** ≥35% reduction in total from baseline (Pallanti 2002
+  international consensus)
+- **Remission:** total ≤12 sustained
+
+## Rater training
+
+The Y-BOCS Rater Manual (Goodman et al., distributed by UPMC Western
+Psychiatric Institute and Clinic) provides scoring anchors and probe
+questions. Reliability with trained raters typically reaches ICC 0.85+.
+
+## What we render vs. the source
+
+Verbatim Goodman 1989 items with the published severity anchors in the
+choice display text. The 10 items are presented in two groups
+(Obsessions / Compulsions) with a section header in the Rivet renderer.
+
+The Y-BOCS Symptom Checklist — the separate ~65-item lifetime symptom
+inventory that distinguishes obsession content (contamination,
+aggressive, sexual, hoarding, religious, somatic, ordering,
+miscellaneous) from compulsion form (cleaning, checking, repeating,
+counting, ordering, hoarding, miscellaneous) — is a separate template
+and is not part of the 10-item severity scale.
+
+## Y-BOCS vs OCI-R
+
+The Y-BOCS is the severity standard and it costs your time — ten items
+rated by you across an interview, covering how much time the symptoms
+take, how much they interfere, how distressing they are, how hard the
+client resists and how much control they have. It's the measure OCD
+treatment trials report, which is why a Y-BOCS number travels: a 35% drop
+is the conventional definition of treatment response.
+
+The [OCI-R](/clinical-templates/screening/oci-r) is self-report, takes the
+client a few minutes, and is better at a different job — showing which of
+the six symptom dimensions are active, which is what you need when
+planning exposure work.
+
+Most practices use both: OCI-R to see the shape of the problem and to
+track between sessions, Y-BOCS at assessment and at intervals to measure
+severity properly.
+
+Note that the Y-BOCS symptom checklist — the long lifetime inventory of
+specific obsessions and compulsions — is a separate instrument from the
+ten severity items, and Rivet includes the severity items only.
+
+## Is it free to use?
+
+**Yes.** Free clinical use, per UPMC Western Psychiatric.
+
+## Citations
+
+- Goodman, W. K., Price, L. H., Rasmussen, S. A., Mazure, C., Fleischmann,
+  R. L., Hill, C. L., Heninger, G. R., & Charney, D. S. (1989). "The
+  Yale-Brown Obsessive Compulsive Scale: I. Development, use, and
+  reliability." *Archives of General Psychiatry,* 46(11): 1006-1011. Free
+  clinical use per UPMC Western Psychiatric Institute and Clinic.
+- Pallanti, S., Hollander, E., Bienstock, C., et al. (2002).
+  "Treatment non-response in OCD: methodological issues and operational
+  definitions." *International Journal of Neuropsychopharmacology,*
+  5(2): 181-191.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="YGTSS" icon="clipboard-list" href="/clinical-templates/clinician-administered/ygtss">
+    Yale Global Tic Severity Scale. Frequently paired with Y-BOCS in
+    Tourette's and tic-related OCD presentations.
+  </Card>
+  <Card title="Clinician-administered overview" icon="folder-open" href="/clinical-templates/clinician-administered/overview">
+    Why these six measures don't ship to clients, and how solo fill works.
+  </Card>
+</CardGroup>

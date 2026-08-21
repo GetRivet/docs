@@ -1,0 +1,111 @@
+---
+title: "Notification preferences"
+description: "Push on the phone, push in the browser, SMS to your cell — which channel handles which event."
+---
+
+Rivet notifies you about three kinds of things — **new voicemail**,
+**new SMS from a client**, and **provisioning / account events**. Each
+event has a natural channel; the goal is that you get notified once,
+through the right channel for what you're doing, and never get a
+double-buzz from two channels for the same event.
+
+## The channels
+
+| Channel | Where it lives | What it's for |
+|---|---|---|
+| **App push** | iOS and Android Rivet app | New voicemail, new SMS — fast lane for in-day events while you're on your phone. |
+| **Browser push** | Chrome, Safari, Firefox on desktop | Same events as app push, for when you're at your computer instead of your phone. |
+| **SMS to your cell** | Your personal mobile (set at signup) | Provisioning done, lead-side account alerts, anything urgent that needs to find you off the app. |
+| **Email** | The address you sign in with | Invoices, occasional product updates, magic links. |
+
+## Tuning each channel
+
+### App push (phone)
+
+Push permission is requested the first time you open the Rivet app on
+your phone. If you missed the prompt:
+
+- **iOS** — Settings → Notifications → Rivet → Allow Notifications.
+- **Android** — Settings → Apps → Rivet → Notifications → Allow.
+
+Turning it off won't affect SMS or browser notifications; each channel
+is independent. You'll see voicemails and texts when you next open
+Rivet — they just won't ping you in the moment.
+
+### Browser push (desktop)
+
+Open the **account panel** (tap your avatar, top-right). The
+**Notifications** card has a toggle. Flipping it on prompts your browser
+for permission; the toggle saves on grant. The hint under the toggle
+tells you what state the browser is in — supported and granted, blocked
+by the browser, or not supported at all.
+
+Browser push works on:
+
+- Chrome, Edge, and Firefox on macOS, Windows, and Linux.
+- Safari on macOS.
+- iOS Safari **with the app added to your home screen** (Share →
+  Add to Home Screen). iOS Safari blocks push for tabs; the
+  home-screen install unlocks it.
+
+If the toggle reads **"Notifications are blocked at the browser
+level,"** the browser is refusing the prompt before we see it. Re-enable
+in your browser settings: usually a 🔒 or "Site information" button to
+the left of the URL bar, then "Notifications → Allow."
+
+### SMS to your cell
+
+We text your cell number for things that aren't routine inbox events —
+your phone line going live during provisioning, account-level alerts
+that need your eyes, and anything we'd be uncomfortable letting sit
+inside an app you might not check for a day. You can't disable these
+individually; if you're getting too many, email us so we can dig into
+why.
+
+### Email
+
+- **Magic links** — every sign-in. Not configurable; turning these off
+  would lock you out.
+- **Invoices and receipts** — emailed automatically when a payment
+  runs. Configurable inside the billing portal (link in any invoice
+  email).
+- **Product email** — only if you ticked the marketing-opt-in checkbox
+  at signup. Every promotional message has an unsubscribe link in the
+  footer.
+
+## How the channels split events
+
+The cleanest mental model:
+
+- **Voicemails and inbound SMS** — app push on your phone, browser push
+  on your desktop, never SMS. The app and browser are real-time enough
+  that SMS would be noise.
+- **Provisioning and account events** — SMS to your cell, never app
+  push. These tend to happen *before* you're actively in Rivet (or are
+  urgent enough that the app might be closed).
+- **Billing** — email, always. Sales tax receipts, invoices, payment
+  failures. Handled through the billing portal, not the app.
+
+If you're getting buzzed twice for the same event, we missed something —
+email hello@getrivet.ca with a screenshot and the timestamp.
+
+## Quiet hours
+
+Rivet doesn't currently send notifications outside business hours by
+default — your phone's own Do Not Disturb mode is the right place to
+silence them at night. iOS Focus modes and Android's "Bedtime mode"
+both let you mute Rivet alongside the rest of your apps. We deliberately
+don't add a separate "quiet hours" toggle to the account panel because
+the OS-level controls already handle this well and centralise it across
+every app, not just Rivet.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Managing your account" icon="sliders" href="/account/managing-your-account">
+    The account panel where you'll find the notification toggle.
+  </Card>
+  <Card title="Browser push troubleshooting" icon="circle-question" href="/troubleshooting/index">
+    Push not landing? Permission stuck? Common fixes.
+  </Card>
+</CardGroup>

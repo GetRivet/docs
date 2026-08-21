@@ -1,0 +1,184 @@
+---
+title: "How Rivet flags clinical risk"
+description: "PHQ-9 Item 9, C-SSRS items 4/5/6, and what Rivet surfaces during a measure — and what it does not do."
+---
+
+Some items on standardized measures carry weight beyond their contribution
+to a total score. PHQ-9 Item 9 (suicidal ideation) is the canonical
+example: a "nearly every day" answer is clinically significant regardless
+of where the total lands. What follows is how Rivet surfaces those items
+— and, more importantly, what Rivet does not do when they fire.
+
+<Warning>
+  **Rivet does not auto-escalate.** No automatic text to a crisis line,
+  no message to a supervisor, no notification to an external service.
+  Clinical action — risk assessment, safety planning, escalation —
+  remains yours.
+</Warning>
+
+## What gets flagged
+
+### PHQ-9 Item 9 — suicidal ideation
+
+Item 9 reads:
+
+> "Thoughts that you would be better off dead, or of hurting yourself in
+> some way"
+
+The published rule, from Kroenke 2001 forward, is that any non-zero answer
+warrants suicide risk assessment regardless of the total PHQ-9 score. A
+client with a PHQ-9 of 6 ("mild depression") and Item 9 = "several days"
+needs the same Item 9 follow-up as a client with a PHQ-9 of 22.
+
+The PHQ-9 template description in Rivet states this rule inline so it
+appears in the "Copy for session notes" output and in the PDF download
+alongside the response. The practitioner is the layer that reads the rule
+and acts on it.
+
+### C-SSRS items 4, 5, and 6
+
+The Columbia Suicide Severity Rating Scale is a clinician-administered
+measure. Rivet includes the Screening (Recent) variant with five ideation
+severity items plus one behavior item. Three of these trigger a cutoff
+the moment you answer YES:
+
+- **Item 4** — active suicidal ideation with some intent to act, without
+  specific plan
+- **Item 5** — active suicidal ideation with specific plan and intent
+- **Item 6** — past 3-month suicidal behavior (actual / aborted /
+  interrupted attempts / preparatory acts)
+
+When you (the rater) answer YES on any of items 4, 5, or 6, the
+corresponding cutoff fires. It surfaces inline in your practitioner
+view as a high-risk flag and in the score block as a labelled cutoff
+message:
+
+- Items 4–5: "Any YES on items 4 (intent) or 5 (plan) — high-risk;
+  immediate safety planning + means restriction indicated"
+- Item 6: "YES on past-3-month suicidal behavior — high-risk; emergency
+  evaluation indicated"
+
+The exact label text is what the C-SSRS literature uses; Rivet renders it
+verbatim.
+
+### Other sensitive items, by measure
+
+A number of other items across the library are flagged as sensitive and
+surface inside the score block when they fire:
+
+- **EPDS Item 10** — self-harm in the postnatal context
+- **CES-D-R Items 14 + 15** — death wishes / self-harm
+- **QIDS-SR Item 12** — suicidal ideation
+- **CPSS-5 Items 9, 10, 16** — trauma-related self-harm / suicidality
+- **BSL-23 Items 5, 7, 12, 18** — self-harm / suicide subscale
+- **ASQ — all 5 items** — NIMH suicide screen (positive on items 1–4 =
+  positive screen; item 5 YES = acute risk)
+- **All 10 ACE items** — childhood adversity (handled with the same
+  sensitivity flag for trauma-informed UX)
+
+For each of these, the published rule and the cutoff text from the source
+paper are embedded in the template. Rivet shows the rule; the practitioner
+takes the clinical action.
+
+## What Rivet does on a flag
+
+Concretely:
+
+- The cutoff appears in your practitioner view as the measure is filled
+- The cutoff appears in the score block of the "Copy for session notes"
+  output (e.g. `[Any YES on items 4 (intent) or 5 (plan) — high-risk;
+  immediate safety planning + means restriction indicated]`)
+- The cutoff appears in the PDF download
+
+That's the entire surface.
+
+## What Rivet does not do on a flag
+
+<Warning>
+  **No automatic crisis-line dial.** Rivet does not send a text or open
+  a call to a crisis line, a hotline, or 911 when a high-risk item fires.
+
+  **No automatic notification.** Rivet does not message a supervisor, a
+  consulting clinician, a partner practice, or anyone outside the
+  session.
+
+  **No automatic chart write.** Rivet does not write to your EHR,
+  flag a chart in Jane or Owl, or escalate a record into a triage
+  workflow.
+
+  **No automatic safety-plan open.** Rivet does not auto-launch the
+  Safety plan template when PHQ-9 Item 9 or a C-SSRS cutoff fires. That
+  remains your decision.
+
+  Clinical judgment + clinical action are yours.
+</Warning>
+
+This is a deliberate design choice. Auto-escalation in clinical contexts
+can fire at clinically inappropriate moments, pathologize normal-range
+responses (e.g. a "several days" PHQ-9 Item 9 in a long-stable client),
+or interrupt a session at exactly the wrong therapeutic moment. The
+practitioner's judgment is the right interpretation layer.
+
+What Rivet provides is structured detection — the item is captured, the
+cutoff is computed, the flag is surfaced inline and in your record.
+What to do about it is the practice of psychotherapy.
+
+## What pairs well with risk flagging
+
+For positive ideation screens (PHQ-9 Item 9 > 0; C-SSRS item 4 or 5 YES),
+the natural follow-on is a structured safety plan. The Rivet library
+includes the **Safety plan** template — a 6-step crisis safety plan
+based on the Stanley-Brown method. You can open it directly after a
+flag fires, fill it collaboratively with the client during the same
+session, and export it the same way (Copy for session notes, or
+Download as PDF) so the safety plan goes home in writing.
+
+A typical flow:
+
+<Steps>
+  <Step title="A flag fires during a PHQ-9 or C-SSRS">
+    Item 9 > 0 on PHQ-9; or items 4/5/6 YES on C-SSRS.
+  </Step>
+  <Step title="You complete the current measure">
+    Don't abandon mid-fill — the score block + cutoff text are what land
+    in your record. Finish, copy, and close.
+  </Step>
+  <Step title="Open the Safety plan template">
+    From the Templates picker, pick **Safety plan**. The template walks
+    through warning signs → internal coping → social distractions →
+    people for help → professionals + agencies → means safety.
+  </Step>
+  <Step title="Fill collaboratively, then export">
+    The client fills warning signs, coping strategies, contacts; you
+    annotate where relevant. Click "Download" for a PDF the client can
+    keep on their phone.
+  </Step>
+  <Step title="Clinical action is yours">
+    Risk assessment, escalation, after-session contact, supervisor
+    consultation — Rivet doesn't do any of these automatically. Rivet
+    captures the structured data; you decide what comes next.
+  </Step>
+</Steps>
+
+<Note>
+  For information on what's covered in the Safety plan template, see
+  Crisis → [Safety plan](/clinical-templates/crisis/safety-plan) in the
+  Clinical templates section.
+</Note>
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="What MBC is in Rivet" icon="circle-info" href="/measurement-based-care/overview">
+    The full scope of what Rivet does — and doesn't — around outcome
+    measures.
+  </Card>
+  <Card title="Safety plan" icon="shield-check" href="/clinical-templates/crisis/safety-plan">
+    The 6-step crisis safety plan template that pairs with positive
+    suicide screens.
+  </Card>
+  <Card title="Administering measures in session" icon="clipboard-check" href="/measurement-based-care/administering-measures-in-session">
+    The collaborative fill flow that surfaces these flags in front of
+    you while you can still talk about them.
+  </Card>
+</CardGroup>

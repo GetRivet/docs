@@ -1,0 +1,84 @@
+---
+title: "Importing contacts from your phone"
+description: "Pull contacts from your phone's address book into Rivet — pick them one at a time, not bulk."
+---
+
+If you've been running your practice from your personal cell, you already have a hundred clients saved in your phone's contacts. The Import flow lets you bring those into Rivet without re-typing.
+
+Importing them is the quick half. Getting people to actually start using the new number is the slower one — [how to move clients across without losing anyone](https://getrivet.ca/switching-your-practice-number) covers what to say and in what order.
+
+The design is deliberate: Rivet doesn't import your entire address book at once. Every contact you import is a deliberate tap. That's how you keep your personal contacts (family, friends, your dentist, your accountant) out of your practice address book.
+
+## Where it lives
+
+In the **Contacts** tab, tap `+` → **"Upload contacts from phone."**
+
+The first tap surfaces an in-app explainer, then the OS asks for permission to read your contacts. Allow it.
+
+If you decline, the picker shows an honest message and a link to your phone's Settings — Rivet can't read contacts without that permission, so the picker won't bypass it.
+
+<Note>
+  Import works on mobile only. Phone address-book reading isn't available in desktop browsers — there's no native API for it. On desktop, add contacts one at a time via the `+` "Create new" option.
+</Note>
+
+## Picking the contacts to import
+
+Once permission is granted, the picker opens with your phone's contacts in a list. You'll see name, formatted phone number, and a checkbox.
+
+<Steps>
+  <Step title="Filter or search">
+    Use the search pill to narrow the list by name or phone. Useful if your address book has 500+ entries.
+  </Step>
+  <Step title="Tap each contact you want to import">
+    The checkbox fills with indigo when selected. Tap again to deselect.
+  </Step>
+  <Step title="Tap 'Import N contacts' at the bottom">
+    The button counts how many you've selected. Rivet adds them to your practice Contacts list. A progress indicator shows how many of the batch have landed.
+  </Step>
+</Steps>
+
+After import, you're back on the Contacts tab. The imported contacts are now in your alphabetical list.
+
+## North-American numbers only
+
+The picker only shows phone-book entries with North-American (`+1`) numbers. International contacts in your address book are filtered out — Rivet's outbound calling and SMS are North America-only, so an international contact can't be auto-replied to or called through the practice line anyway.
+
+If your phone book has zero NA contacts, you'll see "No phone contacts with a +1 number were found." Add contacts one at a time instead.
+
+## Re-importing
+
+If you tap **Upload contacts from phone** again later, contacts that are already in your Rivet Contacts list show as pre-checked, with an "Imported" label, and are non-interactive. You can't un-import a contact from this screen — to remove one, open it in Contacts and tap **Delete contact**.
+
+This is intentional. The Import picker is add-only. The contact detail page is where edits and deletes happen.
+
+## Partial-access on iOS 18+
+
+iOS 18 introduced a "Selected Contacts" permission level — instead of granting full access, you can pick a subset of your address book that Rivet sees.
+
+If you picked Selected Contacts at the OS prompt, the picker shows a banner at the top: "Only some contacts are visible." Tap the banner to open Rivet's permission settings in iOS and widen the selection. Without this step, you'll only see the subset you originally picked at the system prompt — even if you really did want all of them.
+
+## What gets imported
+
+For each picked contact, Rivet imports:
+
+- The display name (first + last from your phone book).
+- The phone number.
+
+It does **not** import:
+
+- Email addresses.
+- Multiple phone numbers per contact. The picker treats each phone number as a separate row, so a contact with two numbers shows up twice — pick whichever line is the practice-relevant one.
+- Notes from your phone's address book.
+
+After import, you can edit each contact's name, add notes, and (if needed) mark them as Personal — same as any contact you create from scratch.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Managing contacts" icon="address-book" href="/practice-phone/managing-contacts">
+    Edit names, add notes, mark Personal, delete.
+  </Card>
+  <Card title="Sending texts" icon="message" href="/practice-phone/sending-texts">
+    Once contacts are imported, you can compose a new message to any of them.
+  </Card>
+</CardGroup>

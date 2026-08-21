@@ -1,0 +1,185 @@
+---
+title: "The SUDS scale"
+description: "Wolpe's 0–10 Subjective Units of Distress — how Rivet captures it between sets, where it lives, and how it renders in the session arc."
+---
+
+The SUDS scale — Subjective Units of Distress — is how EMDR captures the
+client's experienced distress at each point in a reprocessing session. It's
+the single most important data point in the Phase 4 → Phase 7 work, and
+Rivet's Workspace is designed around capturing it cleanly.
+
+## The scale
+
+> Wolpe, J. (1969). *The Practice of Behavior Therapy.* Pergamon Press.
+> (Earlier appearance in Wolpe, 1958, *Psychotherapy by Reciprocal
+> Inhibition.*)
+
+Wolpe's original scale ran 0 to 100. EMDR convention is **0 to 10**. Rivet
+uses 0–10 to match EMDR practice and to reduce the perceived precision the
+client has to commit to in the moment.
+
+The Workspace surfaces these anchors:
+
+- **0 — calm** — no distress
+- **5 — moderate**
+- **10 — worst imaginable**
+
+The narrative interpretation in between (1–4 light, 6–9 high) is
+clinical judgment territory. Rivet doesn't surface band labels for the
+intermediate numbers because the published convention varies and the
+clinical use depends on the client's reference frame, not a software label.
+
+## SUD check-ins follow your protocol
+
+Rivet doesn't force one check-in rhythm on every session. A **SUD
+check-ins** control in the Configure modal lets you match how you'd run
+the protocol on paper:
+
+- **Every set** — a SUDS card pops after each set, the EMDR 2.0 default.
+  This is the tightest read on trajectory, set by set.
+- **Baseline + end** — the Classic default. A SUDS card opens before Set 1
+  to capture where the client is starting from, then again after the
+  final set. Between sets, the card is quiet by default — you keep
+  moving without a forced rating every time — but a small **Capture SUD**
+  link is there if you want an on-demand reading (a return-to-target
+  check, for example).
+
+Switching modes (EMDR 2.0 ↔ Classic) resets SUD check-ins to that mode's
+default; you can override it either way before you start. When
+baseline-first check-ins are on, the **Start** button reads **"Start —
+baseline first"** so the first card in the session is never a surprise.
+
+### Baseline
+
+If your session is set to baseline + end, the Workspace opens a SUDS card
+before any bilateral stimulation runs — pretitle **"Baseline — before we
+begin."** Ask the client for their rating, capture it, and tap **Begin
+Set 1** to start the first set. This is the Phase 3 assessment rating,
+captured in the same flow as everything else, and it becomes the first
+point on the session arc.
+
+### Between sets
+
+On every-set check-ins, the card behaves exactly as it always has: a
+question, a scale, a Continue button, after every set.
+
+On baseline + end check-ins, the between-sets card is quieter —
+**"Set complete,"** a sparkline, and **Continue to Set N+1**. If you want
+a reading at that point, tap **Capture SUD** to reveal the scale, rate it,
+then continue. Skip it and nothing is recorded for that set — the choice
+is yours, set by set.
+
+### End of session
+
+Whichever check-in style the session uses, the last card is always the
+end-of-session reading — pretitle **"End of session,"** button
+**"Finish."** This closes the SUD history for the session and opens the
+session arc.
+
+The card shows:
+- The question ("How distressing now?" or the baseline/end variant)
+- A gradient horizontal **scale track** with a draggable marker (starts at
+  5)
+- A **legend** showing the three anchors: 0 · calm, 5 · moderate, 10 · worst
+- A **sparkline** of the session's SUDS history so far
+
+<Note>
+  The SUDS card pops **automatically** at each of these points — baseline,
+  between sets, and end. You don't have to open a separate panel; the
+  Workspace transitions through the state on its own.
+</Note>
+
+## Optional VOC capture
+
+At baseline and at the end of a session using baseline + end check-ins,
+the card shows a second, smaller row under the SUD scale — **"Belief
+feels true (VOC),"** the Validity of Cognition scale, 1 (completely
+false) to 7 (completely true). Tap a number to capture it, or leave it —
+nothing is selected by default and nothing is required.
+
+VOC pairs with the SUD reading the way it does in the standard protocol:
+SUD tracks distress coming down, VOC tracks the positive belief going up.
+When both a baseline and end VOC are captured, the session arc and the
+Copy output show the shift.
+
+## Where the SUDS values live
+
+During the session, SUDS values are held in your **browser's session
+storage** — available to the Workspace for the duration of the session, so
+the sparkline rehydrates if you reload the page mid-session.
+
+At the end of the session, the full SUDS trajectory saves to the client's
+chart automatically, alongside the VOC readings, sets, duration, and
+modalities — the same session arc data shown on the closing card. That
+only happens for a session linked to a client who checked in by name and
+number; an unlinked session has nowhere on a chart to save to, and the
+Workspace tells you that plainly.
+
+The **Copy button** on the session arc card is still there any time you
+want the plain-text summary on your clipboard too — for an EHR note or a
+session log you keep yourself. See
+[The session arc](/emdr/the-session-arc).
+
+## The optional note field
+
+The SUDS modal on the practitioner panel surfaces an optional one-line
+note field where you can capture context — a body sensation the client
+mentioned, an image they reported, a shift in their narrative ("less heavy
+in chest"). The note is stored alongside the SUDS value and renders in the
+Copy session summary.
+
+The field is capped at 120 characters. Skip if you don't want it.
+
+## The session sparkline
+
+Inside the between-sets card, a small sparkline renders the SUDS history so
+far. After Set 1 it's a single dot; after Set 4 it's a 4-point line.
+
+The sparkline gives you a quick read on trajectory without having to
+remember the previous SUDS values. If the line is descending steadily, the
+reprocessing is doing its work. If the line flatlines or rises, that's a
+clinical signal — adjust pace, switch dual-task prompt category, check the
+target, or close the session early.
+
+## What SUDS isn't
+
+- **Not validated for the practitioner to set.** Only the client can rate
+  their own distress. The slider is on your screen because you're driving
+  the controls, but the value reflects the client's verbal report.
+- **Not a forced choice.** A client who can't or won't rate can skip the
+  capture — the practitioner panel surfaces a **Skip** button. The skipped
+  set won't render a dot on the sparkline.
+- **Not part of the EMDR diagnosis.** SUDS is a process measure inside the
+  protocol, not a clinical assessment tool. Pair with a validated PTSD
+  measure (PCL-5) for diagnostic and outcome tracking — see the
+  [Clinical templates library](/clinical-templates/index).
+
+## Capturing SUDS in Phase 3 vs Phase 4
+
+Strictly speaking, the first SUDS in an EMDR session is captured in Phase 3
+(assessment) before any BLS runs — the baseline rating with the target
+activated. If your session uses baseline + end check-ins, Rivet captures
+that reading directly in the Workspace, before Set 1 — it's the first
+point on the session arc curve, no extra step in your notes.
+
+If your session uses every-set check-ins instead (the EMDR 2.0 default),
+the first captured point is still the post-Set-1 reading, matching the
+convention of measuring after activation. Switch a session to baseline +
+end check-ins from the Configure modal any time you want that Phase 3
+anchor on the curve.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="The session arc" icon="line-chart" href="/emdr/the-session-arc">
+    How the SUDS trajectory renders at the end of the session, the stats
+    tiles, and the Copy button.
+  </Card>
+  <Card title="Practitioner controls" icon="hand" href="/emdr/practitioner-controls">
+    Spacebar start, pause, end, and how the between-sets card flows.
+  </Card>
+  <Card title="The research behind EMDR" icon="book-open" href="/emdr/the-research-behind-emdr">
+    Wolpe's original SUDS, Shapiro's EMDR adoption, and the WHO/NICE
+    guidance.
+  </Card>
+</CardGroup>

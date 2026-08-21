@@ -1,0 +1,145 @@
+---
+title: "Body scan"
+description: "Phase 6 body-focused scan — catch residual disturbance after VOC reaches 7 and SUDS reaches 0."
+---
+
+The body scan is Shapiro's Phase 6 — the step after the positive
+cognition is installed and before closure. The client holds the
+original target memory and the installed positive cognition in mind,
+then scans the body for any residual tension or disturbance. Anything
+left over is processed with additional BLS until the scan is clear.
+
+This template captures the scan and the residual-clearing work.
+
+## What the template covers
+
+A single screen with seven fields:
+
+| Field | Type | What it captures |
+|---|---|---|
+| **VOC at start of body scan** | Slider 1–7 | Validity of the positive cognition entering the scan |
+| **SUDS at start of body scan** | Slider 0–10 | Subjective distress entering the scan |
+| **Residual locations** | Large text | Where in the body the client noticed anything |
+| **Residual description** | Text | Quality (tightness, heaviness, ache, etc.) |
+| **BLS sets to clear** | Integer | Sets needed to clear the residual (0 if first-pass clear) |
+| **Final clear** | Boolean | Body scan is clear on second pass |
+| **Notes** | Large text | Optional |
+
+## When to use it
+
+Phase 6 sits after a complete Phase 4 (desensitization to SUDS = 0) and
+a complete Phase 5 (positive cognition installation to VOC ≥ 7). The
+body scan is performed in the same session as those phases — it's the
+final clinical step before Phase 7 closure.
+
+The prerequisites are documentation-only in Rivet. The template doesn't
+gate the scan behind a VOC or SUDS threshold; you apply the protocol
+ordering yourself.
+
+## Reading the scan
+
+The clinical interpretation of the scan is:
+
+- **Body scan clear on first pass** → target is fully processed. Move
+  to Phase 7 closure.
+- **Residual present** → additional BLS sets to clear; the body holds
+  what cognition has cleared. Re-scan after each set.
+- **VOC at scan < 7** → Phase 5 is not complete. Return to Phase 5
+  before scanning.
+- **SUDS at scan > 0** → Phase 4 is not complete. Return to Phase 4
+  before scanning.
+
+The first two read like "is the target processed yet?" — the answer is
+in the body, not just the cognition.
+
+## How to launch it
+
+In the EMDR Workspace or from the templates picker, search "body scan."
+The template opens with the scan prompt at the top — read it to the
+client to set up the scan, then fill the fields as you go.
+
+The BLS that clears residual disturbance runs in the
+[EMDR Workspace](/emdr/setting-up-an-emdr-session). Capture the
+cumulative set count in the **BLS sets to clear** field.
+
+## Field-by-field
+
+### The scan prompt
+
+A display-only instruction at the top of the template:
+
+> Have the client hold the original target memory plus the installed
+> positive cognition in mind, then scan the body for residual tension
+> or disturbance.
+
+Read it to the client to set up the scan.
+
+### VOC at start of body scan
+
+Slider 1–7. Validity-of-cognition rating entering the scan. Should be
+≥ 7 if Phase 5 is complete. If it's lower, return to Phase 5.
+
+### SUDS at start of body scan
+
+Slider 0–10. Subjective-units-of-distress rating entering the scan.
+Should be 0 if Phase 4 is complete. If it's higher, return to Phase 4.
+
+### Residual locations
+
+Large text field. Where in the body the client notices anything. Be
+specific — "right shoulder," "low belly," "the back of the throat."
+Specificity helps the next round of BLS focus.
+
+### Residual description
+
+The quality of the residual. Tightness, heaviness, ache, fluttering,
+warmth, cold, pressure. The descriptor is part of the target for the
+next BLS set.
+
+### BLS sets to clear
+
+Integer. Cumulative BLS sets used to clear the residual. **0** if the
+first-pass scan was clear. Otherwise the count for however many sets
+the clearing required.
+
+### Final clear
+
+Boolean. Body scan is clear on the second pass — no residual remains.
+Check this when the clearing is done; leave unchecked if the session
+ran out of time and the scan was incomplete.
+
+### Notes
+
+Optional large text field for anything that didn't fit the structured
+record — pacing observations, dual-attention quality, anything that
+informs the next session.
+
+## What an incomplete body scan means
+
+If the session ran out of time before the scan was clear, **don't
+check the final-clear box**. Use the container or the calm place for
+closure, and pick up the body scan at the start of the next session.
+The unchecked box is the cue that there's still work to do on this
+target.
+
+## Citation
+
+- **Shapiro, F.** (1995, 2001, 2018). *Eye Movement Desensitization and
+  Reprocessing Therapy: Basic Principles, Protocols, and Procedures.*
+  Guilford Press. Phase 6 body scan procedure documented in all
+  editions of the canonical text.
+
+The protocol is published clinical method. Rivet's field labels are
+original.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Future template" icon="forward" href="/clinical-templates/emdr/future-template">
+    Phase 8 — the next phase after a clean body scan and successful
+    closure.
+  </Card>
+  <Card title="The EMDR Workspace" icon="brain" href="/emdr/index">
+    Where the residual-clearing BLS sets run.
+  </Card>
+</CardGroup>

@@ -1,0 +1,109 @@
+---
+title: "Your data export"
+description: "Per-session PDF inside the app; a full-account export by email request."
+---
+
+PHIPA gives you, as the health information custodian, the right to access
+the records of personal health information your agent (Rivet) holds on your
+behalf. PIPEDA gives you, as a Rivet customer, equivalent rights to your
+own account data.
+
+## Per-session PDF — inside the app
+
+For a single session's notes and any clinical templates you used in that
+session, you can generate a PDF from the session-summary screen.
+
+<Steps>
+  <Step title="Open the session in your inbox or session history">
+    Each completed session lives at the same place — inbox thread for
+    voicemails and SMS, video history for video sessions.
+  </Step>
+  <Step title="Tap Export → PDF">
+    Generates a single PDF bundling the session metadata (date,
+    duration, client identifier), every clinical template you completed
+    during the session, and your session note.
+  </Step>
+  <Step title="Save or share">
+    The PDF arrives on your device. From there, paste into your EHR,
+    drop into a shared drive, or email it to yourself.
+  </Step>
+</Steps>
+
+This is the most common export. Most practitioners use it to move a
+session's record from Rivet into their EHR — Jane, OWL Practice,
+PracticeBetter, whatever they're billing through.
+
+See [Exporting notes](/documentation/exporting-notes) for the full
+walkthrough including the clipboard path and what's in the
+session-summary PDF.
+
+## Full-account export — by email request
+
+For everything Rivet holds about your account, email
+**hello@getrivet.ca** with the subject line **"Data export request"**.
+We'll respond within five business days with a download link to a
+single archive containing:
+
+- Your account profile (practice name, email, cell, signup metadata).
+- Every voicemail in your inbox, with the audio file, transcript, and
+  metadata as a separate row.
+- Every SMS conversation, with thread metadata and individual messages.
+- Every completed assessment on the client's record — item-by-item
+  answers, scores, and severity bands.
+- Every session note on the client's record — signed notes and unsigned
+  drafts, labeled by status.
+- Every billing event tied to your account (a CSV summary;
+  full records are available in your billing portal).
+
+The format is a zipped folder of CSVs and PDFs, structured so a
+clinician without a tech background can browse it and a tech-savvy
+practice manager can search through it.
+
+We make this manual on purpose. Automating it would mean exposing an
+"export everything" URL, which is exactly the kind of attack surface we
+don't want sitting unused 364 days a year for the one day you need it.
+A human-touched request is slower; it's also safer.
+
+## What we DON'T hold
+
+A few categories of data we genuinely don't have, so we can't export
+them:
+
+- **Call recordings.** Rivet doesn't record calls. Only voicemails
+  are recorded — calls themselves are real-time and not captured. There
+  are no call recordings to export.
+- **Video session recordings.** Rivet doesn't record video sessions.
+  Designed in. See [Privacy + security](/privacy/index) for the full
+  posture.
+- **Whiteboard or in-session drawings.** These are ephemeral by design;
+  they exist for the duration of the session and aren't archived to
+  the server.
+- **Per-field ✎ annotations.** These are a private scratch layer you can
+  add beside individual fields during a session. They stay local to your
+  device and aren't stored on our servers. Export them as part of your
+  clipboard copy or PDF before you close the session if you want them in
+  the archive.
+
+## How long Rivet keeps your data
+
+By default, Rivet retains operational records (voicemails, SMS, session
+metadata) for as long as your account is active, plus the period
+required by Canadian health-records retention rules where applicable.
+After cancellation, see [Canceling your account](/account/canceling-your-account)
+for the deletion timeline.
+
+If you want a custom retention policy for your account — say, automatic
+purging of voicemails older than 30 days for a higher-volume practice
+— email us. It's not a self-serve setting, but we can set it up
+manually.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Exporting notes" icon="file-export" href="/documentation/exporting-notes">
+    The in-app session PDF and clipboard paths in detail.
+  </Card>
+  <Card title="How Rivet handles your data" icon="shield-check" href="/privacy/index">
+    What lives where, how long it stays, and your role as custodian.
+  </Card>
+</CardGroup>

@@ -1,0 +1,264 @@
+---
+title: "Setting up an EMDR session"
+description: "A walkthrough of the Configure modal — rate, stimulus, modalities, sound, motion path, set count, backdrop, SUD check-ins, client phone haptics, per-client saved settings, and Flash technique (Beta)."
+---
+
+When you tap **EMDR** in the call toolbar, the Configure modal opens on top
+of your video session with a preview of the scene. Your client's screen
+shows that scene while you're still choosing, and every change you make is
+visible on their side as you make it — worth knowing before you scroll
+through all sixteen backdrops in front of them.
+
+<Tip>
+  Rivet remembers your last configuration. The modal opens pre-populated
+  with the settings you used last time — so a returning client who wants
+  the same BLS as last week is one tap to **Start Set 1**.
+</Tip>
+
+## Per-client saved settings
+
+When the session is tied to a client in your records, Rivet can remember
+that specific client's settings separately from your general defaults. If
+the client has saved settings, the modal shows a quiet caption — **"Using
+this client's saved settings"** — and pre-fills the configuration from
+them.
+
+To save the current configuration as that client's defaults, check **Save
+as this client's defaults** before you start or apply changes. Leave it
+unchecked and saving works the way it always has — your practitioner-level
+defaults, not tied to any one client. If the session isn't linked to a
+client record, this option doesn't appear and nothing changes.
+
+## Mode toggle — EMDR 2.0, Classic, and Flash
+
+Top of the modal, mode pills. **EMDR 2.0** is the default. Tap **Classic**
+or **Flash — Beta** to switch.
+
+| | EMDR 2.0 (default) | Classic |
+|---|---|---|
+| Rate | 1.5 Hz | 1.0 Hz |
+| Modalities | Visual + Audio | Visual only |
+| Stimulus | Butterfly | Dot |
+| Sound preset | Soft drum | Sine |
+| Background | Photo backdrop | None (video shows through) |
+| Dual-task prompts | On | Off |
+| SUD check-ins | Every set | Baseline + end |
+
+Flipping the toggle resets every parameter to that mode's defaults. If
+you've tweaked the rate or the sound and then flip modes, your tweaks are
+replaced — by design, so the mode swap is clean. EMDR 2.0 is a research
+protocol rather than an EMDRIA-adopted one; see
+[The research behind EMDR](/emdr/the-research-behind-emdr) for where it
+stands.
+
+Flash mode is a different technique entirely — see the Flash technique
+section below.
+
+## Rate
+
+The slider runs from **0.3 Hz to 2.0 Hz**. A "cap 2.0 Hz" label sits at the
+right edge.
+
+<Warning>
+  The 2.0 Hz ceiling is a hard cap, not a UI suggestion. It holds wherever
+  the speed can be set — this slider, the stepper during a running set, and
+  any stored setting.
+  See [Photosensitive epilepsy safety](/emdr/photosensitive-epilepsy-safety)
+  for why.
+</Warning>
+
+Useful reference points:
+- **0.3–0.7 Hz** — slow. Used in early Phase 2 testing or when a client
+  reports visual overwhelm at higher rates.
+- **1.0 Hz** — Shapiro Classic baseline.
+- **1.5 Hz** — EMDR 2.0 default. Midpoint of the de Jongh / Matthijssen
+  published 1.2–2.0 Hz range.
+- **2.0 Hz** — upper edge of clinical norm and of safety.
+
+## Stimulus shape
+
+Five options:
+
+- **Dot** — Shapiro Classic default. Maximum clinical familiarity.
+- **Butterfly** — EMDR 2.0 default. The EMDRIA-adjacent silhouette
+  recognizable to EMDR-trained therapists.
+- **Flame** — a soft warm shape some clients prefer to a sharper geometric.
+- **Star** — a five-point shape with more visual texture.
+- **Square** — a clean geometric for clients who prefer neutral over
+  symbolic.
+
+All shapes render at the same pixel size and color regardless of the choice.
+See [Visual bilateral stimulation](/emdr/visual-bilateral-stimulation) for
+sizing and color.
+
+## Modalities
+
+Two pill toggles — **V** (visual) and **A** (audio). Tap to toggle either
+on or off. One has to stay on; turning off the last one puts visual back.
+
+- **V** is the moving stimulus. Turn it off for a client you've screened
+  out of visual BLS and the set runs audio-only against a calm backdrop.
+- **A** is the tone, which sits in whichever ear the stimulus is currently
+  on rather than merely moving at the same rate. See
+  [One movement, not three](/emdr/staying-in-sync).
+
+EMDR 2.0 expects multimodal stimulation. Classic defaults to visual only.
+
+## Client phone haptics
+
+A row further down the modal turns on taps in your client's hand. Switch it
+on and a card appears on your client's screen for them to scan with their
+phone's camera — nothing to install on Android, a small Rivet companion on
+iPhone. **Add a second phone** issues a second code, so one phone can sit in
+each hand.
+
+A paired phone doesn't run its own rhythm. It joins the one already
+running, so the taps land on the turns of the stimulus. Two phones hold
+opposite halves of the same rhythm without communicating with each other.
+
+While a set is running, a **PHONE** marker joins the stats pill so you can
+see at a glance whether a paired phone is still with you.
+
+## Audio
+
+A row of eight sound presets — **Sine**, **Triangle**, **Soft drum**,
+**Chime**, **Click**, **Woodblock**, **Alpha drum**, **Tick**. All are
+synthesized live in the browser; nothing is downloaded.
+
+See [Auditory bilateral stimulation](/emdr/auditory-bilateral-stimulation)
+for what each sound is and when to reach for it.
+
+Below the preset, two values: the carrier frequency (default 250 Hz,
+clamped 200–450 Hz) and the audio volume slider.
+
+## Path
+
+Six motion paths:
+
+- **Horizontal** — classic left-right oscillation (default)
+- **Vertical** — top to bottom
+- **Diag ↗** — bottom-left to top-right
+- **Diag ↘** — top-left to bottom-right
+- **Circle** — continuous circular orbit
+- **Figure 8** — figure-eight loop
+
+Horizontal is the default for both modes and the most clinically familiar.
+The other paths are options for clients who report habituation or visual
+fatigue on horizontal.
+
+## Sets
+
+Two steppers — set count and set duration.
+
+- **Set count** — how many sets you plan to run before the session arc card
+  closes the session. You can change this mid-session; the card respects the
+  current count.
+- **Set duration** — clamped to **20 to 40 seconds** in 5-second increments.
+  Default is 30 seconds.
+
+The label above reads "**4 × 30s**" — 4 sets, 30 seconds each.
+
+## Photo backdrop
+
+A horizontal row of 16 thumbnails — 8 gradient scenes plus 8 photo
+backdrops. Tap to apply.
+
+- **Gradient scenes** (no external fetch) — None, Indigo, Dark, Sunset,
+  Forest, Ocean, Void, Warm
+- **Photo backdrops** — Forest, Ocean, Mountain, Sky, Lavender, Dawn, Lake,
+  Dunes
+
+See [Backgrounds and scenes](/emdr/backgrounds-and-scenes) for which to pick
+when.
+
+## Stim size + Audio volume
+
+Two sliders side by side.
+
+- **Stim size** — 16 to 48 px. Default 32 px. The size of the stimulus
+  within the frame, which scales to whatever screen your client is on.
+- **Audio volume** — 0 to 100%. Default 60%.
+
+## Auto-vary toggle
+
+Off by default. When on, the renderer applies small modulations to speed,
+size, and color brightness over the duration of a set — staying within
+clinical bounds at all times.
+
+Rationale: monotonous stimulation can let working memory habituate. Mild
+parameter variation keeps the dual-task engaging without leaving the
+clinical envelope. Engelhard / Littel working-memory taxation research is
+the backdrop.
+
+## Dual-task prompts
+
+EMDR 2.0 default is **on**, Classic default is **off**. When on, the
+running Workspace surfaces a panel with a dual-task prompt you read aloud
+during the set.
+
+See [Dual-task prompts](/emdr/dual-task-prompts) for the prompts, the five
+categories, and how to switch between them mid-set.
+
+## SUD check-ins
+
+A **SUD check-ins** control lets you choose how often the Workspace asks
+for a SUDS rating: **Every set** (the EMDR 2.0 default) or **Baseline +
+end** (the Classic default) — a check before Set 1, an optional check
+between sets, and a check at the end. Switching modes resets this to that
+mode's default; you can override it either way.
+
+When Baseline + end is selected, the **Start Set 1** button changes to
+**Start — baseline first**, so it's clear a SUDS check happens before any
+stimulation begins. See [The SUDS scale](/emdr/the-suds-scale) for exactly
+how each check-in works, and how optional VOC capture fits in.
+
+## Flash technique (Beta)
+
+Flash is a different technique from standard bilateral stimulation —
+select it from the mode toggle and the modal changes shape. Speed, path,
+stimulus shape, and audio rows disappear, because Flash doesn't use a
+moving stimulus. In their place:
+
+- **Positive engaging focus** — a short text field where you note a calm,
+  absorbing memory or image the client holds in mind. This stays on your
+  device for the session only — it's never saved to a Rivet server.
+- SUD check-ins are locked to **Baseline + end** — Flash captures a
+  reading before you begin and one at the close, matching how the
+  technique is run in practice.
+
+During the running set, your client sees the positive-focus text on their
+screen — calm, steady type, no moving stimulus. When you're ready for a
+blink, tap **Flash** on your overlay and a gentle cue plays on their
+side: the text pulses softly and a soft chime sounds. That's the signal
+for the blink sequence you're guiding verbally. See
+[Practitioner controls](/emdr/practitioner-controls) for how the Flash
+button behaves during a session.
+
+## Footer — Cancel vs Start Set 1
+
+Two buttons.
+
+- **Cancel** — saves your configuration and closes the modal without
+  starting. The next time you tap EMDR, your settings are pre-loaded.
+- **Start Set 1** — saves the configuration, closes the modal, and starts
+  the first set. The Workspace transitions to the running state. If SUD
+  check-ins is set to Baseline + end, this button reads **"Start —
+  baseline first"** instead.
+
+If the Workspace is already running and you open the modal mid-session, the
+**Start Set 1** button changes to **Apply changes** — the running set
+inherits the new configuration the moment the next set begins.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Visual bilateral stimulation" icon="eye" href="/emdr/visual-bilateral-stimulation">
+    Stimulus shapes, paths, sizing, and the 0.3 to 2.0 Hz speed range.
+  </Card>
+  <Card title="Auditory bilateral stimulation" icon="volume-2" href="/emdr/auditory-bilateral-stimulation">
+    Eight synthesized sound presets and the L↔R pan rate.
+  </Card>
+  <Card title="Photosensitive epilepsy safety" icon="triangle-alert" href="/emdr/photosensitive-epilepsy-safety">
+    The 2.0 Hz cap, the first-use warning modal, and what to screen for.
+  </Card>
+</CardGroup>

@@ -1,0 +1,86 @@
+---
+title: "Can't log in"
+description: "Magic link not arriving, wrong email, or an account that's been paused — how to tell which one and what to do."
+---
+
+Rivet doesn't use passwords. You sign in by entering your email; Rivet
+sends a one-tap magic link to that address; you open the link on the
+device you want to use Rivet on. If that loop is broken, one of three
+things is happening.
+
+## 1. The magic link isn't arriving
+
+The most common cause. The email is in spam or the promotions tab.
+
+<Steps>
+  <Step title="Check spam and promotions">
+    First emails from a new sending domain land in spam more often than
+    not. Gmail and Outlook are especially aggressive about new senders.
+    Search your inbox for `getrivet` or `Rivet` across all folders.
+  </Step>
+  <Step title="Mark it Not Spam">
+    Once you find it, move it to your inbox and mark it as Not Spam (Gmail)
+    or Not Junk (Outlook). Future Rivet emails will route correctly.
+  </Step>
+  <Step title="Wait two minutes, then request a fresh link">
+    If it's genuinely not there, request a new one from the sign-in
+    screen. The previous link is now invalid — only the most recent one
+    works.
+  </Step>
+</Steps>
+
+<Note>
+  Magic links expire after one hour. If you requested one yesterday and
+  came back to it today, request a new one instead.
+</Note>
+
+## 2. You're typing the wrong email
+
+Rivet sends the link to the address attached to your account — not a
+similar one. Check the email you used at signup:
+
+- Was it your professional address or a personal one?
+- Did you include a typo (`.con` instead of `.com`, missing letter)?
+- Is it the email your welcome message came to? That's the one Rivet
+  knows about.
+
+If you signed up with the wrong address by mistake, email
+**hello@getrivet.ca** with both addresses (the one you used and the one
+you want) and we'll move your account over.
+
+## 3. Your account is paused
+
+Accounts get paused for two reasons:
+
+- **Trial expired and no card on file.** Your data is intact, but the
+  app shows a "Subscribe to continue" overlay instead of the inbox.
+  Subscribe via the payment link in the overlay (or in the
+  expiry email we sent) and the overlay clears within a minute.
+- **Manual hold.** Rare — happens if we flag suspicious activity on a
+  new account. Email **hello@getrivet.ca** and we'll explain what
+  triggered it.
+
+In both cases the magic link still arrives and still works — you'll just
+land on the overlay instead of the inbox.
+
+## What Rivet doesn't do
+
+There is **no password reset.** Rivet doesn't have passwords. Every
+sign-in is a fresh magic link sent to your email. If you've forgotten
+which email you used, that's the question to ask — not "how do I reset
+my password."
+
+There is **no SMS verification code path.** Magic links are the only
+sign-in mechanism. If a page is asking you for a code we didn't send,
+you're on a phishing site, not Rivet.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Magic link not working" icon="link-slash" href="/troubleshooting/magic-link-not-working">
+    The link arrived but tapping it doesn't sign you in.
+  </Card>
+  <Card title="Contacting support" icon="envelope" href="/troubleshooting/contacting-support">
+    What to include in your email so we can fix it fast.
+  </Card>
+</CardGroup>

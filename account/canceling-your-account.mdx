@@ -1,0 +1,193 @@
+---
+title: "Canceling your account"
+description: "How to cancel, what happens to your number, what we keep, and the timeline for deletion."
+---
+
+You can cancel Rivet at any time. No clawback, no penalty, no "are you
+sure?" five-screen flow. Email us, we close the account, your number
+gets released, your data is handled per the timeline below.
+
+## How to cancel
+
+Email **hello@getrivet.ca** with the subject line **"Cancel my account"**.
+Include:
+
+- The email you sign in with (so we close the right account).
+- Whether you want your data deleted immediately or kept for the
+  default retention window (see below).
+
+A human responds within one business day. The cancellation is processed
+the same day in most cases.
+
+We do it this way deliberately. A one-click cancellation in the app
+would also mean a one-click *accidental* cancellation — and recovering
+from accidental cancellation means re-provisioning a phone number,
+which is a non-trivial workflow we'd rather not optimise for.
+
+## When billing stops
+
+- **During the 14-day trial** — no payment ever ran, so there's nothing
+  to stop. Cancellation just closes the account.
+- **After paying** — your subscription is charged monthly. Cancelling
+  closes the account immediately and stops future charges; the current
+  month is not pro-rated. You keep access until the end of the period
+  you've already paid for, unless you ask us to disable access sooner.
+
+There is no clawback fee, no minimum term, no annual commitment. The
+model is the simplest one: month-to-month, cancel anytime.
+
+## What happens to your phone number
+
+Your Rivet phone number is released back to the carrier pool a short
+time after cancellation. By default, we hold it for **30 days** in
+case you change your mind — during that window, reactivating gets your
+old number back. After 30 days, the number returns to the pool and
+could be assigned to a new Rivet customer (or another carrier customer
+entirely) within days.
+
+If you don't want the number recycled — say, the number is on a
+business card you can't reprint and you'd rather just port it
+elsewhere — let us know in your cancellation email and we'll start a
+port-out instead. Porting takes 5–10 business days and goes through
+your destination carrier; we provide the release authorisation on our
+end.
+
+<Warning>
+  **Released numbers don't come back.** Once a number is released to the
+  carrier pool, there's no recall path. Decide on port vs release
+  before the 30-day window closes.
+</Warning>
+
+## What happens to your data
+
+Two paths for your account and communication data (voicemail recordings,
+transcripts, SMS history, call records, imported contacts), depending on
+what you ask for in the cancellation email. **Clinical records follow a
+separate path — see below.**
+
+### Default — 30-day retention then delete
+
+For 30 days after cancellation:
+- Your data sits in our database in a read-only state.
+- Your account is signed out everywhere; the magic-link sign-in is
+  disabled.
+- If you reactivate, every voicemail, SMS, and session note comes back
+  exactly as it was.
+
+After 30 days:
+- Voicemail audio files are purged from our storage.
+- SMS message bodies are deleted.
+- Personal information on your account row (name, cell number, signup
+  IP) is overwritten with `[redacted]`.
+- The row itself stays as a stub for auditing — every PHIPA-grade
+  service keeps a deletion ledger entry so we can prove the deletion
+  happened.
+
+### Immediate — delete on cancellation
+
+If you ask for immediate deletion in your cancellation email, we skip
+the 30-day window. Everything in the default 30-day-then-delete path
+runs that day. No reactivation path after this point.
+
+Use the immediate path if:
+- You're closing your practice entirely and don't expect to come back.
+- You're under a regulatory or college instruction to delete records
+  on a specific date.
+- You'd just rather not have records lingering.
+
+### Clinical records — 90-day export window
+
+Your clinical records (progress notes, assessment responses, risk
+assessments, and client record fields) are yours — they go with you
+into your own record system. Rivet gives you a **90-day window** after
+your account closes to export them before they are permanently deleted.
+
+- A full structured export is available on or before your cancellation
+  date. Export early — don't let the window close.
+- Your records are deleted on your written instruction, or
+  automatically at the end of the 90-day window, whichever comes first.
+- The ongoing obligation to keep clinical records for the period your
+  College requires — commonly at least 10 years from the last clinical
+  interaction with a client — is yours, as the practitioner, to meet
+  through your own record system after export. That obligation does not
+  stay with Rivet.
+
+<Note>
+  **Export before you cancel.** Request a clinical record export from
+  `hello@getrivet.ca` as part of your cancellation email. The export
+  is ready within five business days; starting it before you close
+  the account gives you the most time.
+</Note>
+
+## What we keep after deletion
+
+A small set of records survive the deletion for a reason:
+
+- **Billing records.** Our payment provider holds invoices and payment records for
+  7 years per Canadian tax law (CRA requirement). We don't override
+  that retention.
+- **Deletion ledger.** A timestamped entry stating "Account
+  `[business_id]` was deleted on `[date]` at the customer's request,
+  including audio purge and personal information overwrite." This is
+  evidence of the deletion, not the data itself.
+- **Aggregate, non-identifying metrics.** Things like "Rivet processed
+  X voicemails in Q2" — your individual numbers aren't recoverable from
+  this, but the count was part of it.
+
+What we do **not** keep:
+
+- **Clinical records** — these are yours and go with you. At the end of
+  the 90-day wind-down, any clinical records still on Rivet's servers
+  are permanently deleted. Rivet does not hold clinical records for
+  10 years after account closure. Your own professional obligations for
+  that period are met through the copy you exported.
+
+## Before you cancel
+
+A short list of things to do first, in priority order:
+
+<Steps>
+  <Step title="Export your data">
+    Request a [full-account export](/account/your-data-export). The
+    export takes up to five business days; start it before you cancel
+    so it doesn't race the deletion window.
+  </Step>
+  <Step title="Stop forwarding your existing line to Rivet">
+    Otherwise, calls to your published practice number ring into a
+    dead Rivet line during the gap. See
+    [Call forwarding by carrier](/practice-phone/index) for the
+    carrier-specific instructions to undo your forwarding setup.
+  </Step>
+  <Step title="Update your website, business cards, and email signatures">
+    Move them to your next solution before the Rivet number stops
+    working, so a client who calls during the handover reaches the
+    right place.
+  </Step>
+  <Step title="Tell your active clients">
+    A one-line text from your Rivet number a few days before
+    cancellation: "*My office line is changing. Save this new
+    number…*"
+  </Step>
+</Steps>
+
+## Coming back
+
+If you cancelled and within 30 days decide to come back, just sign in
+with the same email. Your account, your number, and your data are
+restored. Billing resumes at the same rate from the day you reactivate
+— no setup fees, no penalty, no questions.
+
+After 30 days (default retention) or immediately (if you asked for
+immediate deletion), coming back means signing up fresh — new account,
+new number, no historical data.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Your data export" icon="file-export" href="/account/your-data-export">
+    Get your data out before the deletion window closes.
+  </Card>
+  <Card title="Refunds" icon="rotate-left" href="/billing/refunds">
+    If you cancelled and want a refund considered, this is the route.
+  </Card>
+</CardGroup>

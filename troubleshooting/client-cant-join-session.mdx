@@ -1,0 +1,101 @@
+---
+title: "Client can't join session"
+description: "What to send your client when the waiting-room link won't load — usually a browser update or a corporate firewall."
+---
+
+When a client can't reach the session, it almost always falls into one
+of three buckets. Walk them through these in order — most cases resolve
+in under a minute.
+
+## 1. Their browser is too old
+
+Rivet's waiting room needs a browser built since roughly 2020 (any
+recent Safari on iPhone or Mac, Chrome, Edge, Firefox). Older browsers
+lack the features the session needs; they'll load the page and
+show a "Couldn't start" message, or freeze at the pre-join screen.
+
+**Send them this:**
+
+> If the session won't load, please update your browser and try again.
+> On iPhone or iPad, update iOS in Settings → General → Software Update
+> (Safari updates with iOS). On a laptop, install the latest Chrome at
+> google.com/chrome.
+
+99% of "won't load" reports are this. Update Chrome, retry, they're in.
+
+## 2. They denied camera or mic permission earlier
+
+If they (or their kid, or whoever last used the device) tapped Block on a
+camera prompt for `getrivet.ca` in the past, the browser remembers and
+won't ask again. The waiting room loads but the video is black and the
+Join button can't proceed.
+
+**Send them this:**
+
+> Look for a small camera or lock icon in the address bar at the top of
+> your screen. Tap it, and change Camera and Microphone to **Allow**.
+> Then refresh the page.
+
+The exact wording differs by browser, but the lock-icon path works
+everywhere. On iPhone Safari, the fix is in Settings → Safari → Camera
+(Ask) and Microphone (Ask) instead.
+
+## 3. They're on a corporate or hospital network that blocks video calls
+
+Some workplaces and hospitals block the network traffic browsers use
+for peer-to-peer video. Rivet has a fallback relay (a Canadian server
+that forwards encrypted call traffic when the direct route is blocked),
+and it kicks in automatically for most restrictive networks. But a
+small number of locked-down enterprise networks block even that.
+
+**Symptoms:** The pre-join screen works, they tap Join, the screen says
+"Connecting…" and stays there.
+
+**Send them this:**
+
+> Some workplace networks block video calls. Please try joining from
+> your phone's cellular data (turn off Wi-Fi for the moment) — that
+> almost always works.
+
+If they're on a phone, the cellular switch is the fastest fix. If
+they're on a desktop at work, hotspotting their phone is the workaround
+for that day, and a longer-term conversation about which network to use
+for sessions makes sense.
+
+## What clients should be on, ideally
+
+If you can pick the environment for them ahead of session day, the
+combinations that work without fail are:
+
+- **iPhone or iPad, Safari, home Wi-Fi or cellular** — the most
+  reliable setup. Safari on iPhone handles video sessions natively, no add-ons.
+- **Mac, Chrome or Safari, home Wi-Fi** — desktop video, full size,
+  works first time almost always.
+- **Android phone, Chrome, cellular** — works without fuss in
+  almost every case.
+- **Windows laptop, Chrome or Edge, home Wi-Fi** — works as long as
+  Chrome/Edge are recent (within a year).
+
+What to avoid if possible:
+
+- A browser they haven't updated in two years.
+- Internet Explorer (too old for video sessions).
+- A school or hospital Wi-Fi if there's a cellular alternative.
+
+## The thing that always works as a last resort
+
+If the session is starting in three minutes and nothing is working, end
+the video attempt and call them on the practice phone. Phone-line audio
+works on any phone with a signal, no browser involved. Reschedule the
+video session for next week and figure out their setup with more time.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Audio issues" icon="volume-high" href="/troubleshooting/audio-issues">
+    Once they're in but the audio is broken.
+  </Card>
+  <Card title="Video issues" icon="video-slash" href="/troubleshooting/video-issues">
+    Black screen and choppy video, on your side or theirs.
+  </Card>
+</CardGroup>

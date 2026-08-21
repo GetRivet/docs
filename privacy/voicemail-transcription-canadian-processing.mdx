@@ -1,0 +1,115 @@
+---
+title: "Voicemail and transcription processed in Canada"
+description: "Voicemail audio and transcription run on Canadian hardware. No cloud AI service receives client audio or transcripts."
+---
+
+When someone calls your Rivet number and leaves a voicemail, the audio
+follows a short, well-defined path — and the most sensitive parts of
+that path stay on Canadian hardware.
+
+This page is specific about *where* each step runs. It's the level of
+detail your College, your compliance officer, or an HIC compliance
+review will ask for.
+
+## The path a voicemail takes
+
+1. Your client calls your Rivet number.
+2. Twilio (United States) records the audio. Twilio retains the
+   recording for 30 days by default.
+3. Rivet's worker — running in Canada — fetches the audio from Twilio
+   for transcription.
+4. **Whisper**, an open-source speech-to-text model, transcribes the
+   audio. **Whisper runs locally on Rivet's Canadian hardware.** The
+   audio file is read into memory, transcribed, and never transmitted
+   to any cloud AI service.
+5. **Ollama**, running the same locally on the same Canadian hardware,
+   classifies the transcript's intent (new client, reschedule, urgent,
+   etc.) using an open-source language model.
+6. The transcript and the intent label are written to Rivet's database (hosted by Supabase in their `ca-central-1` region — Montreal, Canada).
+7. You receive a push notification, see the voicemail in your inbox,
+   and the appropriate auto-reply (if any) is sent to the caller.
+
+## What runs locally in Canada
+
+- **Voicemail audio transcription** — Whisper, on Rivet's hardware in
+  Belle River, Ontario.
+- **Intent classification** — Ollama, on the same hardware.
+- **The voicemail-processing worker** — also on the same hardware.
+
+That hardware never sends audio or transcripts to OpenAI, Anthropic,
+Google, or any other cloud AI provider. The transcription and
+classification models are open-source and run as local processes. No
+third-party AI service ever sees a client's voicemail.
+
+## What still touches the United States
+
+Being specific about what *is* in the US matters as much as being
+specific about what isn't.
+
+- **Twilio** records the inbound audio and holds it for the platform
+  retention window (30 days by default). Twilio operates under its own
+  published data-handling commitments and processes the audio only to
+  deliver the recording back to Rivet.
+- **Mobile push notifications** route through Apple (iOS) and Google
+  (Android FCM) push services in the United States. The notification
+  payload doesn't contain transcript text — it carries an identifier
+  that your device uses to fetch the full content over HTTPS.
+
+The transcript and the rest of your client information itself lives in
+the database, and the database is in Canada — see
+[where your data lives](/privacy/where-your-data-lives) for the
+specific region and the evidence trail.
+
+The Data Processing Agreement enumerates each sub-processor and its
+processing location. See [the DPA](/privacy/data-processing-agreement)
+for the full table.
+
+## Why the "no cloud AI" line matters
+
+The most sensitive moment in a voicemail's life is its raw audio. A
+caller may say their full name, the medication they take, a description
+of their symptoms, or the name of a family member. That's the kind of
+content that, once it leaves your boundary into a cloud AI vendor's
+training pipeline, becomes very hard to track.
+
+Running transcription and classification locally on Canadian hardware
+means:
+
+- The audio is read, transcribed, and discarded from memory.
+- The transcript is the only artifact that touches the database.
+- No vendor's terms of service govern what happens to the audio in
+  transit, in training, or in their analytics.
+- A subpoena to an AI vendor won't pull a copy of your client's
+  voicemail, because the vendor never had it.
+
+## What this lets you say
+
+If you're describing Rivet's privacy posture in a sales conversation,
+to your College, or to an HIC compliance review, the accurate phrasing
+is:
+
+> Voicemail audio and transcription are processed locally on Canadian
+> hardware. No third-party AI service receives client audio or
+> transcripts. The database, where every transcript and conversation
+> is stored, is hosted by Supabase in their Canadian (`ca-central-1`)
+> region.
+
+For the full architectural answer your College reviewer will want —
+table of every kind of information and where it physically lives,
+plus the evidence Rivet can produce — see
+[where your data lives](/privacy/where-your-data-lives).
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Client data handling" icon="database" href="/privacy/client-data-handling">
+    The full retention schedule for transcripts, audio, and conversation
+    history.
+  </Card>
+  <Card title="Encryption" icon="lock" href="/privacy/encryption">
+    How the audio and transcript are protected in transit and at rest.
+  </Card>
+  <Card title="The Data Processing Agreement" icon="file-signature" href="/privacy/data-processing-agreement">
+    The full sub-processor table and their processing locations.
+  </Card>
+</CardGroup>

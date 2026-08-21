@@ -1,0 +1,121 @@
+---
+title: "SOAP vs DAP — picking your note format"
+description: "Two standard mental-health note formats. What each one is for and which one fits your practice."
+---
+
+Rivet includes both SOAP and DAP. They're standard clinical note
+formats — neither is proprietary, and both are taught in graduate
+training across psychology, social work, counselling, and psychiatry.
+The differences are small but real, and most practitioners settle on
+one and stick with it. Pick one, try it for a week, switch if it
+doesn't fit.
+
+## SOAP — four sections
+
+**S**ubjective · **O**bjective · **A**ssessment · **P**lan.
+
+| Section | What goes here |
+|---|---|
+| **Subjective** | What the client reported. Chief concern, symptoms in their own words, narrative since last session. |
+| **Objective** | What you observed. Affect, mood, behaviour, session work completed, screening scores. |
+| **Assessment** | Your clinical formulation. Interpretation of S+O, working diagnosis, risk considerations. |
+| **Plan** | Next steps. Interventions for next session, homework, referrals, follow-up. |
+
+SOAP comes from problem-oriented medical records (Weed, 1968). It's the
+default note format in hospital-based therapy, psychiatry, integrated
+primary-care behavioural-health teams, and any practice with a medical
+chart upstream of it. The Subjective/Objective split mirrors the way a
+physician separates patient report from physical-exam findings.
+
+In Rivet, SOAP fits when:
+
+- You work in a multidisciplinary clinic and your notes sit alongside
+  physician notes
+- You bill insurance that audits for SOAP structure
+- You were trained on SOAP and don't have a reason to change
+- You want a clean place to put screening scores (the Objective section
+  is the natural home — see
+  [Auto-fill from templates](/documentation/auto-fill-from-templates))
+
+## DAP — three sections
+
+**D**ata · **A**ssessment · **P**lan.
+
+| Section | What goes here |
+|---|---|
+| **Data** | What was reported and what you observed, combined. Client narrative + affect + presentation + session work + screening scores. |
+| **Assessment** | Same as SOAP — your clinical formulation, working diagnosis, risk considerations. |
+| **Plan** | Same as SOAP — interventions, homework, referrals, follow-up. |
+
+DAP collapses Subjective + Objective into a single Data section.
+Practitioners who use DAP usually argue that the split between "what
+the client said" and "what I observed" is artificial in mental-health
+work — affect, mood, and content of speech are observed *through* what
+the client says. One Data section, one place to write, less
+copy-paste-shuffle when you're documenting a session that didn't
+divide neatly.
+
+DAP fits when:
+
+- You're a counsellor, social worker, psychologist, or
+  marriage-and-family therapist in private practice
+- You've ever felt like you're writing the same thing twice in S and O
+- You want a faster note (one section means one decision about where
+  content goes)
+- Your provincial regulator doesn't mandate a specific format
+
+## What Rivet does for either one
+
+Both templates carry the same machinery:
+
+- **Auto-fill** from completed client-fillable templates in the same
+  session — PHQ-9 / GAD-7 / K10 / DASS-21 / PCL-5 scores land in the
+  appropriate section, EMDR target ID and SUDS readings land in the
+  observation section, thought records and safety plans land in the
+  assessment section. See
+  [Auto-fill from templates](/documentation/auto-fill-from-templates).
+- **Voice-to-text dictation** via the browser's built-in
+  SpeechRecognition (mic icon on every textarea).
+- **Snippet rail** with quick-insert phrases like "congruent affect",
+  "no SI/HI", "safety plan reviewed". Default seeds ship with the
+  template; you edit the list to match your phrasing.
+- **Per-field private annotations** for clinical reasoning you want in
+  your record but not visible if a colleague reads the printed note.
+  See [Private annotations](/documentation/private-annotations).
+- **Three export paths** — copy to clipboard, per-note PDF, session-
+  summary PDF that bundles every template with your note at the top.
+  See [Exporting notes](/documentation/exporting-notes).
+
+## Which format does Rivet default to?
+
+Neither. The picker shows both under **Your notes (private)**. Pick the
+one you want; Rivet doesn't save a default. The two-tap pick is faster
+than a setting screen.
+
+## What about BIRP, PIRP, GIRP, narrative?
+
+Not included. SOAP and DAP cover the great majority of clinical-practice
+usage. If you'd find BIRP or another format useful, email
+**hello@getrivet.ca** with the request and we'll track it.
+
+<Tip>
+  There's no wrong answer here. Practitioners who learned SOAP in
+  graduate school and now work in private practice often keep SOAP out
+  of habit even though DAP would suit them better — and the reverse.
+  Try the one you weren't trained on for a few sessions before
+  committing.
+</Tip>
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Auto-fill from templates" icon="wand-magic-sparkles" href="/documentation/auto-fill-from-templates">
+    What lands in which section automatically when you open the note.
+  </Card>
+  <Card title="Reviewing and editing notes" icon="pen-to-square" href="/documentation/reviewing-and-editing-notes">
+    The hands-free dictation flow and snippet library.
+  </Card>
+  <Card title="Treatment plan" icon="map" href="/documentation/overview#treatment-plan">
+    A separate, longer-form template for the start of treatment.
+  </Card>
+</CardGroup>

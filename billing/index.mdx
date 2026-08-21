@@ -1,0 +1,75 @@
+---
+title: "Billing + trial"
+description: "Pricing, the 14-day trial, payment methods, invoices, and Canadian sales tax."
+---
+
+Rivet's billing model is the simplest one we could justify: one price,
+month-to-month, paid by credit card to Stripe. No tiers, no per-seat
+math, no annual lock-in, no setup fees, no overage charges. **$65 CAD a
+month.** Cancel anytime.
+
+## What's in this section
+
+<CardGroup cols={2}>
+  <Card title="The 14-day trial" icon="clock" href="/billing/the-trial">
+    No credit card up-front. Auto-replies keep firing the whole time.
+    What changes on day 15.
+  </Card>
+  <Card title="Subscription pricing" icon="dollar-sign" href="/billing/subscription-pricing">
+    $65 CAD a month. Everything that's included.
+  </Card>
+  <Card title="Payment methods" icon="credit-card" href="/billing/payment-methods">
+    Card payment via a Stripe-hosted Payment Link. Rivet never sees
+    your card.
+  </Card>
+  <Card title="Invoices and receipts" icon="receipt" href="/billing/invoices-and-receipts">
+    Where they're emailed. How to retrieve historical invoices from
+    your billing portal.
+  </Card>
+  <Card title="Canadian taxes" icon="map-canada" href="/billing/canadian-taxes">
+    HST, GST, PST — calculated automatically per province from your
+    billing address.
+  </Card>
+  <Card title="Failed payments" icon="circle-exclamation" href="/billing/failed-payments">
+    The automatic retry schedule. What stays working while a card is
+    being resolved.
+  </Card>
+  <Card title="Refunds" icon="rotate-left" href="/billing/refunds">
+    Case-by-case via email. The thinking behind that and what a
+    reasonable refund request looks like.
+  </Card>
+</CardGroup>
+
+## How the billing model is set up
+
+For visibility:
+
+- **One product, one price.** $65 CAD per month per practitioner. Same
+  price whether you're using one feature or every feature.
+- **Our payment provider handles all payment data.** Credit card numbers, ACH details,
+  expiration dates — none of that lives in Rivet's database. The payment
+  provider collects, stores, and processes them. We get a customer ID and a
+  subscription ID back; that's it.
+- **Sales tax is calculated and added automatically.** HST / GST /
+  PST owed per province based on your billing address goes onto your
+  invoice. You don't configure anything.
+- **Receipts are emailed after every charge.** Email receipt for every charge,
+  invoice PDF for every period. Your accountant can grab everything
+  from the billing portal at the end of the year.
+
+The trade-off: there's no "Billing" tab inside Rivet itself. We point you
+at the billing portal for anything billing-shaped — because
+duplicating the invoice view in the Rivet app would cost more to
+build, maintain, and audit than it would save anyone.
+
+## Related sections
+
+<CardGroup cols={2}>
+  <Card title="Your account" icon="user" href="/account/index">
+    Identity, profile, notifications, and the controls that aren't
+    billing-shaped.
+  </Card>
+  <Card title="Privacy + security" icon="shield-check" href="/privacy/index">
+    The full posture on payment data, who sees what, and what's audited.
+  </Card>
+</CardGroup>

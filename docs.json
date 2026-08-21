@@ -1,97 +1,546 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
-  "name": "Product Guide",
-  "description": "Step-by-step guides for every product—platform setup, analytics, and integrations in one place.",
+  "theme": "mint",
+  "name": "Rivet Knowledge Base",
+  "description": "Product guide for Rivet — your practice phone, video sessions, clinical templates, and EMDR.",
   "colors": {
-    "primary": "#166E3F",
-    "light": "#26BD6C",
-    "dark": "#166E3F"
+    "primary": "#5E6AD2",
+    "light": "#7D88DC",
+    "dark": "#4854C4"
   },
-  "favicon": "/favicon.ico",
-  "icons": {
-    "library": "lucide"
-  },
-  "styling": {
-    "eyebrows": "breadcrumbs"
-  },
-  "contextual": {
-    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+  "favicon": "/logo/favicon.svg",
+  "logo": {
+    "light": "/logo/rivet-logo-color.png",
+    "dark": "/logo/rivet-logo-color.png",
+    "href": "/"
   },
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Home",
-          "icon": "house",
-          "href": "/"
-        },
-        {
-          "anchor": "Changelog",
-          "icon": "scroll-text",
-          "href": "https://www.mintlify.com/docs/changelog"
-        },
-        {
-          "anchor": "Help",
-          "icon": "life-buoy",
-          "href": "https://www.mintlify.com/docs/contact-support"
-        }
-      ]
-    },
-    "directory": "card",
-    "groups": [
+    "products": [
       {
-        "group": "Platform",
-        "icon": "layers",
-        "expanded": true,
-        "pages": [
-          "platform/quickstart",
-          "platform/key-concepts",
-          "platform/configuration/settings",
-          "platform/configuration/user-management",
-          "platform/administration/roles-permissions"
+        "product": "Welcome",
+        "icon": "house",
+        "groups": [
+          {
+            "group": "Start here",
+            "pages": [
+              "introduction",
+              "what-is-rivet",
+              "quick-start"
+            ]
+          }
         ]
       },
       {
-        "group": "Analytics",
-        "icon": "chart-bar",
-        "expanded": true,
-        "pages": [
-          "analytics/quickstart",
-          "analytics/connect-data",
-          "analytics/dashboards/create-dashboard",
-          "analytics/reports/scheduled-reports"
+        "product": "What's new",
+        "icon": "sparkles",
+        "groups": [
+          {
+            "group": "Updates",
+            "pages": [
+              "changelog/index"
+            ]
+          }
         ]
       },
       {
-        "group": "Integrations",
-        "icon": "plug",
-        "expanded": true,
-        "pages": [
-          "integrations/quickstart",
-          "integrations/authentication",
-          "integrations/connectors/crm",
-          "integrations/webhooks/configure"
+        "product": "Getting started",
+        "icon": "rocket",
+        "groups": [
+          {
+            "group": "Your first day with Rivet",
+            "pages": [
+              "getting-started/index",
+              "getting-started/welcome",
+              "getting-started/signup",
+              "getting-started/choosing-your-number",
+              "getting-started/your-rivet-url",
+              "getting-started/install-the-app",
+              "getting-started/desktop-vs-mobile",
+              "getting-started/first-10-minutes",
+              "getting-started/your-first-session",
+              "getting-started/test-your-line",
+              "getting-started/testing-with-a-colleague",
+              "getting-started/the-14-day-trial",
+              "getting-started/works-alongside-your-ehr",
+              "getting-started/send-your-rivet-link-through-your-ehr"
+            ]
+          }
+        ]
+      },
+      {
+        "product": "Practice phone",
+        "icon": "phone",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "practice-phone/index",
+              "practice-phone/overview",
+              "practice-phone/professional-line-vs-personal"
+            ]
+          },
+          {
+            "group": "Calls",
+            "pages": [
+              "practice-phone/making-calls",
+              "practice-phone/receiving-calls",
+              "practice-phone/in-session-call-handling"
+            ]
+          },
+          {
+            "group": "Voicemail",
+            "pages": [
+              "practice-phone/voicemail",
+              "practice-phone/voicemail-greeting",
+              "practice-phone/call-forwarding"
+            ]
+          },
+          {
+            "group": "Messaging",
+            "pages": [
+              "practice-phone/sending-texts",
+              "practice-phone/delivery-status",
+              "practice-phone/auto-response",
+              "practice-phone/customizing-auto-response"
+            ]
+          },
+          {
+            "group": "Contacts",
+            "pages": [
+              "practice-phone/managing-contacts",
+              "practice-phone/importing-contacts"
+            ]
+          }
+        ]
+      },
+      {
+        "product": "Video sessions",
+        "icon": "video",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "video-sessions/index",
+              "video-sessions/overview",
+              "video-sessions/clients-need-no-app"
+            ]
+          },
+          {
+            "group": "Running a session",
+            "pages": [
+              "video-sessions/creating-a-session-link",
+              "video-sessions/sharing-with-clients",
+              "video-sessions/the-pre-join-experience",
+              "video-sessions/the-session-workspace",
+              "video-sessions/screen-sharing",
+              "video-sessions/in-session-controls",
+              "video-sessions/ending-a-session"
+            ]
+          },
+          {
+            "group": "Quality + use cases",
+            "pages": [
+              "video-sessions/audio-and-video-quality",
+              "video-sessions/using-rivet-for-consultation",
+              "video-sessions/troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "product": "Client record",
+        "icon": "folder-open",
+        "groups": [
+          {
+            "group": "Your client record",
+            "pages": [
+              "client-record/index",
+              "client-record/overview",
+              "client-record/progress-notes",
+              "client-record/getting-notes-out"
+            ]
+          }
+        ]
+      },
+      {
+        "product": "Whiteboard",
+        "icon": "presentation-screen",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "whiteboard/index",
+              "whiteboard/overview",
+              "whiteboard/opening-the-whiteboard"
+            ]
+          },
+          {
+            "group": "Drawing + collaboration",
+            "pages": [
+              "whiteboard/drawing-tools",
+              "whiteboard/client-collaboration",
+              "whiteboard/sticky-notes",
+              "whiteboard/exporting-as-pdf"
+            ]
+          },
+          {
+            "group": "Therapy presets",
+            "pages": [
+              "whiteboard/presets-overview",
+              "whiteboard/presets-cbt",
+              "whiteboard/presets-trauma",
+              "whiteboard/presets-formulation",
+              "whiteboard/presets-emotion-regulation",
+              "whiteboard/presets-mindfulness-act",
+              "whiteboard/presets-relationships",
+              "whiteboard/presets-substance-use",
+              "whiteboard/presets-children-adolescents",
+              "whiteboard/presets-psychoeducation"
+            ]
+          }
+        ]
+      },
+      {
+        "product": "EMDR",
+        "icon": "brain",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "emdr/index",
+              "emdr/overview",
+              "emdr/staying-in-sync",
+              "emdr/the-research-behind-emdr",
+              "emdr/the-8-phase-protocol"
+            ]
+          },
+          {
+            "group": "Running an EMDR session",
+            "pages": [
+              "emdr/setting-up-an-emdr-session",
+              "emdr/visual-bilateral-stimulation",
+              "emdr/auditory-bilateral-stimulation",
+              "emdr/dual-task-prompts",
+              "emdr/backgrounds-and-scenes",
+              "emdr/the-suds-scale",
+              "emdr/the-session-arc",
+              "emdr/practitioner-controls"
+            ]
+          },
+          {
+            "group": "Safety + practice",
+            "pages": [
+              "emdr/photosensitive-epilepsy-safety",
+              "emdr/best-practices-for-virtual-emdr",
+              "emdr/who-should-not-use-emdr"
+            ]
+          }
+        ]
+      },
+      {
+        "product": "Clinical templates",
+        "icon": "clipboard-list",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "clinical-templates/index",
+              "clinical-templates/overview",
+              "clinical-templates/in-session-administration",
+              "clinical-templates/finding-a-template"
+            ]
+          },
+          {
+            "group": "Depression + anxiety screening",
+            "pages": [
+              "clinical-templates/screening/overview",
+              "clinical-templates/screening/phq-9",
+              "clinical-templates/screening/gad-7",
+              "clinical-templates/screening/qids-sr-16",
+              "clinical-templates/screening/ces-d-r",
+              "clinical-templates/screening/spin",
+              "clinical-templates/screening/pswq"
+            ]
+          },
+          {
+            "group": "Distress + trauma",
+            "pages": [
+              "clinical-templates/screening/k10",
+              "clinical-templates/screening/dass-21",
+              "clinical-templates/screening/pss-10",
+              "clinical-templates/screening/pcl-5",
+              "clinical-templates/screening/itq",
+              "clinical-templates/screening/cpss-5",
+              "clinical-templates/screening/bsl-23",
+              "clinical-templates/screening/msi-bpd",
+              "clinical-templates/screening/ace"
+            ]
+          },
+          {
+            "group": "Sleep, substance + other",
+            "pages": [
+              "clinical-templates/substance/overview",
+              "clinical-templates/screening/psqi",
+              "clinical-templates/screening/isi",
+              "clinical-templates/substance/audit",
+              "clinical-templates/substance/audit-c",
+              "clinical-templates/substance/dast-10",
+              "clinical-templates/substance/crafft",
+              "clinical-templates/substance/cage-aid",
+              "clinical-templates/screening/scoff",
+              "clinical-templates/screening/ede-q",
+              "clinical-templates/screening/who-5",
+              "clinical-templates/screening/whodas-12",
+              "clinical-templates/screening/oci-r",
+              "clinical-templates/screening/mdq",
+              "clinical-templates/screening/mspss"
+            ]
+          },
+          {
+            "group": "CBT + behavioral",
+            "pages": [
+              "clinical-templates/cbt/overview",
+              "clinical-templates/cbt/thought-record",
+              "clinical-templates/cbt/distortion-check",
+              "clinical-templates/cbt/activity-check-in",
+              "clinical-templates/cbt/behavioral-experiment",
+              "clinical-templates/cbt/exposure-log",
+              "clinical-templates/cbt/problem-solving",
+              "clinical-templates/cbt/values-clarification",
+              "clinical-templates/cbt/aaq-ii",
+              "clinical-templates/cbt/cfq-7",
+              "clinical-templates/cbt/stuck-point-log",
+              "clinical-templates/cbt/mood-diary",
+              "clinical-templates/cbt/sleep-diary",
+              "clinical-templates/cbt/suds-check-in",
+              "clinical-templates/cbt/self-compassion-break",
+              "clinical-templates/cbt/scs-sf",
+              "clinical-templates/cbt/target-identification"
+            ]
+          },
+          {
+            "group": "EMDR templates",
+            "pages": [
+              "clinical-templates/emdr/overview",
+              "clinical-templates/emdr/calm-place",
+              "clinical-templates/emdr/container",
+              "clinical-templates/emdr/body-scan",
+              "clinical-templates/emdr/future-template"
+            ]
+          },
+          {
+            "group": "Crisis",
+            "pages": [
+              "clinical-templates/crisis/overview",
+              "clinical-templates/crisis/safety-plan",
+              "clinical-templates/crisis/rfl-12"
+            ]
+          },
+          {
+            "group": "Clinician-administered measures",
+            "pages": [
+              "clinical-templates/clinician-administered/overview",
+              "clinical-templates/clinician-administered/ham-d",
+              "clinical-templates/clinician-administered/ham-a",
+              "clinical-templates/clinician-administered/y-bocs",
+              "clinical-templates/clinician-administered/ymrs",
+              "clinical-templates/clinician-administered/ygtss",
+              "clinical-templates/clinician-administered/c-ssrs"
+            ]
+          },
+          {
+            "group": "Child, adolescent + specialized",
+            "pages": [
+              "clinical-templates/child/overview",
+              "clinical-templates/specialized/overview",
+              "clinical-templates/child/phq-a",
+              "clinical-templates/child/sdq-self",
+              "clinical-templates/child/rcads-parent",
+              "clinical-templates/child/asrs-v1-1",
+              "clinical-templates/child/snap-iv",
+              "clinical-templates/specialized/epds",
+              "clinical-templates/specialized/asq",
+              "clinical-templates/specialized/wai-sr",
+              "clinical-templates/specialized/maas",
+              "clinical-templates/specialized/ders-18",
+              "clinical-templates/screening/erq"
+            ]
+          }
+        ]
+      },
+      {
+        "product": "Notes + documentation",
+        "icon": "file-lines",
+        "groups": [
+          {
+            "group": "Session notes",
+            "pages": [
+              "documentation/index",
+              "documentation/overview",
+              "documentation/soap-vs-dap",
+              "documentation/auto-fill-from-templates",
+              "documentation/why-no-ai-transcription",
+              "documentation/reviewing-and-editing-notes",
+              "documentation/private-annotations",
+              "documentation/exporting-notes",
+              "documentation/notes-and-your-ehr"
+            ]
+          }
+        ]
+      },
+      {
+        "product": "Measurement-based care",
+        "icon": "arrow-trend-up",
+        "groups": [
+          {
+            "group": "Working with measures over time",
+            "pages": [
+              "measurement-based-care/index",
+              "measurement-based-care/overview",
+              "measurement-based-care/the-evidence-base",
+              "measurement-based-care/administering-measures-in-session",
+              "measurement-based-care/measure-trajectories",
+              "measurement-based-care/clinical-change-thresholds",
+              "measurement-based-care/risk-flagging"
+            ]
+          }
+        ]
+      },
+      {
+        "product": "Account + billing",
+        "icon": "user",
+        "groups": [
+          {
+            "group": "Your account",
+            "pages": [
+              "account/index",
+              "account/managing-your-account",
+              "account/your-practice-profile",
+              "account/changing-your-number",
+              "account/changing-your-rivet-url",
+              "account/notification-preferences",
+              "account/your-data-export",
+              "account/canceling-your-account"
+            ]
+          },
+          {
+            "group": "Billing + trial",
+            "pages": [
+              "billing/index",
+              "billing/the-trial",
+              "billing/subscription-pricing",
+              "billing/payment-methods",
+              "billing/invoices-and-receipts",
+              "billing/canadian-taxes",
+              "billing/failed-payments",
+              "billing/refunds"
+            ]
+          }
+        ]
+      },
+      {
+        "product": "Privacy + security",
+        "icon": "shield-check",
+        "groups": [
+          {
+            "group": "How Rivet handles your data",
+            "pages": [
+              "privacy/index",
+              "privacy/phipa-and-rivet",
+              "privacy/your-role-as-custodian",
+              "privacy/data-processing-agreement",
+              "privacy/client-data-handling",
+              "privacy/voicemail-transcription-canadian-processing",
+              "privacy/where-your-data-lives"
+            ]
+          },
+          {
+            "group": "Security + safeguards",
+            "pages": [
+              "privacy/encryption",
+              "privacy/audit-logging",
+              "privacy/breach-response",
+              "privacy/the-measurement-results-vs-clinical-content-distinction",
+              "privacy/security-best-practices-for-practitioners"
+            ]
+          }
+        ]
+      },
+      {
+        "product": "Troubleshooting",
+        "icon": "circle-question",
+        "groups": [
+          {
+            "group": "Common issues",
+            "pages": [
+              "troubleshooting/index",
+              "troubleshooting/cant-log-in",
+              "troubleshooting/magic-link-not-working",
+              "troubleshooting/audio-issues",
+              "troubleshooting/video-issues",
+              "troubleshooting/client-cant-join-session",
+              "troubleshooting/sms-not-sending",
+              "troubleshooting/calls-not-coming-through",
+              "troubleshooting/payment-issues",
+              "troubleshooting/missing-features",
+              "troubleshooting/contacting-support"
+            ]
+          }
         ]
       }
     ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
-    "links": [],
+    "links": [
+      {
+        "label": "Open Rivet",
+        "href": "https://next.getrivet.ca"
+      }
+    ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Email support",
+      "href": "mailto:hello@getrivet.ca"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/yourcompany",
-      "linkedin": "https://linkedin.com/company/yourcompany"
-    }
-  }
+      "website": "https://getrivet.ca"
+    },
+    "links": [
+      {
+        "header": "Rivet",
+        "items": [
+          {
+            "label": "getrivet.ca",
+            "href": "https://getrivet.ca"
+          },
+          {
+            "label": "Email support",
+            "href": "mailto:hello@getrivet.ca"
+          }
+        ]
+      },
+      {
+        "header": "Legal",
+        "items": [
+          {
+            "label": "Privacy",
+            "href": "https://getrivet.ca/legal/privacy"
+          },
+          {
+            "label": "Terms",
+            "href": "https://getrivet.ca/legal/terms"
+          }
+        ]
+      }
+    ]
+  },
+  "search": {
+    "prompt": "Search the Rivet product guide"
+  },
+  "seo": {
+    "indexing": "navigable"
+  },
+  "redirects": []
 }

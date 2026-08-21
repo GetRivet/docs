@@ -1,0 +1,156 @@
+---
+title: "Why Rivet doesn't record sessions or use an AI scribe"
+description: "The deliberate decision against session recording, cloud transcription, and AI note generation — and what we built instead."
+---
+
+The AI-scribe category exists. Mentalyc, Heidi, Freed, and a half-dozen
+competitors record therapy sessions, transcribe them, and generate
+SOAP/DAP drafts. Most telementalhealth platforms either ship recording
+themselves or integrate with one of those vendors.
+
+Rivet doesn't. Not as a "we'll get to it" — as a design choice.
+
+## The short version
+
+A 50-minute therapy session is among the most sensitive PHI surfaces in
+healthcare. Recording it and shipping the audio (or transcript) to a
+cloud LLM means: now there's a copy of every word your client said,
+somewhere outside your control, processed by a system you don't
+operate. Even with the strictest architecture — local recording, short-term
+deletion, a signed agreement with the vendor — you've just moved a
+sensitive surface from "in the room" to "in a vendor's processing
+pipeline."
+
+The structured-template approach captures the same clinical data without
+the recording. PHQ-9, GAD-7, K10, DASS-21, PCL-5, target identification,
+SUDS, thought records, safety plans — these are the artifacts an
+AI scribe would try to extract from a transcript. Rivet captures them
+**as structured data, in-session, in the templates the client filled
+out**. The note can then auto-fill from that structured data
+deterministically, with no LLM, no transcript, and no recording.
+
+You write the formulation. Rivet provides the supporting structure.
+
+## The full reasoning
+
+### Clinical data stays in Canadian hands, not a cloud AI vendor
+
+Progress notes and completed assessments save to the client's record on
+Rivet's servers, in Canada. No third-party cloud AI sees them. The
+practitioner-private posture means notes are never sent to the client's
+device, and audio or session conversation never reaches Rivet at all.
+
+Rivet processes voicemails on its own hardware in Belle River, Ontario —
+not through a cloud AI vendor. Transcription runs locally; nothing is
+shipped to an external AI service. The same principle applies to the
+clinical work in a session: your notes are authored by you, with no LLM
+in the path.
+
+An AI-scribe recording pipeline is a fundamentally different shape: it
+requires that session audio — 50 minutes of a therapy conversation —
+travel to a cloud vendor, be transcribed, and be summarized by an LLM
+you don't operate. That's the privacy surface the structured-template
+approach sidesteps entirely.
+
+### Clinical quality
+
+A SOAP or DAP note authored by you — with the structured template data
+sitting alongside in the same session summary — is clinically superior
+to an LLM reconstruction from a transcript. Your note carries inference
+and judgment that the transcript doesn't contain: formulation,
+treatment direction, risk assessment. AI session-notes' marketing pitch
+is "save typing time," not "produce better notes."
+
+The auto-fill engine cuts the typing without putting the inference in a
+black box.
+
+### The structured data is already captured
+
+The clinical template library plus the EMDR 2.0 workspace already
+capture, in structured form, the data an AI session note would have
+to extract from a transcript. PHQ-9 scores. GAD-7 scores. K10 / DASS-21
+/ PCL-5 with cluster sums. EMDR target ID (NC / PC / VOC / SUDS
+baseline / body sensation). SUDS trajectory across BLS sets. Thought
+records. Safety plans. Sleep diaries.
+
+An LLM on a transcript is doing **information extraction from
+unstructured conversation** — an inference task with measurable error
+rates and known hallucination modes. An auto-fill engine on the
+templates is doing **information reformatting from already-extracted
+clinical data** — a deterministic merge. The first needs an LLM and a
+disclosure modal. The second needs neither.
+
+### No hallucinated content reaches the chart
+
+An LLM-summarized note will, eventually, write something the client
+didn't say. Or attribute a symptom to the wrong session. Or get the
+medication wrong. The category's marketing materials acknowledge this
+and recommend "always review the generated note before signing."
+Practitioners do — but the burden of catching every mistake is real,
+and the rare-but-serious error rate is non-zero.
+
+The deterministic auto-fill engine doesn't have a hallucination mode.
+What lands in your draft is exactly what was in the source template,
+formatted for clinical reading. The only inference in the note is
+yours.
+
+### No cloud AI processes PHI
+
+Rivet makes zero LLM calls during your session — no cloud transcription,
+no processing agreement to negotiate. The auto-fill engine runs in your browser.
+The voice-to-text dictation runs on the browser's built-in dictation
+(which may use a vendor cloud — same as iOS keyboard dictation — but
+never receives the session audio; only the words you dictate into the
+textarea).
+
+This isn't an absolute claim that no cloud AI is involved in any tool
+you use during your day. It's a claim about Rivet specifically: no
+session content, transcribed or summarized, leaves your browser via
+Rivet.
+
+## What this means practically
+
+- **No recording.** The video session is peer-to-peer. The audio
+  + video never reach a Rivet server in a re-playable form. Rivet
+  cannot retroactively transcribe a session.
+- **No AI scribe.** No vendor integration, no "connect your Mentalyc
+  account" button.
+- **No prompt engineering for clinical content.** The structured
+  templates don't have LLM-generated text in them. The
+  cognitive-distortions list, the safety-plan steps, the PHQ-9 items —
+  all human-authored, citation-backed.
+- **Your dictation is yours.** Voice-to-text uses the browser's built-
+  in dictation. Rivet never sees the audio. (Your browser might —
+  Chrome routes dictation through Google's cloud, Safari handles it
+  on-device. Same posture as your iOS keyboard.)
+- **The chart entry is yours.** When you paste the note into Jane or
+  Owl, every clinical interpretation in it was written by you. No
+  "AI-assisted" disclosure to your client, no provenance ambiguity.
+
+## What if I want an AI scribe anyway?
+
+Use a separate tool alongside Rivet — there are several in the
+category, and they're designed to plug into any video platform. Rivet
+won't block you. But Rivet won't help, either: the audio never reaches
+us, so we can't pipe it to a vendor on your behalf. The third-party
+tool would handle the recording, transcription, and AI-summarization
+end of things; Rivet would still handle the session, the templates,
+and the structured data.
+
+The structured-template path is what Rivet bets on, and it earns the
+bet every time a note exports cleanly with no hallucinated content.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Auto-fill from templates" icon="wand-magic-sparkles" href="/documentation/auto-fill-from-templates">
+    What replaces the AI scribe — and how the deterministic merge
+    works.
+  </Card>
+  <Card title="How documentation works" icon="folder-open" href="/documentation/overview">
+    The full posture behind practitioner-private notes.
+  </Card>
+  <Card title="Privacy and your clients' data" icon="shield-check" href="/privacy/index">
+    The broader Canadian-privacy posture Rivet is designed around.
+  </Card>
+</CardGroup>

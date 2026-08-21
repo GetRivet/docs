@@ -1,0 +1,94 @@
+---
+title: "Finding the right template"
+description: "The picker, the category groups, search, and the choice between sending a template async vs filling it in the session."
+---
+
+The Rivet template library has 65+ pre-built templates. Two things help you
+find the one you want fast: the category groups and the search box.
+
+## Where the picker lives
+
+You reach the template picker from four places:
+
+**In a video session.** Tap **Clinical templates ▾** in the top corner of the
+workspace. The picker opens with categories and search — select a
+template and the form appears on your client's device while you watch
+the responses and score update on yours.
+
+**From a conversation thread.** Tap the **+** in the message composer.
+Pick a template and Rivet sends the client a link they open on their
+own device and fill on their own time. The completed response arrives
+as a notification in the thread.
+
+**From a client's record.** Open the client's contact, then tap
+**Send form**. Same picker and same delivery — the completed response
+lands in the conversation thread.
+
+**From the create menu.** Tap **+** at the top of the screen and choose
+**Send assessment** to pick a client and a template in one step.
+
+## The category groups
+
+The picker organizes the library into these categories:
+
+- **Screening scales** — PHQ-9, GAD-7, QIDS-SR-16, CES-D-R, SPIN, K10,
+  DASS-21, PSS-10, PCL-5, ITQ, OCI-R, WHO-5, and the rest of the validated
+  measures
+- **Substance use** — AUDIT, AUDIT-C, DAST-10, CRAFFT, CAGE-AID, SCOFF (eating)
+- **CBT** — Thought records, distortion checks, behavioural experiments,
+  exposure logs, problem-solving, values clarification, mood + sleep diaries
+- **EMDR** — Safe place, container, body scan, future template, and the
+  other phase tools
+- **Crisis** — Stanley-Brown safety plan, RFL-12, ASQ, C-SSRS
+- **Outcome tracking** — Session check-ins, ORS / SRS
+- **Children + adolescents** — Age-appropriate versions of the common measures
+- **Clinician-administered** — HAM-D, MADRS, and other forms you fill about
+  the client
+- **Your notes (private)** — SOAP, DAP, treatment plan
+
+## The search box
+
+Above the categories is a search box. It matches on:
+
+- The template title (e.g. typing "phq" surfaces PHQ-9, "gad" surfaces GAD-7)
+- The template ID (handy if you know the canonical short name)
+- The first 300 characters of the description (covers most of what you'd
+  search for — "social anxiety" finds SPIN, "trauma" finds PCL-5 and ITQ)
+
+Search is local — instant, no network round-trip.
+
+## Sending async vs filling in-session
+
+
+Every client-fillable template can go out two ways. The right one depends
+on what you're doing with it.
+
+**Send async (link in an email or SMS).** Best for intake screening
+batteries you want the client to do before the first session. The client
+opens the link on their phone or laptop, fills the form on their own time,
+hits submit, and the completed response arrives as a notification in the
+conversation thread. You review it before the session starts.
+
+**Fill in-session.** Best for measures you want to administer with the
+client present — a follow-up PHQ-9 in week 4, a SUDS check-in during
+EMDR, a thought record built collaboratively. You see the response form
+on your screen as the client fills theirs.
+
+A small number of templates are flagged so the server only accepts one
+delivery mode. Clinician-administered measures (HAM-D, MADRS) and the
+practitioner-private notes (SOAP, DAP, treatment plan) cannot be sent
+async — there's no client filling them, so async makes no sense.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Filling a template in-session" icon="users" href="/clinical-templates/in-session-administration">
+    The collaborative live fill — what you and the client each see.
+  </Card>
+  <Card title="What's in the library" icon="layer-group" href="/clinical-templates/overview">
+    The three kinds of templates and the storage stance behind them.
+  </Card>
+  <Card title="Screening overview" icon="clipboard-check" href="/clinical-templates/screening/overview">
+    Picking between overlapping depression and anxiety measures.
+  </Card>
+</CardGroup>

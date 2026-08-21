@@ -1,0 +1,125 @@
+---
+title: "Testing with a colleague"
+description: "The two-minute waiting-room test that doubles as a peer demo."
+---
+
+The fifth row of the welcome-screen checklist says: "Test your waiting
+room with a colleague." That row earns its keep twice over — once as the
+smartest sanity check you can do before booking a real client, and once
+as the gentlest way to show another therapist what Rivet looks like.
+
+Two minutes. One colleague. Done.
+
+## Why this test, not a client test
+
+You could test your waiting room by booking yourself a fake session,
+opening Rivet on your phone, and tapping through both sides. That works
+for the mechanics. It misses the thing a colleague test catches: how the
+experience reads to someone who has never seen Rivet before.
+
+Your client will be a stranger to the product. So is your colleague.
+What confuses them now will confuse a client later — better to find out
+in a low-stakes test than in week three of someone's therapy.
+
+It also doubles as the most natural peer demo you can do. Therapists
+talk to other therapists about tools constantly. A friend who joins your
+waiting room, sees how clean the experience is, and goes "wait, what is
+this?" has now seen Rivet without you ever giving a sales pitch.
+
+## The script
+
+<Steps>
+  <Step title="Pick a colleague">
+    Another therapist, social worker, counsellor, or a friend you trust
+    to give you honest feedback. Bonus points if they're a peer who
+    might be curious about Rivet themselves.
+  </Step>
+  <Step title="Text them your URL">
+    From your phone, send them a text that reads roughly:
+
+    > "Doing a 2-minute Rivet test — can you tap getrivet.ca/your-name
+    > when you have a sec and tell me what you see?"
+
+    Use your actual slug. If you have their cell in your contacts, send
+    from your personal number; the point is to make sure they tap a
+    real link.
+  </Step>
+  <Step title="Open Rivet on your laptop">
+    Sign in if you're not already. Click into the Video tab and open
+    your waiting room. Leave it open in the foreground so you see when
+    they join.
+  </Step>
+  <Step title="Watch them appear in your waiting room">
+    Once they tap the link, grant camera + mic permission, and tap
+    Join, a row for them appears in your waiting room panel. Their
+    name (if they typed it) and a green Let-in button.
+  </Step>
+  <Step title="Let them in">
+    Click the green button. You're now in a live session together.
+  </Step>
+  <Step title="Spend two minutes saying hello">
+    Ask them what they saw on their side. Was the camera prompt clear?
+    Did the waiting state feel reasonable? Did they have any "wait,
+    where do I…" moments? This is the feedback that catches the small
+    confusions before a client hits them.
+
+    If they're a therapist, show them the whiteboard and the EMDR
+    workspace. Open a clinical template. The demo writes itself.
+  </Step>
+  <Step title="End the session">
+    Red End-session button. Both sides disconnect cleanly. Text them a
+    quick thanks.
+  </Step>
+</Steps>
+
+## What the test confirms
+
+By the end of two minutes you've verified:
+
+- Your URL is live and your slug routes to the right waiting room
+- A real person on a real phone, on a different network, can reach you
+- Camera + microphone permission prompts work on their device
+- Your waiting-room panel updates in real time on your side
+- Letting someone in works
+- The session room launches without surprises
+- The end-session flow disconnects both sides cleanly
+
+That's the entire happy path of a real client session, in a no-stakes
+context, with someone you can text right after to ask "did that feel
+weird at any point?"
+
+## If something didn't behave
+
+If they couldn't reach your URL at all, double-check that you committed
+your slug on the welcome screen. The slug picker waits for you to tap
+**Save URL** — typing it isn't enough.
+
+If their camera or mic permission prompt didn't appear, ask them to
+refresh the page. Some browsers (Safari especially) suppress permission
+prompts until the user clicks a button on the page.
+
+If they joined but you didn't see them in your waiting room panel,
+refresh your laptop's Rivet tab. The panel updates over a long-lived
+connection that occasionally needs a kick after a long idle.
+
+If the audio felt echo-y, you were both on speakers. Put on headphones
+for client sessions; the difference is night and day.
+
+## Tick the row
+
+Once it works end-to-end, come back to the welcome screen and tap the
+**Test your waiting room with a colleague** row to tick it off. The
+checklist row saves across devices, so you'll see the green checkmark
+the next time you open Rivet anywhere.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Your first session" icon="video" href="/getting-started/your-first-session">
+    The full session walkthrough, this time with a real client on the
+    other side.
+  </Card>
+  <Card title="Sharing with clients" icon="paper-plane" href="/video-sessions/sharing-with-clients">
+    The wording that works when you're sharing your URL with a client.
+  </Card>
+</CardGroup>

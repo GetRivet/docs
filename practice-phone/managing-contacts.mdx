@@ -1,0 +1,95 @@
+---
+title: "Managing contacts"
+description: "Add, edit, and tag the people who use your practice line — including family or friends who shouldn't get auto-replies."
+---
+
+The Contacts tab is the address book for your practice. Each entry is one person — name, phone number, and optional notes. Contacts show up everywhere a phone number does: voicemail rows, message threads, recents, the incoming-call screen.
+
+The address book is also where you handle the awkward edge case of *personal* contacts who happen to dial or text the practice line. You can mark a contact as Personal, and Rivet will skip the auto-reply for that number.
+
+## Where it lives
+
+Contacts is in the bottom navigation. The layout is iOS-Contacts-style:
+
+- A search icon and a `+` button at the top.
+- An alphabetical list of contacts below, grouped by first letter.
+- An A–Z scroll rail pinned to the right edge — drag down it to jump to a letter.
+- A "Personal" pill on rows where you've suppressed auto-replies.
+
+Tap a row to open the contact's detail page.
+
+## Adding a contact manually
+
+<Steps>
+  <Step title="Tap the + button">
+    Choose "Create new" from the action sheet. (The other option, "Upload contacts from phone," is the bulk import — see [Importing contacts](/practice-phone/importing-contacts).)
+  </Step>
+  <Step title="Fill in the fields">
+    Name, phone, optional notes. The phone field formats as you type. Phone is required; name is optional but recommended.
+  </Step>
+  <Step title="Save">
+    The contact lands in the alphabetical list immediately, and the detail page opens for that contact.
+  </Step>
+</Steps>
+
+Type the phone number in any common format — Rivet formats it automatically.
+
+## Editing a contact
+
+Open the contact and tap **Edit** in the top right. You can change the name and notes. To change the phone number, you'll need to delete the contact and create a new one — the phone number is the contact's identity, so it isn't editable in-place.
+
+Notes are free text. Use them for whatever's useful: client preferences, intake status, where they came from. The notes never get sent to the client; they're for you.
+
+Tap **Save** to commit, **Cancel** to discard. Save fires immediately — there's no auto-save on the contact form.
+
+## Calling, messaging, or video-linking from a contact
+
+The contact detail page has three round action tiles:
+
+- **Call** — places a call through your Rivet practice line. (Mobile only — desktop shows a message redirecting you to the mobile app.)
+- **Message** — opens the conversation thread with this contact, or starts a new one if you've never messaged them.
+- **Video** — sends them a text with your waiting-room URL, then drops you into the thread so you can see when they tap the link.
+
+## Marking a contact as Personal
+
+A toggle below the notes section: **"Personal contact — Suppress auto-replies for this number."**
+
+When you flip it on, Rivet confirms ("Tag as Personal?") and then permanently skips the auto-reply pipeline for that number. If they leave a voicemail, the voicemail still transcribes and tags — it just doesn't send a text back to them.
+
+Use this for:
+
+- Family and friends who occasionally dial the practice line.
+- A colleague you don't want canned-replying to.
+- A recurring spam caller you can't block at the carrier level.
+
+The Personal pill shows on the row in the Contacts list so you can see at a glance which numbers are tagged. Toggle it off whenever — the auto-reply behavior resumes.
+
+## Deleting a contact
+
+At the bottom of the detail page: a red "Delete contact" button.
+
+Deleting:
+
+- Removes the contact from the Contacts tab.
+- Removes the name from voicemail rows and conversation threads (numbers will show in formatted-phone style instead).
+- **Does not** touch the conversation history. Threads stay intact; you just lose the name annotation.
+- **Does not** touch your phone's native address book.
+
+Deleted contacts can be recovered. Email **hello@getrivet.ca** if you need one back.
+
+## The "stub" contact case
+
+If you tap a phone number in a thread for someone who isn't saved, you land on a fresh-contact form pre-filled with the phone. Fill in a name and optional notes, hit save, and the contact is created at the same number. You're now back in the regular Contacts surface for that person.
+
+This is the most common way contacts get added in practice — you respond to a client a few times, decide they're worth saving, and tap into the stub.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Importing contacts" icon="upload" href="/practice-phone/importing-contacts">
+    Bring in contacts from your phone in one batch.
+  </Card>
+  <Card title="How auto-reply works" icon="reply" href="/practice-phone/auto-response">
+    What the Personal toggle suppresses.
+  </Card>
+</CardGroup>

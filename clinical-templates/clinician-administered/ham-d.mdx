@@ -1,0 +1,170 @@
+---
+title: "HAM-D — scoring and severity cutoffs"
+description: "How to score the 17-item Hamilton Depression Rating Scale, what each severity band means, and what you need in front of you to administer it."
+---
+
+The HAM-D is the most widely cited clinician-administered depression
+rating scale. It's been the standard outcome measure in depression
+treatment trials for more than sixty years — through the lithium era,
+SSRIs, ketamine, TMS, and every iteration in between. You fill it about
+the client, after a structured interview. The client never sees the form.
+
+## What it measures
+
+Seventeen items covering:
+
+- Depressed mood, guilt, suicide
+- Insomnia (early, middle, late)
+- Work and activities, retardation, agitation
+- Anxiety (psychic and somatic)
+- Somatic symptoms (general and gastrointestinal)
+- Genital symptoms
+- Hypochondriasis, weight loss, insight
+
+The scale uses mixed item weighting: items 1, 2, 3, 7, 8, 9, 10, 11, and
+15 score 0-4. Items 4, 5, 6, 12, 13, 14, 16, and 17 score 0-2. Total
+range is 0-52.
+
+## When to use it
+
+- Longitudinal monitoring of depression severity in psychiatric or
+  consultation-liaison contexts
+- Treatment-response outcome measurement (the standard for response is
+  ≥50% reduction in total score; remission is total ≤7 sustained across
+  three weeks per Frank et al. 1991)
+- Pre/post measurement in ECT, TMS, ketamine, and trial protocols
+- STAR*D-style stepped-care workflows
+
+For routine therapy outcome tracking, the PHQ-9 self-report is usually
+the lighter choice. Use the HAM-D when you need rater anchors — research
+contexts, complex presentations, or settings where self-report
+reliability is in question.
+
+## How you fill it
+
+Solo fill. Open **HAM-D** from the templates picker and tap **New response**.
+The renderer walks you through each item with the Williams 1988
+SIGH-D anchor language distilled into the answer options. You score from
+the structured interview probes — typically 15-30 minutes for a trained
+rater.
+
+The form never goes to the client. There is no "Send to client" option
+for this measure.
+
+## Scoring and severity cutoffs
+
+Total = sum of all 17 items, with the mixed-weight scoring above.
+
+### Severity bands (Frank et al. 1991)
+
+| Total | Band |
+|---|---|
+| 0-7 | Remission |
+| 8-13 | Mild depression |
+| 14-18 | Moderate depression |
+| 19-22 | Severe depression |
+| ≥23 | Very severe depression |
+
+### Clinical change thresholds
+
+- **Response:** ≥50% reduction in total score from baseline
+- **Remission:** total ≤7, sustained across three weeks
+
+## Item 3 — suicide
+
+<Warning>
+  Item 3 (suicide) is flagged sensitive. A score of 3 ("Suicidal ideas or
+  gesture") or 4 ("Attempts at suicide") fires the high-risk cutoff —
+  regardless of the total. A patient with mild overall depression but an
+  active plan still requires safety planning and a level-of-care
+  decision in the room.
+
+  Rivet surfaces the flag in the response view. It does not auto-escalate,
+  does not contact crisis services, and does not substitute for your
+  clinical judgment. The decision — safety plan, means restriction,
+  hospitalization — is yours.
+</Warning>
+
+For documented safety planning, pair the HAM-D with the C-SSRS or a
+Stanley-Brown safety plan in the same session.
+
+## Rater training
+
+The HAM-D requires rater training for reliable scoring. The standard
+reference is the Williams 1988 Structured Interview Guide for the
+Hamilton Depression Rating Scale (SIGH-D), which provides probe
+questions and severity anchors. It's free at the University of Wisconsin
+psychiatry library.
+
+Inter-rater reliability on trained raters typically reaches ICC 0.85+
+(Bagby 2004).
+
+## What we render vs. the source
+
+Verbatim Hamilton 1960 items, with Williams 1988 SIGH-D severity anchors
+distilled into the choice display text. The total computes as a simple
+sum; factor-analysis subscales are not surfaced.
+
+One known difference: item 16 (weight loss) is a single combined item
+in Rivet. The original Hamilton 1960 allowed either "A: by history" or
+"B: actual weight change measured" with item 16 = max of the two. Rivet
+collapses to a single rating.
+
+The 21-item Hamilton 1967 extension (diurnal variation, depersonalization,
+paranoid symptoms, obsessional symptoms) isn't included — the 17-item
+version is the dominant clinical-practice configuration.
+
+## HAM-D vs PHQ-9 and the BDI-II
+
+The HAM-D is rated by you in an interview; the
+[PHQ-9](/clinical-templates/screening/phq-9) is filled in by the client in
+two minutes. Both measure depression severity and they are not
+interchangeable numbers.
+
+Reach for the HAM-D when the measurement has to carry weight — tracking
+response to a medication change, a course of treatment where response is
+defined formally (a 50% drop) and remission has a threshold (7 or below),
+or any context where the standard from six decades of depression trials is
+the expected instrument. Reach for the PHQ-9 for routine tracking, for
+anything sent ahead of a session, and when a referrer needs a number they
+recognise.
+
+The real cost of the HAM-D is your time and your training. Reliable
+scoring depends on familiarity with the rating anchors; the structured
+interview guide exists for that, and it is free.
+
+Against the BDI-II: the Beck inventory is the self-report scale most often
+set beside the HAM-D. It's licensed by Pearson and paid for per
+administration, so Rivet doesn't include it — the library was built from
+instruments with no per-use fee. The PHQ-9 is the self-report depression
+measure to pair with the HAM-D here.
+
+## Is it free to use?
+
+**Yes — it is public domain.** Hamilton published it in 1960 and it has been the standard clinician-administered depression rating scale in clinical trials ever since. Williams' SIGH-D structured interview guide is public domain too.
+
+## Citations
+
+- Hamilton, M. (1960). "A rating scale for depression." *Journal of
+  Neurology, Neurosurgery, and Psychiatry,* 23(1): 56-62. Public domain.
+- Williams, J. B. W. (1988). "A structured interview guide for the
+  Hamilton Depression Rating Scale." *Archives of General Psychiatry,*
+  45(8): 742-747.
+- Frank, E., Prien, R. F., Jarrett, R. B., Keller, M. B., Kupfer, D. J.,
+  Lavori, P. W., Rush, A. J., & Weissman, M. M. (1991). "Conceptualization
+  and rationale for consensus definitions of terms in major depressive
+  disorder. Remission, recovery, relapse, and recurrence." *Archives of
+  General Psychiatry,* 48(9): 851-855.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="HAM-A" icon="clipboard-list" href="/clinical-templates/clinician-administered/ham-a">
+    The Hamilton Anxiety Rating Scale. Frequently paired with HAM-D in
+    mixed depression/anxiety presentations.
+  </Card>
+  <Card title="C-SSRS" icon="shield-exclamation" href="/clinical-templates/clinician-administered/c-ssrs">
+    Columbia Suicide Severity Rating Scale. The dedicated suicide
+    severity instrument; use it when item 3 fires.
+  </Card>
+</CardGroup>

@@ -1,0 +1,74 @@
+---
+title: "The voicemail inbox"
+description: "Voicemails arrive transcribed, tagged, and ready to act on — usually within a minute of the caller hanging up."
+---
+
+The voicemail tab is the inbox half of the Gmail-for-voicemail idea. Every voicemail your practice line takes shows up as a row, sorted newest first, with two lines of transcript visible without tapping in. You scan the list, decide which to open, and the rest can wait.
+
+## How a voicemail gets to the inbox
+
+When a caller leaves a message, four things happen in sequence:
+
+<Steps>
+  <Step title="The audio is captured">
+    The caller's voicemail is recorded the moment they finish speaking.
+  </Step>
+  <Step title="Rivet transcribes it in Canada">
+    The audio is transcribed on Canadian hardware — not sent to a cloud AI service. The transcript is the raw text the caller spoke. Typical wait: under a minute from hangup to inbox row.
+  </Step>
+  <Step title="The call gets categorized">
+    The transcript is read and assigned one of eleven categories: Missed Call, New Client, Booking, Reschedule, Urgent, Emergency, Insurance, Referral, Pricing, Hours, or Other. The category is just a tag — it drives which auto-reply text the caller receives, and gives you a colored chip to scan in the inbox.
+  </Step>
+  <Step title="The caller receives an auto-reply text">
+    Based on the category, Rivet sends the caller a text message acknowledging the call. The text is a template you control — not AI-generated. See [How auto-reply works](/practice-phone/auto-response).
+  </Step>
+</Steps>
+
+<Note>
+  Audio and transcription run on Canadian infrastructure. The transcript text is not sent to any cloud AI service. See [Privacy & security](/privacy/index) for the full picture.
+</Note>
+
+## What you see on the inbox row
+
+Each row in the Voicemail tab shows:
+
+- The caller's name (if they're in your Contacts) or formatted phone number.
+- The first two lines of the transcript, in quotes.
+- The date.
+- The voicemail length in `m:ss` format.
+- An info glyph and a chevron — tapping anywhere on the row opens the detail.
+
+If the caller didn't speak (a recording with empty or too-short transcript), the row still appears, marked as a missed call without a quoted line.
+
+## What you see when you open one
+
+Tap a row and you get the detail page:
+
+- **The caller** — a large avatar and the name (or phone number) at the top, with the timestamp underneath.
+- **Action tiles** — Message, Call, and Send video link buttons, side by side. Tap Message to reply by SMS, Call to dial them back, or Send video link to text them your waiting-room URL.
+- **The audio player** — play, pause, scrub, and a duration display. Same audio the caller left.
+- **The full transcript** — under a "Transcript" label.
+- **A contact action** — "Open contact" if they're saved, or "Create new contact" if they aren't.
+
+The audio plays directly from Rivet. The transcript is the same text that appeared on the inbox row, expanded to full length.
+
+## Missed calls without a voicemail
+
+If a caller hangs up before leaving a message, no voicemail row is created in this tab. The call shows up in the **Recents** tab instead, marked as missed. The caller still receives the "Missed Call" auto-reply.
+
+This is deliberate — the Voicemail tab is for messages with actual content. The Recents tab is the full call log.
+
+## Multiple voicemails from the same caller
+
+If the same caller leaves multiple voicemails, each one is a separate row in the inbox. They're also grouped under one conversation in the **Messages** tab — one thread per phone number, with each voicemail showing inline as an event card alongside the SMS replies. This way you can see the full back-and-forth in one place even when several voicemails are involved.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Recording a greeting" icon="microphone" href="/practice-phone/voicemail-greeting">
+    What your caller hears before the beep.
+  </Card>
+  <Card title="Sending texts" icon="message" href="/practice-phone/sending-texts">
+    Replying to the conversation a voicemail kicks off.
+  </Card>
+</CardGroup>

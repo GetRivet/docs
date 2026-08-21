@@ -1,0 +1,191 @@
+---
+title: "C-SSRS — Columbia Suicide Severity Rating Scale"
+description: "The FDA's standard suicide severity rating — clinician-administered, never self-report, with explicit high-risk flagging."
+---
+
+The C-SSRS is the FDA's standard suicide severity rating in clinical
+trials. It's used in emergency departments, primary care, schools, and
+crisis hotlines. Rivet includes the **Screening (Recent)** variant: five
+ideation severity items plus one behavior item covering the past three
+months.
+
+<Warning>
+  Columbia explicitly states the C-SSRS is **not** a self-report
+  instrument. It must be administered by a trained interviewer. Rivet
+  enforces this — the C-SSRS cannot be sent to a client as an async
+  link. You ask the questions in person, in the room or on a video
+  call.
+</Warning>
+
+## What it measures
+
+Five ideation severity items, each scored Yes/No, structured so that the
+highest YES captures the severity level:
+
+| Item | Construct | Severity if YES |
+|---|---|---|
+| 1 | Wish to be dead | 1 |
+| 2 | Non-specific active suicidal thoughts | 2 |
+| 3 | Active ideation with methods, without intent | 3 |
+| 4 | Active ideation with some intent, without specific plan | 4 |
+| 5 | Active ideation with specific plan and intent | 5 |
+
+Plus one **behavior** item (item 6): Yes/No for actual, aborted, or
+interrupted suicide attempts or preparatory acts in the past three months.
+
+## When to use it
+
+- Emergency department screening — every encounter, integrated with safety
+  plan triage
+- Primary care annual screening — particularly in pediatric and
+  adolescent intake
+- Clinical trial safety monitoring — FDA-required for many trial protocols
+- SAMHSA Zero Suicide care model intake screening
+- School gatekeeper training pairs with this scale
+
+The Screening (Recent) variant Rivet includes is the right tool for
+**screening contexts**. The Past 1-Month, Lifetime, Intensity of
+Ideation, and Lethality of Behavior variants are separate Columbia
+instruments — not in Rivet.
+
+## How you administer it
+
+Solo fill, in person or on a video call with the client. Open **C-SSRS**
+from the templates picker and tap **New response**. The renderer presents
+the six items in order; you ask each question of the client directly and
+record the answer.
+
+The form cannot be sent to a client — there is no "Send to client" option
+for this measure. You are in the room (or on the call) for every
+administration.
+
+The Columbia Lighthouse Project provides free training videos at
+[cssrs.columbia.edu](https://cssrs.columbia.edu). The Screening variant
+does not require formal training to administer, but inter-rater
+reliability improves meaningfully with the one-hour training module.
+
+## How Rivet scores it
+
+- **Ideation severity:** the highest YES level among items 1-5 (0 if all
+  No)
+- **Behavior:** YES or NO on item 6
+
+Both subscales are reported independently. The score is not a single
+sum — it's the highest ideation level + the behavior flag.
+
+## High-risk items — items 4, 5, and 6
+
+<Warning>
+  **Items 4 (intent), 5 (plan), and 6 (behavior in the past 3 months)
+  trigger immediate clinical action.**
+
+  Any YES on item 4, item 5, or item 6 indicates high-risk presentation
+  and warrants:
+
+  - **Immediate safety planning** — Rivet's safety plan template
+    (Stanley-Brown format) is the standard pairing
+  - **Means restriction counseling** — firearms, medications,
+    high-lethality access
+  - **Level-of-care decision** — outpatient with frequent monitoring,
+    crisis stabilization, hospitalization, or emergency-department
+    referral
+
+  Rivet captures the data and surfaces the high-risk flags in the
+  response view. **Rivet does not auto-escalate, does not notify
+  anyone, does not contact crisis services, and does not substitute for
+  your clinical judgment in the room.** The decision is yours.
+</Warning>
+
+The standard pairing for a positive C-SSRS is a **Stanley-Brown Safety
+Planning Intervention** (Stanley & Brown, 2012) — collaborative
+identification of warning signs, internal coping strategies, social
+contacts for distraction, social contacts for asking help, professional
+contacts, and means restriction. The safety plan template lives in
+Rivet's clinical template library and is designed to be filled
+collaboratively with the client in the same session.
+
+## Mandatory citation
+
+Columbia requires the citation to appear in the clinical record whenever
+the C-SSRS is administered. Rivet embeds the citation as a display item
+in the template description so it appears inline as you administer the
+scale and in the formatted note output.
+
+## What we render vs. the source
+
+Verbatim items from the Columbia Lighthouse Project Screening (Recent)
+distribution PDF, with the mandatory citation embedded as a `display`
+item. Items 1-5 each map to a single Yes/No with the YES value set to
+the ideation severity score (1-5), so the scoring computes the highest
+YES — matching Columbia's published scoring.
+
+All six items are flagged sensitive in the response data model.
+
+## What Rivet doesn't include
+
+These Columbia variants are separate instruments and are not part of
+the Screening (Recent) version:
+
+- **Past 1-Month variant** — separate template
+- **Lifetime variant** — rarely used in screening contexts
+- **Intensity of Ideation subscale** — frequency, duration,
+  controllability, deterrents, reasons for ideation
+- **Lethality of Behavior subscale** — 5-point ratings for actual
+  attempts
+
+If you need any of these, the Columbia Lighthouse Project distributes
+them at no cost from their training site.
+
+## C-SSRS vs a suicidality item on a screening measure
+
+Most depression measures carry one risk item — Item 9 on the
+[PHQ-9](/clinical-templates/screening/phq-9), Item 12 on the
+[QIDS-SR-16](/clinical-templates/screening/qids-sr-16), Items 14 and 15 on
+the [CES-D-R](/clinical-templates/screening/ces-d-r). Those items are
+tripwires. They tell you to ask, and nothing more.
+
+The C-SSRS is the asking. It grades ideation across five levels, from a
+wish to be dead through to a plan with intent, and separately asks about
+behaviour in the past three months. A positive Item 9 and a C-SSRS of 5
+are not the same finding and shouldn't be recorded as though they were.
+
+The other difference is who administers it. The C-SSRS is explicitly not a
+self-report instrument — it is meant to be asked by a trained interviewer,
+and it is the reason Rivet won't let this one be sent ahead of a session.
+
+What follows a positive C-SSRS is a
+[safety plan](/clinical-templates/crisis/safety-plan), and the
+[RFL-12](/clinical-templates/crisis/rfl-12) if you want to inventory what
+protective beliefs the client still has to build that plan on.
+
+## Is it free to use?
+
+**Yes — with one condition.** The Columbia Lighthouse Project permits free clinical use, and **requires the citation to appear in the clinical record**. Rivet carries it inline where you administer the measure and includes it in what you copy out, so meeting that condition is not something you have to remember.
+
+## Citations
+
+- Posner, K., Brown, G. K., Stanley, B., Brent, D. A., Yershova, K. V.,
+  Oquendo, M. A., Currier, G. W., Melvin, G. A., Greenhill, L., Shen, S.,
+  & Mann, J. J. (2011). "The Columbia-Suicide Severity Rating Scale:
+  initial validity and internal consistency findings from three
+  multisite studies with adolescents and adults." *American Journal of
+  Psychiatry,* 168(12): 1266-1277.
+- Stanley, B., & Brown, G. K. (2012). "Safety planning intervention:
+  a brief intervention to mitigate suicide risk." *Cognitive and
+  Behavioral Practice,* 19(2): 256-264.
+
+Free clinical use per The Columbia Lighthouse Project
+([cssrs.columbia.edu](https://cssrs.columbia.edu)), with mandatory
+citation in the clinical record.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="HAM-D" icon="clipboard-list" href="/clinical-templates/clinician-administered/ham-d">
+    Hamilton Depression Rating Scale. Item 3 (suicide) cutoff fires for
+    severity ≥3; pair with C-SSRS for dedicated suicide assessment.
+  </Card>
+  <Card title="Clinician-administered overview" icon="folder-open" href="/clinical-templates/clinician-administered/overview">
+    Why these six measures don't ship to clients, and how solo fill works.
+  </Card>
+</CardGroup>

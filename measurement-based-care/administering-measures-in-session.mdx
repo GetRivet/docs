@@ -1,0 +1,133 @@
+---
+title: "Administering measures in session"
+description: "The collaborative fill flow — your client fills on their device while you watch the score build."
+---
+
+The simplest way to use a validated measure inside Rivet is to push it to
+your client during the video session. They fill on their own device; you
+see the score and severity band update item by item; you talk about what
+comes up.
+
+## The flow
+
+<Steps>
+  <Step title="Open Templates during the session">
+    Click "Clinical templates ▾" in the top-right of the meet page. The picker opens
+    with a search box and a list grouped by category — Screening, CBT, EMDR,
+    Crisis, and so on.
+  </Step>
+  <Step title="Pick a measure">
+    Type to filter ("phq", "gad", "pcl") or scroll. Each row shows the
+    measure title and a short description.
+  </Step>
+  <Step title="Send to your client">
+    On pick, the measure appears full-bleed on your client's device. Their
+    video tile shrinks to a small floating tile in the corner so the form
+    owns their screen.
+  </Step>
+  <Step title="Watch the score build">
+    You see a live read-only preview of what they're filling. The "typing…"
+    pill shows you which field they're on. As items get answered, the
+    subscale totals, severity bands, and any high-risk cutoffs update in
+    your view.
+  </Step>
+  <Step title="Discuss as you go">
+    The whole point of in-session administration: the score is something
+    you can talk about while you and the client are still in the room.
+    Items that surprise you, items that conflict with your impression,
+    items that hit a cutoff — all become part of the session.
+  </Step>
+  <Step title="Copy or download">
+    When you're done, click "Copy for session notes" to copy a plain-text
+    block of the responses + score into your clipboard, or "Download" to
+    save it as a PDF — that gets the result into your EHR. The completed
+    responses and score are also saved to the client's record automatically.
+  </Step>
+</Steps>
+
+## Why in-session beats async
+
+You can also send a measure as a one-time link for the client to fill
+before the session, and there's a place for that — but the default posture
+is in-session, for reasons that are clinical, not technical.
+
+**Completion.** Async forms that go home don't always come back. In-session
+administration has a completion rate of "did you stay for the session."
+
+**Engagement.** The measure isn't just data collection; it's a conversation
+starter. A client answering "nearly every day" to PHQ-9 Item 1 (anhedonia)
+while you're both looking at the screen is a different therapeutic moment
+than reading the same answer alone the next day.
+
+**Clarification.** Clients ask what items mean. "Trouble concentrating" —
+do they mean at work or in general? "Felt I would be better off dead" —
+do they mean now or last week? You can clarify in real time, which is
+both kinder and produces better data.
+
+**The intervention is the conversation.** If the PHQ-9 has been climbing
+for three sessions, the session where you and the client look at the trend
+together is part of the response to the trend. That doesn't happen if the
+form sits in their inbox.
+
+## What you see, what the client sees
+
+Two distinct views render from the same template:
+
+**Client view.** The measure renders full-bleed: clear instructions at
+the top, large readable items, simple answer options. No scoring is shown
+to the client. They see the questions; they don't see the totals.
+
+**Practitioner view.** A read-only preview pane that updates live with
+the client's answers, plus the score block (subscale totals, severity
+bands, any cutoffs that fired) at the top, plus a "✎ note" button next
+to every field. Your notes are stored locally in your browser — they're
+not sent to the client, and they appear in your "Copy for session notes"
+output as italic lines under the field they belong to.
+
+<Note>
+  The video tile shrinks to a 200×150 floating thumbnail in the corner of
+  the client's screen when a measure is open, so they can still see you
+  while they fill. On your side, your client's tile stays visible too.
+</Note>
+
+## What happens if someone drops mid-form
+
+Mid-session responses are held briefly so reconnects work. If your
+client drops the video session and rejoins, their progress is recovered.
+If you drop and rejoin, your read-only preview catches back up.
+
+When the client submits, the completed responses and score save to the
+client's record. The export step — Copy for session notes or Download —
+is how the result reaches your EHR.
+
+<Tip>
+  Completed assessments save to the client's record automatically. Use
+  Copy for session notes or Download to bring the result into your EHR —
+  that step is what gets it into Jane, Owl, or your paper chart.
+</Tip>
+
+## Solo fill (when in-session doesn't fit)
+
+For the six clinician-administered measures (HAM-D, HAM-A, Y-BOCS, YMRS,
+YGTSS, C-SSRS), you fill the measure yourself during a structured clinical
+interview. Open the client's record, tap **Send form**, and choose a
+clinician-administered template — it's badged "Fill in session" in the
+picker. Tapping it opens a solo-fill view where you rate the client
+during the interview. Nothing is sent to the client's device.
+
+For everything else, in-session administration is the default. Consistent
+in-session administration is the rhythm the research supports.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="What MBC is in Rivet" icon="circle-info" href="/measurement-based-care/overview">
+    The full scope + what flows into your notes.
+  </Card>
+  <Card title="Risk flagging" icon="triangle-exclamation" href="/measurement-based-care/risk-flagging">
+    How PHQ-9 Item 9 and C-SSRS items surface during the session.
+  </Card>
+  <Card title="Clinical change thresholds" icon="ruler" href="/measurement-based-care/clinical-change-thresholds">
+    What counts as meaningful change session to session.
+  </Card>
+</CardGroup>

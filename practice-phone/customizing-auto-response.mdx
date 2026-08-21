@@ -1,0 +1,97 @@
+---
+title: "Customizing your auto-reply"
+description: "The master toggle, the fallback, the per-category texts, and the one variable you can use."
+---
+
+The Auto-Reply screen is where you edit what your callers receive when they leave a voicemail or miss you. It's three layers of control: the master switch, the fallback text, and the eleven category-specific texts.
+
+Every edit auto-saves a second after you stop typing. There's no Save button.
+
+## Where it lives
+
+Open **Auto-Reply** from the More switcher in the bottom navigation. The screen is one long scroll: master toggle on top, then fallback and follow-up acknowledgment cards, then the eleven per-category cards.
+
+## The master toggle
+
+The card at the top: "Auto-replies enabled."
+
+When this is **on**, Rivet sends auto-replies. When it's **off**, no auto-replies fire — categories, fallback, follow-up acknowledgment, all silent. The category cards below dim out so you can see at a glance that nothing's going.
+
+Voicemails still record, transcribe, and tag normally regardless of the master toggle. The toggle only governs what your caller receives.
+
+## The fallback card
+
+The fallback is the catch-all reply. When the call doesn't match any *enabled* category, the caller receives the fallback text instead.
+
+The fallback card adapts its label based on what's happening:
+
+- **"Active for all calls"** — All category replies are disabled. The fallback text is the universal reply.
+- **"Fallback"** — One or more categories are enabled. The fallback only fires when a call doesn't match those.
+
+The card has a textarea where you edit the fallback text. Up to 480 characters.
+
+## The follow-up acknowledgment card
+
+The card labeled "Follow-up reply" is what gets sent when the caller replies to your auto-response. The default text is something like *"Thanks, we've passed your details along."* You can edit it.
+
+This message is suppressed if you've already manually replied to the conversation — see [How auto-reply works](/practice-phone/auto-response). So you don't need to worry about it stacking on top of your real reply.
+
+## The per-category cards
+
+Below the fallback you'll see eleven cards, one per category — Missed Call, New Client, Booking, Reschedule, Urgent, Emergency, Insurance, Referral, Pricing, Hours, Other.
+
+Each card has:
+
+- A **category chip** at the top in the category's color.
+- A **toggle** on the right — flip it to enable or disable this category's specific reply.
+- A **textarea** with the current text.
+- A short subtitle if the category expects the caller to reply (most do).
+
+Disabled categories fall through to the fallback. Enabled categories use their own text.
+
+The dot pattern most practices end up with: enable the few categories where the reply differs meaningfully from the fallback (New Client, Booking, Emergency) and leave the rest disabled so they fall through to one well-written fallback. Less work, less drift.
+
+## The `{{business_name}}` variable
+
+You can use exactly one placeholder in any of these texts:
+
+```
+{{business_name}}
+```
+
+When the text is sent, Rivet substitutes your business name in its place. So a template like:
+
+> Thanks for calling \{\{business_name\}\}. Sorry we missed your call.
+
+becomes (for a practice named "Hawthorn Therapy"):
+
+> Thanks for calling Hawthorn Therapy. Sorry we missed your call.
+
+This is the only variable supported. You don't need to type the literal `{{business_name}}` — when you're editing, the textarea shows your business name in place, and Rivet stores the placeholder behind the scenes so the template stays portable if you rename your practice.
+
+## Auto-save
+
+Every edit fires a save 1 second after you stop typing. A small "Saved" toast confirms when it lands. There's no manual save action. If you close the app mid-edit, you might lose the last second of typing — finish your thought, then close.
+
+If a save fails (no network, server error), an inline error message appears under the master toggle. The next successful save clears it.
+
+## How long can a reply be?
+
+Up to 480 characters per text. Long enough for two or three sentences plus the variable. Longer replies split automatically and arrive as one message on the recipient's phone.
+
+## When all categories are off
+
+This is a valid configuration. Rivet sends only the fallback text to every caller, regardless of what the model categorized them as. The fallback card label flips to "Active for all calls" so you can see this is what's happening, and the category cards dim.
+
+It's a useful mode when you want one consistent reply for everyone while you tune the rest.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="How auto-reply works" icon="reply" href="/practice-phone/auto-response">
+    The eleven categories and when each one fires.
+  </Card>
+  <Card title="Managing contacts" icon="address-book" href="/practice-phone/managing-contacts">
+    Mark a contact as Personal to suppress auto-replies for just that number.
+  </Card>
+</CardGroup>

@@ -1,0 +1,127 @@
+---
+title: "In-session controls"
+description: "Mute, camera, the session link, and what to do mid-call — the small set of practitioner-side controls during a session."
+---
+
+The in-session toolbar is intentionally small. A working clinical session
+doesn't need a dozen buttons; it needs the right four or five, available
+without thinking.
+
+## Mute and unmute
+
+The microphone button toggles your mic. The icon shows current state:
+
+- **Solid mic** → your mic is live, your client hears you.
+- **Mic with a slash** → you're muted.
+
+There's no "push to talk" mode — Rivet sessions are designed for the
+conversation pace of therapy, not the conference-room rapid-fire pattern.
+Tap once to mute, tap again to unmute.
+
+When you mute yourself, the client sees no visual indicator on their side
+that you're muted (they'll just notice you stopped talking). On your side,
+a small "muted" badge appears on your PiP tile so you can see at a glance
+what state you're in.
+
+<Tip>
+  Joined the call with mic off and aren't sure if it's working? Watch your
+  own PiP tile in the corner — the badge says "muted" when it's muted. Tap
+  the mic button once. Your client will say "hi" within a few seconds and
+  the mystery is solved.
+</Tip>
+
+## Camera on and off
+
+Same pattern as mute. Tap to turn off, tap to turn on. When your camera
+is off, your client sees a clean placeholder where your face was. Your
+audio keeps working.
+
+A few real reasons to turn the camera off mid-session:
+
+- You need to step away for ten seconds (water, tissue box, kid in the
+  doorway). Audio stays, video off, dignity preserved.
+- Your bandwidth is struggling and you're about to share your screen.
+  Killing your camera mid-share frees up uplink — usually not needed
+  because the screen share path already throttles your camera, but
+  available as a manual control.
+- The client asks. Some clients prefer audio-only for a session. Tap off.
+
+## Copying the session link mid-call
+
+If a client texts mid-session saying "the link doesn't work, what's the
+address?" — you can grab your slug URL from your account settings, or
+just from your address bar:
+
+- **From the address bar of any browser tab logged into Rivet:** your
+  slug URL is in the welcome screen or account section. Copy it.
+- **From the SMS thread:** the video icon in the reply bar drops the bare
+  URL into the message. Send it.
+- **From your contacts:** if you've saved your slug URL anywhere on your
+  device, you can text it.
+
+There isn't an in-session "copy session link" button because there's no
+new session link to copy — your URL is permanent. The same `getrivet.ca/your-slug`
+the client tried before is the right URL.
+
+## Switching audio devices mid-call
+
+The browser's native picker handles this — Rivet doesn't render its own
+device picker on top. To change audio devices:
+
+- **Chrome / Edge desktop:** tap the lock icon in the URL bar → Site
+  settings → Microphone / Camera → pick the device. Reload the tab. The
+  call will reconnect.
+- **macOS Safari:** Safari → Settings for This Website → pick the device
+  from the dropdowns.
+- **iOS / Android:** the system audio routing handles it. Plug in a
+  headset, the call switches to it automatically. Unplug, switches back.
+
+This is unusual mid-session but worth knowing when a client's audio is
+breaking up and the fix is switching them from laptop speakers to
+headphones.
+
+## What's not in the toolbar
+
+A few things that are common in generic meeting tools but absent in
+Rivet's session workspace, with the reason for each:
+
+- **Reactions, raised hands, emoji.** Not a session shape.
+- **Speaker view / gallery view toggle.** 1:1 sessions are always the
+  client on the main stage with you in PiP. No layout to choose.
+- **Closed captions.** No live captioning. Captions imply transcription,
+  which implies audio leaving the call — and Rivet's stance is that
+  session audio stays in the call.
+- **Recording.** Not present, ever.
+- **Polls, breakout rooms, registration.** Conference tooling, not
+  session tooling.
+- **In-call chat panel.** Conversation happens in the SMS thread. Less
+  surface to forget about.
+
+## The toolbar buttons that DO exist
+
+For completeness, the full toolbar from left to right:
+
+1. **Mute** — covered above.
+2. **Camera** — covered above.
+3. **Share Screen** — opens a picker for screen or whiteboard. See
+   [Sharing your screen](/video-sessions/screen-sharing).
+4. **EMDR** — opens the EMDR configuration modal. Host-only. See
+   [EMDR overview](/emdr/overview).
+5. **End Call** — the red phone, far right. See
+   [Ending a session](/video-sessions/ending-a-session).
+
+That's the whole set.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="The session workspace" icon="display" href="/video-sessions/the-session-workspace">
+    Layout and toolbar overview.
+  </Card>
+  <Card title="Sharing your screen" icon="rectangle-list" href="/video-sessions/screen-sharing">
+    What the Share Screen button does.
+  </Card>
+  <Card title="Ending a session" icon="circle-stop" href="/video-sessions/ending-a-session">
+    What the red phone button does.
+  </Card>
+</CardGroup>

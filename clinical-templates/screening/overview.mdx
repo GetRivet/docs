@@ -1,0 +1,219 @@
+---
+title: "Depression + anxiety screening in Rivet"
+description: "When to screen, what the severity bands tell you, and how to pick between overlapping measures like PHQ-9 vs QIDS or CES-D-R."
+---
+
+The depression and anxiety screening family is the most-used corner of the
+template library. PHQ-9 and GAD-7 are the universally expected pair —
+insurers ask for them, EFAP referrals often require them, and outcome-
+informed therapy treats them as the standard depression and anxiety
+measures. Rivet includes three more depression scales (QIDS-SR-16,
+CES-D-R) and a social anxiety scale (SPIN) for cases where the standard
+pair isn't the right fit.
+
+## When to screen
+
+The common cadence:
+
+- **Intake.** A PHQ-9 + GAD-7 baseline on the first session, often sent
+  async ahead of time so they're already filled when you sit down together.
+- **Every 2–4 weeks during treatment.** Track response without screening
+  burnout. PHQ-9 takes the client about two minutes.
+- **Pre/post a discrete intervention.** Around an EMDR target, a CBT
+  protocol, a medication change, or any time you want to attribute a
+  symptom change to a specific piece of work.
+- **Discharge.** Outcome documentation for the chart, for the referrer,
+  and for the client to see what changed.
+
+You're free to administer them less often — these are tools, not rules —
+but most outcome-informed practices land on something close to this
+rhythm.
+
+## What the severity bands tell you
+
+Every measure in this family has a published total-score-to-severity-band
+mapping (e.g. PHQ-9: 0–4 Minimal, 5–9 Mild, 10–14 Moderate, 15–19
+Moderately severe, 20–27 Severe). Rivet shows you the band live as soon
+as the total crosses a threshold.
+
+The bands are interpretive aids, not diagnoses. A PHQ-9 of 14 doesn't mean
+the client has Major Depressive Disorder — it means their self-reported
+symptoms over the last two weeks fall in the moderate-severity range on a
+nine-item screening instrument. The clinical interview is what makes a
+diagnosis; the band is what helps you triage attention.
+
+The most useful question to ask about a score is what *changed*. A drop
+from 18 to 10 over six weeks is a clinically meaningful response. A flat
+14 across three months suggests the current approach isn't moving the
+client.
+
+## Picking between depression measures
+
+Rivet includes four self-report depression scales. They cover overlapping
+ground; the practical differences:
+
+- **[PHQ-9](/clinical-templates/screening/phq-9)** — Nine items, two-week
+  frame, the universal default. Pair with GAD-7. Item 9 surfaces suicidal
+  ideation in a single item.
+- **[QIDS-SR-16](/clinical-templates/screening/qids-sr-16)** — Sixteen
+  items, two-week frame, mirrors DSM-IV-TR symptom domains. Used widely
+  in research and outcome-tracking. Item 12 is the suicidality item.
+- **[CES-D-R](/clinical-templates/screening/ces-d-r)** — Twenty items,
+  past-week frame, covers all nine DSM symptom groups. Often selected
+  when there's continuity with prior CES-D documentation. Items 14 and
+  15 split death wish and self-harm into two items.
+- **[SPIN](/clinical-templates/screening/spin)** — Seventeen items
+  specifically for social anxiety / Social Phobia. Past-week frame.
+  Different family from the other three; use when the presenting concern
+  is social-evaluative anxiety.
+
+If you don't have a preference, start with PHQ-9. It's the expected
+default and pairs naturally with GAD-7.
+
+## The risk-flag rule
+
+Every depression measure in this family carries a suicidality item
+(sometimes two). Across PHQ-9, QIDS, and CES-D-R, the rule is the same:
+
+<Warning>
+  **Any positive answer on a suicidality item warrants follow-up regardless
+  of the total score.** A PHQ-9 of 6 with Item 9 answered "Several days"
+  matters more than a PHQ-9 of 22 with Item 9 at zero. Rivet surfaces a
+  flag in the scoring pill when the cutoff is crossed; the clinical
+  judgment about what to do next is yours.
+</Warning>
+
+Each per-measure article calls out the specific item(s) that trigger the
+flag and how Rivet displays it.
+
+## A note on clinical change
+
+A common practitioner question is "how big a drop counts as real change?"
+The convention from the literature varies by measure — a 5-point PHQ-9
+drop is often cited (Kroenke 2010 follow-up), and similar conventions
+exist for GAD-7 and the others. Rivet doesn't compute "change" between
+two responses; the in-session scoring pill shows the current total only.
+If you want week-over-week trends, that's the role of
+[measurement-based care](/measurement-based-care/index), not the
+in-session template.
+
+## Every measure in this section
+
+Twenty-five instruments, grouped by what they are for. Each page carries the
+scoring rules, the cutoffs and what a change in score actually means.
+
+### Depression and mood
+
+<CardGroup cols={2}>
+  <Card title="PHQ-9" icon="chart-column" href="/clinical-templates/screening/phq-9">
+    The default depression measure. Nine items, and Item 9 carries a risk flag.
+  </Card>
+  <Card title="QIDS-SR-16" icon="chart-column" href="/clinical-templates/screening/qids-sr-16">
+    Depression severity with a highest-item rule across the sleep, weight and psychomotor domains.
+  </Card>
+  <Card title="CES-D-R" icon="chart-column" href="/clinical-templates/screening/ces-d-r">
+    Depressive symptoms over the past week, with a longer look-back than the PHQ-9.
+  </Card>
+  <Card title="WHO-5" icon="chart-column" href="/clinical-templates/screening/who-5">
+    Five items on well-being rather than symptoms. Reverse-scored — higher is better.
+  </Card>
+  <Card title="MDQ" icon="chart-column" href="/clinical-templates/screening/mdq">
+    Screens for a history of hypomanic or manic episodes before you treat for depression.
+  </Card>
+</CardGroup>
+
+### Anxiety, worry and stress
+
+<CardGroup cols={2}>
+  <Card title="GAD-7" icon="chart-column" href="/clinical-templates/screening/gad-7">
+    The standard anxiety companion to the PHQ-9.
+  </Card>
+  <Card title="DASS-21" icon="chart-column" href="/clinical-templates/screening/dass-21">
+    Depression, anxiety and stress on three separate subscales.
+  </Card>
+  <Card title="PSWQ" icon="chart-column" href="/clinical-templates/screening/pswq">
+    Worry as a trait rather than a symptom — useful in GAD work.
+  </Card>
+  <Card title="SPIN" icon="chart-column" href="/clinical-templates/screening/spin">
+    Social anxiety across fear, avoidance and physiological arousal.
+  </Card>
+  <Card title="OCI-R" icon="chart-column" href="/clinical-templates/screening/oci-r">
+    Obsessive-compulsive symptoms across six dimensions.
+  </Card>
+  <Card title="PSS-10" icon="chart-column" href="/clinical-templates/screening/pss-10">
+    Perceived stress over the last month — appraisal rather than event count.
+  </Card>
+</CardGroup>
+
+### Trauma
+
+<CardGroup cols={2}>
+  <Card title="PCL-5" icon="chart-column" href="/clinical-templates/screening/pcl-5">
+    The DSM-5 PTSD checklist. The adult standard.
+  </Card>
+  <Card title="CPSS-5" icon="chart-column" href="/clinical-templates/screening/cpss-5">
+    The pediatric counterpart to the PCL-5, ages 8 to 18.
+  </Card>
+  <Card title="ITQ" icon="chart-column" href="/clinical-templates/screening/itq">
+    The ICD-11 measure, and the one that separates PTSD from Complex PTSD.
+  </Card>
+  <Card title="ACE" icon="chart-column" href="/clinical-templates/screening/ace">
+    Childhood adversity as a count, not a severity score. Read the caveats before using it.
+  </Card>
+</CardGroup>
+
+### Sleep
+
+<CardGroup cols={2}>
+  <Card title="ISI" icon="chart-column" href="/clinical-templates/screening/isi">
+    Insomnia severity, with a published 6-point threshold for meaningful change.
+  </Card>
+  <Card title="PSQI" icon="chart-column" href="/clinical-templates/screening/psqi">
+    Sleep quality across seven components over the past month.
+  </Card>
+</CardGroup>
+
+### Eating
+
+<CardGroup cols={2}>
+  <Card title="SCOFF" icon="chart-column" href="/clinical-templates/screening/scoff">
+    A five-question screen. Two or more positives warrants a fuller assessment.
+  </Card>
+  <Card title="EDE-Q" icon="chart-column" href="/clinical-templates/screening/ede-q">
+    Eating-disorder psychopathology across four subscales.
+  </Card>
+</CardGroup>
+
+### Personality, regulation and function
+
+<CardGroup cols={2}>
+  <Card title="MSI-BPD" icon="chart-column" href="/clinical-templates/screening/msi-bpd">
+    A brief screen for borderline personality features.
+  </Card>
+  <Card title="BSL-23" icon="chart-column" href="/clinical-templates/screening/bsl-23">
+    Borderline symptom severity, tracked over time — the DBT outcome standard.
+  </Card>
+  <Card title="ERQ" icon="chart-column" href="/clinical-templates/screening/erq">
+    Reappraisal and suppression as emotion-regulation strategies.
+  </Card>
+  <Card title="WHODAS-12" icon="chart-column" href="/clinical-templates/screening/whodas-12">
+    Functional disability across six life domains, independent of diagnosis.
+  </Card>
+  <Card title="K10" icon="chart-column" href="/clinical-templates/screening/k10">
+    General psychological distress. A wide net when the presentation is unclear.
+  </Card>
+  <Card title="MSPSS" icon="chart-column" href="/clinical-templates/screening/mspss">
+    Perceived social support from family, friends and a significant other.
+  </Card>
+</CardGroup>
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="What's in the library" icon="layer-group" href="/clinical-templates/overview">
+    The three kinds of templates and how scoring works.
+  </Card>
+  <Card title="Filling a template in-session" icon="users" href="/clinical-templates/in-session-administration">
+    The live collaborative flow from picker to PDF.
+  </Card>
+</CardGroup>

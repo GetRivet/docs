@@ -1,0 +1,165 @@
+---
+title: "Minimal clinically important difference, by measure"
+description: "What counts as real improvement rather than noise on PHQ-9, GAD-7, the Insomnia Severity Index and the rest — the point-change thresholds, per instrument."
+---
+
+A raw score change from week to week tells you direction. A clinically
+meaningful change tells you whether the change is large enough to act on.
+What follows is a quick reference for the change thresholds on the
+most-used measures in the Rivet library. Rivet shows the raw score and
+the severity band; the interpretation of whether a change is clinically
+meaningful is yours.
+
+## What "clinically meaningful change" means
+
+A change in score is clinically meaningful when it's larger than the
+measurement noise of the instrument — i.e. larger than what you'd expect
+from session-to-session variation alone. Different research traditions
+operationalize this differently:
+
+- **Reliable Change Index (RCI)** — the change a client would need to show
+  for you to be statistically confident the change isn't just measurement
+  noise (Jacobson & Truax 1991).
+- **Minimal Clinically Important Difference (MCID)** — the smallest change
+  a client or clinician would notice as actually meaningful.
+- **Severity band crossing** — a drop from "moderately severe" to "mild"
+  is meaningful regardless of the absolute change.
+
+For most published scales there's a single working number — that's the
+number below.
+
+## Per-measure thresholds
+
+### PHQ-9 (depression)
+
+- **5-point change** is the working threshold for clinically significant
+  improvement (Kroenke 2010 follow-up).
+- **Severity band crossings** matter independently: moving from "moderately
+  severe" (15–19) to "moderate" (10–14) is meaningful even if the absolute
+  drop is smaller.
+- **Score ≥ 10** is the screening threshold for major depression.
+
+Citation: Kroenke, K., Spitzer, R. L., & Williams, J. B. W. (2001). *J Gen
+Intern Med,* 16(9): 606–613.
+
+### GAD-7 (generalized anxiety)
+
+- **4-point change** is the working threshold for meaningful improvement.
+- **Score ≥ 10** is the threshold for probable generalized anxiety disorder
+  and the trigger for further assessment.
+
+Citation: Spitzer, R. L., Kroenke, K., Williams, J. B. W., & Löwe, B.
+(2006). *Archives of Internal Medicine,* 166(10): 1092–1097.
+
+### PCL-5 (PTSD symptoms)
+
+- **5- to 10-point change** is the working threshold for reliable change
+  (Bovin 2016). The narrower number reflects research-grade reliable
+  change; the wider one is the clinically meaningful threshold most
+  commonly cited.
+- **Score ≥ 31–33** is the cutoff for probable PTSD.
+- Cluster-specific change matters: an overall drop driven entirely by
+  Cluster D (cognition / mood) without movement in Cluster B (intrusion)
+  suggests something different than a uniform reduction.
+
+Citation: Bovin, M. J., et al. (2016). *Psychological Assessment,* 28(11):
+1379–1391.
+
+### K10 (psychological distress)
+
+- **5-point change** is the practical threshold; K10's bands are 5-point
+  wide (low / mild / moderate / severe) so a band crossing and an MCID
+  roughly coincide.
+
+Citation: Kessler, R. C., et al. (2002). *Psychological Medicine,* 32(6):
+959–976.
+
+### DASS-21 (depression, anxiety, stress)
+
+Each subscale has its own bands and thresholds (the 21-item version sums
+each subscale × 2 to align with the 42-item norms — Rivet handles the
+multiplier automatically). A useful working threshold:
+
+- **Depression subscale:** ~9-point change at the multiplied score
+- **Anxiety subscale:** ~7-point change
+- **Stress subscale:** ~9-point change
+
+The above are rough working numbers commonly cited in DASS application
+literature; the original Lovibond & Lovibond (1995) manual focuses on
+severity bands rather than a single MCID.
+
+### PSS-10 (perceived stress)
+
+- **3- to 5-point change** is a commonly-cited working threshold.
+- No formal clinical cutoff — descriptive measure with bands (low /
+  moderate / high stress).
+
+Citation: Cohen, S., Kamarck, T., & Mermelstein, R. (1983). *Journal of
+Health and Social Behavior,* 24(4): 385–396.
+
+### ISI (insomnia)
+
+- **6-point change** is the published meaningful improvement threshold for
+  CBT-I outcomes.
+- **Score ≥ 15** is the cutoff for clinical insomnia.
+
+Citation: Bastien, C. H., Vallières, A., & Morin, C. M. (2001). *Sleep
+Medicine,* 2(4): 297–307.
+
+### AUDIT (alcohol use)
+
+- **Score ≥ 8** is the WHO cutoff for hazardous drinking (≥ 7 for women
+  in some adaptations).
+- **Score ≥ 16** indicates harmful drinking.
+- **Score ≥ 20** suggests possible alcohol dependence and warrants further
+  evaluation.
+- Change-from-baseline matters more than a single MCID for AUDIT; the
+  WHO scoring rubric focuses on bands.
+
+Citation: Babor, T. F., Higgins-Biddle, J. C., Saunders, J. B., & Monteiro,
+M. G. (2001). *AUDIT: The Alcohol Use Disorders Identification Test*
+(2nd ed.). WHO.
+
+### WHO-5 (well-being)
+
+- **10-point change** on the 0–100 percentage scale is the working
+  threshold (the 0–25 raw score is multiplied by 4 to produce the
+  percentage; Rivet applies the multiplier automatically).
+- **≤ 28%** indicates a need for further depression screening.
+
+Citation: Topp, C. W., Østergaard, S. D., Søndergaard, S., & Bech, P.
+(2015). *Psychotherapy and Psychosomatics,* 84(3): 167–176.
+
+## What Rivet shows; what's yours
+
+Rivet shows you:
+
+- The raw subscale score
+- The multiplied score where the algorithm requires it (DASS-21 × 2,
+  WHO-5 × 4)
+- The matching severity band
+- Whether any cutoff fired (e.g. "probable PTSD", "clinical insomnia")
+
+Rivet does not:
+
+- Compute a Reliable Change Index from prior sessions (no longitudinal
+  data; that's your chart's job)
+- Tell you whether a specific change is "clinically significant" — that's
+  a judgment that takes the trajectory, the client's life context, and
+  treatment phase into account
+- Diagnose anything — cutoffs surface a screening signal, not a diagnosis
+
+The numeric thresholds above are practitioner shorthand. The interpretation
+of what to do about a score change is the practice of psychotherapy,
+which remains yours.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Risk flagging" icon="triangle-exclamation" href="/measurement-based-care/risk-flagging">
+    What Rivet does — and doesn't — when a high-risk item fires.
+  </Card>
+  <Card title="Tracking measures over time" icon="chart-line" href="/measurement-based-care/measure-trajectories">
+    How session-to-session scores land in your chart today.
+  </Card>
+</CardGroup>

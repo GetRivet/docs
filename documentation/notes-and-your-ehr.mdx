@@ -1,0 +1,147 @@
+---
+title: "Notes and your EHR"
+description: "Rivet holds your session record. Your EHR stays your system of record. Here's how the two work side by side."
+---
+
+Rivet doesn't replace your EHR. Jane, Owl, OWL Practice, your paper
+chart — wherever you keep client records today — stays your system of
+record. Rivet is the session layer: it holds the video call, the
+structured templates you use during the session, the progress note you
+write, and the client's record in Rivet. The handoff to your EHR is by
+copy-paste or PDF attach.
+
+The two systems work side by side. The rest of this page is how.
+
+## How Rivet and your EHR fit together
+
+Your EHR holds your full chart history — demographics, appointment
+calendar, billing, insurance records, and the documentation continuity
+that spans years of care. Rivet holds the session record: progress notes
+(unsigned drafts and signed notes), completed assessments with scores,
+and the client's activity timeline.
+
+Rivet's job is to get a clean session note and the structured clinical
+data from that session into your EHR. The export — a clipboard paste or
+a PDF — is the handoff. Your EHR receives it and the chart continues
+uninterrupted.
+
+This is a deliberate framing: Rivet is where you work during the session;
+your EHR is where the long-term record lives. The export keeps the two
+current.
+
+## The workflow, end to end
+
+### Before the session
+
+1. **Open the client's chart in your EHR** — Jane, Owl, paper — as you
+   would for any other appointment. This is where the note will end
+   up.
+2. **Open the session in Rivet** — your client joins via your Rivet URL
+   (`getrivet.ca/your-name`).
+
+### During the session
+
+3. **Pull templates as the session needs them** — PHQ-9 to start, a
+   thought record midway, a target ID for EMDR, a safety plan if risk
+   comes up. The structured data accumulates.
+4. **Open your SOAP, DAP, or treatment plan** when you're ready to
+   write — usually the last 5–10 minutes of the session, sometimes
+   midway if you have time. The note auto-fills from the templates
+   that completed earlier (see
+   [Auto-fill from templates](/documentation/auto-fill-from-templates)).
+
+### Ending the session
+
+5. **Finish typing the note.** Dictate the parts you can, snip-rail the
+   phrases you write every time, type the rest. Add private annotations
+   where you want clinical reasoning preserved that the main field
+   shouldn't carry. The video call can end while you're still typing —
+   the note stays open.
+6. **Export.** **Copy for Jane** for a clipboard paste, or
+   Download as PDF for a file. Or run the full session-summary export
+   to bundle every template with your note at the top. See
+   [Exporting notes](/documentation/exporting-notes).
+
+### After the session — into the EHR
+
+7. **Paste into your EHR's session-note field.** Most practitioners use
+   the clipboard export here — it pastes cleanly into Jane's note
+   field, Owl's session field, or any free-text chart.
+8. **Attach the PDF** if your EHR supports it and you want a
+   visually-formatted archive copy alongside the text note.
+9. **Close the overlay when you're done.** The note stays on the client's
+   record in Rivet — your EHR and Rivet each hold a copy. Done.
+
+## EHR-specific notes
+
+### Jane / JaneApp
+
+Jane's session-note field accepts plain text and preserves line breaks.
+**Copy for Jane** → paste in. Section headings (Subjective:
+/ Objective: / etc.) render as bold-ish heavier text in Jane's
+viewer. Private annotations appear as italic indented lines below their
+field.
+
+If you use Jane's chart attachments, the session-summary PDF lands
+clean as an attachment. Filename includes the date so it sorts
+correctly.
+
+### Owl / OWL Practice
+
+Same as Jane — paste the clipboard export into the session-note field,
+attach the PDF if you want a copy. Owl's text editor preserves line
+breaks; the label/value format reads well.
+
+### Paper chart
+
+Practitioners with paper charts download the PDF, print it, and file
+it. The PDF is designed for letter / A4 paper — generous margins,
+sans-serif body, clear section breaks.
+
+### Other EHRs
+
+Anything that accepts text in a session-note field will accept the
+clipboard export. Anything that accepts PDF attachments will accept
+the per-template or session-summary PDF. If you have an EHR-specific
+question, email **hello@getrivet.ca** and we'll work through it with
+you.
+
+## Per-client history in Rivet
+
+Each client has a record in Rivet: a timeline of sessions, voicemails,
+and messages; the completed assessments with scores and score-over-time
+charts; and the progress notes from each session — unsigned drafts and
+signed notes, labeled by status.
+
+Before a session, you can open the client's record to review the PHQ-9
+trend, read the prior note, or check what came up last time. During the
+session, you work fresh templates and a new note. After the session, you
+export into the EHR to keep the chart there current too.
+
+The pattern that works: Rivet holds the session record; the EHR holds the
+full chart. The export is the handoff that keeps them aligned.
+
+## The line, restated
+
+Rivet is the **session record** — notes, assessments, and the client
+timeline. Your EHR is the **system of record** — the full chart, billing,
+and long-term continuity. The export is the handoff that keeps both
+current. Both tools are doing what they're best at, and the seam between
+them is narrow enough to stay out of your way.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Exporting notes" icon="file-export" href="/documentation/exporting-notes">
+    The three export paths — clipboard, per-template PDF, session-
+    summary PDF.
+  </Card>
+  <Card title="How documentation works" icon="folder-open" href="/documentation/overview">
+    The practitioner-private posture that makes the EHR-handoff
+    pattern coherent.
+  </Card>
+  <Card title="Works alongside your EHR" icon="hospital" href="/getting-started/works-alongside-your-ehr">
+    The broader story of how Rivet sits next to Jane / Owl /
+    paper in your practice.
+  </Card>
+</CardGroup>

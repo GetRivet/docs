@@ -1,0 +1,114 @@
+---
+title: "Test your line"
+description: "The five-minute verification loop — ring your Rivet number from another phone, confirm push, voicemail, transcription, and auto-reply all fire end-to-end."
+---
+
+Once your line is live, the fastest way to know it's working is to
+ring it yourself from another phone. The whole loop takes about five
+minutes and proves push notifications, voicemail recording,
+transcription, and auto-reply are firing end-to-end.
+
+If you don't have a second phone handy, ask a colleague — the same
+test doubles as a chance to introduce them to Rivet.
+
+## Before you start
+
+Two things should already be true:
+
+- The **native app is installed** on your phone and you're signed in.
+  Without the app, push notifications and the in-app incoming-call UI
+  don't have a destination. See [Install the Rivet app](/getting-started/install-the-app).
+- The **welcome screen has flipped your line to active.** If you're
+  still seeing "Setting up your line …" wait the remaining 60-120
+  seconds — the line isn't routable yet.
+
+If both are true, your Rivet number is on the welcome screen and on
+your contact card; you can also find it any time under Settings →
+Phone.
+
+## The test loop
+
+<Steps>
+  <Step title="Pull your Rivet number">
+    Welcome screen, Settings → Phone, or the practice line section in
+    the inbox header — all three show the same `+1` number.
+  </Step>
+  <Step title="From a different phone, dial it">
+    The phone needs to be one not signed into your Rivet account.
+    A colleague's phone, your partner's phone, your old line — anything
+    that won't be intercepted by the Rivet app routing to itself.
+  </Step>
+  <Step title="Expected: your phone rings the same way a regular call does">
+    The OS treats it like a phone call. The practice name shows as
+    the caller (it's actually the OTHER phone calling YOU, but the
+    UI shape is "Rivet — incoming").
+  </Step>
+  <Step title="Don't pick up. Let it go to voicemail">
+    Your custom greeting plays if you've recorded one; otherwise the
+    Rivet default greeting plays. Speak for 15-30 seconds on the
+    caller side — long enough to test transcription.
+  </Step>
+  <Step title="Hang up. Expected, within 5-15 seconds:">
+    - A **push notification** lands on your Rivet phone — "New
+      voicemail from the calling number".
+    - The **inbox** shows a new row with the voicemail at the top.
+    - The **transcription** appears under the row within a few seconds
+      of the recording finishing.
+    - An **auto-reply text** is sent back to the calling number —
+      check the calling phone's SMS app to confirm.
+  </Step>
+  <Step title="Tap the inbox row → listen to the recording">
+    Audio playback works; the transcription updates a few seconds
+    after if it was still processing.
+  </Step>
+</Steps>
+
+If all six expected outcomes fire, the line is working end-to-end.
+
+## Or test it with a text
+
+Texting works as a check too, and it needs no second person. Send a
+text from your Rivet number to your own phone, or text your Rivet
+number from another phone — either direction proves the line carries
+messages, and either one marks **Test your line** complete on your
+setup checklist.
+
+The call loop above is still the fuller test. It's the only one that
+exercises voicemail, transcription and the auto-reply. A text confirms
+the line is live; the call confirms everything that happens after it.
+
+## What to do if a step doesn't fire
+
+| Doesn't happen | Likely cause | Fix |
+|---|---|---|
+| Your phone doesn't ring | Notification permission off | Allow notifications for Rivet in OS settings |
+| Phone rings but no audio when you pick up | Mic permission off, or carrier audio routing quirk | Settings → Apps → Rivet → Microphone; if the issue persists, see [calls-not-coming-through](/troubleshooting/calls-not-coming-through) |
+| Voicemail recorded but no push | Push token not registered — re-open the Rivet app once after sign-in | Open the app, confirm the inbox loads, try again |
+| Transcription stuck on "Transcribing…" | Slow processing for very long messages | Wait 60 seconds; if still stuck, the message is over 5 minutes — long messages process slower |
+| No auto-reply text | Auto-Reply switched off, or the caller number is a landline | Settings → Auto-Reply (master toggle); landlines can't receive SMS — that's expected |
+
+## Why this matters
+
+If your line ever stops working, this is the same loop you'll run to
+diagnose it. Train your fingers on it now while there's no pressure;
+the muscle memory carries over.
+
+A weekly run of this test (Monday morning takes 90 seconds) catches
+any silent breakage before a real client hits it.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Install the Rivet app" icon="mobile" href="/getting-started/install-the-app">
+    The native phone app is what rings.
+  </Card>
+  <Card title="How voicemail works" icon="voicemail" href="/practice-phone/voicemail">
+    The full lifecycle of an incoming voicemail.
+  </Card>
+  <Card title="Auto-reply explained" icon="message" href="/practice-phone/auto-response">
+    What the caller sees within seconds of leaving a voicemail.
+  </Card>
+  <Card title="Calls not coming through" icon="phone-slash" href="/troubleshooting/calls-not-coming-through">
+    Push permission, Do Not Disturb, weak network at the call window.
+  </Card>
+</CardGroup>

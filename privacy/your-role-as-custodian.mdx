@@ -1,0 +1,124 @@
+---
+title: "Your role as the health information custodian"
+description: "What being a PHIPA custodian means for your practice — and what Rivet handles on your behalf as your agent."
+---
+
+You're the **health information custodian** for the people who call,
+text, and meet with you. PHIPA puts the accountability for their personal
+health information (PHI) in your hands. When you bring Rivet in, the
+accountability stays with you — Rivet handles the day-to-day work on your
+behalf, under your direction. What follows is what you own, what Rivet
+owns, and where the seam runs.
+
+## What you control
+
+As the custodian, you are responsible for:
+
+1. **Client consent to the channels.** Your clients need to know that
+   text messages and voicemail aren't encrypted in the carrier network. You
+   tell them what they should put in a voicemail or text, and what should be
+   saved for the session.
+2. **Access requests (PHIPA s.52).** If a client asks for a copy of the
+   information you hold about them, that request comes to you. Rivet helps
+   you collect the answer — voicemail transcripts, message history, session
+   metadata — but the response to the client is yours to make.
+3. **Correction requests (PHIPA s.55).** If a client tells you something
+   in their record is wrong, you decide how to address it. Rivet supports
+   any deletion you authorize.
+4. **Withdrawal of consent.** A client can ask you to stop using a channel
+   for them. You enforce that — Rivet doesn't message clients on its own.
+5. **Statutory breach notification.** If a breach affects a client of
+   yours, *you* notify the client and (where required) the Information and
+   Privacy Commissioner of Ontario. Rivet's job is to give you the facts
+   fast enough that you can act on them.
+
+## What Rivet handles on your behalf
+
+As your agent (PHIPA s.2), Rivet takes care of:
+
+- Receiving inbound calls and texts on your Rivet practice number.
+- Recording and transcribing voicemails (the transcription runs on Canadian
+  hardware — see [voicemail processing in Canada](/privacy/voicemail-transcription-canadian-processing)).
+- Surfacing voicemails and conversations in your inbox.
+- Sending the auto-reply text you wrote, in the categories you configured.
+- Carrying video sessions between your device and your client's browser.
+  Sessions are not recorded.
+- Holding session metadata (who joined, how long the session ran) — never
+  session content.
+- Notifying you of new activity by push notification, email, or SMS, by
+  your preference.
+- Notifying you of any privacy or security incident affecting your
+  practice — at the first reasonable opportunity.
+
+Rivet doesn't use any of this for its own purposes. No marketing, no
+training of any AI system, no resale, no analytics that profile individual
+clients.
+
+## What Rivet does *not* do
+
+Knowing what's *not* in scope is just as load-bearing as knowing what is.
+
+- **Rivet doesn't replace your EHR.** The chart — diagnoses, treatment
+  plans, formal progress notes, signed assessments — lives in Jane, Owl,
+  Practice Better, or wherever your clinical records live. Rivet is a
+  communication tool. See [the measurement vs. clinical content
+  line](/privacy/the-measurement-results-vs-clinical-content-distinction).
+- **Rivet doesn't record video sessions.** Period. The architecture
+  doesn't have a recording path.
+- **Rivet doesn't share your client list, your message content, or your
+  call patterns with anyone.** Sub-processors (Twilio, Supabase,
+  Cloudflare, Stripe, Apple, Google, Metered.ca) handle the technical
+  delivery of the service and operate under their own data-handling
+  commitments — they don't receive client information for any other
+  purpose.
+- **Rivet doesn't message your clients on its own beyond the auto-reply
+  you've configured.** Every auto-reply is fixed text you wrote. No AI
+  system generates a message that goes to a client.
+
+## The DPA captures the agency relationship
+
+You accept the Data Processing Agreement when you sign up. It writes down
+the agency relationship in legal terms — your obligations to your clients,
+Rivet's obligations to you, the sub-processors, how termination works, how
+breach notification flows. Read it once at signup, then keep a copy on
+hand for your College or your compliance officer.
+
+The full text is at [the Data Processing
+Agreement](/privacy/data-processing-agreement).
+
+## When something needs to leave Rivet
+
+Two cases come up regularly.
+
+**A client asks you to delete their information.** Email
+`hello@getrivet.ca` with the client's phone number and the scope of the
+deletion ("all conversation history" or "voicemail from [date]" or
+similar). Rivet acts on your authorization within seven business days.
+
+**A client asks for a copy of what you have.** Use the inbox to compile
+your answer — voicemails and conversation history are exportable. If you
+need help, email `hello@getrivet.ca` and the Privacy Officer will work
+the request with you.
+
+## Outside Ontario
+
+If you practice in another province, your role is the equivalent under
+your provincial health-privacy statute (Alberta HIA, B.C. PIPA, Quebec
+Law 25, etc.). The shape of the responsibility — you hold accountability;
+Rivet handles operations under your direction — translates without
+modification. If your provincial regulator wants this written up against
+their specific statute, email `hello@getrivet.ca`.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="PHIPA and Rivet" icon="scale-balanced" href="/privacy/phipa-and-rivet">
+    The legal characterization of Rivet's role.
+  </Card>
+  <Card title="The Data Processing Agreement" icon="file-signature" href="/privacy/data-processing-agreement">
+    The written agreement that papers the agency relationship.
+  </Card>
+  <Card title="Breach response" icon="triangle-exclamation" href="/privacy/breach-response">
+    What happens — on your side and Rivet's — when something goes wrong.
+  </Card>
+</CardGroup>

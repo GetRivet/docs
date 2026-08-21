@@ -1,0 +1,101 @@
+---
+title: "Drawing tools"
+description: "Pen, eraser, text, shapes, color picker — and how Apple Pencil pressure shows up in your strokes."
+---
+
+The whiteboard's toolbar gives you what you'd expect from a clinical drawing
+surface — a pen with adjustable stroke and color, an eraser, text, a handful
+of shapes, and an arrow tool for connecting things. The aesthetic is
+intentionally hand-drawn rather than corporate-slide; what you sketch looks
+like therapy, not a deck.
+
+## The tool palette
+
+The toolbar runs along the top of the canvas. Left to right, the tools you'll
+use most:
+
+- **Selection** — click an element to move it, resize it, recolor it, or
+  delete it. Drag a box around several elements to grab them as a group.
+- **Pen / freedraw** — your main drawing tool. Strokes flow naturally and pick
+  up Apple Pencil pressure if your device supports it.
+- **Rectangle, ellipse, diamond, arrow, line** — quick geometric shapes for
+  diagrams. Hold Shift while drawing to constrain to perfect squares or
+  circles.
+- **Text** — click anywhere on the canvas and start typing. The font matches
+  the hand-drawn style of everything else.
+- **Eraser** — drag across strokes to remove them. The eraser only touches
+  what you cross; it doesn't erase by area.
+- **Laser pointer** — a glowing red trail that fades after a second. Use it
+  to point at something on the canvas without leaving a mark. Your client
+  sees the laser too, even though it isn't permanent ink.
+
+## Color and stroke
+
+When a tool is active, the side panel shows its options — stroke color,
+background fill, stroke width, stroke style (solid, dashed, dotted), edge
+style (sharp or rounded), and roughness (clean line vs. hand-drawn squiggle).
+
+The default colors are clinical-clean — deep navy for the main stroke,
+muted blues, greens, ambers, and reds for highlights. Each background fill
+is paired so the stroke reads cleanly against it without you tuning contrast
+by hand.
+
+<Tip>
+  Sticking to two or three colors keeps a session diagram readable when you
+  export it later. The presets follow the same discipline — every preset uses
+  the same small palette so a board with multiple presets dropped on it still
+  reads coherently.
+</Tip>
+
+## Apple Pencil pressure
+
+If you're drawing on iPad with an Apple Pencil, your strokes pick up pressure
+variation — press harder for thicker ink, lighter for thinner. The same is
+true if you're drawing on a Wacom or any other pressure-sensitive tablet
+connected to a Mac or PC.
+
+Mouse and finger strokes use a uniform weight — the stroke width you've set
+in the toolbar is what you get from edge to edge of the stroke.
+
+Pressure also rides across the two-way connection. If your client is drawing
+on an iPad with Apple Pencil and you have Two-way ON, their strokes show up
+on your canvas with pressure preserved.
+
+## Undo, redo, zoom
+
+Standard keyboard shortcuts work as you'd expect:
+
+- **Cmd+Z / Ctrl+Z** — undo
+- **Cmd+Shift+Z / Ctrl+Y** — redo
+- **Cmd+= / Ctrl+= / pinch out** — zoom in
+- **Cmd+- / Ctrl+- / pinch in** — zoom out
+- **Cmd+0 / Ctrl+0** — reset zoom
+- **Space + drag** — pan around the canvas
+
+The canvas itself is large — you can scroll past the visible area in any
+direction and keep drawing. Presets land in your current viewport, so you
+can use a different region of the canvas for each diagram and scroll
+between them.
+
+## Native viewing (iPhone, Android)
+
+The interactive whiteboard tools are designed for a real keyboard and pointer
+— a desktop or laptop browser, or an iPad with Apple Pencil. If a client
+joins from an iPhone or Android, they see the whiteboard as a video stream
+inside their browser. They can watch what you draw, but the pen / shape /
+text tools don't show on their side. For Two-way drawing, your client wants
+a laptop or iPad.
+
+## Related articles
+
+<CardGroup cols={3}>
+  <Card title="Opening the whiteboard" icon="pen-line" href="/whiteboard/opening-the-whiteboard">
+    Share Screen → Whiteboard.
+  </Card>
+  <Card title="Letting your client draw" icon="users" href="/whiteboard/client-collaboration">
+    The Two-way toggle.
+  </Card>
+  <Card title="Exporting as PDF" icon="file-pdf" href="/whiteboard/exporting-as-pdf">
+    Save what you drew before the session ends.
+  </Card>
+</CardGroup>

@@ -1,0 +1,185 @@
+---
+title: "Audio and video quality"
+description: "Practical setup tips — lighting, mic placement, ethernet, browser choice — that turn a passable session into a good one."
+---
+
+The video tech does a lot. The rest is physical setup. A 1080p session
+with good lighting, a real mic, and a wired internet connection looks
+and sounds completely different from the same software on a laptop in a
+dim room. What follows is the short list of things that actually move
+the needle — skip whatever feels obvious.
+
+## Lighting
+
+The biggest single improvement available, and most practitioners get it
+wrong on first try.
+
+- **Light should come from in front of you, not behind.** A window or
+  lamp behind your head puts your face in silhouette. The client sees
+  a dark shape.
+- **A window in front of you is the best light source.** Free, soft,
+  flattering. Face the window. If you can't, face a wall with a lamp
+  on it.
+- **Avoid overhead fluorescent only.** It puts shadows under your eyes
+  and washes you out. Add a desk lamp at eye level pointing at your
+  face.
+- **A cheap key light helps.** $30 USB ring light or panel. Eye level,
+  slightly off to the side. Don't overdo brightness — the soft glow
+  setting is what you want.
+
+## Microphone
+
+Laptop mics are passable. Anything else is better.
+
+- **Wired headset with a built-in mic** is the cheapest meaningful
+  upgrade. Apple EarPods with a Lightning or 3.5mm jack, the wired ones
+  that came with your iPhone before AirPods existed. The mic is closer
+  to your mouth than a laptop mic and the audio is significantly
+  cleaner.
+- **A USB microphone** (Blue Yeti, Shure MV5, Rode NT-USB, Samson Q2U)
+  is the upgrade from there. ~$80–150. Sounds like a podcast.
+- **AirPods and other Bluetooth earbuds work**, but they can drop audio
+  quality during the call as the codec downgrades to compensate for
+  background noise. Acceptable in a pinch, not first choice.
+- **Avoid built-in webcam mics on external monitors.** They're
+  notoriously bad — pointing away from you, picking up keyboard noise,
+  with no echo cancellation.
+
+The mic level meter on the pre-join screen tells you whether the right
+mic is selected. If it's not moving when you talk, the wrong mic is
+active.
+
+## Internet
+
+Video calls use roughly 1–2.5 Mbps per stream in each direction. Most
+modern home internet can handle this without thinking. The two scenarios
+that cause problems:
+
+- **WiFi with poor signal.** If you're seeing one or two bars in your
+  office, you're on the edge of what a video call can sustain. Move closer to
+  the router or run a session in a room with better signal.
+- **Sharing the connection with someone streaming or downloading.** A
+  household member starting a 4K stream during your session will cut your
+  available bandwidth. Easiest fix: a wired ethernet connection. Most
+  laptops accept a USB-C to ethernet adapter ($20).
+
+If you do see "Connection lost" warnings during a session, internet is the
+first thing to suspect.
+
+## Browser choice
+
+Any modern browser works. There are real differences:
+
+- **Chrome (desktop)** — the most-tested path. Best behavior across
+  screen share, EMDR audio, and edge cases.
+- **Firefox (desktop)** — solid. Slightly different screen-share picker
+  UX, otherwise indistinguishable from Chrome.
+- **Safari (macOS)** — works. Tighter security around microphone gestures
+  (you have to tap once before the camera/mic enables), more conservative
+  about background audio.
+- **Edge (desktop)** — works. Same engine as Chrome under the hood, so
+  expect identical behavior.
+- **Mobile Safari (iPhone, iPad)** — works for sessions. Screen share
+  is unreliable on mobile across all platforms; do clinical sharing from
+  a desktop or laptop.
+- **Mobile Chrome (Android)** — works. Same caveats as mobile Safari for
+  screen share.
+
+For clients, recommend whatever browser is already their default. They
+don't need to install anything.
+
+## Camera framing
+
+A few small adjustments make a big difference:
+
+- **Camera at eye level.** Stack books under your laptop, or use a
+  proper webcam on a stand. Looking down into a laptop camera puts your
+  client below you.
+- **Your head and shoulders should fill the frame.** Don't sit so far
+  back that you're a postage stamp. Closer than feels natural for a
+  conversation tends to look right on video.
+- **Clean background.** Not curated — clean. A wall, a bookshelf, a
+  plant. Avoid your bed, dishes, or a window blasting sun behind you.
+
+## Echo
+
+The single most common audio complaint, and almost always fixable in
+under a minute.
+
+Echo happens when one side's mic picks up the other side's audio coming
+out of their own speakers. The other side then hears their own voice
+delayed by half a second. The fix:
+
+- **Use headphones.** Any kind — wired earbuds, AirPods, headset.
+  Headphones break the speaker-to-mic loop. Echo gone.
+- **Lower your speaker volume.** Less audio coming out means less
+  re-captured.
+- **Move farther from the speaker.** Laptop speakers can echo at high
+  volume; moving 18 inches back usually fixes it.
+
+If the client is echoing back to you, ask them to put on headphones.
+
+## What to do when something goes wrong mid-session
+
+Video quality issues usually have one of three causes:
+
+- **One side's internet is unstable** → refresh both browsers, rejoin via
+  the slug URL.
+- **The browser is overheating or low on memory** → close other tabs and
+  apps, refresh.
+- **Camera permission was revoked** by an OS update or a paired
+  Bluetooth device taking over → check browser permissions, restart
+  the browser.
+
+The general fallback: refresh the tab, rejoin the URL. The connection
+resets cleanly when you refresh.
+
+## What Rivet does automatically when the connection degrades
+
+Rivet runs a quality monitor every two seconds during a call. When the
+network can't sustain video at acceptable quality, the system steps
+through three levels of degradation in order, always preserving audio:
+
+1. **Step down video bitrate and resolution** (silent — you'll see a slight
+   softening of the other person's image but nothing alarming)
+2. **Step down further** to a 640×360 baseline (still silent — most people
+   don't notice)
+3. **Audio-first mode** — when packet loss stays above 8% for 6 seconds
+   and Rivet has already shed all video quality it can, your outbound
+   video pauses entirely. A small banner appears at the top of your
+   screen: **"Audio only — video paused, weak connection."** Your audio
+   keeps going. The other side sees your last frame frozen.
+
+When the connection clears (under 5% loss for 30 seconds), video
+automatically resumes. You don't have to do anything.
+
+Why audio-first: in therapy specifically, the conversation matters more
+than the visual. A frozen video on a client mid-disclosure is far less
+disruptive than the call dropping. Audio is the irreducible minimum.
+
+If you'd rather stay on video and accept the quality loss, just keep
+the camera button on — Rivet honours your camera button as a hard
+preference. If you turn the camera off yourself while in audio-only
+mode, Rivet won't re-enable it when the connection recovers; you stay
+in whatever state you chose.
+
+For the full list of banners and prompts you might see during a
+degraded call — *Reconnecting…*, *Other person disconnected*, *Audio
+only*, the **Rejoin call** button — see the
+[connection-state guide](/troubleshooting/video-issues#what-youll-see-if-the-connection-has-trouble).
+That page is the single reference for what each one means and what to
+do about it.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="The pre-join screen" icon="eye" href="/video-sessions/the-pre-join-experience">
+    Test your setup before joining.
+  </Card>
+  <Card title="Troubleshooting" icon="circle-question" href="/video-sessions/troubleshooting">
+    The mid-session fixes.
+  </Card>
+  <Card title="Audio issues" icon="volume-high" href="/troubleshooting/audio-issues">
+    The deeper audio troubleshooting page.
+  </Card>
+</CardGroup>

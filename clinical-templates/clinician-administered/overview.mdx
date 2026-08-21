@@ -1,0 +1,131 @@
+---
+title: "Clinician-administered measures"
+description: "The six structured-interview instruments you fill about a client — never sent to them, by design."
+---
+
+These are the measures you fill out yourself, during or after a clinical
+interview. The client never sees the form. They don't get a link, a text, or
+an email. You sit with the rater anchors in front of you, ask the structured
+probe questions, and score each item based on your clinical judgment.
+
+Rivet includes six of them: HAM-D, HAM-A, Y-BOCS, YMRS, YGTSS, and C-SSRS.
+They cover depression, anxiety, OCD, bipolar mania, tic severity, and suicide
+risk — the clinician-administered counterparts to most of Rivet's self-report
+screens.
+
+## Why they're separate from your self-report library
+
+Self-report measures like the PHQ-9 and GAD-7 are designed to be filled by
+the client. The questions are written in plain second-person English, the
+scoring is simple, and the psychometrics are validated for unaided
+self-completion.
+
+Clinician-administered measures are different instruments. They have
+structured rater anchors, severity rubrics that require clinical training to
+interpret, and inter-rater reliability validated only when a trained
+interviewer scores them. A HAM-D is not a "long PHQ-9" — it's a different
+scale measuring different constructs, with different cut-points, and
+designed for a different filler.
+
+If you sent a HAM-D to a client to fill out, the resulting score would be
+psychometrically meaningless. That's the reason these measures are walled
+off from your normal "send to client" flow.
+
+## What Rivet does to enforce it
+
+These six measures are flagged in the template library as
+clinician-administered. If you try to send one of them to a client,
+the option isn't available — the picker doesn't show "send to
+client" for these templates.
+
+The same lockout applies to practitioner-private templates (SOAP, DAP).
+Practitioner-private notes are blocked from sending for privacy reasons
+— they autofill from prior PHI. Clinician-administered measures are
+blocked for psychometric reasons — sending them would invert the
+instrument. Different reason, same outcome.
+
+## How you fill one
+
+Solo fill is the canonical delivery mode. From the templates picker, pick the
+measure, tap **New response**, and the renderer opens with the client
+selector at the top. You pick the client, answer each item with the rater
+anchor you choose, and submit. Rivet computes the total, subscales, and
+severity band and saves the response to the client's chart.
+
+You can also fill one inside a video session — open it from the in-session
+toolbar (**Clinical templates ▾**) and it renders on your screen only. Nothing is sent
+to the client's device, and your selections save as you work. The client sees
+the normal session view while you ask each question and record the answer.
+
+## When to choose clinician-administered over self-report
+
+| Situation | Clinician-administered | Self-report |
+|---|---|---|
+| Treatment trial / outcome research | HAM-D, HAM-A, Y-BOCS, YMRS | PHQ-9, GAD-7 |
+| Inpatient / acute-care setting | All six | Sometimes paired |
+| Client has limited reading / language barrier | Clinician-administered | Avoid self-report |
+| Client may minimize or over-report | Clinician-administered | Adds rater calibration |
+| Routine outcome monitoring in therapy | Self-report is fine | PHQ-9, GAD-7 weekly |
+| Suicide risk screening | C-SSRS (always) | Never substitute |
+
+For weekly progress monitoring in psychotherapy, self-report is usually
+the right tool — it's lighter, the client engages with the score, and the
+psychometrics hold up. Clinician-administered measures earn their cost when
+you need the rater anchors: research-grade outcome tracking, complex
+presentations, or instruments like the C-SSRS where self-report is
+explicitly contraindicated.
+
+## On suicide risk
+
+The C-SSRS is in this group for a reason. Columbia explicitly states the
+C-SSRS is **not** a self-report instrument, and Rivet enforces that. When
+you administer the C-SSRS, items 4 (intent), 5 (plan), and 6 (behavior in
+the past 3 months) carry clinical weight that needs your judgment in the
+room.
+
+Rivet captures the data and surfaces high-risk items. The clinical decision
+— safety plan, means restriction, level-of-care, hospitalization — stays
+yours. Rivet does not auto-escalate, does not notify anyone, and does not
+substitute for your in-the-moment assessment.
+
+## The six measures
+
+<CardGroup cols={2}>
+  <Card title="HAM-D" icon="clipboard-list" href="/clinical-templates/clinician-administered/ham-d">
+    Hamilton Depression Rating Scale, 17-item. Treatment-trial outcome
+    measure for depression.
+  </Card>
+  <Card title="HAM-A" icon="clipboard-list" href="/clinical-templates/clinician-administered/ham-a">
+    Hamilton Anxiety Rating Scale, 14 items split across psychic and
+    somatic subscales.
+  </Card>
+  <Card title="Y-BOCS" icon="clipboard-list" href="/clinical-templates/clinician-administered/y-bocs">
+    Yale-Brown Obsessive Compulsive Scale. Severity tracking for OCD,
+    including ERP outcome measurement.
+  </Card>
+  <Card title="YMRS" icon="clipboard-list" href="/clinical-templates/clinician-administered/ymrs">
+    Young Mania Rating Scale. Mood-stabilizer outcome measure in bipolar
+    care.
+  </Card>
+  <Card title="YGTSS" icon="clipboard-list" href="/clinical-templates/clinician-administered/ygtss">
+    Yale Global Tic Severity Scale. Motor and phonic tic severity for
+    Tourette's and chronic tic disorders.
+  </Card>
+  <Card title="C-SSRS" icon="shield-exclamation" href="/clinical-templates/clinician-administered/c-ssrs">
+    Columbia Suicide Severity Rating Scale, Screening (Recent). FDA's
+    standard suicide severity rating.
+  </Card>
+</CardGroup>
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Sending a measure to a client" icon="paper-plane" href="/measurement-based-care/index">
+    How async send works for self-report measures — and why these six are
+    excluded.
+  </Card>
+  <Card title="Clinical templates overview" icon="folder-open" href="/clinical-templates/index">
+    The full template library: screening, outcome tracking, substance use,
+    children and adolescents, specialized.
+  </Card>
+</CardGroup>

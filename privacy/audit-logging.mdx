@@ -1,0 +1,166 @@
+---
+title: "Audit logging"
+description: "Rivet's append-only audit log, the video connection-quality diagnostics — what's recorded, what's deliberately kept out, and how both support incident response."
+---
+
+The audit log is the answer to "who accessed what, and when?" — the
+question that follows every privacy concern, every College inquiry,
+and every breach investigation. Rivet maintains an append-only audit
+log for that reason. A second, narrower log captures connection-quality
+metadata for video sessions so support can diagnose dropped calls
+without having to guess.
+
+## What gets recorded
+
+The audit log captures **events**, not content. Each row is a
+structured record of an access event tied to your business ID:
+
+| Event type | When it fires |
+|---|---|
+| `bearer_auth_success` | A bearer token successfully authenticates a request to a Rivet API |
+| `voice_token_mint` | A voice-call credential is issued to a signed-in device (used to place or receive a call) |
+| `audio_play_voicemail` | A voicemail audio file is fetched for playback |
+| `sms_outbound` | An outbound SMS is sent from your number |
+
+Each row stores:
+
+- A timestamp.
+- The event type.
+- Your business ID (so events can be filtered to your practice).
+- A small bag of structured metadata (IDs, counts, hashes — see the
+  PHI-hygiene rule below).
+
+That's it. The row is enough to reconstruct *that* a thing happened
+without exposing the substance of what was said or heard.
+
+## The append-only guarantee
+
+The audit log table has no `UPDATE` or `DELETE` permissions for any
+role — even the service role Rivet's worker runs under can't modify or
+remove rows. The only way a row enters the log is through a database
+function (`audit_emit`) that runs with elevated privileges and inserts
+the row atomically.
+
+What this gives you:
+
+- A row in the log can't be edited after the fact.
+- A compromised database key can't quietly erase tracks.
+- The log is evidence-grade for a breach investigation.
+
+## The PHI-hygiene rule
+
+The audit log is the most-accessed log Rivet keeps. If it filled up
+with phone numbers, transcript snippets, or message bodies, every
+support session would become a PHI exposure surface.
+
+The rule is:
+
+> Audit log rows may contain identifiers, counts, hashes, and the last
+> four digits of a phone number. Audit log rows may not contain
+> message bodies, transcript text, voicemail audio paths with caller
+> identifiers, or any PHI substance.
+
+So an `sms_outbound` row records *that* an SMS was sent from your
+business to a phone number ending in `…4729`, with a body length of
+`87` characters, at a specific timestamp. It does not record the
+message body.
+
+A `voice_token_mint` row records *that* a voice token was issued to
+your signed-in session at a specific time. It doesn't record the call
+that followed.
+
+## How the log supports breach response
+
+When something goes wrong, the audit log is the canonical "who
+accessed which PHI" record. The breach response runbook (see [breach
+response](/privacy/breach-response)) walks through five log sources
+during the assessment phase; the audit log is the most useful of them
+for answering:
+
+- Did anyone access voicemail audio during the suspect window?
+- Was there an unusual spike in outbound SMS?
+- Were voice tokens issued from an unexpected location?
+- Was there a successful bearer authentication on a stale token?
+
+Because the log is structured (not free-form text) and append-only,
+those queries return clean, evidence-grade answers — often within
+minutes.
+
+## What you can see
+
+The audit log is internal — Rivet uses it for incident response and
+security review. If you need a copy of audit events related to your
+practice (for a College audit, an HIC compliance review, or a breach
+investigation), email `hello@getrivet.ca` and the Privacy Officer will
+work the request with you. Audit log access is itself audited, so the
+request and the response both leave a trail.
+
+## What's not in the audit log (and why)
+
+A few categories are deliberately out of scope:
+
+- **Read-only inbox views.** Every time you open the inbox, you're
+  reading rows. Logging every read would explode the log size without
+  adding investigatory value — the system is designed so that *any*
+  database access from the worker role is bounded by the row-level
+  security policies enforced on every table.
+- **Static asset requests.** Loading the app's CSS, fonts, and icons
+  isn't a PHI event.
+- **Heartbeats.** The worker writes a "still alive" row every ten
+  seconds. That's an operational signal, not an access event.
+
+The audit log captures the events that actually matter for "who
+touched PHI" — and trusts row-level security at the database layer to
+enforce the rest.
+
+## Connection-quality diagnostics for video sessions
+
+Video sessions emit a separate, narrower log — connection-quality
+metadata — designed to be consistent with PIPEDA / PHIPA principles
+around purpose limitation and minimization.
+
+<Note>
+**What is logged:** when a video call ends, the app sends a small
+report describing how the connection behaved during the session.
+That report covers bitrate, packet loss, jitter, round-trip time,
+frame rate and resolution, ICE state transitions (connection drops
+and recoveries), the browser family and major version, the device
+platform (macOS / Windows / iOS / Android / Linux), and the
+network type the browser exposes (4G / Wi-Fi / 3G). The server
+adds the two-letter country code from Cloudflare's edge. Each
+report is tied to the opaque session token and your business ID.
+
+**What is NOT logged:** no audio, no video frames, no transcript,
+no IP addresses, no full user-agent string, no client identifying
+information, no link to a specific patient. Rivet does not record
+video sessions — only this technical metadata about how the
+connection behaved.
+
+**Retention:** 30 days, then deleted by a scheduled cleanup. The
+diagnostic value of these reports decays quickly past the first
+week; 30 days is enough to investigate "the call last week dropped
+repeatedly" and short enough that the data doesn't accumulate
+indefinitely.
+</Note>
+
+The point of these reports is visibility when something goes wrong.
+If a session drops in the middle of an EMDR set or freezes during a
+disclosure, Rivet support can look at the diagnostic report and tell
+whether the cause was a network blip, encoder pressure on the device,
+or a TURN-server problem — without having to guess. The reports are
+the only way to do that in a system that deliberately doesn't record
+session content.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Encryption" icon="lock" href="/privacy/encryption">
+    What's protected on the database the audit log lives in.
+  </Card>
+  <Card title="Breach response" icon="triangle-exclamation" href="/privacy/breach-response">
+    How the audit log fits into the five-phase response.
+  </Card>
+  <Card title="Client data handling" icon="database" href="/privacy/client-data-handling">
+    What categories of data those audit events relate to.
+  </Card>
+</CardGroup>

@@ -1,0 +1,146 @@
+---
+title: "Call forwarding to your Rivet number"
+description: "Two patterns for routing your existing line to Rivet — toggle on with *72 when you step away, or replace your carrier's voicemail so missed calls automatically forward."
+---
+
+You don't have to give clients a new number to use Rivet. The
+practice you've been running with your existing line keeps running —
+you just route the calls that would have rolled to your voicemail
+over to your Rivet number instead. Every missed call lands in the
+Rivet inbox with transcription + auto-reply firing within seconds.
+
+There are two patterns for setting this up. The right one depends
+on how often you want to think about it.
+
+## Pattern 1 — Forward when away
+
+You toggle forwarding on when you step away and off when you're
+back. Lunch breaks, end of day, weekends, vacations, between
+sessions. The desk phone keeps ringing during the times you're
+willing to pick up.
+
+**To turn it on** (do this from your office phone):
+
+<Steps>
+  <Step title="Pick up your office phone">
+    Most carriers want you to dial these codes from the line you're
+    forwarding. Cell forwarding works too, but the dial pattern is
+    the same.
+  </Step>
+  <Step title="Dial *72">
+    You'll hear a tone or some beeps. That's the carrier confirming
+    it's listening for the destination number.
+  </Step>
+  <Step title="Dial your Rivet number">
+    Use the 10-digit form (no `+1` prefix needed). You'll find your
+    Rivet number on the welcome screen, in Settings → Phone, or in
+    the inbox header.
+  </Step>
+  <Step title="Wait for the line to answer, then hold for 5 seconds">
+    The Rivet line picks up and plays your greeting. Don't hang up
+    immediately — the carrier needs the connection to hold for a
+    moment to register the forwarding rule.
+  </Step>
+  <Step title="Hang up — forwarding is active">
+    From now until you cancel it, every call to your office phone
+    goes straight to Rivet. Your desk phone won't ring.
+  </Step>
+</Steps>
+
+**To turn it off:** pick up the office phone, dial `*73`, listen for
+two beeps. Calls ring your desk normally again.
+
+This pattern works with every Canadian carrier. No special features
+required. The tradeoff: you have to remember to toggle.
+
+## Pattern 2 — Replace your voicemail
+
+Rivet becomes your voicemail system. Calls ring your desk phone
+first; if nobody picks up within 4–5 rings, the carrier automatically
+forwards to Rivet. Nothing to toggle.
+
+This is the right pattern if you want the experience to be permanent
+— callers always get either you on the line, or Rivet. Your carrier's
+old voicemail goes away.
+
+The setup is carrier-specific — different providers use different
+codes (`*92`, `*004*`, online portals). Rivet's in-app forwarding
+guide has the exact steps for your phone system. Open the app → Call
+Forwarding → "Replace Your Voicemail" tab → pick your provider from
+the dropdown. The codes are pre-filled with your Rivet number so you
+can read them off the screen as you dial.
+
+Providers Rivet has detailed step-by-step instructions for:
+
+- Bell business + home phone
+- Rogers
+- TELUS (mobile + landline)
+- Cogeco
+- Shaw
+- Nortel office systems
+- Mitel office systems
+- Generic VoIP / hosted PBX
+
+If your phone system isn't listed, the underlying pattern is the
+same. Look for "Call Forward No Answer" (CFNA) in your provider's
+calling features. The destination number is your Rivet line.
+
+### The voicemail gotcha
+
+There's one thing worth knowing before you start Pattern 2: **most
+carriers' voicemail intercepts calls before conditional forwarding
+can trigger.** That means if you have your carrier's voicemail
+turned on AND CFNA set up, callers still hit the carrier voicemail,
+not Rivet.
+
+You usually need to **disable your carrier's voicemail** before
+"Replace Your Voicemail" actually works. The in-app guide flags
+this for the specific providers where it matters (Rogers is the
+strictest about it). If you're not sure, call your carrier and ask:
+*"If I set up Call Forward No Answer to forward to an external
+number, will your voicemail still intercept?"*
+
+If yes — disable your carrier voicemail. Rivet is your voicemail now.
+
+## Which pattern should you pick?
+
+| If you… | Pick |
+|---|---|
+| Want to keep using your carrier's voicemail for some calls (e.g. internal lines) | Pattern 1 — toggle when away |
+| Want every missed call to land in Rivet without thinking about it | Pattern 2 — replace voicemail |
+| Don't have a desk phone and just use your cell | Either works; Pattern 2 is simpler once set up |
+| Have a multi-line office and only want SOME lines forwarded | Pattern 1 per line |
+
+Most solo practitioners end up on Pattern 2 — set it once, forget
+it. Group practices with shared lines often start with Pattern 1 so
+the front desk keeps answering during business hours.
+
+## When forwarding is on, auto-reply still fires
+
+This is the part that makes Rivet feel different from a regular
+voicemail. The caller leaves a message, hangs up, and within seconds
+a text arrives back on their phone — *"Got your message about
+booking, we'll be in touch by end of day"* or similar, based on what
+they said. They're not staring at a black hole; they have a
+confirmation in their pocket before they put the phone away.
+
+Make sure Auto-Reply is switched on under Settings before you start
+forwarding, otherwise callers hit Rivet but get no reply text. See
+[How auto-reply works](/practice-phone/auto-response).
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="How voicemail works" icon="voicemail" href="/practice-phone/voicemail">
+    The lifecycle of a voicemail once it reaches Rivet.
+  </Card>
+  <Card title="How auto-reply works" icon="message" href="/practice-phone/auto-response">
+    What the caller sees within seconds of leaving a voicemail.
+  </Card>
+  <Card title="Receiving calls on Rivet" icon="phone" href="/practice-phone/receiving-calls">
+    When forwarding is OFF and someone dials Rivet directly.
+  </Card>
+  <Card title="Test your line" icon="check" href="/getting-started/test-your-line">
+    The 5-minute verification loop to confirm forwarding works end-to-end.
+  </Card>
+</CardGroup>

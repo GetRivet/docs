@@ -1,0 +1,125 @@
+---
+title: "PSQI — Pittsburgh Sleep Quality Index"
+description: "The 19-item self-report measure of sleep quality over the past month, with three components live-scored in Rivet."
+---
+
+The PSQI is the dominant clinical measure of sleep quality. You send it when
+sleep is part of the formulation — depression with insomnia, generalized
+anxiety with sleep onset trouble, trauma-related nightmares, CBT-I outcome
+tracking, or a baseline against ISI for monitoring change.
+
+Clients answer 19 items about their sleep over the past month. The original
+PSQI also includes 5 partner-observer items (snoring, leg movements, apnea,
+confusion) — Rivet uses the 19-item self-report subset, which is the
+dominant configuration in clinical practice.
+
+## What it measures
+
+Sleep quality and disturbance across seven canonical components:
+
+- Subjective sleep quality
+- Sleep latency (how long to fall asleep)
+- Sleep duration
+- Habitual sleep efficiency (time asleep ÷ time in bed)
+- Sleep disturbances (waking up, pain, bad dreams, breathing problems)
+- Use of sleeping medication
+- Daytime dysfunction (staying awake, low motivation)
+
+The canonical algorithm rolls these seven component scores (each 0–3) into a
+**Global PSQI** ranging 0–21.
+
+## When to send it
+
+- Intake for any client where sleep is in the picture
+- Monthly or every-6-week monitoring during CBT-I or behavioural sleep work
+- As a screening trigger — a poor Global score is the standard prompt for
+  ISI follow-up or sleep-specialist referral
+- Pre/post for any intervention where sleep is the primary outcome
+
+The 19 self-report items take 5–10 minutes. Most clients fill it out async
+in the day or two before session — send it ahead and the result is on the
+client's record when they arrive.
+
+## Scoring and severity cutoffs
+
+Three components are live-scored in the app:
+
+| Component | Items | Range | Bands |
+|---|---|---|---|
+| Subjective sleep quality | Item 9 | 0–3 | Very good / Fairly good / Fairly bad / Very bad |
+| Sleep disturbances (raw sum) | Items 5b–5j | 0–27 | None / Mild / Moderate / Severe |
+| Sleep medication use | Item 6 | 0–3 | Not in past month / Less than weekly / Once or twice / Three or more |
+
+The remaining four components (sleep latency, sleep duration, sleep
+efficiency, daytime dysfunction) and the Global PSQI score require
+arithmetic that Rivet's scoring engine doesn't yet express live in-session —
+banding continuous values, ratios with banding, chained band-then-sum-then-
+band sequences. The structured answers are still captured in full; you copy
+them out for note-taking or compute the Global score against the canonical
+scoring sheet when you need it.
+
+<Note>
+The University of Pittsburgh Sleep Research Group publishes the canonical
+scoring sheet at sleep.pitt.edu. Three minutes to walk the seven
+component formulas if you need the Global number for a referral letter.
+</Note>
+
+## Cutoffs
+
+- **Global PSQI > 5** → poor sleeper (Buysse 1989: sensitivity 89.6%,
+  specificity 86.5%)
+- **Global PSQI > 8** → severe insomnia (Backhaus et al. 2002)
+
+Item 5h ("have bad dreams") is flagged sensitive in the template so the
+intake panel keeps the trauma-informed framing on the rest of the form.
+
+## PSQI vs ISI
+
+The PSQI describes sleep; the [ISI](/clinical-templates/screening/isi)
+grades insomnia. Nineteen items across a month covering quality, how long
+it takes to fall asleep, how long the client sleeps, how much of their
+time in bed is spent asleep, what disturbs them, medication and daytime
+effects — that breadth is why it's the instrument for characterising a
+sleep complaint you don't yet understand, and why it picks up problems
+that aren't insomnia at all.
+
+The ISI is seven items over two weeks and produces one number, which makes
+it the easier measure to repeat during treatment. A PSQI above 5 is a
+sensible trigger to follow up with the ISI or refer on.
+
+The practical cost of the PSQI is scoring. Three of its seven components
+compute in session; the rest, and the global score, need the published
+scoring sheet — the response exports in full so you have everything you
+need to do that.
+
+## Is it free to use?
+
+**Yes.** The University of Pittsburgh Sleep Research Group permits free clinical, educational and non-commercial research use.
+
+## Citation
+
+Buysse, D. J., Reynolds, C. F., Monk, T. H., Berman, S. R., & Kupfer, D. J.
+(1989). The Pittsburgh Sleep Quality Index: a new instrument for psychiatric
+practice and research. *Psychiatry Research,* 28(2), 193–213.
+
+Free for clinical, educational, and non-commercial research use per the
+University of Pittsburgh Sleep Research Group.
+
+## When not to use it
+
+PSQI asks about the past month — it's not the right tool for acute sleep
+disruption in a recent crisis. Use ISI when you want a 2-week window or a
+faster outcome measure during active CBT-I. Use both together when sleep is
+the primary treatment target and you want a longitudinal-quality and
+severity pair.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="ISI — Insomnia Severity Index" icon="moon" href="/clinical-templates/screening/isi">
+    7-item, 2-week window. The CBT-I outcome measure.
+  </Card>
+  <Card title="Administering measures in session" icon="paper-plane" href="/measurement-based-care/administering-measures-in-session">
+    How in-session and async administration work.
+  </Card>
+</CardGroup>

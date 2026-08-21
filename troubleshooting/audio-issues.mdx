@@ -1,0 +1,115 @@
+---
+title: "Audio issues"
+description: "Echo, one-way audio, garbled voice, mic muted by the OS — the practical fixes for every audio problem in a Rivet session."
+---
+
+Audio is the single most important thing in a clinical session. Most
+audio problems have a one-step fix. Try the obvious thing first; the
+exotic causes are at the bottom of this page.
+
+## Echo — you hear your own voice come back
+
+Almost always the same cause: somebody (you or the client) isn't wearing
+headphones, so their mic picks up your voice from their speakers and
+sends it back to you.
+
+**Fix:** Put on headphones. AirPods, wired earbuds, anything that
+separates the mic from the speaker. Ask your client to do the same.
+
+If the echo is on your side and you're already wearing headphones,
+double-check that your laptop hasn't switched the audio output to its
+built-in speakers (the macOS audio menu sometimes flips after a Bluetooth
+hiccup). Switch it back to your headphones.
+
+<Note>
+  Rivet's built-in echo cancellation, noise suppression, and auto-gain
+  control work by default. They handle mild echo well, but they can't
+  fully cancel a client across the room with their phone on speaker —
+  that's a physics problem, not a software setting.
+</Note>
+
+## One-way audio — they hear you but you don't hear them
+
+Two common causes, in order of likelihood:
+
+<Steps>
+  <Step title="The browser blocked their mic">
+    Most common. The client tapped Join before granting microphone
+    permission, the prompt got dismissed, and now their mic is muted at
+    the browser level. Ask them to look for a mic-with-a-slash icon in
+    the address bar, click it, and allow microphone access — then refresh
+    the page and rejoin.
+  </Step>
+  <Step title="OS-level mute">
+    On Mac and Windows, the keyboard mic-mute key (often F4 or a function
+    row toggle) silences the mic at the OS level. The browser shows the
+    mic as active but no audio reaches the call. Pressing the key again
+    unmutes it.
+  </Step>
+</Steps>
+
+If neither fixes it, ask the client to leave the session and rejoin —
+the most reliable recovery for a stuck audio track is closing the tab
+and tapping the waiting-room link again.
+
+## Garbled or robotic voice
+
+Almost always a bandwidth problem. Audio quality drops when the
+connection can't keep up.
+
+**Quick checks:**
+
+- Are they on Wi-Fi? Ask them to move closer to the router. Wi-Fi
+  strength drops sharply more than 15 feet from the access point.
+- Are they on cellular? 4G is fine; spotty 4G isn't. If you can hear
+  them clearly between drops, the network is the problem, not the
+  hardware.
+- Is something else on the network downloading? A family member's
+  Netflix stream on the same Wi-Fi can saturate the link.
+
+**Fix:** Move to a better network if possible. If not, both of you turn
+off your video — audio-only uses about a tenth of the bandwidth and
+usually stays clear when video can't.
+
+## Echo cancellation off — you hear yourself faintly
+
+Some Bluetooth headsets (older Jabra, some Plantronics models) put
+themselves into a "music" profile when the browser starts a call. In
+music profile, echo cancellation is disabled because music doesn't need
+it.
+
+**Fix:** Disconnect and reconnect the headset, or end the call and
+restart it. Both force the OS to renegotiate the audio profile, which
+usually drops the device back into the call-optimised "handsfree"
+profile.
+
+## macOS sample-rate mismatch (the rare one)
+
+If you're on a Mac with an external audio interface (a USB mic, a Focusrite
+Scarlett, etc.), Audio MIDI Setup sometimes sets the device sample rate
+to 96 kHz while the browser expects 48 kHz. The result is choppy or
+pitched audio.
+
+**Fix:** Open Audio MIDI Setup (Spotlight → Audio MIDI Setup), select
+your input device, and set the Format to **48000.0 Hz**. Restart the
+browser. Most users will never hit this — only Mac users with semi-pro
+audio gear see it.
+
+## Nothing helps — end the call and use the practice line
+
+If audio is genuinely broken and you have a session running, end the
+video call and call the client back on the practice line. Phone-line
+audio is more reliable than browser audio. You lose the visual,
+but the session continues. Reschedule a video session for next week and
+investigate the setup at your own pace.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Video issues" icon="video-slash" href="/troubleshooting/video-issues">
+    Camera-side problems — black screen, choppy video, wrong camera.
+  </Card>
+  <Card title="Client can't join" icon="door-closed" href="/troubleshooting/client-cant-join-session">
+    The client never reaches the session at all.
+  </Card>
+</CardGroup>

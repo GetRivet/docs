@@ -1,0 +1,157 @@
+---
+title: "Video session troubleshooting"
+description: "The common issues and the first-line fixes — echo, frozen video, camera not detected, client can't join."
+---
+
+A handful of issues account for the majority of mid-session problems.
+What follows is the fast list. For deeper coverage of each category, the
+global [Troubleshooting](/troubleshooting/index) section has dedicated
+pages.
+
+## The client can't join
+
+Almost always one of:
+
+- **They opened the link in an in-app browser.** The browser inside
+  Instagram, Facebook Messenger, or Gmail often blocks camera access.
+  Tell them to tap the three-dot menu and choose **Open in Browser** or
+  **Open in Safari/Chrome**.
+- **They denied camera or mic permission.** The first time the prompt
+  appears, some people tap Block instinctively. Have them refresh the
+  page and allow access this time.
+- **Their phone is on Low Power Mode (iOS) or Battery Saver (Android)**
+  which can block media. Have them turn it off.
+- **They're on a corporate or hospital network** that's blocking the
+  video connection. Rare for therapy clients, common for clients tapping
+  the link from a workplace. Switch to mobile data.
+
+Full coverage: [Client can't join](/troubleshooting/client-cant-join-session).
+
+## Echo (you hear yourself, or they hear themselves)
+
+Echo is one side's mic picking up the other side's audio coming out of
+their own speakers. The fix is always headphones on the echoing side:
+
+- **You hear an echo of your own voice** → the client's mic is picking up
+  your voice from their speakers. Ask them to put on headphones.
+- **They report hearing themselves** → your mic is picking up their
+  voice from your speakers. Put on headphones.
+- **Low-grade echo even with headphones** → one side's speakers are
+  bleeding into the headset mic. Lower speaker volume on the echoing
+  side.
+
+## Choppy or frozen video
+
+Rivet silently adapts to bandwidth — when the network gets bad, video
+quality drops first, then frame rate, then connection. If you're seeing
+freezes:
+
+- **Refresh both browsers.** The fastest reset — both sides reconnect
+  with a clean connection.
+- **Switch from WiFi to ethernet** if you have the option. A USB-C to
+  ethernet adapter ($20) is the single best video-quality investment
+  for a home office.
+- **Close other tabs and apps** using the camera or eating bandwidth.
+- **Check whether someone else on your network is streaming or
+  downloading.** Pause it.
+
+Full coverage: [Video issues](/troubleshooting/video-issues).
+
+## No audio at all on one side
+
+Common causes in order of frequency:
+
+- **The wrong microphone is selected.** Browsers default to the system's
+  default mic, which may not be what you want. Open browser site
+  settings, pick the right input device, refresh.
+- **A paired iPhone is hijacking the mic** (macOS Continuity). If you're
+  on a Mac with a paired iPhone nearby, the iPhone can become the
+  default mic. Sleep the iPhone, turn off Bluetooth, or disable
+  Continuity Camera in System Settings.
+- **Camera and mic permission were revoked.** Browser settings → site
+  permissions → re-enable.
+
+Rivet shows a small "No mic input detected" warning if your mic has been
+at literal silence for 8+ seconds. If you see it, the mic isn't picking
+anything up.
+
+Full coverage: [Audio issues](/troubleshooting/audio-issues).
+
+## Camera not detected
+
+A handful of fixes, in order:
+
+- **Close other apps using the camera.** Zoom, Teams, FaceTime, Photo
+  Booth — only one app can hold the camera at a time on most operating
+  systems.
+- **Check browser permissions.** Settings → Privacy → Camera → make sure
+  the browser is allowed.
+- **Restart the browser** (a full quit, not just the tab).
+- **Restart the laptop** if the camera is still missing.
+
+## "Couldn't start"
+
+The pre-join screen shows "Couldn't start" when the browser can't get
+camera or mic access at all. The fix is almost always permissions or
+another app holding the camera. See the previous section.
+
+## The whiteboard or EMDR isn't loading
+
+The clinical surfaces depend on the screen-share path being available.
+A few rare causes for them not loading:
+
+- **The browser doesn't support screen capture.** Some older browser
+  versions (very old Safari) don't expose screen capture. Update the browser.
+- **A browser extension is blocking it.** Some ad-blockers and
+  privacy extensions block screen capture. Try in an incognito window
+  (which usually disables extensions).
+
+Most of the time, refreshing the page and rejoining clears it.
+
+## The summary card shows "0 seconds"
+
+If you see "0 seconds" or "Did not connect" on the post-call summary,
+the session never fully established. Common causes:
+
+- **The other side never tapped Join** on their pre-join screen.
+- **One side's network blocked the connection.** Often a corporate
+  firewall.
+- **One side closed their browser before the connection completed.**
+
+Rejoin via the slug URL — you both land back in the pre-join screen
+and try again.
+
+## When to refresh vs. when to rejoin
+
+- **Refresh the tab** if mid-call quality has degraded but you're still
+  connected.
+- **Rejoin the slug URL** if the call has ended (or you ended it) and
+  you want to start over with a clean session.
+- **Restart the browser** if camera, mic, or screen share are missing
+  from the device picker entirely.
+
+## When to email support
+
+After the basics above, if a session keeps failing the same way for the
+same client — or a particular feature is broken across sessions — email
+**hello@getrivet.ca**. Include:
+
+- What browser you and the client were each on
+- What you saw vs. what you expected
+- The approximate time of the failed session (in your timezone)
+
+A real human reads every email.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Audio issues" icon="volume-high" href="/troubleshooting/audio-issues">
+    Deeper audio troubleshooting.
+  </Card>
+  <Card title="Video issues" icon="video-slash" href="/troubleshooting/video-issues">
+    Deeper video troubleshooting.
+  </Card>
+  <Card title="Client can't join" icon="circle-exclamation" href="/troubleshooting/client-cant-join-session">
+    The mid-session client-side failure list.
+  </Card>
+</CardGroup>

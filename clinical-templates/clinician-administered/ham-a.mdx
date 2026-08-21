@@ -1,0 +1,142 @@
+---
+title: "HAM-A — Hamilton Anxiety Rating Scale"
+description: "The 14-item clinician-administered anxiety severity scale, split across psychic and somatic subscales."
+---
+
+The HAM-A is the dominant anxiety severity rating in clinical trials.
+You fill it about the client after a structured interview. The client
+never sees the form. It's frequently paired with the HAM-D in mixed
+depression-and-anxiety presentations, and is the standard outcome scale
+in SSRI, SNRI, and buspirone trials.
+
+## What it measures
+
+Fourteen items split into two subscales:
+
+- **Psychic anxiety** (items 1-7): anxious mood, tension, fears, insomnia,
+  cognitive symptoms, depressed mood, somatic muscular tension
+- **Somatic anxiety** (items 8-14): sensory symptoms, cardiovascular,
+  respiratory, gastrointestinal, genitourinary, autonomic, behavior at
+  interview
+
+Each item scores 0-4 (Not present / Mild / Moderate / Severe / Very
+severe — incapacitating). Total range is 0-56.
+
+## When to use it
+
+- Anxiety disorder severity tracking — GAD, panic disorder, PTSD-comorbid
+  anxiety
+- Benzodiazepine taper monitoring
+- Treatment-response measurement in SSRI, SNRI, and buspirone trials
+- Mixed depression-and-anxiety presentations, paired with HAM-D
+
+For routine therapy monitoring, the GAD-7 self-report is usually the
+right tool — it's shorter, the client engages with the score, and the
+psychometrics hold up. The HAM-A earns its cost when you need rater
+anchors: trial protocols, complex presentations, or contexts where
+self-report is unreliable.
+
+## How you fill it
+
+Solo fill. Open **HAM-A** from the templates picker and tap **New response**.
+The renderer walks you through each item with the SIGH-A (Shear et al. 2001)
+anchor language in the answer options. Typical administration time is
+15-25 minutes.
+
+The form never goes to the client. The picker has no "Send to client"
+option for this measure.
+
+## Scoring and severity cutoffs
+
+### Total + subscales
+
+- **Total:** sum of all 14 items, 0-56
+- **Psychic anxiety subscale:** sum of items 1-7, 0-28
+- **Somatic anxiety subscale:** sum of items 8-14, 0-28
+
+### Severity bands (Maier et al. 1988)
+
+| Total | Band |
+|---|---|
+| `<17` | Mild |
+| 18-24 | Mild-to-moderate |
+| 25-30 | Moderate-to-severe |
+| ≥31 | Severe |
+
+### Clinical change thresholds
+
+- **Response:** ≥50% reduction in total from baseline
+- **Remission:** total ≤7 sustained
+
+## Rater training
+
+The Structured Interview Guide for the Hamilton Anxiety Rating Scale
+(SIGH-A, Shear et al. 2001) provides standardized probe questions.
+Inter-rater reliability with trained raters typically ranges ICC 0.74-0.96.
+
+## What we render vs. the source
+
+Verbatim Hamilton 1959 items with the SIGH-A anchor descriptors in the
+answer options. Item 7 ("somatic muscular") and item 8 ("somatic
+sensory") may seem misaligned to the psychic/somatic subscale split —
+that's the canonical Hamilton 1959 split per Maier 1988, and Rivet
+surfaces it as the standard subscale division.
+
+## Known limitations
+
+- The 0-4 scale doesn't distinguish well between items rated for
+  frequency vs. intensity vs. duration. Clinical judgment for borderline
+  ratings.
+- Items 12 (genitourinary) and 13 (autonomic) overlap substantially with
+  depression symptoms. The scale doesn't differentiate well between
+  anxious depression and pure anxiety — pair with HAM-D for
+  disambiguation.
+- Item 14 (behavior at interview) is the only direct-observation item.
+  The others rely on patient report.
+
+## HAM-A vs GAD-7 and the BAI
+
+The HAM-A is rated by you during a structured interview; the
+[GAD-7](/clinical-templates/screening/gad-7) is filled in by the client.
+That difference drives everything else. The HAM-A gives you fourteen items
+split into psychic and somatic anxiety and is the scale treatment trials
+report, which makes it the better fit for tracking response to a
+medication change or a benzodiazepine taper. The GAD-7 takes two minutes,
+can go out ahead of a session, and is what a referrer recognises.
+
+It also costs your time rather than the client's, and reliable scoring
+depends on rater familiarity — the structured interview guide exists for
+exactly that reason.
+
+Against the BAI: the Beck Anxiety Inventory is the self-report scale most
+often set beside the HAM-A in the literature. It is licensed by Pearson
+and paid for per use, so Rivet doesn't include it. If you want a
+self-report anxiety measure here, the GAD-7 is the one to use.
+
+## Is it free to use?
+
+**Yes — it is public domain.** Hamilton, 1959.
+
+## Citations
+
+- Hamilton, M. (1959). "The assessment of anxiety states by rating."
+  *British Journal of Medical Psychology,* 32(1): 50-55. Public domain.
+- Maier, W., Buller, R., Philipp, M., & Heuser, I. (1988). "The Hamilton
+  Anxiety Scale: reliability, validity and sensitivity to change in
+  anxiety and depressive disorders." *Journal of Affective Disorders,*
+  14(1): 61-68.
+- Shear, M. K., Vander Bilt, J., Rucci, P., et al. (2001). "Reliability
+  and validity of a structured interview guide for the Hamilton Anxiety
+  Rating Scale (SIGH-A)." *Depression and Anxiety,* 13(4): 166-178.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="HAM-D" icon="clipboard-list" href="/clinical-templates/clinician-administered/ham-d">
+    The Hamilton Depression Rating Scale. Most often paired with HAM-A
+    in mixed depression/anxiety presentations.
+  </Card>
+  <Card title="Clinician-administered overview" icon="folder-open" href="/clinical-templates/clinician-administered/overview">
+    Why these six measures don't ship to clients, and how solo fill works.
+  </Card>
+</CardGroup>

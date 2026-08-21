@@ -1,0 +1,131 @@
+---
+title: "Visual bilateral stimulation"
+description: "Stimulus shapes, motion paths, sizing, color, and the 0.3 to 2.0 Hz clinical range — every setting behind the moving stimulus."
+---
+
+The visual modality is the default and most familiar form of bilateral
+stimulation. The set runs inside the session, with both of you in frame the
+whole time — there's nothing for your client to install and nowhere else for
+them to go.
+
+<Warning>
+  The visual speed is hard-capped at **2.0 Hz**. The cap holds wherever the
+  speed can be set — the Configure modal, the stepper during a running set,
+  and any stored setting — and it can't be raised.
+  See [Photosensitive epilepsy safety](/emdr/photosensitive-epilepsy-safety).
+</Warning>
+
+## Stimulus shapes
+
+Five shapes — nothing extra to download.
+
+| Shape | Default for | Notes |
+|---|---|---|
+| **Dot** | Classic mode | A solid filled circle. Maximum clinical familiarity — the Shapiro standard stimulus. |
+| **Butterfly** | EMDR 2.0 mode | A symmetric two-wing silhouette. Recognizable to EMDR-trained therapists as the butterfly-hug-adjacent shape (Artigas & Jarero 2014). |
+| **Flame** | — | A soft tapered shape with a candle-flame outline. Useful for clients who report the dot feels too clinical. |
+| **Star** | — | A five-point star with sharper edges and more visual texture. |
+| **Square** | — | A clean geometric for clients who prefer neutral and non-symbolic shapes. |
+
+All shapes render at the same configured pixel size and color regardless of
+which one you choose. The shape is a stylistic preference, not a clinical
+parameter.
+
+## Motion paths
+
+Six paths control the trajectory of the stimulus across the canvas.
+
+- **Horizontal** — left to right oscillation. The default and most clinically
+  familiar pattern. Matches the eye movement Shapiro's original protocol
+  used.
+- **Vertical** — top to bottom oscillation. Useful for clients who report
+  visual fatigue on horizontal or who track vertical more comfortably.
+- **Diagonal ↗** — bottom-left to top-right.
+- **Diagonal ↘** — top-left to bottom-right.
+- **Circular** — continuous circular orbit around the center of the canvas.
+- **Figure 8** — figure-eight loop.
+
+The diagonals, circular, and figure-8 paths are options for clients who
+report habituation on a single axis. Clinical norm is horizontal; the
+others are tools to keep in your back pocket.
+
+## Speed
+
+The rate slider runs from **0.3 Hz to 2.0 Hz**. The values you'll reach for
+most often:
+
+| Rate | Use case |
+|---|---|
+| 0.3 – 0.7 Hz | Initial Phase 2 testing; clients reporting visual overwhelm at higher rates |
+| 1.0 Hz | Classic EMDR (Shapiro standard) baseline |
+| 1.2 – 1.8 Hz | EMDR 2.0 working range (de Jongh / Matthijssen published range) |
+| 1.5 Hz | EMDR 2.0 default |
+| 2.0 Hz | Upper edge of clinical norm and the hard safety cap |
+
+The 2.0 Hz cap is enforced because sustained visual flicker above ~3 Hz can
+trigger photosensitive seizures in susceptible individuals (WCAG flicker
+guideline). 2.0 Hz sits comfortably below that threshold and also stays
+within EMDR clinical practice norms — every published EMDR and EMDR 2.0
+protocol stays at or below 2 Hz.
+
+## Size
+
+The stim-size slider runs from **16 to 48 px**. Default is 32 px.
+
+This is the size of the stimulus within the frame, not on any particular
+screen. The frame scales to whatever your client is on, so a 32-px
+butterfly reads the same relative size on a phone, a tablet, and a laptop.
+
+Larger sizes (40–48 px) read well on phones; smaller sizes (16–24 px) suit
+desktop screens at typical viewing distance.
+
+## Color
+
+The stimulus reads white against the backdrop, with a small indigo accent —
+high contrast, and legible across screens and lighting conditions.
+
+## Auto-vary
+
+A toggle in the Configure modal. When on, speed, size, and brightness
+each vary slightly over the course of a set — staying strictly inside
+the clinical bounds. Auto-vary cannot push the speed above 2.0 Hz or
+the size above 48 px.
+
+Rationale: monotonous stimulation lets working memory habituate. Mild
+variation keeps the dual-task engaging. Grounded in Engelhard / Littel
+working-memory taxation research.
+
+Default is **off** in both modes. Turn it on for sets where you want a less
+predictable visual envelope.
+
+## Changing the visual mid-set
+
+Nudge the speed during a set and the movement picks up the new pace on the
+next pass — no restart, no reload, no gap. The sound and any paired phone
+land on the same pass, because they come from the same movement rather than
+following it. See [One movement, not three](/emdr/staying-in-sync).
+
+Shape, path and backdrop change from the Configure modal and take effect
+when the next set starts, so a set never changes shape underneath your
+client.
+
+If the connection degrades mid-set, **stop the set yourself**. A set runs
+its own timer regardless of what the connection is doing — Rivet won't stop
+it for you, and stimulation your client is receiving while you can't see
+them isn't stimulation you're running.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Auditory bilateral stimulation" icon="volume-2" href="/emdr/auditory-bilateral-stimulation">
+    The audio modality — eight sound presets, L↔R panning, frequency, and
+    volume.
+  </Card>
+  <Card title="Backgrounds and scenes" icon="image" href="/emdr/backgrounds-and-scenes">
+    Eight gradient scenes and eight photo backdrops to settle the visual
+    field behind the stimulus.
+  </Card>
+  <Card title="Photosensitive epilepsy safety" icon="triangle-alert" href="/emdr/photosensitive-epilepsy-safety">
+    The 2.0 Hz hard cap, the first-use warning modal, what to screen for.
+  </Card>
+</CardGroup>

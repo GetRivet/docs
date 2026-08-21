@@ -1,0 +1,1524 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "account/canceling-your-account",
+      "title": "Canceling your account",
+      "description": "How to cancel, what happens to your number, what we keep, and the timeline for deletion.",
+      "url": "/account/canceling-your-account",
+      "section": "Account"
+    },
+    {
+      "id": "account/changing-your-number",
+      "title": "Changing your Rivet number",
+      "description": "When changing the Rivet line is worth it, what changes break, and how to request a swap.",
+      "url": "/account/changing-your-number",
+      "section": "Account"
+    },
+    {
+      "id": "account/changing-your-rivet-url",
+      "title": "Changing your Rivet URL",
+      "description": "You get three changes. What the new URL covers and what you have to update yourself.",
+      "url": "/account/changing-your-rivet-url",
+      "section": "Account"
+    },
+    {
+      "id": "account/index",
+      "title": "Your account",
+      "description": "Where to find your practice profile, your Rivet URL, your notification settings, and the controls for changing or closing your account.",
+      "url": "/account",
+      "section": "Account"
+    },
+    {
+      "id": "account/managing-your-account",
+      "title": "Managing your account",
+      "description": "The account panel, the settings tabs, and how to tell which one you need.",
+      "url": "/account/managing-your-account",
+      "section": "Account"
+    },
+    {
+      "id": "account/notification-preferences",
+      "title": "Notification preferences",
+      "description": "Push on the phone, push in the browser, SMS to your cell — which channel handles which event.",
+      "url": "/account/notification-preferences",
+      "section": "Account"
+    },
+    {
+      "id": "account/your-data-export",
+      "title": "Your data export",
+      "description": "Per-session PDF inside the app; a full-account export by email request.",
+      "url": "/account/your-data-export",
+      "section": "Account"
+    },
+    {
+      "id": "account/your-practice-profile",
+      "title": "Your practice profile",
+      "description": "Your practice name, sign-in email, and cell number — what each one drives and how to change it.",
+      "url": "/account/your-practice-profile",
+      "section": "Account"
+    },
+    {
+      "id": "billing/canadian-taxes",
+      "title": "Canadian sales tax",
+      "description": "HST, GST, and PST — calculated automatically based on your billing address.",
+      "url": "/billing/canadian-taxes",
+      "section": "Billing"
+    },
+    {
+      "id": "billing/failed-payments",
+      "title": "Failed payments",
+      "description": "Your payment retries automatically. Your service stays on during the retry window.",
+      "url": "/billing/failed-payments",
+      "section": "Billing"
+    },
+    {
+      "id": "billing/index",
+      "title": "Billing + trial",
+      "description": "Pricing, the 14-day trial, payment methods, invoices, and Canadian sales tax.",
+      "url": "/billing",
+      "section": "Billing"
+    },
+    {
+      "id": "billing/invoices-and-receipts",
+      "title": "Invoices and receipts",
+      "description": "Where they're emailed, how to find your billing portal, and what's on each invoice.",
+      "url": "/billing/invoices-and-receipts",
+      "section": "Billing"
+    },
+    {
+      "id": "billing/payment-methods",
+      "title": "Payment methods",
+      "description": "Credit card, entered at checkout. Rivet never sees your card details.",
+      "url": "/billing/payment-methods",
+      "section": "Billing"
+    },
+    {
+      "id": "billing/refunds",
+      "title": "Refunds",
+      "description": "Case-by-case via email. What a reasonable request looks like and how the review works.",
+      "url": "/billing/refunds",
+      "section": "Billing"
+    },
+    {
+      "id": "billing/subscription-pricing",
+      "title": "Subscription pricing",
+      "description": "$65 CAD a month. What's included, what isn't, and why the model is flat.",
+      "url": "/billing/subscription-pricing",
+      "section": "Billing"
+    },
+    {
+      "id": "billing/the-trial",
+      "title": "The 14-day trial",
+      "description": "What the trial covers, what stays running on day 15, and how to convert.",
+      "url": "/billing/the-trial",
+      "section": "Billing"
+    },
+    {
+      "id": "changelog/index",
+      "title": "What's new",
+      "description": "Recent updates to Rivet — what shipped, when, and what it means for your practice.",
+      "url": "/changelog",
+      "section": "changelog"
+    },
+    {
+      "id": "client-record/getting-notes-out",
+      "title": "Getting notes out of Rivet",
+      "description": "Three paths for moving notes into your existing practice record — plain text, per-note PDF, and a full client export with a date-range filter.",
+      "url": "/client-record/getting-notes-out",
+      "section": "client-record"
+    },
+    {
+      "id": "client-record/index",
+      "title": "Client record",
+      "description": "The contact as a clinical record — identity, risk, a timeline of every session and interaction, scored measure trends, and your progress notes.",
+      "url": "/client-record",
+      "section": "client-record"
+    },
+    {
+      "id": "client-record/overview",
+      "title": "Your client record",
+      "description": "What's on the client record — identity information, a risk banner, a day-grouped activity timeline, and scored measure trends.",
+      "url": "/client-record/overview",
+      "section": "client-record"
+    },
+    {
+      "id": "client-record/progress-notes",
+      "title": "Progress notes",
+      "description": "Writing a DAP or SOAP note after a session, saving it as a draft, signing it, and correcting it with an addendum.",
+      "url": "/client-record/progress-notes",
+      "section": "client-record"
+    },
+    {
+      "id": "clinical-templates/cbt/aaq-ii",
+      "title": "AAQ-II — Acceptance and Action Questionnaire",
+      "description": "The dominant ACT process measure of psychological inflexibility. 7 items, 7–49 total, with a clinical cutoff at 24.",
+      "url": "/clinical-templates/cbt/aaq-ii",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/activity-check-in",
+      "title": "Activity check-in",
+      "description": "Behavioral activation — one activity, mastery rating, pleasure rating, optional context.",
+      "url": "/clinical-templates/cbt/activity-check-in",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/behavioral-experiment",
+      "title": "Behavioral experiment",
+      "description": "Bennett-Levy's five-stage worksheet for designing a real-world test of a belief and revising the belief based on what happens.",
+      "url": "/clinical-templates/cbt/behavioral-experiment",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/cfq-7",
+      "title": "CFQ-7 — Cognitive Fusion Questionnaire",
+      "description": "The ACT measure of cognitive fusion — how entangled a client is with their own thoughts. 7 items, 7–49 total, elevated from 28.",
+      "url": "/clinical-templates/cbt/cfq-7",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/distortion-check",
+      "title": "Distortion check",
+      "description": "Eleven common thinking patterns in a checkbox grid — a pattern-recognition aid for CBT clients.",
+      "url": "/clinical-templates/cbt/distortion-check",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/exposure-log",
+      "title": "Exposure log",
+      "description": "Single-exposure SUDS triplet — predicted, peak, and end — plus duration and notes.",
+      "url": "/clinical-templates/cbt/exposure-log",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/mood-diary",
+      "title": "Mood diary",
+      "description": "A sub-twenty-second daily mood capture — slider, optional sleep, optional context.",
+      "url": "/clinical-templates/cbt/mood-diary",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/overview",
+      "title": "CBT and behavioral worksheets",
+      "description": "Thirteen worksheets covering thought records, behavioral activation, exposure, problem solving, values, and the in-session SUDS check-in — when each one earns its place.",
+      "url": "/clinical-templates/cbt/overview",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/problem-solving",
+      "title": "Problem solving",
+      "description": "D'Zurilla's five-stage worksheet — define, brainstorm without filtering, evaluate, pick and plan, review.",
+      "url": "/clinical-templates/cbt/problem-solving",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/scs-sf",
+      "title": "SCS-SF — Self-Compassion Scale, Short Form",
+      "description": "The 12-item short form of Neff's Self-Compassion Scale. Six two-item subscales, 12–60 total, six reverse-scored items, higher meaning more self-compassion.",
+      "url": "/clinical-templates/cbt/scs-sf",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/self-compassion-break",
+      "title": "Self-compassion break",
+      "description": "Neff's three-component exercise — mindfulness, common humanity, self-kindness — for shame and harsh inner voice.",
+      "url": "/clinical-templates/cbt/self-compassion-break",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/sleep-diary",
+      "title": "Sleep diary",
+      "description": "Consensus Sleep Diary single-day entry for CBT-I — bedtime, onset, awakenings, wake time, quality, daytime impact.",
+      "url": "/clinical-templates/cbt/sleep-diary",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/stuck-point-log",
+      "title": "Stuck point log",
+      "description": "CPT stuck-point identification and Socratic challenge — the cognitive piece of Cognitive Processing Therapy for PTSD.",
+      "url": "/clinical-templates/cbt/stuck-point-log",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/suds-check-in",
+      "title": "SUDS check-in",
+      "description": "Before and after distress rating across a single in-session intervention — 30 seconds total to fill.",
+      "url": "/clinical-templates/cbt/suds-check-in",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/target-identification",
+      "title": "Target identification",
+      "description": "EMDR Phase 3 assessment — image, negative cognition, positive cognition, VOC, emotion, SUDS, body sensation, and the post-processing re-ratings.",
+      "url": "/clinical-templates/cbt/target-identification",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/thought-record",
+      "title": "Thought record",
+      "description": "Beck's 5-column cognitive restructuring worksheet — situation, thought, evidence, balanced thought, re-rating.",
+      "url": "/clinical-templates/cbt/thought-record",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/cbt/values-clarification",
+      "title": "Values clarification",
+      "description": "ACT values exploration across eight life domains — importance, current alignment, and the gap to close.",
+      "url": "/clinical-templates/cbt/values-clarification",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/child/asrs-v1-1",
+      "title": "ASRS v1.1 — adult ADHD screener",
+      "description": "The WHO 6-item Part A screener plus the 12-item Part B symptom checklist, with shaded-region scoring built in.",
+      "url": "/clinical-templates/child/asrs-v1-1",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/child/overview",
+      "title": "Child and adolescent measures — which one, and who fills it in",
+      "description": "Five measures for clients under 18 — PHQ-A, SDQ, RCADS, SNAP-IV and the ASRS. Who completes each one, the age range it was validated in, and how to choose between them.",
+      "url": "/clinical-templates/child/overview",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/child/phq-a",
+      "title": "PHQ-A — depression screening for teens",
+      "description": "The PHQ-9 adapted for adolescents 11-17, with an adolescent-specific cutoff and a built-in self-harm flag.",
+      "url": "/clinical-templates/child/phq-a",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/child/rcads-parent",
+      "title": "RCADS parent report — scoring and T-scores",
+      "description": "How to score Chorpita's 47-item parent-report measure for children 6-18, what the six subscales cover, and how to read the T-score cutoffs for anxiety and depression.",
+      "url": "/clinical-templates/child/rcads-parent",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/child/sdq-self",
+      "title": "SDQ — a brief mental-health screen for adolescents",
+      "description": "Goodman's Strengths and Difficulties Questionnaire, self-report version for clients 11-17 — 25 items, five subscales, and a prosocial strength index.",
+      "url": "/clinical-templates/child/sdq-self",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/child/snap-iv",
+      "title": "SNAP-IV — scoring, cutoffs, and whether it is free to use",
+      "description": "The SNAP-IV is public domain, so no permission or fee is needed. How to score the 26 parent-rated items for ADHD and ODD in children 6-18, and what the subscale cutoffs mean.",
+      "url": "/clinical-templates/child/snap-iv",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/clinician-administered/c-ssrs",
+      "title": "C-SSRS — Columbia Suicide Severity Rating Scale",
+      "description": "The FDA's standard suicide severity rating — clinician-administered, never self-report, with explicit high-risk flagging.",
+      "url": "/clinical-templates/clinician-administered/c-ssrs",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/clinician-administered/ham-a",
+      "title": "HAM-A — Hamilton Anxiety Rating Scale",
+      "description": "The 14-item clinician-administered anxiety severity scale, split across psychic and somatic subscales.",
+      "url": "/clinical-templates/clinician-administered/ham-a",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/clinician-administered/ham-d",
+      "title": "HAM-D — scoring and severity cutoffs",
+      "description": "How to score the 17-item Hamilton Depression Rating Scale, what each severity band means, and what you need in front of you to administer it.",
+      "url": "/clinical-templates/clinician-administered/ham-d",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/clinician-administered/overview",
+      "title": "Clinician-administered measures",
+      "description": "The six structured-interview instruments you fill about a client — never sent to them, by design.",
+      "url": "/clinical-templates/clinician-administered/overview",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/clinician-administered/y-bocs",
+      "title": "Y-BOCS — Yale-Brown Obsessive Compulsive Scale",
+      "description": "The 10-item clinician-administered OCD severity scale — the standard outcome measure in ERP and SSRI trials.",
+      "url": "/clinical-templates/clinician-administered/y-bocs",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/clinician-administered/ygtss",
+      "title": "YGTSS — Yale Global Tic Severity Scale",
+      "description": "The clinician-administered tic severity instrument for Tourette's and chronic tic disorders.",
+      "url": "/clinical-templates/clinician-administered/ygtss",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/clinician-administered/ymrs",
+      "title": "YMRS — Young Mania Rating Scale",
+      "description": "The 11-item clinician-administered mania severity scale — the standard outcome in bipolar treatment trials.",
+      "url": "/clinical-templates/clinician-administered/ymrs",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/crisis/overview",
+      "title": "Crisis templates — safety planning and reasons for living",
+      "description": "Two templates for when risk is the presenting concern: the Stanley & Brown six-step safety plan, and the Brief Reasons for Living inventory of protective factors.",
+      "url": "/clinical-templates/crisis/overview",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/crisis/rfl-12",
+      "title": "RFL — Brief Reasons for Living",
+      "description": "A twelve-item inventory of protective factors against suicide across four subscales, scored 12–72, with higher meaning more reasons for living.",
+      "url": "/clinical-templates/crisis/rfl-12",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/crisis/safety-plan",
+      "title": "Safety plan",
+      "description": "A six-step crisis safety plan built collaboratively with the client — warning signs, internal coping, social distraction, social help, professional contacts, and means safety.",
+      "url": "/clinical-templates/crisis/safety-plan",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/emdr/body-scan",
+      "title": "Body scan",
+      "description": "Phase 6 body-focused scan — catch residual disturbance after VOC reaches 7 and SUDS reaches 0.",
+      "url": "/clinical-templates/emdr/body-scan",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/emdr/calm-place",
+      "title": "Calm place",
+      "description": "Phase 2 resource installation — build a calm or safe place the client can return to between and within sessions.",
+      "url": "/clinical-templates/emdr/calm-place",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/emdr/container",
+      "title": "Container",
+      "description": "Phase 2 container exercise — design a strong, sealable, openable place to put distressing material between sessions.",
+      "url": "/clinical-templates/emdr/container",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/emdr/future-template",
+      "title": "Future template",
+      "description": "Phase 8 future-rehearsal installation — the third prong of past → present → future.",
+      "url": "/clinical-templates/emdr/future-template",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/emdr/overview",
+      "title": "EMDR templates in Rivet",
+      "description": "The in-session worksheets that pair with the EMDR Workspace — calm place, container, body scan, and future template.",
+      "url": "/clinical-templates/emdr/overview",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/finding-a-template",
+      "title": "Finding the right template",
+      "description": "The picker, the category groups, search, and the choice between sending a template async vs filling it in the session.",
+      "url": "/clinical-templates/finding-a-template",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/in-session-administration",
+      "title": "Filling a template in-session",
+      "description": "The collaborative flow — your client fills on their device, you see the score rise on yours, and the form exports to your chart at the end.",
+      "url": "/clinical-templates/in-session-administration",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/index",
+      "title": "Clinical templates",
+      "description": "Standardized measures, therapeutic worksheets, and your own private session notes — all inside the session, with live scoring.",
+      "url": "/clinical-templates",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/overview",
+      "title": "What's in the template library",
+      "description": "Standardized measures, therapeutic worksheets, and progress notes — what each is for and what saves to the client's record.",
+      "url": "/clinical-templates/overview",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/ace",
+      "title": "ACE — Adverse Childhood Experiences",
+      "description": "The ten-item retrospective childhood adversity screener — administered with trauma-informed care.",
+      "url": "/clinical-templates/screening/ace",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/bsl-23",
+      "title": "BSL-23 — scoring and mean-score interpretation",
+      "description": "How to score the Borderline Symptom List, what the mean score means, and how to track borderline symptom severity across DBT work.",
+      "url": "/clinical-templates/screening/bsl-23",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/ces-d-r",
+      "title": "CES-D-R — Center for Epidemiologic Studies Depression Scale, Revised",
+      "description": "A 20-item depression scale revised to align with DSM-IV major-depressive-episode criteria across all nine symptom groups. Past-week frame, range 0–60.",
+      "url": "/clinical-templates/screening/ces-d-r",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/cpss-5",
+      "title": "CPSS-5 — scoring and PTSD cutoffs for children",
+      "description": "How to score the Child PTSD Symptom Scale for ages 8 to 18, the severity cutoff, and how it maps to DSM-5 PTSD criteria.",
+      "url": "/clinical-templates/screening/cpss-5",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/dass-21",
+      "title": "DASS-21 — Depression, Anxiety, Stress Scales",
+      "description": "Three subscales in one 21-item form — when symptoms overlap and you need to separate depression, anxiety, and stress arousal.",
+      "url": "/clinical-templates/screening/dass-21",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/ede-q",
+      "title": "EDE-Q — Eating Disorder Examination Questionnaire",
+      "description": "Fairburn's 28-item self-report measure of eating-disorder psychopathology over the past 28 days.",
+      "url": "/clinical-templates/screening/ede-q",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/erq",
+      "title": "ERQ — Emotion Regulation Questionnaire",
+      "description": "Two emotion-regulation styles rather than a severity level — Cognitive Reappraisal across 6 items and Expressive Suppression across 4, each scored separately.",
+      "url": "/clinical-templates/screening/erq",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/gad-7",
+      "title": "GAD-7 — Generalized Anxiety Disorder scale",
+      "description": "The companion to PHQ-9 for anxiety. 7 items, 0–21 total, severity bands from Minimal to Severe, scored on the same 2-week frequency frame.",
+      "url": "/clinical-templates/screening/gad-7",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/isi",
+      "title": "ISI — Insomnia Severity Index",
+      "description": "Morin's 7-item, 2-week measure of insomnia severity — the standard CBT-I outcome instrument.",
+      "url": "/clinical-templates/screening/isi",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/itq",
+      "title": "ITQ — scoring PTSD and Complex PTSD (CPTSD)",
+      "description": "How to score the International Trauma Questionnaire, the ICD-11 cutoffs that separate PTSD from Complex PTSD, and what disturbances in self-organization look like on the scale.",
+      "url": "/clinical-templates/screening/itq",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/k10",
+      "title": "K10 — Kessler Psychological Distress Scale",
+      "description": "Ten-item general distress screener — the Canadian standard for non-specific psychological distress.",
+      "url": "/clinical-templates/screening/k10",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/mdq",
+      "title": "MDQ — Mood Disorder Questionnaire",
+      "description": "The standard brief bipolar-spectrum screen. 13 symptom items plus a co-occurrence question and an impairment question, with a three-part positive-screen rule.",
+      "url": "/clinical-templates/screening/mdq",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/msi-bpd",
+      "title": "MSI-BPD — McLean Screening Instrument for Borderline Personality Disorder",
+      "description": "A ten-item yes/no screen for probable borderline personality disorder, positive at 7, with a self-harm and suicide-attempt item that flags on its own.",
+      "url": "/clinical-templates/screening/msi-bpd",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/mspss",
+      "title": "MSPSS — Multidimensional Scale of Perceived Social Support",
+      "description": "How supported a client feels, and by whom. 12 items across three sources — significant other, family and friends — scored 12–84 with no diagnostic cutoff.",
+      "url": "/clinical-templates/screening/mspss",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/oci-r",
+      "title": "OCI-R — Obsessive-Compulsive Inventory, Revised",
+      "description": "Foa's 18-item self-report measure of OCD symptoms across six dimensions — Washing, Checking, Ordering, Obsessing, Hoarding, Neutralizing.",
+      "url": "/clinical-templates/screening/oci-r",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/overview",
+      "title": "Depression + anxiety screening in Rivet",
+      "description": "When to screen, what the severity bands tell you, and how to pick between overlapping measures like PHQ-9 vs QIDS or CES-D-R.",
+      "url": "/clinical-templates/screening/overview",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/pcl-5",
+      "title": "PCL-5 — PTSD Checklist for DSM-5",
+      "description": "The standard 20-item DSM-5 PTSD measure — for trauma-focused intake, treatment monitoring, and outcome documentation.",
+      "url": "/clinical-templates/screening/pcl-5",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/phq-9",
+      "title": "PHQ-9 — Patient Health Questionnaire",
+      "description": "The standard depression severity scale. 9 items, 0–27 total, severity bands from Minimal to Severe, with Item 9 risk flagging for suicidal ideation.",
+      "url": "/clinical-templates/screening/phq-9",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/psqi",
+      "title": "PSQI — Pittsburgh Sleep Quality Index",
+      "description": "The 19-item self-report measure of sleep quality over the past month, with three components live-scored in Rivet.",
+      "url": "/clinical-templates/screening/psqi",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/pss-10",
+      "title": "PSS-10 — Perceived Stress Scale",
+      "description": "Ten-item measure of how unpredictable, uncontrollable, and overloaded a client feels — the standard tool for burnout and stress-management work.",
+      "url": "/clinical-templates/screening/pss-10",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/pswq",
+      "title": "PSWQ — Penn State Worry Questionnaire",
+      "description": "The standard measure of trait worry. 16 items, 16–80 total, five reverse-scored items, with a high-worry band consistent with GAD from 60.",
+      "url": "/clinical-templates/screening/pswq",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/qids-sr-16",
+      "title": "QIDS-SR-16 — scoring and severity ranges",
+      "description": "How to score the Quick Inventory of Depressive Symptomatology, including the highest-item rule for the sleep, weight and psychomotor domains, and what each severity range means.",
+      "url": "/clinical-templates/screening/qids-sr-16",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/scoff",
+      "title": "SCOFF — Brief eating-disorder screen",
+      "description": "The 5-item yes/no screen developed at St George's Hospital — under a minute to administer.",
+      "url": "/clinical-templates/screening/scoff",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/spin",
+      "title": "SPIN — Social Phobia Inventory",
+      "description": "A 17-item self-report scale for social anxiety severity, covering fear, avoidance, and physiological arousal. Range 0–68, with a cutoff of 19 for probable Social Anxiety Disorder.",
+      "url": "/clinical-templates/screening/spin",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/who-5",
+      "title": "WHO-5 — Well-Being Index",
+      "description": "The WHO's 5-item positive-frame measure of subjective well-being — a depression screen that doesn't read like one.",
+      "url": "/clinical-templates/screening/who-5",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/screening/whodas-12",
+      "title": "WHODAS-12 — simple scoring and what the score means",
+      "description": "How to score the WHO Disability Assessment Schedule 12-item version, what the six life domains cover, and how to read a functional-disability score.",
+      "url": "/clinical-templates/screening/whodas-12",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/specialized/asq",
+      "title": "ASQ — Ask Suicide-Screening Questions",
+      "description": "NIMH's brief 4-item suicide-risk screen plus an acute-risk follow-up, validated in pediatric ED settings and widely used in outpatient mental-health.",
+      "url": "/clinical-templates/specialized/asq",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/specialized/ders-18",
+      "title": "DERS-18 — emotion-regulation difficulties",
+      "description": "The 18-item short form of the Difficulties in Emotion Regulation Scale — six subscales for tracking DBT and emotion-focused work.",
+      "url": "/clinical-templates/specialized/ders-18",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/specialized/epds",
+      "title": "EPDS — perinatal depression screen",
+      "description": "The Edinburgh Postnatal Depression Scale — 10 items, validated for use during pregnancy and through the first year postpartum, with a self-harm flag on Item 10.",
+      "url": "/clinical-templates/specialized/epds",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/specialized/maas",
+      "title": "MAAS — dispositional mindfulness",
+      "description": "The Mindful Attention Awareness Scale — 15 items on present-moment attention, with the canonical inverted response scale baked in.",
+      "url": "/clinical-templates/specialized/maas",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/specialized/overview",
+      "title": "Specialized measures — perinatal, emotion regulation, alliance, mindfulness, suicide screen",
+      "description": "Five measures that do not fit the broad screening families — EPDS, DERS-18, WAI-SR, MAAS and the ASQ. What each is for and when a general instrument will not do.",
+      "url": "/clinical-templates/specialized/overview",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/specialized/wai-sr",
+      "title": "WAI-SR — tracking the therapeutic alliance",
+      "description": "The Working Alliance Inventory, Short Revised — 12 client-rated items measuring task agreement, goal agreement, and the therapeutic bond.",
+      "url": "/clinical-templates/specialized/wai-sr",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/substance/audit",
+      "title": "AUDIT — Alcohol Use Disorders Identification Test",
+      "description": "The WHO's 10-item screen for hazardous and harmful alcohol use, with three subscales live-scored.",
+      "url": "/clinical-templates/substance/audit",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/substance/audit-c",
+      "title": "AUDIT-C — 3-item alcohol consumption screener",
+      "description": "The first three AUDIT items as a standalone brief screen — under a minute to administer.",
+      "url": "/clinical-templates/substance/audit-c",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/substance/cage-aid",
+      "title": "CAGE-AID — Brief combined alcohol-and-drug screen",
+      "description": "The 4-item yes/no screen that covers alcohol and drugs together — the fastest substance-use measure in the library.",
+      "url": "/clinical-templates/substance/cage-aid",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/substance/crafft",
+      "title": "CRAFFT — Adolescent substance-use screen",
+      "description": "The validated 12–21 substance-use screen covering alcohol and drugs in a two-part structure.",
+      "url": "/clinical-templates/substance/crafft",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/substance/dast-10",
+      "title": "DAST-10 — Drug Abuse Screening Test",
+      "description": "Skinner's 10-item yes/no screen for non-alcohol substance use over the past 12 months.",
+      "url": "/clinical-templates/substance/dast-10",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "clinical-templates/substance/overview",
+      "title": "Substance-use screens — picking between AUDIT, DAST-10, CAGE-AID and CRAFFT",
+      "description": "Five alcohol and drug screens, from a four-item combined screen to the WHO's full ten-item AUDIT. Which to reach for by substance, age and how much time you have.",
+      "url": "/clinical-templates/substance/overview",
+      "section": "Clinical templates"
+    },
+    {
+      "id": "documentation/auto-fill-from-templates",
+      "title": "Auto-fill from clinical templates",
+      "description": "When you open a SOAP or DAP note, scores and worksheet content from the session pre-fill the right sections. Deterministic, no AI.",
+      "url": "/documentation/auto-fill-from-templates",
+      "section": "Documentation"
+    },
+    {
+      "id": "documentation/exporting-notes",
+      "title": "Exporting notes",
+      "description": "Three ways to get a note out of Rivet — clipboard, per-template PDF, and the session-summary PDF that bundles everything.",
+      "url": "/documentation/exporting-notes",
+      "section": "Documentation"
+    },
+    {
+      "id": "documentation/index",
+      "title": "Notes + documentation",
+      "description": "SOAP, DAP, and treatment-plan notes you author in-session — saved to your client's record and ready to export.",
+      "url": "/documentation",
+      "section": "Documentation"
+    },
+    {
+      "id": "documentation/notes-and-your-ehr",
+      "title": "Notes and your EHR",
+      "description": "Rivet holds your session record. Your EHR stays your system of record. Here's how the two work side by side.",
+      "url": "/documentation/notes-and-your-ehr",
+      "section": "Documentation"
+    },
+    {
+      "id": "documentation/overview",
+      "title": "How documentation works in Rivet",
+      "description": "SOAP, DAP, and treatment-plan notes you author in the session — saved to the client's record, signed, and ready to copy into your EHR.",
+      "url": "/documentation/overview",
+      "section": "Documentation"
+    },
+    {
+      "id": "documentation/private-annotations",
+      "title": "Private annotations",
+      "description": "Per-field practitioner-only notes that travel with your export but never reach the client.",
+      "url": "/documentation/private-annotations",
+      "section": "Documentation"
+    },
+    {
+      "id": "documentation/reviewing-and-editing-notes",
+      "title": "Reviewing and editing notes",
+      "description": "The hands-free dictation flow, the snippet library, and how to work the note overlay during and after a session.",
+      "url": "/documentation/reviewing-and-editing-notes",
+      "section": "Documentation"
+    },
+    {
+      "id": "documentation/soap-vs-dap",
+      "title": "SOAP vs DAP — picking your note format",
+      "description": "Two standard mental-health note formats. What each one is for and which one fits your practice.",
+      "url": "/documentation/soap-vs-dap",
+      "section": "Documentation"
+    },
+    {
+      "id": "documentation/why-no-ai-transcription",
+      "title": "Why Rivet doesn't record sessions or use an AI scribe",
+      "description": "The deliberate decision against session recording, cloud transcription, and AI note generation — and what we built instead.",
+      "url": "/documentation/why-no-ai-transcription",
+      "section": "Documentation"
+    },
+    {
+      "id": "emdr/auditory-bilateral-stimulation",
+      "title": "Auditory bilateral stimulation",
+      "description": "Eight sound presets, and why the tone is in the ear the stimulus is on rather than merely moving at the same rate.",
+      "url": "/emdr/auditory-bilateral-stimulation",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/backgrounds-and-scenes",
+      "title": "Backgrounds and scenes",
+      "description": "Eight gradient scenes and eight photo backdrops the client sees behind the stimulus — and how to choose between them for different presentations.",
+      "url": "/emdr/backgrounds-and-scenes",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/best-practices-for-virtual-emdr",
+      "title": "Best practices for virtual EMDR",
+      "description": "Client environment, browser window, headphones, and how to choose between EMDR 2.0 and Classic — the operational notes that make remote BLS work.",
+      "url": "/emdr/best-practices-for-virtual-emdr",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/dual-task-prompts",
+      "title": "Dual-task prompts",
+      "description": "The working-memory prompts across five categories that distinguish EMDR 2.0 from the Shapiro standard — and the research that put them there.",
+      "url": "/emdr/dual-task-prompts",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/index",
+      "title": "EMDR",
+      "description": "EMDR 2.0 inside your video session — bilateral stimulation that holds together, dual-task prompts, SUDS capture, and the 2.0 Hz safety cap.",
+      "url": "/emdr",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/overview",
+      "title": "The EMDR Workspace",
+      "description": "What happens when you tap EMDR in a session — the configure modal, the running stimulus, the SUDS card between sets, and the arc at the end.",
+      "url": "/emdr/overview",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/photosensitive-epilepsy-safety",
+      "title": "Photosensitive epilepsy safety",
+      "description": "The 2.0 Hz hard cap on bilateral visual stimulation, the first-use warning modal, what to screen for, and what to do mid-set if a client reports symptoms.",
+      "url": "/emdr/photosensitive-epilepsy-safety",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/practitioner-controls",
+      "title": "Practitioner controls",
+      "description": "Spacebar start and stop, speed changes mid-set, mid-session reconfigure, and the deliberate clinical choice not to auto-advance between sets.",
+      "url": "/emdr/practitioner-controls",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/setting-up-an-emdr-session",
+      "title": "Setting up an EMDR session",
+      "description": "A walkthrough of the Configure modal — rate, stimulus, modalities, sound, motion path, set count, backdrop, SUD check-ins, client phone haptics, per-client saved settings, and Flash technique (Beta).",
+      "url": "/emdr/setting-up-an-emdr-session",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/staying-in-sync",
+      "title": "One movement, not three",
+      "description": "Why the picture, the sound and the tap in your client's hand hold together — and what to do when the connection degrades",
+      "url": "/emdr/staying-in-sync",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/the-8-phase-protocol",
+      "title": "The 8 phases of EMDR, in order",
+      "description": "History-taking, preparation, assessment, desensitization, installation, body scan, closure and re-evaluation — what happens in each of Shapiro's eight phases, and which parts of a virtual session carry them.",
+      "url": "/emdr/the-8-phase-protocol",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/the-research-behind-emdr",
+      "title": "The research behind EMDR",
+      "description": "Where EMDR sits in the evidence base — Shapiro's original protocol, the EMDR 2.0 variant, and the international guidance that recommends it.",
+      "url": "/emdr/the-research-behind-emdr",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/the-session-arc",
+      "title": "The session arc",
+      "description": "The closing card at the end of an EMDR session — SUDS trajectory curve, stats tiles, and a one-tap Copy of the session summary for your chart.",
+      "url": "/emdr/the-session-arc",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/the-suds-scale",
+      "title": "The SUDS scale",
+      "description": "Wolpe's 0–10 Subjective Units of Distress — how Rivet captures it between sets, where it lives, and how it renders in the session arc.",
+      "url": "/emdr/the-suds-scale",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/visual-bilateral-stimulation",
+      "title": "Visual bilateral stimulation",
+      "description": "Stimulus shapes, motion paths, sizing, color, and the 0.3 to 2.0 Hz clinical range — every setting behind the moving stimulus.",
+      "url": "/emdr/visual-bilateral-stimulation",
+      "section": "EMDR"
+    },
+    {
+      "id": "emdr/who-should-not-use-emdr",
+      "title": "Who should not use EMDR",
+      "description": "Contraindications, training and credentialing requirements, and the line between Rivet's delivery tool and the clinical work it supports.",
+      "url": "/emdr/who-should-not-use-emdr",
+      "section": "EMDR"
+    },
+    {
+      "id": "getting-started/choosing-your-number",
+      "title": "Choosing your Rivet phone number",
+      "description": "How the area-code cascade picks three local Canadian numbers near you — and how to pin a specific area code.",
+      "url": "/getting-started/choosing-your-number",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/desktop-vs-mobile",
+      "title": "Desktop vs. mobile — which to use when",
+      "description": "Your phone takes calls and texts. Your laptop runs sessions. Here's the split.",
+      "url": "/getting-started/desktop-vs-mobile",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/first-10-minutes",
+      "title": "Your first 10 minutes — the activation checklist",
+      "description": "A concrete order of operations for the seven rows on the welcome screen.",
+      "url": "/getting-started/first-10-minutes",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/index",
+      "title": "Your first day with Rivet",
+      "description": "Sign up, claim your URL, get your line live, and run your first session — without losing the afternoon to a help site.",
+      "url": "/getting-started",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/install-the-app",
+      "title": "Install the Rivet app on your phone",
+      "description": "What the native app gives you over the browser, where to download it, and how the magic-link sign-in works the first time.",
+      "url": "/getting-started/install-the-app",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/send-your-rivet-link-through-your-ehr",
+      "title": "Send your Rivet link through Jane or Owl",
+      "description": "Put your Rivet waiting room link inside your EHR's appointment emails, so clients get one link and land on a computer",
+      "url": "/getting-started/send-your-rivet-link-through-your-ehr",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/signup",
+      "title": "Signing up at getrivet.ca/start",
+      "description": "What each of the six signup fields is for, and where the magic link lands.",
+      "url": "/getting-started/signup",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/test-your-line",
+      "title": "Test your line",
+      "description": "The five-minute verification loop — ring your Rivet number from another phone, confirm push, voicemail, transcription, and auto-reply all fire end-to-end.",
+      "url": "/getting-started/test-your-line",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/testing-with-a-colleague",
+      "title": "Testing with a colleague",
+      "description": "The two-minute waiting-room test that doubles as a peer demo.",
+      "url": "/getting-started/testing-with-a-colleague",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/the-14-day-trial",
+      "title": "The 14-day trial",
+      "description": "No card upfront. What changes on day 15. What stays running for your clients either way.",
+      "url": "/getting-started/the-14-day-trial",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/welcome",
+      "title": "Welcome to Rivet",
+      "description": "What Rivet is, who it's for, and what day one actually looks like.",
+      "url": "/getting-started/welcome",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/works-alongside-your-ehr",
+      "title": "Works alongside your EHR",
+      "description": "Rivet sits beside Jane, Owl, Practice Better — it doesn't replace them. Here's how the handoff works.",
+      "url": "/getting-started/works-alongside-your-ehr",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/your-first-session",
+      "title": "Your first session",
+      "description": "End-to-end — sharing your URL, the pre-join screen, in-session controls, ending cleanly.",
+      "url": "/getting-started/your-first-session",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/your-rivet-url",
+      "title": "Your Rivet URL",
+      "description": "getrivet.ca/your-name — the one address your clients ever have to remember.",
+      "url": "/getting-started/your-rivet-url",
+      "section": "Getting started"
+    },
+    {
+      "id": "introduction",
+      "title": "Welcome to Rivet",
+      "description": "The product guide for therapists running their practice on Rivet — sessions, phone, and everything between.",
+      "url": "/introduction",
+      "section": "Welcome"
+    },
+    {
+      "id": "measurement-based-care/administering-measures-in-session",
+      "title": "Administering measures in session",
+      "description": "The collaborative fill flow — your client fills on their device while you watch the score build.",
+      "url": "/measurement-based-care/administering-measures-in-session",
+      "section": "Measurement-based care"
+    },
+    {
+      "id": "measurement-based-care/clinical-change-thresholds",
+      "title": "Minimal clinically important difference, by measure",
+      "description": "What counts as real improvement rather than noise on PHQ-9, GAD-7, the Insomnia Severity Index and the rest — the point-change thresholds, per instrument.",
+      "url": "/measurement-based-care/clinical-change-thresholds",
+      "section": "Measurement-based care"
+    },
+    {
+      "id": "measurement-based-care/index",
+      "title": "Measurement-based care",
+      "description": "Validated measures administered in session, scored live, and ready for your record.",
+      "url": "/measurement-based-care",
+      "section": "Measurement-based care"
+    },
+    {
+      "id": "measurement-based-care/measure-trajectories",
+      "title": "Tracking measures over time",
+      "description": "Where to see score-over-time trends on the client record, and how to carry measures through your chart.",
+      "url": "/measurement-based-care/measure-trajectories",
+      "section": "Measurement-based care"
+    },
+    {
+      "id": "measurement-based-care/overview",
+      "title": "What measurement-based care is in Rivet",
+      "description": "Validated measures administered in session, scored live, with results captured for your record.",
+      "url": "/measurement-based-care/overview",
+      "section": "Measurement-based care"
+    },
+    {
+      "id": "measurement-based-care/risk-flagging",
+      "title": "How Rivet flags clinical risk",
+      "description": "PHQ-9 Item 9, C-SSRS items 4/5/6, and what Rivet surfaces during a measure — and what it does not do.",
+      "url": "/measurement-based-care/risk-flagging",
+      "section": "Measurement-based care"
+    },
+    {
+      "id": "measurement-based-care/the-evidence-base",
+      "title": "The evidence base for measurement-based care",
+      "description": "Why MBC changes outcomes — what the research shows and what it means for your practice.",
+      "url": "/measurement-based-care/the-evidence-base",
+      "section": "Measurement-based care"
+    },
+    {
+      "id": "practice-phone/auto-response",
+      "title": "How auto-reply works",
+      "description": "Every missed call gets a text back, based on what kind of call it was. The text is a template you control — not AI.",
+      "url": "/practice-phone/auto-response",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/call-forwarding",
+      "title": "Call forwarding to your Rivet number",
+      "description": "Two patterns for routing your existing line to Rivet — toggle on with *72 when you step away, or replace your carrier's voicemail so missed calls automatically forward.",
+      "url": "/practice-phone/call-forwarding",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/customizing-auto-response",
+      "title": "Customizing your auto-reply",
+      "description": "The master toggle, the fallback, the per-category texts, and the one variable you can use.",
+      "url": "/practice-phone/customizing-auto-response",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/importing-contacts",
+      "title": "Importing contacts from your phone",
+      "description": "Pull contacts from your phone's address book into Rivet — pick them one at a time, not bulk.",
+      "url": "/practice-phone/importing-contacts",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/in-session-call-handling",
+      "title": "Calls during a video session",
+      "description": "What happens when your practice line rings while you're already with a client.",
+      "url": "/practice-phone/in-session-call-handling",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/index",
+      "title": "Practice phone",
+      "description": "Your practice line — voicemail inbox, two-way SMS, the softphone, contacts, and auto-replies.",
+      "url": "/practice-phone",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/making-calls",
+      "title": "Making calls from your practice line",
+      "description": "Use the in-app dialer on your phone to call clients from your Rivet number.",
+      "url": "/practice-phone/making-calls",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/managing-contacts",
+      "title": "Managing contacts",
+      "description": "Add, edit, and tag the people who use your practice line — including family or friends who shouldn't get auto-replies.",
+      "url": "/practice-phone/managing-contacts",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/overview",
+      "title": "Why Rivet has a practice phone",
+      "description": "The case for an inbox-style voicemail line — and what it gives you over the carrier's blinking light.",
+      "url": "/practice-phone/overview",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/professional-line-vs-personal",
+      "title": "Your professional line vs. your personal cell",
+      "description": "Why your Rivet number stays separate from your personal phone — and what that boundary buys you.",
+      "url": "/practice-phone/professional-line-vs-personal",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/receiving-calls",
+      "title": "Receiving calls on your practice line",
+      "description": "What happens when a client dials your Rivet number — on the lock screen and inside the app.",
+      "url": "/practice-phone/receiving-calls",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/sending-texts",
+      "title": "Sending texts from your practice line",
+      "description": "Reply to clients by SMS from inside Rivet. The text comes from your practice number, not your cell.",
+      "url": "/practice-phone/sending-texts",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/voicemail",
+      "title": "The voicemail inbox",
+      "description": "Voicemails arrive transcribed, tagged, and ready to act on — usually within a minute of the caller hanging up.",
+      "url": "/practice-phone/voicemail",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/voicemail-greeting",
+      "title": "Recording your voicemail greeting",
+      "description": "Use the default text-to-speech greeting, or record your voice in 30 seconds. Switch between them anytime.",
+      "url": "/practice-phone/voicemail-greeting",
+      "section": "Practice phone"
+    },
+    {
+      "id": "privacy/audit-logging",
+      "title": "Audit logging",
+      "description": "Rivet's append-only audit log, the video connection-quality diagnostics — what's recorded, what's deliberately kept out, and how both support incident response.",
+      "url": "/privacy/audit-logging",
+      "section": "Privacy + security"
+    },
+    {
+      "id": "privacy/breach-response",
+      "title": "Breach response",
+      "description": "How Rivet responds to a privacy or security incident — the five phases, who Rivet notifies, and how it helps you meet your statutory obligations.",
+      "url": "/privacy/breach-response",
+      "section": "Privacy + security"
+    },
+    {
+      "id": "privacy/client-data-handling",
+      "title": "What Rivet stores about your clients",
+      "description": "The exact data Rivet holds, the retention defaults, and how to delete a client's information on request.",
+      "url": "/privacy/client-data-handling",
+      "section": "Privacy + security"
+    },
+    {
+      "id": "privacy/data-processing-agreement",
+      "title": "The Data Processing Agreement",
+      "description": "The DPA you accept at signup — what it covers, who the sub-processors are, and what happens when you cancel.",
+      "url": "/privacy/data-processing-agreement",
+      "section": "Privacy + security"
+    },
+    {
+      "id": "privacy/encryption",
+      "title": "Encryption",
+      "description": "What's encrypted, where, and how — HTTPS in transit, AES-256 at rest, WebRTC DTLS-SRTP for video, biometric-locked sessions on your phone.",
+      "url": "/privacy/encryption",
+      "section": "Privacy + security"
+    },
+    {
+      "id": "privacy/index",
+      "title": "Privacy & security",
+      "description": "How Rivet handles your clients' information, what's encrypted, what's stored where, and what you control as the custodian of your records.",
+      "url": "/privacy",
+      "section": "Privacy + security"
+    },
+    {
+      "id": "privacy/phipa-and-rivet",
+      "title": "PHIPA and Rivet",
+      "description": "How Rivet's role under Ontario's PHIPA is characterized — agent of the practitioner-custodian, provider of electronic services, not an EHR.",
+      "url": "/privacy/phipa-and-rivet",
+      "section": "Privacy + security"
+    },
+    {
+      "id": "privacy/security-best-practices-for-practitioners",
+      "title": "Security best practices for practitioners",
+      "description": "The handful of habits that keep your account, your sign-in email, and your device honest.",
+      "url": "/privacy/security-best-practices-for-practitioners",
+      "section": "Privacy + security"
+    },
+    {
+      "id": "privacy/the-measurement-results-vs-clinical-content-distinction",
+      "title": "How Rivet and your EHR fit together",
+      "description": "Rivet holds the session's clinical record — notes, measures, and risk — while your EHR remains the system of legal record. The two coexist, and you control the handoff.",
+      "url": "/privacy/the-measurement-results-vs-clinical-content-distinction",
+      "section": "Privacy + security"
+    },
+    {
+      "id": "privacy/voicemail-transcription-canadian-processing",
+      "title": "Voicemail and transcription processed in Canada",
+      "description": "Voicemail audio and transcription run on Canadian hardware. No cloud AI service receives client audio or transcripts.",
+      "url": "/privacy/voicemail-transcription-canadian-processing",
+      "section": "Privacy + security"
+    },
+    {
+      "id": "privacy/where-your-data-lives",
+      "title": "Where your data lives — proof for your College",
+      "description": "Specific, evidence-backed answer to the question your College, compliance officer, or insurer will ask: where is my clients' information physically stored?",
+      "url": "/privacy/where-your-data-lives",
+      "section": "Privacy + security"
+    },
+    {
+      "id": "privacy/your-role-as-custodian",
+      "title": "Your role as the health information custodian",
+      "description": "What being a PHIPA custodian means for your practice — and what Rivet handles on your behalf as your agent.",
+      "url": "/privacy/your-role-as-custodian",
+      "section": "Privacy + security"
+    },
+    {
+      "id": "quick-start",
+      "title": "Your first 10 minutes",
+      "description": "From signup to a working practice line, your waiting room URL, and a tested session loop.",
+      "url": "/quick-start",
+      "section": "Welcome"
+    },
+    {
+      "id": "troubleshooting/audio-issues",
+      "title": "Audio issues",
+      "description": "Echo, one-way audio, garbled voice, mic muted by the OS — the practical fixes for every audio problem in a Rivet session.",
+      "url": "/troubleshooting/audio-issues",
+      "section": "Troubleshooting"
+    },
+    {
+      "id": "troubleshooting/calls-not-coming-through",
+      "title": "Calls not coming through",
+      "description": "Inbound calls ring briefly and stop, or never ring at all. Push permissions, Do Not Disturb, and the network at the moment of the call.",
+      "url": "/troubleshooting/calls-not-coming-through",
+      "section": "Troubleshooting"
+    },
+    {
+      "id": "troubleshooting/cant-log-in",
+      "title": "Can't log in",
+      "description": "Magic link not arriving, wrong email, or an account that's been paused — how to tell which one and what to do.",
+      "url": "/troubleshooting/cant-log-in",
+      "section": "Troubleshooting"
+    },
+    {
+      "id": "troubleshooting/client-cant-join-session",
+      "title": "Client can't join session",
+      "description": "What to send your client when the waiting-room link won't load — usually a browser update or a corporate firewall.",
+      "url": "/troubleshooting/client-cant-join-session",
+      "section": "Troubleshooting"
+    },
+    {
+      "id": "troubleshooting/contacting-support",
+      "title": "Contacting support",
+      "description": "The fastest way to get a useful reply — what to include in the first email so we can fix it without three back-and-forths.",
+      "url": "/troubleshooting/contacting-support",
+      "section": "Troubleshooting"
+    },
+    {
+      "id": "troubleshooting/index",
+      "title": "Troubleshooting",
+      "description": "The questions that come up after the first week — and the fixes.",
+      "url": "/troubleshooting",
+      "section": "Troubleshooting"
+    },
+    {
+      "id": "troubleshooting/magic-link-not-working",
+      "title": "Magic link not working",
+      "description": "The email arrived, you tapped the link, and nothing happened — or the wrong screen opened. The three causes and the fix for each.",
+      "url": "/troubleshooting/magic-link-not-working",
+      "section": "Troubleshooting"
+    },
+    {
+      "id": "troubleshooting/missing-features",
+      "title": "Something we've described isn't in your app",
+      "description": "If a feature in these docs isn't visible in your Rivet, your build is behind. How to refresh on web and update on iOS and Android.",
+      "url": "/troubleshooting/missing-features",
+      "section": "Troubleshooting"
+    },
+    {
+      "id": "troubleshooting/payment-issues",
+      "title": "Payment issues",
+      "description": "Card declined, the trial overlay won't clear after paying, expired card update — the three things that go wrong at billing time.",
+      "url": "/troubleshooting/payment-issues",
+      "section": "Troubleshooting"
+    },
+    {
+      "id": "troubleshooting/sms-not-sending",
+      "title": "SMS not sending",
+      "description": "When a text won't go through — number still provisioning, recipient format wrong, or carrier filtering on the other end.",
+      "url": "/troubleshooting/sms-not-sending",
+      "section": "Troubleshooting"
+    },
+    {
+      "id": "troubleshooting/video-issues",
+      "title": "Video issues",
+      "description": "Black screen, choppy video, the wrong camera on stage — what to check, in the order that fixes the most common cases.",
+      "url": "/troubleshooting/video-issues",
+      "section": "Troubleshooting"
+    },
+    {
+      "id": "video-sessions/audio-and-video-quality",
+      "title": "Audio and video quality",
+      "description": "Practical setup tips — lighting, mic placement, ethernet, browser choice — that turn a passable session into a good one.",
+      "url": "/video-sessions/audio-and-video-quality",
+      "section": "Video sessions"
+    },
+    {
+      "id": "video-sessions/clients-need-no-app",
+      "title": "Your clients don't install anything",
+      "description": "Browser-only join — why a click-and-you're-in experience matters for showing up, and what your client actually sees.",
+      "url": "/video-sessions/clients-need-no-app",
+      "section": "Video sessions"
+    },
+    {
+      "id": "video-sessions/creating-a-session-link",
+      "title": "Your session link",
+      "description": "Your slug URL is a permanent waiting room — share it once, use it for every session, never mint a new link.",
+      "url": "/video-sessions/creating-a-session-link",
+      "section": "Video sessions"
+    },
+    {
+      "id": "video-sessions/ending-a-session",
+      "title": "Ending a session",
+      "description": "What the end-call button does, what your client sees, and why every in-session surface closes at once.",
+      "url": "/video-sessions/ending-a-session",
+      "section": "Video sessions"
+    },
+    {
+      "id": "video-sessions/in-session-controls",
+      "title": "In-session controls",
+      "description": "Mute, camera, the session link, and what to do mid-call — the small set of practitioner-side controls during a session.",
+      "url": "/video-sessions/in-session-controls",
+      "section": "Video sessions"
+    },
+    {
+      "id": "video-sessions/index",
+      "title": "Video sessions",
+      "description": "Therapy-grade video built into Rivet — your permanent waiting room URL, a browser-only client experience, and EMDR + whiteboard in the same call.",
+      "url": "/video-sessions",
+      "section": "Video sessions"
+    },
+    {
+      "id": "video-sessions/overview",
+      "title": "What makes Rivet video different",
+      "description": "Therapy-focused video: clients join from any browser, you keep your face on screen while you share, and EMDR + whiteboard live in the same workspace.",
+      "url": "/video-sessions/overview",
+      "section": "Video sessions"
+    },
+    {
+      "id": "video-sessions/screen-sharing",
+      "title": "Sharing your screen",
+      "description": "Screen share where your client sees your shared content as the main stage AND your face in a corner tile. Your presence stays in the call.",
+      "url": "/video-sessions/screen-sharing",
+      "section": "Video sessions"
+    },
+    {
+      "id": "video-sessions/sharing-with-clients",
+      "title": "Sharing your session link with clients",
+      "description": "Where to put your slug URL so clients find it on session day — intake email, calendar invite, email signature, and the wording that works.",
+      "url": "/video-sessions/sharing-with-clients",
+      "section": "Video sessions"
+    },
+    {
+      "id": "video-sessions/the-pre-join-experience",
+      "title": "The pre-join screen",
+      "description": "What you and your client see right before the call starts — selfie-mirror preview, mic level meter, mic and camera toggles, and the Join gesture.",
+      "url": "/video-sessions/the-pre-join-experience",
+      "section": "Video sessions"
+    },
+    {
+      "id": "video-sessions/the-session-workspace",
+      "title": "The session workspace",
+      "description": "A tour of the in-call layout — the main stage, your own camera tile, the toolbar, and every button on it.",
+      "url": "/video-sessions/the-session-workspace",
+      "section": "Video sessions"
+    },
+    {
+      "id": "video-sessions/troubleshooting",
+      "title": "Video session troubleshooting",
+      "description": "The common issues and the first-line fixes — echo, frozen video, camera not detected, client can't join.",
+      "url": "/video-sessions/troubleshooting",
+      "section": "Video sessions"
+    },
+    {
+      "id": "video-sessions/using-rivet-for-consultation",
+      "title": "Using Rivet for consultation and supervision",
+      "description": "Practitioner-to-practitioner video — supervision, peer consult, group practice meetings — running in the same workspace as client sessions.",
+      "url": "/video-sessions/using-rivet-for-consultation",
+      "section": "Video sessions"
+    },
+    {
+      "id": "what-is-rivet",
+      "title": "What is Rivet?",
+      "description": "An overview for therapists evaluating Rivet — what it does, who it's for, and what it isn't.",
+      "url": "/what-is-rivet",
+      "section": "Welcome"
+    },
+    {
+      "id": "whiteboard/client-collaboration",
+      "title": "Letting your client draw on the canvas",
+      "description": "Flip Two-way ON and your client gets a pen, text, and undo. Flip it OFF and they're back to watching.",
+      "url": "/whiteboard/client-collaboration",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/drawing-tools",
+      "title": "Drawing tools",
+      "description": "Pen, eraser, text, shapes, color picker — and how Apple Pencil pressure shows up in your strokes.",
+      "url": "/whiteboard/drawing-tools",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/exporting-as-pdf",
+      "title": "Exporting the whiteboard as PDF",
+      "description": "Copy to clipboard, save as PNG, or save as a vector PDF for the chart. All three keep the drawing on your machine.",
+      "url": "/whiteboard/exporting-as-pdf",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/index",
+      "title": "Whiteboard",
+      "description": "Draw with your client during a session — a CBT triangle, a polyvagal ladder, a thought record, or a blank canvas you both work on.",
+      "url": "/whiteboard",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/opening-the-whiteboard",
+      "title": "Opening the whiteboard",
+      "description": "Share Screen → Whiteboard. What you'll see, what your client sees, and how to switch back.",
+      "url": "/whiteboard/opening-the-whiteboard",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/overview",
+      "title": "What the whiteboard is in a session",
+      "description": "A shared editable canvas inside the session — used the way you'd use a paper pad in the room.",
+      "url": "/whiteboard/overview",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/presets-cbt",
+      "title": "CBT presets — 7 worksheets",
+      "description": "CBT triangle, cognitive distortions, downward arrow, ABC model, thought record, evidence for/against, hot cross bun.",
+      "url": "/whiteboard/presets-cbt",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/presets-children-adolescents",
+      "title": "Children + adolescents preset — upstairs / downstairs brain",
+      "description": "Dan Siegel's pediatric and family-therapy staple — two stacked bands with stairs between them.",
+      "url": "/whiteboard/presets-children-adolescents",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/presets-emotion-regulation",
+      "title": "Emotion regulation presets — 2 worksheets",
+      "description": "SUDS scale 0–100 and TIPP distress tolerance skills (DBT).",
+      "url": "/whiteboard/presets-emotion-regulation",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/presets-formulation",
+      "title": "Formulation presets — 2 worksheets",
+      "description": "5 Ps formulation and cross-section formulation. Case-conceptualization grids you can build with the client.",
+      "url": "/whiteboard/presets-formulation",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/presets-mindfulness-act",
+      "title": "Mindfulness + ACT presets — 3 worksheets",
+      "description": "Choice point (ACT), bull's-eye values, 5-4-3-2-1 grounding.",
+      "url": "/whiteboard/presets-mindfulness-act",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/presets-overview",
+      "title": "Therapy presets — 29 worksheets across 9 categories",
+      "description": "Pre-built clinical worksheets you can drop onto the canvas as editable elements. CBT, trauma, formulation, ACT, DBT, and more.",
+      "url": "/whiteboard/presets-overview",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/presets-psychoeducation",
+      "title": "Psychoeducation preset + sticky notes",
+      "description": "Stress bucket (Brabban & Turkington), plus the six sticky-note colors that drop from the toolbar.",
+      "url": "/whiteboard/presets-psychoeducation",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/presets-relationships",
+      "title": "Relationship presets — 2 worksheets",
+      "description": "Attachment styles grid and the drama triangle (Karpman).",
+      "url": "/whiteboard/presets-relationships",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/presets-substance-use",
+      "title": "Substance use preset — stages of change",
+      "description": "Prochaska's transtheoretical model laid out as a 5-stage progression with the relapse loop.",
+      "url": "/whiteboard/presets-substance-use",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/presets-trauma",
+      "title": "Trauma + somatic presets — 4 worksheets",
+      "description": "Polyvagal ladder, window of tolerance, iceberg model, trigger map.",
+      "url": "/whiteboard/presets-trauma",
+      "section": "Whiteboard"
+    },
+    {
+      "id": "whiteboard/sticky-notes",
+      "title": "Sticky notes",
+      "description": "Six color variants of Post-it, quick-dropped from the toolbar. For thoughts, homework prompts, affirmations, and goals.",
+      "url": "/whiteboard/sticky-notes",
+      "section": "Whiteboard"
+    }
+  ]
+}

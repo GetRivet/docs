@@ -1,0 +1,95 @@
+---
+title: "DAST-10 — Drug Abuse Screening Test"
+description: "Skinner's 10-item yes/no screen for non-alcohol substance use over the past 12 months."
+---
+
+The DAST-10 is the drug-use counterpart to the [AUDIT](/clinical-templates/substance/audit).
+Skinner published it in 1982 as the brief version of the original DAST-28,
+and CAMH has maintained it as a free-clinical-use instrument since. It
+covers drugs *other than* alcohol — prescription misuse, cannabis, stimulants,
+opioids, sedatives, hallucinogens — over the past 12 months.
+
+## What it measures
+
+Drug-use problems and consequences across 10 yes/no items:
+
+- Loss of control (using more than intended, inability to stop)
+- Social and occupational consequences (family, work, legal)
+- Withdrawal and dependence symptoms
+- Treatment history
+
+Item 3 is reverse-scored: "Are you always able to stop using drugs when
+you want to?" A "No" answer counts as 1 point; "Yes" counts as 0. Rivet's
+template encodes this directly in the answer-option scoring, so the
+live-scoring pill is correct without any manual adjustment.
+
+## When to send it
+
+- Intake substance-use baseline alongside the AUDIT (alcohol) for a full
+  picture
+- Treatment-response monitoring during substance-use work
+- SBIRT protocols where AUDIT alone is incomplete
+- When a CAGE-AID positive screen surfaces drug use specifically and you
+  want the severity gradient
+
+The 10 items take 2–3 minutes. Async administration works well —
+endorsement of drug use without a clinician present in the room is
+sometimes more candid.
+
+## Scoring and severity cutoffs
+
+Sum of yes-scored items, range 0–10.
+
+| Total | Band |
+|---|---|
+| 0 | No problems reported |
+| 1–2 | Low level |
+| 3–5 | Moderate level — further assessment indicated |
+| 6–8 | Substantial level |
+| 9–10 | Severe level |
+
+**Cutoff ≥3** surfaces the "further drug-use assessment indicated" flag.
+
+## DAST-10 vs AUDIT
+
+These are companions, not alternatives. The
+[AUDIT](/clinical-templates/substance/audit) covers alcohol; the DAST-10
+covers drugs other than alcohol and tobacco. If both are in the picture —
+which is common — you run both, and neither one will tell you about the
+other.
+
+If you need one instrument covering both and can accept a flag rather than
+a severity estimate, that's the
+[CAGE-AID](/clinical-templates/substance/cage-aid). For adolescents, the
+[CRAFFT](/clinical-templates/substance/crafft) covers alcohol and drugs
+together in the 12–21 range.
+
+## Is it free to use?
+
+**Yes.** Free clinical use, per CAMH, the institution where it originated.
+
+## Citation
+
+Skinner, H. A. (1982). The Drug Abuse Screening Test. *Addictive
+Behaviors,* 7(4), 363–371.
+
+Free clinical use per CAMH (the Centre for Addiction and Mental Health),
+the original publisher institution.
+
+## When not to use it
+
+The DAST-10 is silent on alcohol — pair it with the [AUDIT](/clinical-templates/substance/audit)
+or [AUDIT-C](/clinical-templates/substance/audit-c) when alcohol is part of
+the picture. For adolescents (12–21), the [CRAFFT](/clinical-templates/substance/crafft)
+is the validated alternative and covers alcohol and drugs in one form.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="AUDIT" icon="wine-glass" href="/clinical-templates/substance/audit">
+    The 10-item alcohol counterpart.
+  </Card>
+  <Card title="CRAFFT" icon="user" href="/clinical-templates/substance/crafft">
+    The adolescent-specific substance-use screen.
+  </Card>
+</CardGroup>

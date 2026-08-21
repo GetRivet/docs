@@ -1,0 +1,93 @@
+---
+title: "Payment issues"
+description: "Card declined, the trial overlay won't clear after paying, expired card update — the three things that go wrong at billing time."
+---
+
+Most payment issues follow common patterns and are straightforward to resolve.
+
+## Card declined at checkout
+
+The checkout page shows you the decline reason. The common ones:
+
+- **Insufficient funds.** Self-explanatory.
+- **Card not authorised for this merchant.** Your bank flagged it as
+  suspicious. Call the number on the back of the card and approve the
+  charge, then retry.
+- **Card expired.** Use the new card the bank mailed you (or any other
+  card on file).
+- **Generic decline / "do not honor."** The bank declined without giving
+  a specific reason. This is almost always an anti-fraud flag triggered
+  by the first transaction from a new merchant. The fix is the same:
+  call the bank, approve the charge, retry.
+
+Retry is automatic — you can resubmit the same card right away after
+fixing the underlying issue. No cooldown.
+
+## Trial expired but the overlay won't clear after I paid
+
+You completed the checkout page, you got the confirmation email,
+but the app still shows the "Subscribe to continue" overlay.
+
+This usually clears within 30 seconds of payment. If it's been longer:
+
+<Steps>
+  <Step title="Refresh the page (web) or kill and reopen the app (mobile)">
+    The app refetches your account state on launch. On web, hard-refresh
+    (Cmd+Shift+R on Mac, Ctrl+F5 on Windows) to bypass any cached page.
+  </Step>
+  <Step title="Wait two minutes and try again">
+    The notification occasionally retries with delay. A two-minute wait
+    covers almost every case.
+  </Step>
+  <Step title="If it's still there after five minutes, email us">
+    Send **hello@getrivet.ca** your Rivet email and forward the payment
+    confirmation email. We'll flip your account to active manually and
+    look at why the update didn't come through.
+  </Step>
+</Steps>
+
+Your data is fine the entire time — voicemails, messages, and contacts
+are not affected by the overlay. The overlay only blocks the practitioner
+UI from doing new work; inbound voicemail and SMS continue to process
+in the background.
+
+## Updating an expired or changed card
+
+You'll get an email when your card on file is about to expire (10 days
+before) and when a charge fails. Both emails contain a link to your
+billing portal where you can update your card.
+
+If you can't find the email:
+
+- Search your inbox for `stripe.com`.
+- The billing portal link is the same in every email — bookmark
+  it after your first visit.
+
+Once you update the card, the charge retries automatically.
+If the retry succeeds, your account stays active without further action.
+
+## Where to see what you've been charged
+
+A receipt is emailed for every successful charge — to the inbox you
+used at signup. Receipts are also in your billing portal (Manage
+subscriptions → Billing history).
+
+Rivet doesn't have its own billing-history page inside the app. The
+billing portal is the source of truth.
+
+## What Rivet costs
+
+The price you signed up at is the price for the life of the account.
+Email **hello@getrivet.ca** if you can't find your trial-end email and
+need the number.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Billing overview" icon="credit-card" href="/billing/index">
+    What the trial covers, what happens on day 15, what's included.
+  </Card>
+  <Card title="Contacting support" icon="envelope" href="/troubleshooting/contacting-support">
+    The fastest way to reach us about a billing question.
+  </Card>
+</CardGroup>

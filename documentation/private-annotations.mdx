@@ -1,0 +1,142 @@
+---
+title: "Private annotations"
+description: "Per-field practitioner-only notes that travel with your export but never reach the client."
+---
+
+Every text field in Rivet's templates — including the SOAP, DAP, and
+treatment-plan notes — has a small **✎ note** button next to its
+label. Click it to open a collapsible textarea below the field. What
+you type there is a private annotation: practitioner-only, never
+shown to the client, included in your export.
+
+<Note>
+  Annotations are a local scratch layer. The note body — the content
+  of each SOAP or DAP field — saves to the client's record as you
+  write. Annotations do not. They travel only in your clipboard copy
+  and PDF when you export. If you close the session without exporting,
+  the annotations are gone; the note body is not.
+</Note>
+
+## The use case
+
+You're filling out a thought record with a client. They type:
+*"My boss didn't email me back, she's going to fire me."*
+
+You want to remember the cognitive pattern for your formulation, but
+you don't want it floating on the client's screen mid-session. You
+click the ✎ note button beside the thought field and type:
+*"catastrophizing — primary distortion this session."*
+
+When you export the thought record at the end of the session, the PDF
+includes:
+
+```
+The thought that went through your mind: "I'm going to be fired"
+  Therapist note: catastrophizing — primary distortion this session.
+```
+
+The italic line is your private annotation. The client never saw it.
+It's in your chart now.
+
+## How it works
+
+Annotations live in your browser only. They are:
+
+- **Never sent to the client.** On a client-fillable template, Rivet
+  streams field updates between practitioner and client — but
+  annotations are excluded from those messages. Your client's browser
+  doesn't know annotations exist.
+- **Never cached anywhere durable.** Client-fillable templates briefly
+  cache field values so a reconnect restores work in progress.
+  Annotations are intentionally excluded. If a reconnect happens, the
+  field value comes back; the annotation doesn't.
+- **Included in the export.** When you **Copy for Jane** or
+  Download as PDF, every annotation appears as an italic
+  *Therapist note:* paragraph indented below its field. Practitioner-
+  private notes (SOAP/DAP) behave the same way — annotations carry
+  through to the PDF and the session-summary export.
+- **Local to the session.** When the template overlay closes,
+  annotations are freed. They aren't saved to the client's record and
+  don't persist across sessions.
+
+## When to use them
+
+Some patterns from practitioners using annotations:
+
+- **Diagnostic impressions** mid-session that you want to capture in
+  the chart but not put in the client's view. *"Possible
+  GAD overlay on top of presenting depression."*
+- **Risk-relevant observations** that don't rise to a formal flag but
+  you want documented. *"Mentioned alcohol use in passing — follow up
+  next session."*
+- **Treatment-direction prompts** to your future self. *"Try
+  behavioural-activation focus next session."*
+- **Quotes for your own reference** that capture the client's exact
+  phrasing — useful for tracking themes across sessions when you
+  paste the export into Jane.
+- **Counter-transference notes** if you keep them — same posture as a
+  paper-chart annotation a colleague wouldn't see.
+
+## What annotations are not for
+
+- **Things you wouldn't want to defend in a chart review.** Annotations
+  end up in your exported document. They're not whisper-only. Write
+  them as you'd write any chart note.
+- **Risk concerns that require action.** If you're documenting a
+  safety risk — current SI, threats of harm, child-safety concern —
+  use the main field, the Assessment section, or a Safety Plan
+  template, not a side annotation. A risk note tucked under a field
+  is harder to find later.
+- **Long narratives.** The textarea grows but the export format keeps
+  annotations as one-paragraph addenda. If you're writing a full
+  formulation, use the Assessment field directly.
+
+## In the export
+
+Three places annotations appear:
+
+### Clipboard copy
+
+Plain text, indented two spaces below the field's value:
+
+```
+The thought that went through your mind: "I'm going to be fired"
+  (therapist note: catastrophizing — primary distortion this session.)
+```
+
+### Per-template PDF
+
+Italic, indented, with a blue left rule:
+
+> **The thought that went through your mind**
+> "I'm going to be fired"
+> > *Therapist note:* catastrophizing — primary distortion this session.
+
+### Session-summary PDF
+
+Same indented italic block, inside the corresponding template's section
+of the summary. Annotations attached to a SOAP or DAP note's field
+appear in that note's section; annotations on a client-fillable
+template (thought record, safety plan, screening scale) appear in
+their section.
+
+## A small UX detail
+
+The ✎ note button shows a small dot once an annotation has content,
+so you can see at a glance which fields you've annotated. Empty
+annotations don't render in the export — typing in the box and then
+clearing it doesn't leave an empty *Therapist note:* line.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="How documentation works" icon="folder-open" href="/documentation/overview">
+    The full practitioner-private posture that annotations sit inside.
+  </Card>
+  <Card title="Exporting notes" icon="file-export" href="/documentation/exporting-notes">
+    Where the annotations land in each of the three export formats.
+  </Card>
+  <Card title="Reviewing and editing notes" icon="pen-to-square" href="/documentation/reviewing-and-editing-notes">
+    The note-writing flow that annotations fit into.
+  </Card>
+</CardGroup>

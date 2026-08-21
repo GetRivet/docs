@@ -1,0 +1,110 @@
+---
+title: "Auditory bilateral stimulation"
+description: "Eight sound presets, and why the tone is in the ear the stimulus is on rather than merely moving at the same rate."
+---
+
+The audio modality is enabled by default in EMDR 2.0 (the de Jongh /
+Matthijssen protocol expects multimodal stimulation) and disabled in Classic
+EMDR. When it's on, your client hears a tone that travels between their ears
+with the stimulus.
+
+The tone is made on the spot rather than played back. Nothing is downloaded
+and there's no audio file anywhere in the session.
+
+## The eight sound presets
+
+| Preset | Character | Notes |
+|---|---|---|
+| **Sine** | Pure carrier tone | Classic EMDR default. The cleanest, most neutral sound — what in-office EMDR hardware kits (EMDR Kit, NeuroTek) produce. |
+| **Triangle** | Softer than sine | A warmer harmonic content than sine; less sterile feel without losing clarity. |
+| **Soft drum** | Subtle thump | EMDR 2.0 default. Sine carrier with a fast envelope shaping — a percussive but gentle texture. |
+| **Chime** | Bell-like decay | Triangle waveform with a slower envelope; a tone that lingers slightly between pans. |
+| **Click** | Very short ping | A sharp attack with minimal sustain — closest to the in-office BLS device "click." |
+| **Woodblock** | Percussive | Square waveform with a fast envelope; firmer than soft drum. |
+| **Alpha drum** | Meditative pulse | Low triangle with a slow envelope; a deeper, more grounding texture. |
+| **Tick** | Metronome-tight click | Sawtooth waveform with an ultra-fast envelope; precision feel. |
+
+Each preset shapes the **timbre and attack** of the tone — the underlying
+carrier frequency and the pan rate are independent controls.
+
+## Carrier frequency
+
+The frequency slider is set to **250 Hz** by default and clamped to **200 to
+450 Hz**. This is the pitch of the carrier tone underneath whatever preset
+you've chosen.
+
+Most clients tolerate the 200–300 Hz range well — high enough to be clearly
+audible without being shrill, low enough to feel grounded. Move higher
+(350–450 Hz) for clients who prefer a brighter feel; move lower for clients
+who report the higher range as fatiguing.
+
+## Where the tone sits
+
+The tone isn't matched to the movement — it *is* the movement. Where the
+stimulus sits on its path and which ear the tone is in are the same value,
+worked out once and used for both. There's no second clock keeping the sound
+in step with the picture, so the tone can't slide behind the stimulus over a
+long set and can't drift when you change the speed partway through.
+
+That matters because you can't hear your client's audio from your side of
+the screen. If a tone lagged the stimulus, nothing on your side would tell
+you. See [One movement, not three](/emdr/staying-in-sync).
+
+Hard panning is intentional. This is **not binaural beats** — binaural beats
+use two slightly detuned tones in different ears and are a different
+mechanism (entrainment) not validated for EMDR. Rivet's audio modality is
+straight stereo panning of a single tone, matching the in-office BLS
+hardware convention.
+
+## Volume
+
+A 0 to 100% slider. The default is 60%.
+
+The client's device volume sits on top of this — a 60% Rivet volume with the
+client's phone muted produces no sound. If the client reports they can't
+hear the audio, ask them to check their device volume first.
+
+## iOS Safari handling
+
+iOS Safari blocks audio playback until the user makes a gesture. Rivet
+sets up the audio at the moment the client taps Join — granting camera
+and mic permission counts as the gesture — so audio just works when BLS
+starts.
+
+This was historically the #1 BLS support category across the industry. Rivet
+sidesteps it by setting up the audio at the moment the client taps Join,
+not when BLS starts.
+
+## When the audio stops
+
+The tone stops when the set stops and when the session ends. Nothing keeps
+playing in the background afterwards — there's no version of this where your
+client is still hearing the tone once you've both left.
+
+## Headphones vs speakers
+
+For optimal BLS, the client should use **stereo headphones**. Earbuds work.
+Laptop speakers technically work but the L↔R panning is far less distinct
+when both speakers are 6 inches apart, and phone speakers (single mono
+output) lose the bilateral effect entirely.
+
+In your reminder email or pre-session message, suggest the client have
+headphones or earbuds ready. See
+[Best practices for virtual EMDR](/emdr/best-practices-for-virtual-emdr).
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Visual bilateral stimulation" icon="eye" href="/emdr/visual-bilateral-stimulation">
+    The visual modality — stimulus shapes, motion paths, and the 0.3 to
+    2.0 Hz speed range.
+  </Card>
+  <Card title="Best practices for virtual EMDR" icon="laptop" href="/emdr/best-practices-for-virtual-emdr">
+    Headphones, browser window, client environment, and choosing modalities
+    for a given client.
+  </Card>
+  <Card title="Setting up an EMDR session" icon="sliders" href="/emdr/setting-up-an-emdr-session">
+    The Configure modal walkthrough — including the modality picker and
+    sound preset row.
+  </Card>
+</CardGroup>

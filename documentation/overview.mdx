@@ -1,0 +1,139 @@
+---
+title: "How documentation works in Rivet"
+description: "SOAP, DAP, and treatment-plan notes you author in the session — saved to the client's record, signed, and ready to copy into your EHR."
+---
+
+Rivet has three practitioner-authored note templates: a **SOAP note**, a
+**DAP note**, and a **treatment plan**. You open them from the same
+**Clinical templates ▾** button as PHQ-9, GAD-7, or any clinical worksheet. They render
+inside the session, fill from the templates you've already used, and save
+automatically as a draft on the client's record while you work.
+
+When the session ends, the note stays. It lives on the client's record as
+an unsigned draft until you're ready to sign it. Signing locks the note;
+any later correction is an append-only addendum — the original entry stays
+visible, the correction is marked as such. That's the shape colleges expect:
+an immutable record with a visible correction trail.
+
+## The three templates
+
+### SOAP note
+
+Four sections — Subjective, Objective, Assessment, Plan. The clinical
+documentation format that originated in problem-oriented medical records
+and crossed over into mental-health practice. Common in psychiatry,
+hospital-based therapy, and any practice that grew up in a
+medically-flavoured chart.
+
+### DAP note
+
+Three sections — Data, Assessment, Plan. Collapses Subjective + Objective
+into one combined Data section. Common in psychology, counselling, and
+social-work practice where the Subjective/Objective split feels
+artificial. See [SOAP vs DAP](/documentation/soap-vs-dap) for the
+detailed comparison.
+
+### Treatment plan
+
+Six sections — Presenting concern, Treatment goals, Objectives, Planned
+interventions, Progress measures, Review schedule. Authored once at the
+start of treatment, then revisited at review points. Same
+practitioner-private posture as the session notes — you export it to
+your EHR when you're done.
+
+## What "practitioner-private" actually means
+
+The note template runs separately from client-fillable templates. When
+you open it:
+
+- **Nothing is sent to your client's device.** Your client's browser
+  literally doesn't know you've opened a note. There's no overlay, no
+  notification, no flicker on their side.
+- **No keystrokes are synced anywhere.** Client-fillable templates send
+  a snapshot of every keystroke so your live preview updates as the
+  client types. Practitioner-private notes skip that path entirely —
+  you're typing into your own browser, so there's nothing to sync.
+- **Saved to the client's record, not to the session transcript.** The
+  note content is yours — stored against the client's record, accessible
+  between sessions, not visible to anyone else and not part of any
+  session recording or client-facing view.
+- **Audit trail includes the note.** Rivet records when you opened a SOAP
+  or DAP template, in which session, when you signed it, and any addenda
+  added afterward. The content is part of that record.
+
+## Getting the note out
+
+Once the note is saved — signed or still a draft — there are three ways
+to get it into your practice-management software:
+
+- **Copy for Jane** — copies the note as plain text, formatted for
+  pasting into a Jane chart note or similar free-text field.
+- **PDF** — downloads the note as a PDF you can attach to a visit record.
+- **Client export** — generates a full clinical-record document for the
+  client: all notes (signed or draft, each labeled clearly), all completed
+  assessment Q&A and scores, with a date-range filter. Useful for
+  referrals, clinical reviews, or your own records.
+
+Because Rivet is the session layer — not a replacement for your system
+of record — the handoff into Jane, Owl, or your paper chart is the point.
+See [Getting notes out](/client-record/getting-notes-out) for the
+step-by-step.
+
+## Why this matters
+
+**Privacy.** A 50-minute therapy session is among the most sensitive PHI
+surfaces in healthcare. Your note content is stored on Canadian
+infrastructure, designed to be consistent with PHIPA/PIPEDA, accessible
+only to you and your practice. It's not used to train any model, not
+surfaced to any third party, not retained beyond what you control.
+
+**Clarity.** When you paste a note into Jane, Owl, or your paper chart,
+you know exactly what's in it — because you authored it. There's no
+"AI generated this part, then I edited it" provenance question. The
+chart entry is your clinical judgment, with the structured
+template-driven data (PHQ-9 score, SUDS curve, thought record) as
+supporting context that auto-filled where it fit.
+
+**Control.** The structured data is captured in the templates — scores,
+target IDs, SUDS readings, worksheet content. The note is your
+interpretation of that data. Rivet's job is to put the structured data
+in your hands; your job is the formulation, the plan, the clinical
+voice. That's the line we drew, and it's the line you reinforce every
+time you author a note here.
+
+## Where the note fits in the session flow
+
+A practitioner-private note can be open at the same time as a
+client-fillable template. They live in parallel — the client sees the
+PHQ-9 overlay on their device, you see the SOAP note overlay on yours,
+and the two don't bleed into each other. When you minimize the SOAP
+overlay to take a break, the in-progress draft is saved. When you reopen
+it, the partial draft is still there. When the call ends, the note
+remains on the client's record as an unsigned draft.
+
+The client list shows a count of unsigned notes so you can return to
+them between sessions. See
+[Progress notes](/client-record/progress-notes) for the full lifecycle —
+draft, sign, addendum. The session-summary export — covered in
+[Exporting notes](/documentation/exporting-notes) — bundles your notes
+with every other completed template into a single PDF. Practitioner-
+authored notes lead the summary; screening + worksheet content
+follows as appendices. That ordering matches how clinical charts read:
+the practitioner's note is the entry; the templates are evidence.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="SOAP vs DAP" icon="scale-balanced" href="/documentation/soap-vs-dap">
+    Picking the format that fits your style.
+  </Card>
+  <Card title="Progress notes" icon="file-pen" href="/client-record/progress-notes">
+    Draft, sign, addendum — the full note lifecycle.
+  </Card>
+  <Card title="Getting notes out" icon="arrow-up-from-bracket" href="/client-record/getting-notes-out">
+    Copy for Jane, PDF, and client export.
+  </Card>
+  <Card title="Notes and your EHR" icon="hospital" href="/documentation/notes-and-your-ehr">
+    How the copy-into-Jane workflow lands.
+  </Card>
+</CardGroup>

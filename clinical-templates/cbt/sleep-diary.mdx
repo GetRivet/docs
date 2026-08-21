@@ -1,0 +1,127 @@
+---
+title: "Sleep diary"
+description: "Consensus Sleep Diary single-day entry for CBT-I — bedtime, onset, awakenings, wake time, quality, daytime impact."
+---
+
+The sleep diary is the foundational data collection tool of CBT for
+Insomnia. The client logs one day at a time — when they got into bed, how
+long it took to fall asleep, how many times they woke, when they got out of
+bed, how rested they felt — and the practitioner reads the patterns at the
+weekly review.
+
+Rivet uses the Consensus Sleep Diary structure (Carney et al. 2012), which
+the sleep medicine field developed specifically to standardize sleep
+self-monitoring across research and clinical settings.
+
+## What it captures
+
+Fifteen fields, single-day entry.
+
+- **Date** — defaults to today
+- **Time you got into bed** — string ("23:30")
+- **Time you fell asleep (estimate)** — string
+- **How long it took to fall asleep (minutes)** — integer (sleep onset
+  latency)
+- **Number of times you woke during the night** — integer
+- **Total time awake during those awakenings (minutes)** — integer
+- **Time you woke up for the day** — string
+- **Time you got out of bed** — string
+- **Estimated total hours of sleep** — decimal
+- **Sleep quality** — 0-10 slider, very poor → very good
+- **How rested you felt today** — 0-10 slider, exhausted → well rested
+- **Total daytime naps (minutes)** — integer
+- **Caffeine after noon** — boolean
+- **Alcohol in the evening** — boolean
+- **Anything else worth noting** — textarea, optional
+
+No total score — the clinical signal is the pattern across many entries.
+
+## What the practitioner reads
+
+The fields are arranged to produce the variables CBT-I works with:
+
+- **Sleep onset latency** (time-to-fall-asleep) — > 30 minutes is the
+  insomnia threshold. The target of stimulus control and sleep
+  restriction.
+- **Wake after sleep onset (WASO)** — the awakening-minutes field. The
+  target of sleep consolidation.
+- **Total sleep time** vs **time in bed** — the ratio is sleep efficiency.
+  ≥ 85% is adequate; < 80% is the insomnia threshold. Sleep restriction
+  targets this ratio directly.
+- **Daytime impact** — the rested rating captures whether the night
+  translated into daytime function.
+- **Lifestyle factors** — caffeine and alcohol entries surface obvious
+  targets for sleep hygiene work without making the worksheet a generic
+  habits checklist.
+
+## When to use it
+
+- **CBT-I treatment.** Daily for 1-2 weeks as baseline before any
+  intervention, then ongoing during the active treatment phase.
+- **Insomnia screening.** Two weeks of sleep diary alongside an
+  [ISI](/clinical-templates/screening/isi) gives a much more reliable
+  picture than ISI alone, because the diary captures the actual
+  behavioral pattern rather than the client's retrospective summary.
+- **Sleep symptoms in depression or anxiety treatment** — the diary
+  surfaces whether sleep is the maintenance mechanism worth targeting
+  directly, or whether mood/anxiety improvement is dragging sleep along.
+- **PTSD with sleep symptoms** — nightmares, frequent awakenings, and
+  short total sleep are common in PTSD; the diary tracks whether
+  trauma-focused treatment is reducing the sleep load.
+
+## In-session mechanics
+
+Open **Sleep diary** from the top-right corner (**Clinical templates ▾**). You typically review prior
+responses (the client's homework entries) from the client's record, rather
+than filling new entries in-session — the daily fill is between-session
+homework.
+
+When reviewing, the most useful display is the per-day comparison. Open
+several recent responses in turn and scan onset latency, WASO, and
+sleep-efficiency-relevant numbers (bedtime vs out-of-bed-time, total sleep
+hours) to read the pattern.
+
+## Citation
+
+Carney, C. E., Buysse, D. J., Ancoli-Israel, S., Edinger, J. D., Krystal,
+A. D., Lichstein, K. L., & Morin, C. M. (2012). "The Consensus Sleep
+Diary: Standardizing prospective sleep self-monitoring." *Sleep,* 35(2):
+287-302.
+
+Buysse, D. J. (2008). "Insomnia." *JAMA,* 309(7): 706-716. (Source for the
+sleep efficiency severity bands.)
+
+The Consensus Sleep Diary was published specifically to standardize the
+field; the structure is published clinical method and uncopyrightable.
+All field labels are original to Rivet.
+
+## When not to use it
+
+- **Acute insomnia from a clearly identifiable transient cause.** A bad
+  week after a death, a job loss, or a medical event isn't always
+  chronic insomnia and doesn't necessarily need the structured diary.
+  Re-assess after 2-4 weeks.
+- **Severe sleep-disordered breathing suspected.** Loud snoring,
+  witnessed apneas, daytime sleepiness disproportionate to time in bed
+  point at sleep apnea, which needs polysomnography and medical
+  workup rather than CBT-I.
+- **Clients for whom self-monitoring drives anxiety about sleep.**
+  Performance anxiety about sleep is a sub-target of CBT-I; for some
+  clients the daily diary itself makes the performance anxiety worse.
+  Shorter-window monitoring (one week at a time, with breaks) can
+  scaffold this.
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="ISI" icon="moon" href="/clinical-templates/screening/isi">
+    The 7-item Insomnia Severity Index — pre/post outcome instrument that pairs with the diary.
+  </Card>
+  <Card title="PSQI" icon="bed" href="/clinical-templates/screening/psqi">
+    Pittsburgh Sleep Quality Index — broader sleep-quality screen for
+    research-grade pre/post measurement.
+  </Card>
+  <Card title="Mood diary" icon="chart-line" href="/clinical-templates/cbt/mood-diary">
+    For days when mood is the variable to track alongside sleep.
+  </Card>
+</CardGroup>
