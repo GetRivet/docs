@@ -1,88 +1,113 @@
 ---
 title: "Choosing your Rivet phone number"
-description: "How the area-code cascade picks three local Canadian numbers near you — and how to pin a specific area code."
+description: "How the picker finds local numbers inside your province, what the headline above the list means, and how to ask for a specific area code."
 ---
 
 The last step of signup is picking the phone number your practice will use.
-Three Canadian numbers appear, picked live from the carrier and as close to
-your city as available stock allows.
+Rivet searches for available numbers inside the province or territory you
+chose, as close to your city as current stock allows, and shows you up to
+five. Tap **Show more** to see the rest of what it found.
 
-## How Rivet picks three numbers
+## How Rivet looks for numbers
 
-After you enter your city, Rivet asks the carrier for available numbers in
-this order:
+Every search stays inside your province. Rivet works down this list and
+stops at the first step that has numbers:
 
 <Steps>
-  <Step title="Numbers in your city + your area code">
-    If you've typed an area code into the picker (the small field below
-    the three options), Rivet uses it as a strict filter. Only numbers in
-    that area code, near that city, are returned.
+  <Step title="An area code you typed">
+    If you've typed an area code into the small field below the list, Rivet
+    looks there first. Your explicit choice outranks everything else.
   </Step>
-  <Step title="Numbers in your city">
-    With no area code typed, Rivet asks for any local number near the city
-    you entered.
+  <Step title="Your city">
+    Numbers the carrier lists under the city you entered.
   </Step>
-  <Step title="Numbers in that area code">
-    If the city search comes back empty, Rivet falls back to the area
-    code on its own.
+  <Step title="The same calling area">
+    Most Canadian cities have more than one area code — Windsor and London
+    share 519, 226, 548 and 382; Toronto has 416, 647, 437 and 683. If
+    the code you asked for is empty, Rivet tries its sister codes, still
+    inside your city.
   </Step>
-  <Step title="Any available Canadian number">
-    A final fallback so signup never dead-ends. In practice you'll only
-    see this if you've typed a city the carrier doesn't recognise.
+  <Step title="The nearest available numbers">
+    For Toronto and Montreal, whose own codes are often sold out, Rivet
+    tries the ring around the city next — 905, 289 and 365 around Toronto;
+    450, 579 and 354 around Montreal.
+  </Step>
+  <Step title="Anywhere in your province">
+    The last resort. Still your province, never the rest of the country.
   </Step>
 </Steps>
 
-The first three available numbers from whichever step succeeds are what
-you see. Tap **Find more** with a different area code to refresh the list.
+## The headline tells you which step answered
 
-## Why area code matters to your clients
+Read the line above the list before you pick. It says exactly what Rivet
+found:
 
-For most people, area code is the first thing they read on an incoming
-call. A 519 number says "Windsor" to a Windsor-area client; a 902 number
-says "East Coast." Both are local Canadian numbers, but the perceived
-distance matters when a client is deciding whether to pick up.
+| You see | It means |
+|---|---|
+| **Numbers in 548 (Kitchener-Waterloo)** | The area code you typed had stock. |
+| **Numbers in Windsor, ON** | Numbers listed under your city. |
+| **Nothing in 780 right now — numbers in Toronto, ON** | The code you typed was empty, so these are your city's numbers instead. |
+| **Nothing in 226 right now — same calling area** | Your code was empty; these are its sister codes, in your city. |
+| **Nothing in 416 right now — the nearest available numbers** | Toronto or Montreal's own codes are sold out; these are the ring around the city. |
+| **Nothing in 226 right now — numbers across Ontario** | Nothing closer was available; these are elsewhere in your province. |
 
-If you see 902 in your three options when you typed "Windsor," the
-carrier returned a Windsor, **Nova Scotia** number — Canada has multiple
-Windsors. Type `519` or `226` in the area-code field and tap
-**Find more** to pin Windsor, Ontario.
+"Right now" means exactly that. Stock changes daily, so a code that is
+empty this morning can have numbers by the afternoon.
+
+## Asking for a specific area code
+
+Type an area code in the field below the list and tap **Search again**.
+Rivet looks there first and tells you if it came up empty. You can do this
+as many times as you like before committing.
 
 Common Canadian area codes:
 
 | Area code | Region |
 |---|---|
-| 519 / 226 / 548 | Southwestern Ontario (Windsor, London, Kitchener) |
-| 416 / 647 / 437 | Toronto |
-| 905 / 289 / 365 | GTA (Mississauga, Hamilton, Niagara) |
-| 613 / 343 | Ottawa, Eastern Ontario |
-| 514 / 438 | Montreal |
-| 418 / 581 | Quebec City |
-| 604 / 778 / 236 | Vancouver, BC Lower Mainland |
-| 250 | Rest of BC (Victoria, Kelowna) |
-| 403 / 587 / 825 | Calgary, Southern Alberta |
-| 780 / 587 / 825 | Edmonton, Northern Alberta |
-| 902 / 782 | Nova Scotia + PEI |
-| 506 | New Brunswick |
-| 709 | Newfoundland and Labrador |
-| 204 / 431 | Manitoba |
-| 306 / 639 | Saskatchewan |
+| 519 / 226 / 548 / 382 | Southwestern Ontario (Windsor, London, Kitchener) |
+| 416 / 647 / 437 / 683 | Toronto |
+| 905 / 289 / 365 | Around Toronto (Mississauga, Hamilton, Niagara) |
+| 613 / 343 / 753 | Ottawa, Eastern Ontario |
+| 705 / 249 / 742 | Northeastern Ontario (Barrie, Sudbury, North Bay) |
+| 807 | Northwestern Ontario (Thunder Bay) |
+| 514 / 438 / 263 | Montreal |
+| 450 / 579 / 354 | Around Montreal (Laval, Longueuil) |
+| 418 / 581 / 367 | Quebec City |
+| 604 / 778 / 236 / 672 | Vancouver, BC Lower Mainland |
+| 250 / 778 / 236 / 672 | Rest of BC (Victoria, Kelowna) |
+| 403 / 587 / 825 / 368 | Calgary, Southern Alberta |
+| 780 / 587 / 825 / 368 | Edmonton, Northern Alberta |
+| 902 / 782 | Nova Scotia and PEI |
+| 506 / 428 | New Brunswick |
+| 709 / 879 | Newfoundland and Labrador |
+| 204 / 431 / 584 | Manitoba |
+| 306 / 639 / 474 | Saskatchewan |
 
 <Tip>
   If you serve clients across two area codes (say, 519 and 226 in
   Southwestern Ontario), either one reads as local. Pick whichever number
-  pattern you like the look of.
+  you like the look of.
 </Tip>
 
-## What if none of the three feel right
+## Why the area code matters to your clients
 
-Type a different area code in the picker's area-code field and tap
-**Find more**. Rivet refreshes against the new filter and shows three new
-options. You can iterate as many times as you want before committing.
+For most people, the area code is the first thing they read on an incoming
+call. A 519 number says "Windsor" to a Windsor-area client; a 902 number
+says "East Coast." Both are local Canadian numbers, but the perceived
+distance matters when a client is deciding whether to pick up.
 
-If the carrier has no stock in a given area code (rare for major metros,
-occasional for small regions), Rivet shows an empty state with a message
-that says so. Try a neighbouring area code, or go back to the previous
-step and pick a larger nearby city.
+Because you choose your province before your city, "Windsor" means Windsor,
+Ontario when you are in Ontario and Windsor, Nova Scotia when you are in
+Nova Scotia. Rivet never offers a number from another province.
+
+## If nothing comes up at all
+
+If your whole province is out of stock, the picker says so and gives you
+**hello@getrivet.ca**. Write to us and we will find you a number. This is
+rare, and it is not something you can fix by picking a different city.
+
+If the picker says it couldn't reach the number search, that is a hiccup
+on our side, not empty stock. Tap **Search again**.
 
 ## Can you change the number later
 
