@@ -886,7 +886,7 @@
     {
       "id": "getting-started/choosing-your-number",
       "title": "Choosing your Rivet phone number",
-      "description": "How the area-code cascade picks three local Canadian numbers near you — and how to pin a specific area code.",
+      "description": "How the picker finds local numbers inside your province, what the headline above the list means, and how to ask for a specific area code.",
       "url": "/getting-started/choosing-your-number",
       "section": "Getting started"
     },
@@ -899,8 +899,8 @@
     },
     {
       "id": "getting-started/first-10-minutes",
-      "title": "Your first 10 minutes — the activation checklist",
-      "description": "A concrete order of operations for the seven rows on the welcome screen.",
+      "title": "Your first 10 minutes — the setup guide",
+      "description": "What the first screen asks of you, and the seven-step setup guide that follows.",
       "url": "/getting-started/first-10-minutes",
       "section": "Getting started"
     },
@@ -928,7 +928,7 @@
     {
       "id": "getting-started/signup",
       "title": "Signing up at getrivet.ca/start",
-      "description": "What each of the six signup fields is for, and where the magic link lands.",
+      "description": "What each of the seven signup questions is for, and what happens after you tap Start my free trial.",
       "url": "/getting-started/signup",
       "section": "Getting started"
     },
@@ -1056,6 +1056,13 @@
       "title": "Customizing your auto-reply",
       "description": "The master toggle, the fallback, the per-category texts, and the one variable you can use.",
       "url": "/practice-phone/customizing-auto-response",
+      "section": "Practice phone"
+    },
+    {
+      "id": "practice-phone/delivery-status",
+      "title": "Knowing whether your text arrived",
+      "description": "Rivet tells you when a text was delivered, and when it wasn't. Failed texts can be sent again once.",
+      "url": "/practice-phone/delivery-status",
       "section": "Practice phone"
     },
     {
