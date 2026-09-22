@@ -102,7 +102,7 @@
     {
       "id": "billing/subscription-pricing",
       "title": "Subscription pricing",
-      "description": "$65 CAD a month. What's included, what isn't, and why the model is flat.",
+      "description": "$45 CAD a month, plus $20 for the practice line. What each part covers and how to choose.",
       "url": "/billing/subscription-pricing",
       "section": "Billing"
     },
@@ -928,7 +928,7 @@
     {
       "id": "getting-started/signup",
       "title": "Signing up at getrivet.ca/start",
-      "description": "What each of the seven signup questions is for, and what happens after you tap Start my free trial.",
+      "description": "What each of the eight signup questions is for, and what happens after you tap Start my free trial.",
       "url": "/getting-started/signup",
       "section": "Getting started"
     },
