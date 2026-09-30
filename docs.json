@@ -84,7 +84,8 @@
             "pages": [
               "practice-phone/making-calls",
               "practice-phone/receiving-calls",
-              "practice-phone/in-session-call-handling"
+              "practice-phone/in-session-call-handling",
+              "practice-phone/do-not-disturb"
             ]
           },
           {
