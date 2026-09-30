@@ -1066,6 +1066,13 @@
       "section": "Practice phone"
     },
     {
+      "id": "practice-phone/do-not-disturb",
+      "title": "Do Not Disturb",
+      "description": "One switch for time off: calls go straight to voicemail, nothing rings, and callers still hear back.",
+      "url": "/practice-phone/do-not-disturb",
+      "section": "Practice phone"
+    },
+    {
       "id": "practice-phone/importing-contacts",
       "title": "Importing contacts from your phone",
       "description": "Pull contacts from your phone's address book into Rivet — pick them one at a time, not bulk.",
