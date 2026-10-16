@@ -475,7 +475,7 @@
             "pages": [
               "troubleshooting/index",
               "troubleshooting/cant-log-in",
-              "troubleshooting/magic-link-not-working",
+              "troubleshooting/sign-in-code-not-working",
               "troubleshooting/audio-issues",
               "troubleshooting/video-issues",
               "troubleshooting/client-cant-join-session",
@@ -542,5 +542,10 @@
   "seo": {
     "indexing": "navigable"
   },
-  "redirects": []
+  "redirects": [
+    {
+      "source": "/troubleshooting/magic-link-not-working",
+      "destination": "/troubleshooting/sign-in-code-not-working"
+    }
+  ]
 }
