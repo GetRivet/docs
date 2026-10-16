@@ -914,7 +914,7 @@
     {
       "id": "getting-started/install-the-app",
       "title": "Install the Rivet app on your phone",
-      "description": "What the native app gives you over the browser, where to download it, and how the magic-link sign-in works the first time.",
+      "description": "What the native app gives you over the browser, where to download it, and how signing in works the first time.",
       "url": "/getting-started/install-the-app",
       "section": "Getting started"
     },
@@ -1250,7 +1250,7 @@
     {
       "id": "troubleshooting/cant-log-in",
       "title": "Can't log in",
-      "description": "Magic link not arriving, wrong email, or an account that's been paused — how to tell which one and what to do.",
+      "description": "Sign-in code not arriving, wrong email, or an account that's been paused — how to tell which one and what to do.",
       "url": "/troubleshooting/cant-log-in",
       "section": "Troubleshooting"
     },
@@ -1276,13 +1276,6 @@
       "section": "Troubleshooting"
     },
     {
-      "id": "troubleshooting/magic-link-not-working",
-      "title": "Magic link not working",
-      "description": "The email arrived, you tapped the link, and nothing happened — or the wrong screen opened. The three causes and the fix for each.",
-      "url": "/troubleshooting/magic-link-not-working",
-      "section": "Troubleshooting"
-    },
-    {
       "id": "troubleshooting/missing-features",
       "title": "Something we've described isn't in your app",
       "description": "If a feature in these docs isn't visible in your Rivet, your build is behind. How to refresh on web and update on iOS and Android.",
@@ -1294,6 +1287,13 @@
       "title": "Payment issues",
       "description": "Card declined, the trial overlay won't clear after paying, expired card update — the three things that go wrong at billing time.",
       "url": "/troubleshooting/payment-issues",
+      "section": "Troubleshooting"
+    },
+    {
+      "id": "troubleshooting/sign-in-code-not-working",
+      "title": "Sign-in code not working",
+      "description": "The code was rejected, said it had expired, or never arrived. The causes and the fix for each.",
+      "url": "/troubleshooting/sign-in-code-not-working",
       "section": "Troubleshooting"
     },
     {
