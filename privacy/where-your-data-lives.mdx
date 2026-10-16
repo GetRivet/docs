@@ -46,7 +46,7 @@ This table is the specific answer most College reviewers and compliance officers
 | Assessment responses (item-by-item answers and scores) | Database | Supabase (`ca-central-1`) | Canada |
 | Derived risk level | Database | Supabase (`ca-central-1`) | Canada |
 | Client record fields (date of birth, emergency contact, referral source, consent log) | Database | Supabase (`ca-central-1`) | Canada |
-| Magic-link emails | Email delivery | Resend | United States (delivery only; message bodies contain no PHI) |
+| Sign-in code emails | Email delivery | Resend | United States (delivery only; message bodies contain no PHI) |
 | Mobile push notification payloads (alert subjects, no transcript content) | Push delivery | Apple APNs (iOS), Google FCM (Android) | United States (delivery only) |
 | Billing records | Payment processor | Stripe | United States (billing identifiers only; no PHI sent to Stripe) |
 | Video session media (audio + video streams) | Peer-to-peer encrypted; not stored | WebRTC DTLS-SRTP between participants | Not stored anywhere |
