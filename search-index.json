@@ -884,6 +884,13 @@
       "section": "EMDR"
     },
     {
+      "id": "getting-started/bringing-your-number",
+      "title": "Bringing your number to Rivet",
+      "description": "What to have ready, how to upload your bill and sign, what happens on move day, and why you keep your current service until the move is done.",
+      "url": "/getting-started/bringing-your-number",
+      "section": "Getting started"
+    },
+    {
       "id": "getting-started/choosing-your-number",
       "title": "Choosing your Rivet phone number",
       "description": "How the picker finds local numbers inside your province, what the headline above the list means, and how to ask for a specific area code.",
