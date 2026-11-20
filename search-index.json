@@ -32,8 +32,15 @@
     {
       "id": "account/managing-your-account",
       "title": "Managing your account",
-      "description": "The account panel, the settings tabs, and how to tell which one you need.",
+      "description": "The account menu and Settings, on your computer and your phone, and the settings tabs.",
       "url": "/account/managing-your-account",
+      "section": "Account"
+    },
+    {
+      "id": "account/message-previews",
+      "title": "Hide what your notifications show",
+      "description": "Choose whether notifications on your phone's lock screen show who it's from and the first words, or only that something arrived.",
+      "url": "/account/message-previews",
       "section": "Account"
     },
     {
@@ -958,6 +965,13 @@
       "title": "The 14-day trial",
       "description": "No card upfront. What changes on day 15. What stays running for your clients either way.",
       "url": "/getting-started/the-14-day-trial",
+      "section": "Getting started"
+    },
+    {
+      "id": "getting-started/tutorials",
+      "title": "Watch a tutorial in Rivet",
+      "description": "Short videos that show how each part of Rivet works. Find them all in Learn, or play one from the page you're on.",
+      "url": "/getting-started/tutorials",
       "section": "Getting started"
     },
     {
